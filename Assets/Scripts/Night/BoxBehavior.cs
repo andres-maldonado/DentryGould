@@ -47,7 +47,7 @@ public class BoxBehavior : MonoBehaviour
 
     public void MoveUp()
     {
-        if (isMain)
+        if (isMain && portraitAnim != null)
         {
             portraitAnim.SetBool("isMain", false);
             isMain = false;

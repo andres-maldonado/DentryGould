@@ -9585,6 +9585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlTable_2
       objectReference: {fileID: 0}
+    - target: {fileID: 320746638175123010, guid: 40535aa33ebc45340b3485d098918459, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1096721010052590840, guid: 40535aa33ebc45340b3485d098918459, type: 3}
       propertyPath: m_RootOrder
       value: 4

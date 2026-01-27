@@ -20,6 +20,7 @@ public abstract class Minigame : MonoBehaviour
         active = true; //TESTING
         manager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         manager.AddToList(this);
+        Enable();
     }
     
     public abstract void Randomize(Transform parent);
@@ -28,6 +29,7 @@ public abstract class Minigame : MonoBehaviour
 
     public void Complete()
     {
+        isComplete = true;
         Disable();
         manager.CheckCompletion();
     }

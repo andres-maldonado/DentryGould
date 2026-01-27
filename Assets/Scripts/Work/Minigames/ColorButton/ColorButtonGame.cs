@@ -14,7 +14,7 @@ public class ColorButtonGame : Minigame
     public byte answer;
     public byte entry;
     
-    public void UpdateColorButtonGame(bool isOn, byte code)
+    public void UpdateGame(bool isOn, byte code)
     {
         if (isOn)
         {
@@ -33,7 +33,7 @@ public class ColorButtonGame : Minigame
     }
     public override void Randomize(Transform p)
     {
-        answer = (byte)UnityEngine.Random.Range(1, 15);
+        answer = (byte)UnityEngine.Random.Range(1, 16);
         thisAnswer = Instantiate(answerTemplate, p);
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer.ToString());
         colorButtons.ForEach(button => 
@@ -42,7 +42,10 @@ public class ColorButtonGame : Minigame
             button.UpdateLamp();
         });
         entry = 0;
-        active = true;
+        active = true; foreach (ColorButton button in colorButtons)
+        {
+            button.IsActive(true);
+        }
     }
     public void Start()
     {
@@ -59,9 +62,17 @@ public class ColorButtonGame : Minigame
     public override void Disable()
     {
         active = false;
+        foreach (ColorButton button in colorButtons)
+        {
+            button.IsActive(false);
+        }
     }
     public override void Enable()
     {
         active = true;
+        foreach (ColorButton button in colorButtons)
+        {
+            button.IsActive(true);
+        }
     }
 }

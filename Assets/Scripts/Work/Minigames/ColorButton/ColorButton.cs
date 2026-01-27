@@ -14,10 +14,10 @@ public class ColorButton : WorkButton
     private ButtonLamp buttonLamp;
     private ColorButtonGame game;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         buttonLamp = GetComponent<ButtonLamp>();
-        game = GetComponentInParent<ColorButtonGame>();
+        game = transform.parent.GetComponentInParent<ColorButtonGame>();
     }
 
     // Update is called once per frame
@@ -32,11 +32,8 @@ public class ColorButton : WorkButton
     }
     public override void OnClick()
     {
-        if (game.active)
-        {
-            isOn = !isOn;
-            UpdateLamp();
-            game.UpdateColorButtonGame(isOn, code);
-        }
+        isOn = !isOn;
+        UpdateLamp();
+        game.UpdateGame(isOn, code);
     }
 }

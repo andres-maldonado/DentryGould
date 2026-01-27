@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class WorkCamControl : MonoBehaviour
 {
     [SerializeField] InputActionAsset inputActionAsset;
+    [SerializeField] Animator zoomAnim;
     [SerializeField] float turnDegrees;
     [SerializeField] float turnSpeed;
     [SerializeField] float turnSnapPoint;
@@ -13,7 +14,6 @@ public class WorkCamControl : MonoBehaviour
 
     private InputActionMap inputActionMap;
     private InputAction turnLeft, turnRight, zoomIn, zoomOut;
-    private Animator zoomAnim;
     private bool zoomedIn;
     private bool isTurning;
     private float newPosition;
@@ -31,8 +31,6 @@ public class WorkCamControl : MonoBehaviour
         zoomIn.performed += _ => ZoomIn();
         zoomOut = inputActionMap.FindAction("Down");
         zoomOut.performed += _ => ZoomOut();
-        zoomAnim = GetComponentInChildren<Animator>();
-        Debug.Log("zoomIn = " + zoomIn);
     }
     private void TurnLeft()
     {
@@ -45,8 +43,6 @@ public class WorkCamControl : MonoBehaviour
                 {
                     newPosition -= 360;
                 }
-                Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-                Debug.Log(transform.eulerAngles.y - newPosition);
                 if (transform.eulerAngles.y - newPosition > 360)
                 {
                     newPosition += 360;
@@ -66,8 +62,6 @@ public class WorkCamControl : MonoBehaviour
                 {
                     newPosition -= 360;
                 }
-                Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-                Debug.Log(transform.eulerAngles.y - newPosition);
                 if (transform.eulerAngles.y - newPosition > 360)
                 {
                     newPosition += 360;
@@ -81,8 +75,6 @@ public class WorkCamControl : MonoBehaviour
                 isTurning = true;
                 currentPanel = maxPanelNum;
             }
-            Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-            Debug.Log(currentPanel);
         }        
     }
     private void TurnRight()
@@ -96,8 +88,6 @@ public class WorkCamControl : MonoBehaviour
                 {
                     newPosition += 360;
                 }
-                Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-                Debug.Log(newPosition - transform.eulerAngles.y);
                 if (newPosition - transform.eulerAngles.y > 360)
                 {
                     newPosition -= 360;
@@ -118,8 +108,6 @@ public class WorkCamControl : MonoBehaviour
                 {
                     newPosition += 360;
                 }
-                Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-                Debug.Log(transform.eulerAngles.y - newPosition);
                 if (transform.eulerAngles.y - newPosition < -360)
                 {
                     newPosition -= 360;
@@ -133,8 +121,6 @@ public class WorkCamControl : MonoBehaviour
                 isTurning = true;
                 currentPanel = minPanelNum;
             }
-            Debug.Log("Current Position: " + transform.eulerAngles.y + ", New Position: " + newPosition);
-            Debug.Log(currentPanel);
         }
     }
     private void ZoomIn()
@@ -169,7 +155,6 @@ public class WorkCamControl : MonoBehaviour
             {
                 nextPosition = (nextPosition + 360) % 360;
                 newPosition = ((currentPanel * 60) + 360) % 360;
-                Debug.Log("CHANGE: NextPosition: " + nextPosition + ", NewPosition: " + newPosition);
             }
             
             transform.eulerAngles = new Vector3(0, nextPosition, 0);

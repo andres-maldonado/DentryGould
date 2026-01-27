@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
+    [Header("Testing")]
+    public bool testingGame;
+    public Minigame testGame;
+
     [Header("Stats")]
     public int gameCount;
     public int successes;
@@ -20,7 +24,15 @@ public class MinigameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GenerateTasks();
+        finalButton.Deactivate();
+        if (testingGame)
+        {
+            testGame.Randomize(answers[0]);
+        }
+        else
+        {
+            GenerateTasks();
+        }
     }
 
     // Update is called once per frame
@@ -40,6 +52,7 @@ public class MinigameManager : MonoBehaviour
         foreach (Minigame m in minigames)
         {
             m.isComplete = true;
+            m.Disable();
         }
         for(int i = 0; i < gameCount; i++)
         {
@@ -58,6 +71,7 @@ public class MinigameManager : MonoBehaviour
     int gamesCompleted;
     public void CheckCompletion()
     {
+        gamesCompleted = 0;
         foreach (Minigame m in minigames)
         {
             if (m.isComplete)
@@ -65,8 +79,10 @@ public class MinigameManager : MonoBehaviour
                 gamesCompleted++;
             }
         }
+        Debug.Log("Games Completed: " + gamesCompleted + ", Minigame Count: " + minigames.Count);
         if (gamesCompleted == minigames.Count)
         {
+            Debug.Log("Final Button Activated");
             finalButton.Activate();
         }
     }
@@ -88,6 +104,7 @@ public class MinigameManager : MonoBehaviour
                 gameCount = 3;
                 break;
         }
+        finalButton.Deactivate();
         StartCoroutine(BeginNewWave());
     }
     IEnumerator BeginNewWave()

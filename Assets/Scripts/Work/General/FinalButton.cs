@@ -2,19 +2,29 @@ using UnityEngine;
 
 public class FinalButton : WorkButton
 {
-    private MinigameManager manager;
+    [SerializeField] MinigameManager manager;
+    public bool ready;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        manager = GetComponentInParent<MinigameManager>();
+
     }
     public override void OnClick()
     {
-        manager.WaveCompletion();
+        Debug.Log("Ready: " + ready);
+        if (ready)
+        {
+            manager.WaveCompletion();
+
+        }
     }
     public void Activate()
     {
-        IsActive(true);
+        ready = true;
         //make it flash later
+    }
+    public void Deactivate()
+    {
+        ready = false;
     }
 }

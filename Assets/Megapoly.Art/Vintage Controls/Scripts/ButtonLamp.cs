@@ -15,16 +15,22 @@ public class ButtonLamp : MonoBehaviour
     public bool on;
     public Transform lamp;
     public eColor lightColor;
+    public float fadeAmount;
 
     Renderer rend;
     // Start is called before the first frame update
     void Start()
     {
         rend = lamp.GetComponent<Renderer>();
+        SetColor();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+    public void SetColor()
     {
         if (on)
         {
@@ -45,11 +51,27 @@ public class ButtonLamp : MonoBehaviour
                 default:
                     break;
             }
-            
+
         }
         else
         {
-            rend.material.SetColor("_EmissionColor", new Color(0.0f, 0.0f, 0.0f, 0.0f));
+            switch (lightColor)
+            {
+                case eColor.Red:
+                    rend.material.SetColor("_EmissionColor", new Color(1f, 0f, 0.02f, 1f) * fadeAmount);
+                    break;
+                case eColor.Yellow:
+                    rend.material.SetColor("_EmissionColor", new Color(1f, 0.65f, 0f, 1f) * fadeAmount);
+                    break;
+                case eColor.Green:
+                    rend.material.SetColor("_EmissionColor", new Color(0.15f, 1f, 0f, 1f) * fadeAmount);
+                    break;
+                case eColor.Blue:
+                    rend.material.SetColor("_EmissionColor", new Color(0f, 0.33f, 1f, 1f) * fadeAmount);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -6,16 +6,18 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Unity.Mathematics;
 
-public class ColorButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class ColorButton : WorkButton
 {
-    [SerializeField] InputActionAsset inputActionAsset;
-    private InputAction clickAction;
+    public bool isOn;
+    public byte code;
+
+    private ButtonLamp buttonLamp;
+    private ColorButtonGame game;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //hitbox = GetComponent<Collider>();
-        clickAction = inputActionAsset.FindActionMap("UI").FindAction("Click");
-        clickAction.performed += _ => OnClick();
+        buttonLamp = GetComponent<ButtonLamp>();
+        game = GetComponentInParent<ColorButtonGame>();
     }
 
     // Update is called once per frame
@@ -23,22 +25,18 @@ public class ColorButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
 
     }
-    void OnClick()
+    public void UpdateLamp()
     {
-
+        buttonLamp.on = isOn;
+        buttonLamp.SetColor();
     }
-    public void OnPointerEnter(PointerEventData eventData)
+    public override void OnClick()
     {
-        //Debug.Log("yurski");
-
-    }
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        //Debug.Log("yurski");
-
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-
+        if (game.active)
+        {
+            isOn = !isOn;
+            UpdateLamp();
+            game.UpdateColorButtonGame(isOn, code);
+        }
     }
 }

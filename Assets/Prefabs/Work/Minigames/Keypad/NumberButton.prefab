@@ -450,4 +450,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NumberButton
   anim: {fileID: 9156080107168724823}
+  animCancel: 1
   backspace: 0

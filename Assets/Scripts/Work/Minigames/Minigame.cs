@@ -15,6 +15,7 @@ public abstract class Minigame : MonoBehaviour
     private Panel panel;
     void Awake()
     {
+        Debug.Log("ok we up");
         panel = GetComponentInParent<Panel>();
         minigameColor = panel.color;
         active = true; //TESTING
@@ -30,6 +31,7 @@ public abstract class Minigame : MonoBehaviour
     public void Complete()
     {
         isComplete = true;
+        thisAnswer.GetComponent<Answer>().Complete();
         Disable();
         manager.CheckCompletion();
     }

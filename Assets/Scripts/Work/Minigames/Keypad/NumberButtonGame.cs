@@ -20,9 +20,11 @@ public class NumberButtonGame : Minigame
     }
     public void AddNumber(char c)
     {
-        Debug.Log("added " + c);
-        entry.Append(c);
-        UpdateDisplay();
+        if (entry == null || entry.Length < maxLength)
+        {
+            entry += c.ToString();
+            UpdateDisplay();
+        }
         if (entry == answer)
         {
             Complete();
@@ -30,7 +32,7 @@ public class NumberButtonGame : Minigame
     }
     public void Backspace()
     {
-        entry.Remove(entry.Length - 1);
+        entry = entry.Substring(0, entry.Length-1);
         UpdateDisplay();
         if (entry == answer)
         {
@@ -61,11 +63,17 @@ public class NumberButtonGame : Minigame
     }
     public override void Randomize(Transform t)
     {
-        int password = Random.Range(0, 10^(maxLength+1));
+        int password = Random.Range(0, (int)Mathf.Pow(10, maxLength));
         answer = password.ToString();
+        Debug.Log("Answer Length: " + answer.Length + ", Max Length: " + maxLength);
         while (answer.Length < maxLength)
         {
-            answer.Insert(0,"0");
+            answer = "0" + answer;
         }
+        Debug.Log("Answer Length: " + answer.Length + ", Max Length: " + maxLength);
+        entry = null;
+        UpdateDisplay();
+        thisAnswer = Instantiate(answerTemplate, t);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
     }
 }

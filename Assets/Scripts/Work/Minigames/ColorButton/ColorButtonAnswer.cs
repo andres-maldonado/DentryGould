@@ -15,9 +15,10 @@ public class ColorButtonAnswer : Answer
     {
 
     }
-    public override void DisplayAnswer(Sprite sprite, Color iconColor, string answer)
+    public override void DisplayAnswer(Sprite sprite, Color color, string answer)
     {
-        icon.color = iconColor;
+        icon.sprite = sprite;
+        icon.color = color;
         index = 0;
         answerByte = (byte)int.Parse(answer);
         Debug.Log("Answer: " + answerByte);

@@ -27,14 +27,11 @@ public abstract class WorkButton : MonoBehaviour, IPointerEnterHandler, IPointer
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("ButtonClick"))
-        {
-            anim.Play("ButtonClick");
+            anim.Play("ButtonClick",-1, 0);
             if (canClick)
             {
                 OnClick();
             }
-        }
     }
     public abstract void OnClick();
     public void IsActive(bool s)

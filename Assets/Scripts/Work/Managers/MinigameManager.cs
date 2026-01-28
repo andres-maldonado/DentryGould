@@ -24,15 +24,7 @@ public class MinigameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        finalButton.Deactivate();
-        if (testingGame)
-        {
-            testGame.Randomize(answers[0]);
-        }
-        else
-        {
-            GenerateTasks();
-        }
+        GenerateTasks();
     }
 
     // Update is called once per frame
@@ -56,14 +48,15 @@ public class MinigameManager : MonoBehaviour
         }
         for(int i = 0; i < gameCount; i++)
         {
-            rg = Random.Range(0, minigames.Count - 1);
+            rg = Random.Range(0, minigames.Count);
             while (games.Contains(rg))
             {
-                rg = Random.Range(0, minigames.Count - 1); //rg = Random Game)
+                rg = Random.Range(0, minigames.Count); //rg = Random Game)
             }
             games.Add(rg);
             minigames[rg].isComplete = false;
             minigames[rg].Randomize(answers[i]);
+            minigames[rg].Enable();
             Debug.Log("Minigame "+rg+" Activated");
         }
         finalButton.IsActive(true);
@@ -102,6 +95,9 @@ public class MinigameManager : MonoBehaviour
                 break;
             case 4:
                 gameCount = 3;
+                break;
+            case 6:
+                gameCount = 4;
                 break;
         }
         finalButton.Deactivate();

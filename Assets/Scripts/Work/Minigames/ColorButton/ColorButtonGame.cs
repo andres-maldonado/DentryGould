@@ -27,7 +27,6 @@ public class ColorButtonGame : Minigame
         if (entry == answer) //Here's where you win
         {
             print("you win!");
-            thisAnswer.GetComponent<Answer>().Complete();
             Complete();
         }
     }
@@ -42,10 +41,6 @@ public class ColorButtonGame : Minigame
             button.UpdateLamp();
         });
         entry = 0;
-        active = true; foreach (ColorButton button in colorButtons)
-        {
-            button.IsActive(true);
-        }
     }
     public void Start()
     {

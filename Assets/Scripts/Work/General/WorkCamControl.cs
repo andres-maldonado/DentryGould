@@ -149,7 +149,7 @@ public class WorkCamControl : MonoBehaviour
         }
         else
         {
-            nextPosition = Mathf.Lerp(transform.eulerAngles.y, newPosition, turnSpeed);
+            nextPosition = Mathf.Lerp(transform.eulerAngles.y, newPosition, turnSpeed*Time.deltaTime);
             //Debug.Log("NextPosition: " + nextPosition + ", NewPosition: " + newPosition);
             if (nextPosition < 0 || nextPosition >= 360)
             {

@@ -1450,6 +1450,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1510673712363140872, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510673712363140872, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2130829656823907530, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: color.b
       value: 0.015686275
@@ -1458,9 +1466,25 @@ PrefabInstance:
       propertyPath: color.g
       value: 0.92156863
       objectReference: {fileID: 0}
+    - target: {fileID: 2557896288695711934, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557896288695711934, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6013051356699061052, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: m_Name
       value: ButtonNumberKnob (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530702753017077556, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530702753017077556, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

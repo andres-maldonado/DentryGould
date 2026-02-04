@@ -149,7 +149,7 @@ public class WorkCamControl : MonoBehaviour
         }
         else
         {
-            nextPosition = Mathf.Lerp(transform.eulerAngles.y, newPosition, turnSpeed*Time.deltaTime);
+            nextPosition = Mathf.Lerp(transform.eulerAngles.y, newPosition, turnSpeed);
             //Debug.Log("NextPosition: " + nextPosition + ", NewPosition: " + newPosition);
             if (nextPosition < 0 || nextPosition >= 360)
             {
@@ -161,7 +161,7 @@ public class WorkCamControl : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isTurning)
         {

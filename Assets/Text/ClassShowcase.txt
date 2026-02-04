@@ -1,0 +1,8 @@
+<align="left"><$PL00><color=#ffdf3d>Wow, this dialogue screen is epic! Great job! This is what I'm saying in person right now!
+<align="right"><$PR01><color=#d108bd>Yea, I'm also here and I have to agree. This is a great showing!
+<align="left"><$PL02><color=#ff7d19>Umm, don't get ahead of yourself, buddy. Anyone could've done this. You're gonna have to try harder!
+<align="center"><color="white">Dang, maybe Karlson's right. Is this really good enough?
+<align="left"><$PL03><color=#5c9aff>I wouldn't worry too much about the expectations of those around you. After all, the true joy of life is found within.
+<align="left"><$PL03><color=#5c9aff>If you can find inner happiness from fulfilling your own personal creative goals, no one's derisive words will ever bring you down.
+<align="left"><$PL03><color=#5c9aff>You're the master of your own fate. Never forget that.
+<align="right"><$PR04><color="green">Hello class, Mr. Brown here. Hope you're all having a wonderful day!

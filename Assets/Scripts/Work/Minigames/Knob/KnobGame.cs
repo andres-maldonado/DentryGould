@@ -41,11 +41,11 @@ public class KnobGame : Minigame
 
     public override void Disable()
     {
-
+        active = false;
     }
     public override void Enable()
     {
-
+        active = true;
     }
     public override void Randomize(Transform t)
     {

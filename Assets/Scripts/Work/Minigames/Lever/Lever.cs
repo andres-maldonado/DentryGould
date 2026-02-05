@@ -7,8 +7,13 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
 {
     [SerializeField] Transform pivotPoint;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     [SerializeField] float moveSpeed;
     [SerializeField] float leverMin, leverMax;
+=======
+    [SerializeField] float moveSpeed, angleMin, angleMax;
+
+>>>>>>> Stashed changes
 =======
     [SerializeField] float moveSpeed, angleMin, angleMax;
 
@@ -32,12 +37,18 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     void FixedUpdate()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         DragLever();
 =======
+=======
+>>>>>>> Stashed changes
         if (isDragging && !isHovering)
         {
             DragLever();
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
     public void OnPointerDown(PointerEventData eventData)
@@ -57,6 +68,7 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     {
         isHovering = false;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
     public void DragLever()
     {
@@ -65,6 +77,9 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
             moveDir = moveSpeed;
         }
         else if(look.ReadValue<Vector2>().y < 0)
+=======
+        if (look.ReadValue<Vector2>().y > 0)
+>>>>>>> Stashed changes
 =======
         if (look.ReadValue<Vector2>().y > 0)
 >>>>>>> Stashed changes
@@ -81,8 +96,11 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
         if (isDragging && !isHovering)
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             pivotPoint.localEulerAngles += new Vector3(moveDir, 0, 0);
 =======
+=======
+>>>>>>> Stashed changes
             if ((pivotPoint.localEulerAngles.x <= angleMax && moveDir < 0) || (pivotPoint.localEulerAngles.x >= angleMin && moveDir > 0))
             {
                 pivotPoint.eulerAngles += new Vector3(moveDir, 0, 0);
@@ -98,6 +116,9 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
         {
             pivotPoint.localEulerAngles = new Vector3(angleMax, 0, 0);
             isDragging = false;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }

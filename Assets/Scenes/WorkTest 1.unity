@@ -245,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Lever
   pivotPoint: {fileID: 479881178}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   mouse:
     m_Name: Mouse
     m_Type: 0
@@ -266,10 +267,15 @@ MonoBehaviour:
   leverMin: 0
   leverMax: 60
 =======
+=======
+>>>>>>> Stashed changes
   moveSpeed: 5
   angleMin: 25
   angleMax: 95
   input: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &249909215
 GameObject:

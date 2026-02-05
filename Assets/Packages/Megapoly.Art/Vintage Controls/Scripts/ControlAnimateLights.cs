@@ -7,7 +7,7 @@ public class ControlAnimateLights : MonoBehaviour
     // Start is called before the first frame update
     public List<ButtonLamp> controls;
     public float interval = 1f;
-    public float startTime = 1f;
+    public float startTime = 0;
     private int result;
     void Start()
     {
@@ -24,9 +24,7 @@ public class ControlAnimateLights : MonoBehaviour
     {
         foreach (ButtonLamp item in controls)
         {
-            result = Random.Range(0, 2);
-            item.on = intToBool(result);
-
+            item.Run();
         }
     }
 

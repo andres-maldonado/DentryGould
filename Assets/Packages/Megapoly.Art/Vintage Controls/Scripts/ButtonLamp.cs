@@ -74,4 +74,24 @@ public class ButtonLamp : MonoBehaviour
             }
         }
     }
+    public void Run()
+    {
+        int color = Random.Range(0, 4);
+        switch (color)
+        {
+            case 0:
+                lightColor = eColor.Red;
+                break;
+            case 1:
+                lightColor = eColor.Yellow;
+                break;
+            case 2:
+                lightColor = eColor.Green;
+                break;
+            case 3:
+                lightColor = eColor.Blue;
+                break;
+        }
+        SetColor();
+    }
 }

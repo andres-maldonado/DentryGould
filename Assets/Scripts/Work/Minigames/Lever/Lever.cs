@@ -6,18 +6,8 @@ using UnityEngine.UIElements;
 public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Transform pivotPoint;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     [SerializeField] float moveSpeed;
-    [SerializeField] float leverMin, leverMax;
-=======
-    [SerializeField] float moveSpeed, angleMin, angleMax;
-
->>>>>>> Stashed changes
-=======
-    [SerializeField] float moveSpeed, angleMin, angleMax;
-
->>>>>>> Stashed changes
+    [SerializeField] float angleMin, angleMax;
     [SerializeField] InputActionAsset input;
     private InputActionMap map;
     private InputAction look;
@@ -36,20 +26,10 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     // Update is called once per frame
     void FixedUpdate()
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        DragLever();
-=======
-=======
->>>>>>> Stashed changes
         if (isDragging && !isHovering)
         {
             DragLever();
         }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -67,44 +47,20 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovering = false;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    }
-    public void DragLever()
-    {
-        if(look.ReadValue<Vector2>().y > 0)
+        if(isDragging )
         {
-            moveDir = moveSpeed;
-        }
-        else if(look.ReadValue<Vector2>().y < 0)
-=======
-        if (look.ReadValue<Vector2>().y > 0)
->>>>>>> Stashed changes
-=======
-        if (look.ReadValue<Vector2>().y > 0)
->>>>>>> Stashed changes
-        {
-            moveDir = -moveSpeed;
-        }
-        else if (look.ReadValue<Vector2>().y < 0)
-        {
-            moveDir = moveSpeed;
+            moveDir = -moveSpeed * look.ReadValue<Vector2>().y;
         }
     }
     public void DragLever()
     {
         if (isDragging && !isHovering)
         {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            pivotPoint.localEulerAngles += new Vector3(moveDir, 0, 0);
-=======
-=======
->>>>>>> Stashed changes
+            //pivotPoint.localEulerAngles += new Vector3(moveDir, 0, 0);
             if ((pivotPoint.localEulerAngles.x <= angleMax && moveDir < 0) || (pivotPoint.localEulerAngles.x >= angleMin && moveDir > 0))
             {
-                pivotPoint.eulerAngles += new Vector3(moveDir, 0, 0);
-                Debug.Log(pivotPoint.localRotation);
+                pivotPoint.localEulerAngles += new Vector3(moveDir, 0, 0);
+                Debug.Log(pivotPoint.localEulerAngles);
             }
         }
         if(pivotPoint.localEulerAngles.x <= angleMin)
@@ -112,14 +68,10 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
             pivotPoint.localEulerAngles = new Vector3(angleMin, 0, 0);
             isDragging = false;
         }
-        if (pivotPoint.localEulerAngles.x >= angleMax)
+        if (pivotPoint.localEulerAngles.x >= angleMax || pivotPoint.localEulerAngles.y == 180)
         {
             pivotPoint.localEulerAngles = new Vector3(angleMax, 0, 0);
             isDragging = false;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         }
     }
 }

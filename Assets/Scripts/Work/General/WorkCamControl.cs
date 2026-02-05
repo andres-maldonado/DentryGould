@@ -132,13 +132,17 @@ public class WorkCamControl : MonoBehaviour
     {
         if (!zoomedIn)
         {
+            if (atTicket)
+            {
+                PutTicketDown();
+            }
             zoomAnim.Play("PanelZoomIn");
             zoomedIn = true;
         }
     }
     private void ZoomOut()
     {
-        if (zoomedIn)
+        if (zoomedIn && !atTicket)
         {
             zoomAnim.Play("PanelZoomOut");
             zoomedIn = false;
@@ -146,16 +150,19 @@ public class WorkCamControl : MonoBehaviour
     }
     private void LookAtTicket()
     {
-        if (zoomedIn && !atTicket)
+        if (!atTicket)
         {
-            zoomAnim.Play("InTicketLook");
-            //handAnim.Play("InLiftHand");
+            if (zoomedIn)
+            {
+                zoomAnim.Play("InTicketLook");
+                handAnim.Play("InHandLift");
+            }
+            if (!zoomedIn)
+            {
+                handAnim.Play("OutHandLift");
+            }
+            atTicket = true;
         }
-        if (!zoomedIn && !atTicket)
-        {
-
-        }
-        atTicket = true;
     }
     private void PutTicketDown()
     {
@@ -164,10 +171,11 @@ public class WorkCamControl : MonoBehaviour
             if (zoomedIn)
             {
                 zoomAnim.Play("InTicketDown");
+                handAnim.Play("InHandLower");
             }
             if (!zoomedIn)
             {
-
+                handAnim.Play("OutHandLower");
             }
             atTicket = false;
         }

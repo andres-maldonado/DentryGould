@@ -6,8 +6,11 @@ using UnityEngine.UIElements;
 public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Transform pivotPoint;
-    [SerializeField] InputAction mouse;
     [SerializeField] float moveSpeed;
+    [SerializeField] float leverMin, leverMax;
+    [SerializeField] InputActionAsset input;
+    private InputActionMap map;
+    private InputAction look;
 
     private bool isDragging;
     private bool isHovering;
@@ -16,13 +19,14 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        map = input.FindActionMap("Player");
+        look = map.FindAction("Look");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        DragLever();
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -42,17 +46,17 @@ public class Lever : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPoi
     }
     public void DragLever()
     {
-        if(mouse.ReadValue<Vector2>().y > 0)
+        if(look.ReadValue<Vector2>().y > 0)
         {
             moveDir = moveSpeed;
         }
-        else if(mouse.ReadValue<Vector2>().y < 0)
+        else if(look.ReadValue<Vector2>().y < 0)
         {
             moveDir = -moveSpeed;
         }
         if (isDragging && !isHovering)
         {
-            pivotPoint.eulerAngles += new Vector3(moveDir, 0, 0);
+            pivotPoint.localEulerAngles += new Vector3(moveDir, 0, 0);
         }
     }
 }

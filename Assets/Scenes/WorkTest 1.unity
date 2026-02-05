@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 239571582}
   - component: {fileID: 239571581}
   - component: {fileID: 239571580}
+  - component: {fileID: 239571583}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -230,6 +231,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239571578}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &239571583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239571578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2163459910478ed4bb668726560feecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lever
+  pivotPoint: {fileID: 479881178}
+  mouse:
+    m_Name: Mouse
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 38a799a9-8281-40b8-af28-a564cd1eb51b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ec3c1a9f-9192-456e-8d88-0d0b5a8e922b
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse
+      m_Flags: 0
+    m_Flags: 0
+  moveSpeed: 1
+  leverMin: 0
+  leverMax: 60
 --- !u!1 &249909215
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class WorkCamControl : MonoBehaviour
 {
     [SerializeField] InputActionAsset inputActionAsset;
     [SerializeField] Animator zoomAnim;
+    [SerializeField] Animator handAnim;
     [SerializeField] float turnDegrees;
     [SerializeField] float turnSpeed;
     [SerializeField] float turnSnapPoint;
@@ -13,9 +14,10 @@ public class WorkCamControl : MonoBehaviour
     [SerializeField] bool circle;
 
     private InputActionMap inputActionMap;
-    private InputAction turnLeft, turnRight, zoomIn, zoomOut;
+    private InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
     private bool zoomedIn;
     private bool isTurning;
+    private bool atTicket;
     private float newPosition;
     private float nextPosition;
     private int currentPanel = 0;
@@ -31,6 +33,9 @@ public class WorkCamControl : MonoBehaviour
         zoomIn.performed += _ => ZoomIn();
         zoomOut = inputActionMap.FindAction("Down");
         zoomOut.performed += _ => ZoomOut();
+        rClick = inputActionMap.FindAction("RightClick");
+        rClick.performed += _ => LookAtTicket();
+        rClick.canceled += _ => PutTicketDown();
     }
     private void TurnLeft()
     {
@@ -137,6 +142,34 @@ public class WorkCamControl : MonoBehaviour
         {
             zoomAnim.Play("PanelZoomOut");
             zoomedIn = false;
+        }
+    }
+    private void LookAtTicket()
+    {
+        if (zoomedIn && !atTicket)
+        {
+            zoomAnim.Play("InTicketLook");
+            //handAnim.Play("InLiftHand");
+        }
+        if (!zoomedIn && !atTicket)
+        {
+
+        }
+        atTicket = true;
+    }
+    private void PutTicketDown()
+    {
+        if (atTicket)
+        {
+            if (zoomedIn)
+            {
+                zoomAnim.Play("InTicketDown");
+            }
+            if (!zoomedIn)
+            {
+
+            }
+            atTicket = false;
         }
     }
     private void Turn()

@@ -15,8 +15,9 @@ public class WorkCamControl : MonoBehaviour
 
     private InputActionMap inputActionMap;
     private InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
+    private Animator thisAnim;
     private bool zoomedIn;
-    private bool isTurning;
+    public bool isTurning;
     private bool atTicket;
     private float newPosition;
     private float nextPosition;
@@ -36,11 +37,14 @@ public class WorkCamControl : MonoBehaviour
         rClick = inputActionMap.FindAction("RightClick");
         rClick.performed += _ => LookAtTicket();
         rClick.canceled += _ => PutTicketDown();
+        thisAnim = GetComponent<Animator>();
+        thisAnim. enabled = false;
     }
     private void TurnLeft()
     {
         if (!zoomedIn)
         {
+            Debug.Log("left");
             if (currentPanel > minPanelNum)
             {
                 newPosition = currentPanel * 60 - turnDegrees;
@@ -86,6 +90,7 @@ public class WorkCamControl : MonoBehaviour
     {
         if (!zoomedIn)
         {
+            Debug.Log("right");
             if (currentPanel < maxPanelNum)
             {
                 newPosition = currentPanel * 60 + turnDegrees;
@@ -182,6 +187,7 @@ public class WorkCamControl : MonoBehaviour
     }
     private void Turn()
     {
+        Debug.Log("turn");
         if (transform.eulerAngles.y - newPosition < turnSnapPoint && transform.eulerAngles.y - newPosition > -turnSnapPoint)
         {
             transform.eulerAngles = new Vector3(0, newPosition % 360, 0);
@@ -212,8 +218,29 @@ public class WorkCamControl : MonoBehaviour
 
     public void FinalButtonSequence()
     {
+        thisAnim.enabled = true;
+        LockControls(true);
         GetComponent<Animator>().Play("FinalButtonRotate");
         zoomAnim.Play("FinalButtonHit");
     }
 
+    public void LockControls(bool isLocking)
+    {
+        if (isLocking)
+        {
+            turnLeft.Disable();
+            turnRight.Disable();
+            zoomIn.Disable();
+            zoomOut.Disable();
+            rClick.Disable();
+        }
+        else
+        {
+            turnLeft.Enable();
+            turnRight.Enable();
+            zoomIn.Enable();
+            zoomOut.Enable();
+            rClick.Enable();
+        }
+    }
 }

@@ -41,6 +41,7 @@ public class ColorButtonGame : Minigame
             button.UpdateLamp();
         });
         entry = 0;
+        taskLight.SetCompletion(false);
     }
     public void Start()
     {

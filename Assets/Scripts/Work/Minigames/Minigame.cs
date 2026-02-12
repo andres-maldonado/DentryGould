@@ -10,6 +10,7 @@ public abstract class Minigame : MonoBehaviour
     public bool active;
     public bool isComplete = true;
     public GameObject thisAnswer;
+    public TaskLight taskLight;
 
     private MinigameManager manager;
     private Panel panel;
@@ -31,6 +32,7 @@ public abstract class Minigame : MonoBehaviour
     public void Complete()
     {
         isComplete = true;
+        taskLight.SetCompletion(true);
         thisAnswer.GetComponent<Answer>().Complete();
         Disable();
         manager.CheckCompletion();

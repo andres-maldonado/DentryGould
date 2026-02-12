@@ -12,12 +12,10 @@ public class FinalButton : WorkButton
     }
     public override void OnClick()
     {
-        camParent.FinalButtonSequence();
         Debug.Log("Ready: " + ready);
         if (ready)
         {
-            manager.WaveCompletion();
-
+            camParent.FinalButtonSequence();
         }
     }
     public void Activate()

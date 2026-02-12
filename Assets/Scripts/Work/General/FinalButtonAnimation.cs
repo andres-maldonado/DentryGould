@@ -3,6 +3,7 @@ using UnityEngine;
 public class FinalButtonAnimation : MonoBehaviour
 {
     [SerializeField] Animator handAnim;
+    [SerializeField] Animator camAnim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,5 +19,9 @@ public class FinalButtonAnimation : MonoBehaviour
     void HandSmash()
     {
         handAnim.Play("FinalButtonHand");
+    }
+    void Return()
+    {
+        camAnim.Play("FinalButtonEnd");
     }
 }

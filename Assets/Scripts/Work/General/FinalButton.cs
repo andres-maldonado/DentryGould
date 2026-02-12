@@ -3,7 +3,7 @@ using UnityEngine;
 public class FinalButton : WorkButton
 {
     [SerializeField] MinigameManager manager;
-    [SerializeField] Animator zoomAnim;
+    [SerializeField] WorkCamControl camParent;
     public bool ready;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -12,7 +12,7 @@ public class FinalButton : WorkButton
     }
     public override void OnClick()
     {
-        zoomAnim.Play("FinalButtonHit");
+        camParent.FinalButtonSequence();
         Debug.Log("Ready: " + ready);
         if (ready)
         {

@@ -210,4 +210,10 @@ public class WorkCamControl : MonoBehaviour
         }
     }
 
+    public void FinalButtonSequence()
+    {
+        GetComponent<Animator>().Play("FinalButtonRotate");
+        zoomAnim.Play("FinalButtonHit");
+    }
+
 }

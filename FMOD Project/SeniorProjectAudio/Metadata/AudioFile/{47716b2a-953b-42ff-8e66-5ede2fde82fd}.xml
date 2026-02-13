@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{47716b2a-953b-42ff-8e66-5ede2fde82fd}">
+		<property name="assetPath">
+			<value>TicketDown.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.59602083333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b8beede7-2631-4354-85c6-db186a9f0f72}</destination>
+		</relationship>
+	</object>
+</objects>

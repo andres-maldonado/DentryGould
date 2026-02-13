@@ -1,3 +1,4 @@
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,6 +14,8 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] float scale;
     [SerializeField] KnobGame game;
     [SerializeField] InputActionAsset input;
+    private EventReference knobStartSound;
+    private EventReference knobStopSound;
     private InputActionMap map;
     private InputAction look;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,6 +23,9 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         map = input.FindActionMap("Player");
         look = map.FindAction("Look");
+        knobStartSound = RuntimeManager.PathToEventReference("event:/SFX/Work/KnobStart");
+        knobStopSound = RuntimeManager.PathToEventReference("event:/SFX/Work/KnobStop");
+
     }
 
     // Update is called once per frame
@@ -46,6 +52,7 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         float angle = gameObject.transform.eulerAngles.z % 360;
         Debug.Log(angle);
+        AudioManager.ins.PlayOneShot(knobStopSound, transform.position);
         if (angle >= 239 && angle < 270)
         {
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, -120);
@@ -83,9 +90,10 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("down");
-        if (isHovering)
+        if (isHovering && eventData.button == PointerEventData.InputButton.Left)
         {
             isDragging = true;
+            AudioManager.ins.PlayOneShot(knobStartSound, transform.position);
         }
     }
     public void OnPointerUp(PointerEventData eventData)

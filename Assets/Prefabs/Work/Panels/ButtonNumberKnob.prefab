@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 7063771141588089498}
   - component: {fileID: 7653443553640100004}
   - component: {fileID: 2130829656823907530}
+  - component: {fileID: 2827533787798100451}
   m_Layer: 0
   m_Name: ButtonNumberKnob
   m_TagString: Untagged
@@ -1570,6 +1571,28 @@ MonoBehaviour:
   - {fileID: 4926873819411783424}
   - {fileID: 6254689385487242926}
   - {fileID: 465131213191612772}
+--- !u!64 &2827533787798100451
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013051356699061052}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8300284429941858418, guid: b511be1ea6767d34ab1443f10cb39488, type: 3}
 --- !u!1 &7271654363726290661
 GameObject:
   m_ObjectHideFlags: 0

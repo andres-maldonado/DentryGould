@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,7 @@ public class WorkCamControl : MonoBehaviour
     private InputActionMap inputActionMap;
     private InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
     private Animator thisAnim;
+    private EventReference ticketUpSound, ticketDownSound;
     private bool zoomedIn;
     public bool isTurning;
     private bool atTicket;
@@ -39,6 +41,8 @@ public class WorkCamControl : MonoBehaviour
         rClick.canceled += _ => PutTicketDown();
         thisAnim = GetComponent<Animator>();
         thisAnim. enabled = false;
+        ticketUpSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TicketUp");
+        ticketDownSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TicketDown");
     }
     private void TurnLeft()
     {
@@ -164,6 +168,7 @@ public class WorkCamControl : MonoBehaviour
             {
                 handAnim.Play("OutHandLift");
             }
+            AudioManager.ins.PlayOneShot(ticketUpSound, transform.position);
             atTicket = true;
         }
     }
@@ -180,6 +185,7 @@ public class WorkCamControl : MonoBehaviour
             {
                 handAnim.Play("OutHandLower");
             }
+            AudioManager.ins.PlayOneShot(ticketDownSound, transform.position);
             atTicket = false;
         }
     }

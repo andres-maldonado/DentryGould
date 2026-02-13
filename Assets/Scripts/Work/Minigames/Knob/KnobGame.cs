@@ -71,5 +71,6 @@ public class KnobGame : Minigame
                 knobPos = (j % 360);
             }
         }
+        taskLight.SetCompletion(false);
     }
 }

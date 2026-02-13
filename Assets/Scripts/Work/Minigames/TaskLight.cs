@@ -1,4 +1,6 @@
+using FMODUnity;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class TaskLight : MonoBehaviour
@@ -14,6 +16,7 @@ public class TaskLight : MonoBehaviour
     public bool on;
     public float fadeAmount;
 
+    private EventReference completionSound;
     private float flashRate;
     private float counter;
     private bool isComplete;
@@ -24,6 +27,7 @@ public class TaskLight : MonoBehaviour
     {
         rend = GetComponent<MeshRenderer>();
         flashRate = Random.value * .4f + .6f;
+        completionSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TaskComplete");
     }
     public void SetCompletion(bool state)
     {
@@ -35,7 +39,8 @@ public class TaskLight : MonoBehaviour
         }
         else if (isComplete)
         {
-            rend.material.SetColor("_EmissionColor", new Color(0.15f, 1f, 0f, 1f));
+            SetColor(eColor.Green);
+            AudioManager.ins.PlayOneShot(completionSound, transform.position);
         }
     }
     void FlashRed()
@@ -57,6 +62,7 @@ public class TaskLight : MonoBehaviour
         else if (isComplete)
         {
             SetColor(eColor.Green);
+            on = true;
         }
     }
     public void SetColor(eColor lightColor)

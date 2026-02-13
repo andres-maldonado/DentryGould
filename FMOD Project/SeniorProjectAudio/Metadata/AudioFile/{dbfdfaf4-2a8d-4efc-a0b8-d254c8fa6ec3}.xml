@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{dbfdfaf4-2a8d-4efc-a0b8-d254c8fa6ec3}">
+		<property name="assetPath">
+			<value>ReceiptPrint.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1357291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b8beede7-2631-4354-85c6-db186a9f0f72}</destination>
+		</relationship>
+	</object>
+</objects>

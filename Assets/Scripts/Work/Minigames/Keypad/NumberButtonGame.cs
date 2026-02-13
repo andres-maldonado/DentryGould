@@ -75,5 +75,6 @@ public class NumberButtonGame : Minigame
         UpdateDisplay();
         thisAnswer = Instantiate(answerTemplate, t);
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
+        taskLight.SetCompletion(false);
     }
 }

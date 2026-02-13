@@ -44,7 +44,6 @@ public class WorkCamControl : MonoBehaviour
     {
         if (!zoomedIn)
         {
-            Debug.Log("left");
             if (currentPanel > minPanelNum)
             {
                 newPosition = currentPanel * 60 - turnDegrees;
@@ -90,7 +89,6 @@ public class WorkCamControl : MonoBehaviour
     {
         if (!zoomedIn)
         {
-            Debug.Log("right");
             if (currentPanel < maxPanelNum)
             {
                 newPosition = currentPanel * 60 + turnDegrees;
@@ -187,7 +185,6 @@ public class WorkCamControl : MonoBehaviour
     }
     private void Turn()
     {
-        Debug.Log("turn");
         if (transform.eulerAngles.y - newPosition < turnSnapPoint && transform.eulerAngles.y - newPosition > -turnSnapPoint)
         {
             transform.eulerAngles = new Vector3(0, newPosition % 360, 0);

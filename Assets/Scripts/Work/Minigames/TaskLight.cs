@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class TaskLight : MonoBehaviour
@@ -21,10 +22,9 @@ public class TaskLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = lamp.GetComponent<Renderer>();
-        SetColor(eColor.Red);
+        rend = GetComponent<MeshRenderer>();
+        flashRate = Random.value * .4f + .6f;
     }
-
     public void SetCompletion(bool state)
     {
         isComplete = state;
@@ -33,17 +33,15 @@ public class TaskLight : MonoBehaviour
             flashRate = Random.value * .4f + .6f;
             counter = flashRate;
         }
-        if (isComplete)
+        else if (isComplete)
         {
-            on = true;
-            SetColor(eColor.Green);
+            rend.material.SetColor("_EmissionColor", new Color(0.15f, 1f, 0f, 1f));
         }
     }
-
     void FlashRed()
     {
         counter -= Time.deltaTime;
-        if (counter <= flashRate)
+        if (counter <= 0)
         {
             on = !on;
             SetColor(eColor.Red);
@@ -56,6 +54,10 @@ public class TaskLight : MonoBehaviour
         {
             FlashRed();
         }
+        else if (isComplete)
+        {
+            SetColor(eColor.Green);
+        }
     }
     public void SetColor(eColor lightColor)
     {
@@ -63,14 +65,14 @@ public class TaskLight : MonoBehaviour
         {
             switch (lightColor)
             {
+                case eColor.Green:
+                    rend.material.SetColor("_EmissionColor", new Color(0.15f, 1f, 0f, 1f));
+                    break;
                 case eColor.Red:
                     rend.material.SetColor("_EmissionColor", new Color(1f, 0f, 0.02f, 1f));
                     break;
                 case eColor.Yellow:
                     rend.material.SetColor("_EmissionColor", new Color(1f, 0.65f, 0f, 1f));
-                    break;
-                case eColor.Green:
-                    rend.material.SetColor("_EmissionColor", new Color(0.15f, 1f, 0f, 1f));
                     break;
                 case eColor.Blue:
                     rend.material.SetColor("_EmissionColor", new Color(0f, 0.33f, 1f, 1f));

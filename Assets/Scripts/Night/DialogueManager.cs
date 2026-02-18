@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextAsset dialogueFile;
     [SerializeField] TextMeshProUGUI textBox;
     [SerializeField] float writeSpeed;
-    public float moveDistance;
+    public float textGap;
     public float moveSpeed;
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] SpriteRenderer leftSprite;
@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     private bool quickFinish;
     private Queue<string> dialogueLines = new Queue<String>();
 
-    public delegate void MoveBoxesUp();
+    public delegate void MoveBoxesUp(float moveAmount);
     public MoveBoxesUp moveBoxesUp;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -78,10 +78,10 @@ public class DialogueManager : MonoBehaviour
     {
 
     }
-
+    Vector2 heightShift;
     private void ContinueDialogue()
     {
-        Debug.Log("isWriting: " + isWriting);
+        //Debug.Log("isWriting: " + isWriting);
         if (!isWriting)
         {
             //textBox.text += "\n"; (if one box)
@@ -93,20 +93,51 @@ public class DialogueManager : MonoBehaviour
                 }
                 else { Debug.Log("shits null ig"); }
             }*/
+            currentLine = dialogueLines.Dequeue();
+            //lineBox.GetComponentInChildren<TextMeshProUGUI>().text = "<alpha=#00>" + currentLine;
+            newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
+            textBoxes.Add(newBox);
+            newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
+            newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine);
+            newBoxText.ForceMeshUpdate();
+            //Debug.Log(newBoxText.GetPreferredValues(currentLine, 546.9998f, 0f));
+            Debug.Log(newBoxText.GetRenderedValues(true));
+            heightShift = new Vector2 (0, newBoxText.GetRenderedValues(true).y + textGap);
+            content.GetComponent<RectTransform>().sizeDelta += heightShift;
             if (moveBoxesUp != null)
             {
-                moveBoxesUp.Invoke();
+                moveBoxesUp.Invoke(heightShift.y);
             }
-            content.GetComponent<RectTransform>().sizeDelta += new Vector2(0, moveDistance);
-            newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
-            newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
-            textBoxes.Add(newBox);
-            currentLine = dialogueLines.Dequeue();
+            textSpawn.transform.localPosition -= new Vector3(0, heightShift.y, 0)/2;
+            newBoxText.text = null;
             letterCount = 0;
             //UnityEngine.Debug.Log(currentLine[letterCount]);
             isWriting = true;
         }
         else {quickFinish = true;}
+    }
+
+    private string StripAllTags(string line)
+    {
+        string strippedLine = null;
+        bool deleteMode = false;
+        for (int i = 0; i < line.Length; i++)
+        {
+            if (line[i] != '<' && !deleteMode)
+            {
+                strippedLine += line[i];
+            }
+            else if (line[i] == '<')
+            {
+                deleteMode = true;
+            }
+            if (line[i] == '>')
+            {
+                deleteMode = false;
+            }
+        }
+        Debug.Log(strippedLine);
+        return strippedLine;
     }
 
     private void ReadCustomTag(string tag)
@@ -117,7 +148,7 @@ public class DialogueManager : MonoBehaviour
             if (tag.StartsWith("L"))
             {
                 tag = tag.Remove(0, 1);
-                Debug.Log(tag);
+                //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
                 GameObject newPortrait = Instantiate(portraitPrefab, leftSprite.transform.position, leftSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
@@ -125,7 +156,7 @@ public class DialogueManager : MonoBehaviour
             else if (tag.StartsWith("R"))
             {
                 tag = tag.Remove(0, 1);
-                Debug.Log(tag);
+                //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
                 GameObject newPortrait = Instantiate(portraitPrefab, rightSprite.transform.position, rightSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
@@ -144,7 +175,8 @@ public class DialogueManager : MonoBehaviour
             letterCount = currentLine.Length;
             isWriting = false;
             quickFinish = false;
-            Debug.Log("YOMAMA");
+            //Debug.Log("YOMAMA");
+            //Debug.Log(newBoxText.GetRenderedValues(true));
         }
         else
         {
@@ -158,8 +190,8 @@ public class DialogueManager : MonoBehaviour
                 for (int i = letterCount; true; i++)
                 {
                     currentTag += currentLine[i];
-                    Debug.Log(currentTag + ", " + i);
-                    Debug.Log(currentTag.Contains('>'));
+                    //Debug.Log(currentTag + ", " + i);
+                    //Debug.Log(currentTag.Contains('>'));
                     if (currentTag.Contains(">"))
                     {
                         letterCount += currentTag.Length;
@@ -172,7 +204,7 @@ public class DialogueManager : MonoBehaviour
                         {
                             currentTag = currentTag.Remove(0, 2);
                             currentTag = currentTag.Remove(currentTag.Length - 1, 1);
-                            Debug.Log(currentTag);
+                            //Debug.Log(currentTag);
                             ReadCustomTag(currentTag);
                         }
                         break;

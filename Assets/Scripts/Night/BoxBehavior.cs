@@ -7,18 +7,16 @@ public class BoxBehavior : MonoBehaviour
     private DialogueManager manager;
     [SerializeField] Animator portraitAnim;
     private float newHeight;
-    private float moveDistance;
     private float moveSpeed;
     private bool isMoving;
     private bool isMain = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         StartCoroutine(FindPortrait());
         manager = GameObject.FindWithTag("DialogueManager").GetComponent<DialogueManager>();
         manager.moveBoxesUp += MoveUp;
-        moveDistance = manager.moveDistance;
         moveSpeed = manager.moveSpeed;
     }
 
@@ -45,14 +43,14 @@ public class BoxBehavior : MonoBehaviour
         }
     }
 
-    public void MoveUp()
+    public void MoveUp(float moveAmount)
     {
         if (isMain && portraitAnim != null)
         {
             portraitAnim.SetBool("isMain", false);
             isMain = false;
         }
-        newHeight = transform.localPosition.y + moveDistance;
+        newHeight = transform.localPosition.y + moveAmount;
         isMoving = true;
     }
 }

@@ -209,6 +209,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knob2
       objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7287680307464937182, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
       propertyPath: game
       value: 
@@ -290,6 +298,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knob3
       objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7287680307464937182, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
       propertyPath: game
       value: 
@@ -370,6 +386,14 @@ PrefabInstance:
     - target: {fileID: 4108433507021343814, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
       propertyPath: m_Name
       value: Knob1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268892631003040472, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7287680307464937182, guid: 9dd267541dc92194eb89f0e94663b367, type: 3}
       propertyPath: game

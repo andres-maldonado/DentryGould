@@ -36,7 +36,7 @@ public abstract class WorkButton : MonoBehaviour, IPointerEnterHandler, IPointer
         {
             anim.Play("ButtonClick", -1, 0);
             AudioManager.ins.PlayOneShot(buttonSound, transform.position);
-            Debug.Log(buttonSound.Path);
+            //Debug.Log(buttonSound.Path);
             if (canClick)
             {
                 OnClick();

@@ -7,8 +7,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
-using static UnityEditor.Progress;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 //using FMODUnity;
 
 public class DialogueManager : MonoBehaviour
@@ -18,12 +16,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] float writeSpeed;
     public float textGap;
     public float moveSpeed;
+    public float fadeTime;
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] SpriteRenderer leftSprite;
     [SerializeField] SpriteRenderer rightSprite;
     [SerializeField] Sprite[] portraits;
     [SerializeField] GameObject portraitPrefab;
     [SerializeField] GameObject lineBox;
+    [SerializeField] Image backgroundSprite;
     private GameObject content;
     private Transform textSpawn;
     private InputActionMap inputMap;
@@ -36,8 +36,11 @@ public class DialogueManager : MonoBehaviour
     private string currentLine;
     private string currentTag;
     private float counter;
+    private float backgroundDarkness;
+    private float backgroundAlpha;
     private int letterCount = 1;
     private int totalLetterCount;
+    private bool isFadingIn;
     private bool isWriting;
     private bool readingTag;
     private bool quickFinish;
@@ -64,7 +67,9 @@ public class DialogueManager : MonoBehaviour
             //Debug.Log(dialogueByLine[i]);
             dialogueLines.Enqueue(dialogueByLine[i]);
         }
-        ContinueDialogue();
+        backgroundDarkness = backgroundSprite.color.a;
+        backgroundSprite.color = new Color(0, 0, 0, 0);
+        isFadingIn = true;
     }
     /* public void Set(string fileName, Sprite speakerImage, int tpl = 25)
     {
@@ -73,6 +78,20 @@ public class DialogueManager : MonoBehaviour
         speakerSprite.sprite = speakerImage;
         writeSpeed = tpl;
     }*/
+
+    void FadeIn()
+    {
+        if (backgroundSprite.color.a < backgroundDarkness)
+        {
+            backgroundSprite.color += new Color(0, 0, 0, (backgroundDarkness / fadeTime) * Time.deltaTime);
+        }
+        if (backgroundSprite.color.a >= backgroundDarkness)
+        {
+            backgroundSprite.color = new Color(0, 0, 0, backgroundDarkness);
+            isFadingIn = false;
+            ContinueDialogue();
+        }
+    }
 
     public void WriteLine(int line)
     {
@@ -100,7 +119,6 @@ public class DialogueManager : MonoBehaviour
             newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
             newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine);
             newBoxText.ForceMeshUpdate();
-            //Debug.Log(newBoxText.GetPreferredValues(currentLine, 546.9998f, 0f));
             Debug.Log(newBoxText.GetRenderedValues(true));
             heightShift = new Vector2 (0, newBoxText.GetRenderedValues(true).y + textGap);
             content.GetComponent<RectTransform>().sizeDelta += heightShift;
@@ -109,6 +127,8 @@ public class DialogueManager : MonoBehaviour
                 moveBoxesUp.Invoke(heightShift.y);
             }
             textSpawn.transform.localPosition -= new Vector3(0, heightShift.y, 0)/2;
+            leftSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
+            rightSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
             newBoxText.text = null;
             letterCount = 0;
             //UnityEngine.Debug.Log(currentLine[letterCount]);
@@ -150,7 +170,7 @@ public class DialogueManager : MonoBehaviour
                 tag = tag.Remove(0, 1);
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                GameObject newPortrait = Instantiate(portraitPrefab, leftSprite.transform.position, leftSprite.transform.rotation, newBox.transform);
+                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y-(heightShift.y-textGap)/1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
             }
             else if (tag.StartsWith("R"))
@@ -158,7 +178,7 @@ public class DialogueManager : MonoBehaviour
                 tag = tag.Remove(0, 1);
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                GameObject newPortrait = Instantiate(portraitPrefab, rightSprite.transform.position, rightSprite.transform.rotation, newBox.transform);
+                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
             }
         }
@@ -187,6 +207,7 @@ public class DialogueManager : MonoBehaviour
             }
             if (readingTag)
             {
+                //Debug.Log("I'm reading a tag");
                 for (int i = letterCount; true; i++)
                 {
                     currentTag += currentLine[i];
@@ -207,12 +228,12 @@ public class DialogueManager : MonoBehaviour
                             //Debug.Log(currentTag);
                             ReadCustomTag(currentTag);
                         }
+                        //Debug.Log("Read Tag: " + currentTag);
                         break;
                     }
                 }
             }
-
-            if ((counter > 1 / writeSpeed && !readingTag) || currentLine[letterCount] == ' ' || quickFinish)
+            else if ((counter > 1 / writeSpeed && !readingTag) || currentLine[letterCount] == ' ' || quickFinish)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
@@ -227,6 +248,10 @@ public class DialogueManager : MonoBehaviour
         if (isWriting)
         {
             WriteText();
+        }
+        if (isFadingIn)
+        {
+            FadeIn();
         }
     }
 }

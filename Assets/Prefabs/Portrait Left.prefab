@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1335292193254288918}
   - component: {fileID: 3338368464503854591}
   - component: {fileID: 5172213442668770734}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Portrait Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

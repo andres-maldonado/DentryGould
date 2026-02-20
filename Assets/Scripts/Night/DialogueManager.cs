@@ -18,12 +18,13 @@ public class DialogueManager : MonoBehaviour
     public float moveSpeed;
     public float fadeTime;
     [SerializeField] InputActionAsset inputAction;
-    [SerializeField] SpriteRenderer leftSprite;
-    [SerializeField] SpriteRenderer rightSprite;
-    [SerializeField] Sprite[] portraits;
+    [SerializeField] Transform leftSprite;
+    [SerializeField] Transform rightSprite;
+    [SerializeField] RuntimeAnimatorController portraitSizer;
+    [SerializeField] RuntimeAnimatorController[] portraits;
     [SerializeField] GameObject portraitPrefab;
     [SerializeField] GameObject lineBox;
-    [SerializeField] Image backgroundSprite;
+    [SerializeField] SpriteRenderer fadeInSprite;
     private GameObject content;
     private Transform textSpawn;
     private InputActionMap inputMap;
@@ -36,8 +37,7 @@ public class DialogueManager : MonoBehaviour
     private string currentLine;
     private string currentTag;
     private float counter;
-    private float backgroundDarkness;
-    private float backgroundAlpha;
+    private float fadeInAlpha;
     private int letterCount = 1;
     private int totalLetterCount;
     private bool isFadingIn;
@@ -67,8 +67,6 @@ public class DialogueManager : MonoBehaviour
             //Debug.Log(dialogueByLine[i]);
             dialogueLines.Enqueue(dialogueByLine[i]);
         }
-        backgroundDarkness = backgroundSprite.color.a;
-        backgroundSprite.color = new Color(0, 0, 0, 0);
         isFadingIn = true;
     }
     /* public void Set(string fileName, Sprite speakerImage, int tpl = 25)
@@ -81,13 +79,9 @@ public class DialogueManager : MonoBehaviour
 
     void FadeIn()
     {
-        if (backgroundSprite.color.a < backgroundDarkness)
+        if (fadeInSprite.color.a <= 0)
         {
-            backgroundSprite.color += new Color(0, 0, 0, (backgroundDarkness / fadeTime) * Time.deltaTime);
-        }
-        if (backgroundSprite.color.a >= backgroundDarkness)
-        {
-            backgroundSprite.color = new Color(0, 0, 0, backgroundDarkness);
+            fadeInSprite.color = new Color(0, 0, 0, 0);
             isFadingIn = false;
             ContinueDialogue();
         }
@@ -170,8 +164,9 @@ public class DialogueManager : MonoBehaviour
                 tag = tag.Remove(0, 1);
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y-(heightShift.y-textGap)/1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
-                newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
+                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
+                newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
             else if (tag.StartsWith("R"))
             {
@@ -179,7 +174,8 @@ public class DialogueManager : MonoBehaviour
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
                 GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
-                newPortrait.GetComponent<SpriteRenderer>().sprite = portraits[portraitIndex];
+                newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
         }
     }
@@ -243,7 +239,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (isWriting)
         {

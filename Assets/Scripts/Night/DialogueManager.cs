@@ -55,7 +55,6 @@ public class DialogueManager : MonoBehaviour
         newBoxText = null;
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
-        UnityEngine.Debug.Log(continueKey);
         continueKey.performed += _ => ContinueDialogue();
         continueKey.Enable();
         textSpawn = GameObject.Find("TextSpawn").GetComponent<Transform>();

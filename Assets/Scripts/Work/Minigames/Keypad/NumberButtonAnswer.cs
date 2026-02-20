@@ -17,7 +17,6 @@ public class NumberButtonAnswer : Answer
     }
     public override void DisplayAnswer(Sprite sprite, Color color, string answer)
     {
-        Debug.Log("displaying...");
         icon.sprite = sprite;
         icon.color = color;
         answerDisplay.text = answer;

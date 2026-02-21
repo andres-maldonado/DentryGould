@@ -48,7 +48,6 @@ public class LoudspeakerDialogue : MonoBehaviour
     }
     private void WriteText()
     {
-        Debug.Log("Current Line Length: " + currentLine.Length + ", Letter Count: " + letterCount);
         //Debug.Log("LetterCount: " + letterCount + ", ReadingTag: " + readingTag +", isWriting: "+isWriting);
         counter += Time.deltaTime;
         //UnityEngine.Debug.Log("Counter: " + counter + ", Letters Displayed: " + letterCount);
@@ -64,7 +63,6 @@ public class LoudspeakerDialogue : MonoBehaviour
         else if ((counter > 1 / writeSpeed) || currentLine[letterCount] == ' ' || quickFinish)
         {
             bottomText.text += currentLine.Substring(letterCount, 1);
-            Debug.Log("added "+currentLine.Substring(letterCount, 1));
             letterCount++;
             counter = 0;
         }
@@ -84,6 +82,5 @@ public class LoudspeakerDialogue : MonoBehaviour
         currentLine = dialogueLines.Dequeue();
         isWriting = true;
         letterCount = 0;
-        Debug.Log("Start writing again: " + currentLine);
     }
 }

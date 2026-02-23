@@ -57,4 +57,10 @@ public class FinalButtonAnimation : MonoBehaviour
         rotateAnim.enabled = false;
         workCamControl.LockControls(false);
     }
+
+    void DoorLeave()
+    {
+        rotateAnim.enabled = true;
+        rotateAnim.Play("DoorLeave");
+    }
 }

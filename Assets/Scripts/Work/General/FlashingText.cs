@@ -22,7 +22,6 @@ public class FlashingText : MonoBehaviour
 
     private void Flash()
     {
-        Debug.Log("counting");
         counter -= Time.deltaTime;
         if (counter <= 0)
         {

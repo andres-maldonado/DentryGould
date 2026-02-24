@@ -21,30 +21,30 @@ public class ColorButtonAnswer : Answer
         icon.color = color;
         index = 0;
         answerByte = (byte)int.Parse(answer);
-        Debug.Log("Answer: " + answerByte);
+        //Debug.Log("Answer: " + answerByte);
         if (answerByte > 7)
         {
             buttonSprites[index].sprite = red;
             index++;
-            Debug.Log("Added Red");
+            //Debug.Log("Added Red");
         }
         if (answerByte % 8 > 3)
         {
             buttonSprites[index].sprite = yellow;
             index++;
-            Debug.Log("Added Yellow");
+            //Debug.Log("Added Yellow");
         }
         if (answerByte % 4 > 1)
         {
             buttonSprites[index].sprite = green;
             index++;
-            Debug.Log("Added Green");
+            //Debug.Log("Added Green");
         }
         if (answerByte % 2 == 1)
         {
             buttonSprites[index].sprite = blue;
             index++;
-            Debug.Log("Added Blue");
+            //Debug.Log("Added Blue");
         }
     }
 }

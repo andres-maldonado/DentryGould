@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class DoorButton : MonoBehaviour, IPointerDownHandler
 {
     public Animator doorAnim;
+    [SerializeField] int eveningScene;
 
     public bool canExit;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

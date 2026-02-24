@@ -35,11 +35,11 @@ public class MinigameManager : MonoBehaviour
     public void AddToList(Minigame minigame)
     {
         minigames.Add(minigame);
-        Debug.Log("Added "+minigame.name); // TESTING ONLY
+        //Debug.Log("Added "+minigame.name); // TESTING ONLY
     }
     public void GenerateTasks()
     {
-        Debug.Log("Tasks to Generate: " + gameCount);
+        //Debug.Log("Tasks to Generate: " + gameCount);
         games.Clear();
         foreach (Minigame m in minigames)
         {

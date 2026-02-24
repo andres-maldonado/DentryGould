@@ -8,6 +8,7 @@ public class FinalButtonAnimation : MonoBehaviour
     [SerializeField] Animator camAnim;
     [SerializeField] Animator ticketAnim;
     [SerializeField] WorkCamControl workCamControl;
+    [SerializeField] int eveningScene;
     private MinigameManager minigameManager;
     private EventReference thudSound;
     private EventReference ticketSound;
@@ -62,5 +63,9 @@ public class FinalButtonAnimation : MonoBehaviour
     {
         rotateAnim.enabled = true;
         rotateAnim.Play("DoorLeave");
+    }
+    void ContinueToEvening()
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, eveningScene);
     }
 }

@@ -16,7 +16,7 @@ public abstract class Minigame : MonoBehaviour
     private Panel panel;
     void Awake()
     {
-        Debug.Log("ok we up");
+        //Debug.Log("ok we up");
         panel = GetComponentInParent<Panel>();
         minigameColor = panel.color;
         active = true; //TESTING

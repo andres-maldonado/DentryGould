@@ -12,7 +12,7 @@ public class NumberButton : WorkButton
     {
         game = transform.parent.GetComponentInParent<NumberButtonGame>();
         keyNum = GetComponentInChildren<TextMeshPro>().text.ToCharArray()[0];
-        Debug.Log(keyNum);
+        //Debug.Log(keyNum);
     }
 
     // Update is called once per frame

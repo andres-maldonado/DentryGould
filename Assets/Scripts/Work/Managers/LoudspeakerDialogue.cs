@@ -18,8 +18,13 @@ public class LoudspeakerDialogue : MonoBehaviour
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void Awake()
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
+        bottomText.text = null;
+    }
+    void StartWriting()
     {
         dialogueByLine = dialogueFile.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++)

@@ -7,7 +7,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] WorkCamControl workCamControl;
     [SerializeField] float fadeInTime;
 
-    private bool isFadingIn, isFadingOut;
+    public bool isFadingIn, isFadingOut;
     private float currentFadeTime;
     private float currentAlpha;
     private int sceneToLoad;

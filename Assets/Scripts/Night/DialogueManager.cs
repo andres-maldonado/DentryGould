@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 //using FMODUnity;
 
 public class DialogueManager : MonoBehaviour
@@ -25,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject portraitPrefab;
     [SerializeField] GameObject lineBox;
     [SerializeField] SpriteRenderer fadeInSprite;
+    [SerializeField] int sceneToLoad;
     private GameObject content;
     private Transform textSpawn;
     private InputActionMap inputMap;
@@ -33,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     public List<GameObject> textBoxes = new List<GameObject>();
     private GameObject newBox;
     private TextMeshProUGUI newBoxText;
+    private SceneManager sceneManager;
     private string[] dialogueByLine;
     private string currentLine;
     private string currentTag;
@@ -40,10 +43,10 @@ public class DialogueManager : MonoBehaviour
     private float fadeInAlpha;
     private int letterCount = 1;
     private int totalLetterCount;
-    private bool isFadingIn;
     private bool isWriting;
     private bool readingTag;
     private bool quickFinish;
+    private bool end;
     private Queue<string> dialogueLines = new Queue<String>();
 
     public delegate void MoveBoxesUp(float moveAmount);
@@ -56,9 +59,12 @@ public class DialogueManager : MonoBehaviour
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
         continueKey.performed += _ => ContinueDialogue();
-        continueKey.Enable();
+        continueKey.Disable();
         textSpawn = GameObject.Find("TextSpawn").GetComponent<Transform>();
         content = GameObject.Find("Content");
+        sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
+        sceneManager.startScene += Begin;
+
 
         dialogueByLine = dialogueFile.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++) 
@@ -66,7 +72,6 @@ public class DialogueManager : MonoBehaviour
             //Debug.Log(dialogueByLine[i]);
             dialogueLines.Enqueue(dialogueByLine[i]);
         }
-        isFadingIn = true;
     }
     /* public void Set(string fileName, Sprite speakerImage, int tpl = 25)
     {
@@ -76,14 +81,10 @@ public class DialogueManager : MonoBehaviour
         writeSpeed = tpl;
     }*/
 
-    void FadeIn()
+    void Begin()
     {
-        if (fadeInSprite.color.a <= 0)
-        {
-            fadeInSprite.color = new Color(0, 0, 0, 0);
-            isFadingIn = false;
-            ContinueDialogue();
-        }
+        continueKey.Enable();
+        ContinueDialogue();
     }
 
     public void WriteLine(int line)
@@ -105,29 +106,44 @@ public class DialogueManager : MonoBehaviour
                 }
                 else { Debug.Log("shits null ig"); }
             }*/
-            currentLine = dialogueLines.Dequeue();
-            //lineBox.GetComponentInChildren<TextMeshProUGUI>().text = "<alpha=#00>" + currentLine;
-            newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
-            textBoxes.Add(newBox);
-            newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
-            newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine);
-            newBoxText.ForceMeshUpdate();
-            Debug.Log(newBoxText.GetRenderedValues(true));
-            heightShift = new Vector2 (0, newBoxText.GetRenderedValues(true).y + textGap);
-            content.GetComponent<RectTransform>().sizeDelta += heightShift;
-            if (moveBoxesUp != null)
+            if (dialogueLines.Count > 0)
             {
-                moveBoxesUp.Invoke(heightShift.y);
+                currentLine = dialogueLines.Dequeue();
+                //lineBox.GetComponentInChildren<TextMeshProUGUI>().text = "<alpha=#00>" + currentLine;
+                newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
+                textBoxes.Add(newBox);
+                newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
+                newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine);
+                newBoxText.ForceMeshUpdate();
+                Debug.Log(newBoxText.GetRenderedValues(true));
+                heightShift = new Vector2(0, newBoxText.GetRenderedValues(true).y + textGap);
+                content.GetComponent<RectTransform>().sizeDelta += heightShift;
+                if (moveBoxesUp != null)
+                {
+                    moveBoxesUp.Invoke(heightShift.y);
+                }
+                textSpawn.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
+                leftSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
+                rightSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
+                newBoxText.text = null;
+                letterCount = 0;
+                //UnityEngine.Debug.Log(currentLine[letterCount]);
+                isWriting = true;
             }
-            textSpawn.transform.localPosition -= new Vector3(0, heightShift.y, 0)/2;
-            leftSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
-            rightSprite.transform.localPosition -= new Vector3(0, heightShift.y, 0) / 2;
-            newBoxText.text = null;
-            letterCount = 0;
-            //UnityEngine.Debug.Log(currentLine[letterCount]);
-            isWriting = true;
         }
-        else {quickFinish = true;}
+        else if (isWriting && !quickFinish)
+        {
+            quickFinish = true;
+        }
+        if (dialogueLines.Count == 0 && !end)
+        {
+            end = true;
+            Debug.Log("End=true");
+        }
+        else if (end && !isWriting && !sceneManager.isFadingOut)
+        {
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad);
+        }
     }
 
     private string StripAllTags(string line)
@@ -243,10 +259,6 @@ public class DialogueManager : MonoBehaviour
         if (isWriting)
         {
             WriteText();
-        }
-        if (isFadingIn)
-        {
-            FadeIn();
         }
     }
 }

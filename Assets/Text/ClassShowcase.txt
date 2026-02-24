@@ -5,4 +5,4 @@
 <align="left"><$PL03><color=#5c9aff>I wouldn't worry too much about the expectations of those around you. After all, the true joy of life is found within.
 <align="left"><$PL03><color=#5c9aff>If you can find inner happiness from fulfilling your own personal creative goals, no one's derisive words will ever bring you down.
 <align="left"><$PL03><color=#5c9aff>You're the master of your own fate. Never forget that.
-<align="right"><$PR04><color="green">Hello class, Mr. Brown here. Hope you're all having a wonderful day!
+<align="right"><$PR00><color="green">Hello class, Mr. Brown here. Hope you're all having a wonderful day!

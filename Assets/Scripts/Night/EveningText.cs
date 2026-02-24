@@ -22,6 +22,7 @@ public class EveningText : MonoBehaviour
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
         text = gameObject.GetComponent<TextMeshPro>();
+        text.text = null;
     }
     void StartWriting()
     {

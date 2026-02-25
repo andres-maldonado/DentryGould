@@ -19,6 +19,8 @@ public class LoudspeakerDialogue : MonoBehaviour
     private bool isWriting;
     private bool quickFinish;
 
+    public delegate void EndWriting();
+    public EndWriting endWriting;
     private void Awake()
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
@@ -83,9 +85,18 @@ public class LoudspeakerDialogue : MonoBehaviour
     }
     IEnumerator BlankTime()
     {
-        yield return new WaitForSeconds(blankTime);
-        currentLine = dialogueLines.Dequeue();
-        isWriting = true;
-        letterCount = 0;
+        Debug.Log("Dialogue Lines Left: "+dialogueLines.Count);
+        if (dialogueLines.Count > 0 )
+        {
+            yield return new WaitForSeconds(blankTime);
+            currentLine = dialogueLines.Dequeue();
+            isWriting = true;
+            letterCount = 0;
+        }
+        else
+        {
+            endWriting.Invoke();
+            Debug.Log("end");
+        }
     }
 }

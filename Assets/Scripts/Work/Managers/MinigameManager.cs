@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class MinigameManager : MonoBehaviour
+public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
 {
     [Header("Testing")]
     public bool testingGame;
@@ -11,19 +11,37 @@ public class MinigameManager : MonoBehaviour
     [Header("Stats")]
     public int gameCount;
     public int successes;
+    public int quota;
+    public float shiftTimer;
+
+    [Header("Difficulty Ramp")]
+    public List<int> completeCount = new List<int>();
+    public List<int> taskCount = new List<int>();
+    public Dictionary<int, int> countChange = new Dictionary<int, int>();
 
     [Header("Objects")]
     [SerializeField] FinalButton finalButton;
     [SerializeField] float pause;
+    [SerializeField] TowerIntensity tower;
 
     [SerializeField] GameObject answerSheet;
     [SerializeField] List<Transform> answers = new List<Transform>();
     [SerializeField] List<Minigame> minigames = new List<Minigame>();
     public List<int> games = new List<int>();
     private int rg;
+    private float counter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        for (int i = 0; i < completeCount.Count; i++)
+        {
+            countChange.Add(completeCount[i], taskCount[i]);
+        }
+    }
+
+    public void BeginShift()
+    {
+        counter = shiftTimer;
         GenerateTasks();
     }
 
@@ -72,6 +90,7 @@ public class MinigameManager : MonoBehaviour
                 gamesCompleted++;
             }
         }
+        tower.UpdateIntensity(gamesCompleted);
         Debug.Log("Games Completed: " + gamesCompleted + ", Minigame Count: " + minigames.Count);
         if (gamesCompleted == minigames.Count)
         {
@@ -88,6 +107,7 @@ public class MinigameManager : MonoBehaviour
             Destroy(answers[i].GetChild(0).gameObject);
         }
         successes++;
+        /*
         switch (successes)
         {
             case 2:
@@ -100,6 +120,16 @@ public class MinigameManager : MonoBehaviour
                 gameCount = 4;
                 break;
         }
+        */
+        foreach (KeyValuePair<int, int> i in countChange)
+        {
+            if (successes == i.Key)
+            {
+                gameCount = i.Value;
+                break;
+            }
+        }
+        tower.UpdateIntensity(0);
         finalButton.Deactivate();
         StartCoroutine(BeginNewWave());
     }
@@ -108,5 +138,13 @@ public class MinigameManager : MonoBehaviour
         GenerateTasks();
         yield return new WaitForSeconds(pause);
         answerSheet.SetActive(true);
+    }
+    public void OnBeforeSerialize()
+    {
+
+    }
+    public void OnAfterDeserialize()
+    {
+        
     }
 }

@@ -137,7 +137,7 @@ public class WorkCamControl : MonoBehaviour
     }
     private void ZoomIn()
     {
-        if (!zoomedIn)
+        if (!zoomedIn && currentPanel != 0)
         {
             if (atTicket)
             {

@@ -1,5 +1,5 @@
 Alright, welcome to your first day at Dentry-Gould, operator. I'm gonna be your manager for today.
-They shuffle managers a lot though, so don't get too attached!
+They shuffle managers a lot though, so don't get too attached.
 Oh, and I can't hear you, so if you were gonna introduce yourself, don't worry about it.
 Anyway, let me give you a brief rundown of what your job is here.
 Use the A and D buttons to turn left and right. You'll see a bunch of panels around you.
@@ -9,8 +9,8 @@ You can hold Right Click to look at the ticket at any time in case you forget wh
 Those images and text represent inputs. As an operator, your job is to enter those inputs in their respective panels. It's easy!
 When you've entered every input on your ticket, hit that big red button on the console over there to finalize the task and receive a new ticket.
 That's all there is to it. Oh, well and the time limit. 
-The company-appointed watch on your wrist will show you how much time you have to complete your task.
-Failing to complete a task before time runs out will result in termination.
-You've got plenty of time though, so you'll be fine. “Try not to think about it” is my advice.
+Each shift, you will have a quota to meet. To disincentivize slacking, I am unable to inform you what that quota is before your shift ends.
+Failing to complete your quota before your shift ends will result in termination.
+You've got plenty of time though, so you'll be fine. "Try not to think about it" is my advice.
 Do you have any questions about our break policy?
 Great! Press that big red button to begin, and good luck!

@@ -21,13 +21,17 @@ public class DoorButton : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!canExit)
+        if (eventData.button == PointerEventData.InputButton.Left)
         {
-            doorAnim.Play("DoorLocked", 0, 0);
-        }
-        if (canExit)
-        {
-            doorAnim.Play("DoorExit");
+            if (!canExit)
+            {
+                doorAnim.Play("DoorLocked", 0, 0);
+            }
+            if (canExit)
+            {
+                doorAnim.Play("DoorExit");
+            }
+
         }
     }
 }

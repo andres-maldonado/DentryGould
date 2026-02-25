@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Android;
 
 public class ControlAnimateLights : MonoBehaviour
 {
@@ -9,15 +10,21 @@ public class ControlAnimateLights : MonoBehaviour
     public float interval = 1f;
     public float startTime = 0;
     private int result;
+    private float counter;
     void Start()
     {
-        InvokeRepeating("Run", startTime, interval);
+        Invoke("Run", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        counter -= Time.deltaTime;
+        if (counter <= 0 )
+        {
+            Run();
+            counter = interval;
+        }
     }
 
     void Run()

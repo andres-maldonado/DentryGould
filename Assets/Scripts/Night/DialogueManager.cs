@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 //using FMODUnity;
 
 public class DialogueManager : MonoBehaviour
@@ -16,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI textBox;
     [SerializeField] float writeSpeed;
     public float textGap;
-    public float moveSpeed;
+    public float moveSpeed, commaTime, pauseTime;
     public float fadeTime;
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] Transform leftSprite;
@@ -113,9 +114,9 @@ public class DialogueManager : MonoBehaviour
                 newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
                 textBoxes.Add(newBox);
                 newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
-                newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine);
+                newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine, false);
                 newBoxText.ForceMeshUpdate();
-                Debug.Log(newBoxText.GetRenderedValues(true));
+                //Debug.Log(newBoxText.GetRenderedValues(true));
                 heightShift = new Vector2(0, newBoxText.GetRenderedValues(true).y + textGap);
                 content.GetComponent<RectTransform>().sizeDelta += heightShift;
                 if (moveBoxesUp != null)
@@ -138,7 +139,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueLines.Count == 0 && !end)
         {
             end = true;
-            Debug.Log("End=true");
+            //Debug.Log("End=true");
         }
         else if (end && !isWriting && !sceneManager.isFadingOut)
         {
@@ -146,7 +147,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private string StripAllTags(string line)
+    private string StripAllTags(string line, bool customOnly)
     {
         string strippedLine = null;
         bool deleteMode = false;
@@ -158,14 +159,17 @@ public class DialogueManager : MonoBehaviour
             }
             else if (line[i] == '<')
             {
-                deleteMode = true;
+                if (line[i+1] == '$' || !customOnly)
+                {
+                    deleteMode = true;
+                }
             }
             if (line[i] == '>')
             {
                 deleteMode = false;
             }
         }
-        Debug.Log(strippedLine);
+        //Debug.Log(strippedLine);
         return strippedLine;
     }
 
@@ -244,7 +248,19 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-            else if ((counter > 1 / writeSpeed && !readingTag) || currentLine[letterCount] == ' ' || quickFinish)
+            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!') && letterCount < StripAllTags(currentLine, true).Length)
+            {
+                newBoxText.text += currentLine.Substring(letterCount, 1);
+                letterCount++;
+                counter = (1 / writeSpeed) - pauseTime;
+            }
+            else if (currentLine[letterCount] == ',' && letterCount < currentLine.Length)
+            {
+                newBoxText.text += currentLine.Substring(letterCount, 1);
+                letterCount++;
+                counter = (1 / writeSpeed) - commaTime;
+            }
+            else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '!') || quickFinish)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;

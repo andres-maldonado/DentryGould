@@ -8,7 +8,7 @@ public class TowerIntensity : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdateIntensity(0);
+        PowerDown();
     }
 
     // Update is called once per frame
@@ -19,8 +19,15 @@ public class TowerIntensity : MonoBehaviour
 
     public void UpdateIntensity(int completedTasks)
     {
-        roller.speed = rollerFactor * (completedTasks+1);
+        roller.UpdateSpeed(rollerFactor * (completedTasks + 1));
+        flashingLights.on = true;
         flashingLights.interval = lightsFactor / (completedTasks+1);
+        Debug.Log(lightsFactor + " / (" + completedTasks + " + 1 = " + lightsFactor / (completedTasks + 1));
         //whirr sound
+    }
+    public void PowerDown()
+    {
+        roller.UpdateSpeed(0);
+        flashingLights.PowerDown();
     }
 }

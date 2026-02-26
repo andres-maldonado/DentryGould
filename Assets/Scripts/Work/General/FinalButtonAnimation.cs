@@ -35,13 +35,27 @@ public class FinalButtonAnimation : MonoBehaviour
     }
     void PrintTicket()
     {
-        ticketAnim.Play("PrintTicket", -1, 0);
-        AudioManager.ins.PlayOneShot(ticketSound, transform.position);
-
+        if (!minigameManager.isEnding)
+        {
+            ticketAnim.Play("PrintTicket", -1, 0);
+            AudioManager.ins.PlayOneShot(ticketSound, transform.position);
+        }
+        else
+        {
+            Invoke("BackUp", 1);
+        }
     }
     void NewTask()
     {
-        minigameManager.WaveCompletion();
+        Debug.Log(minigameManager.isEnding);
+        if (!minigameManager.isEnding)
+        {
+            minigameManager.WaveCompletion();
+        }
+        else
+        {
+            minigameManager.EndShift();
+        }
         AudioManager.ins.PlayOneShot(thudSound, transform.position);
     }
     void BackUp()

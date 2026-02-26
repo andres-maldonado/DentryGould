@@ -56,7 +56,6 @@ public class SceneManager : MonoBehaviour
             {
                 currentAlpha -= currentFadeTime * Time.deltaTime;
                 fadeSprite.color = new Color32(0, 0, 0, (byte)currentAlpha);
-                Debug.Log(fadeSprite.color.a);
             }
             else
             {

@@ -17,11 +17,11 @@ public class ButtonLamp : MonoBehaviour
     public eColor lightColor;
     public float fadeAmount;
 
-    Renderer rend;
+    MeshRenderer rend;
     // Start is called before the first frame update
     void Start()
     {
-        rend = lamp.GetComponent<Renderer>();
+        rend = lamp.GetComponent<MeshRenderer>();
         SetColor();
     }
 

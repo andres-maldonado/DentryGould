@@ -15,7 +15,7 @@ public class WorkCamControl : MonoBehaviour
     [SerializeField] bool circle;
 
     private InputActionMap inputActionMap;
-    private InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
+    public InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
     private Animator thisAnim;
     private EventReference ticketUpSound, ticketDownSound;
     private bool zoomedIn;

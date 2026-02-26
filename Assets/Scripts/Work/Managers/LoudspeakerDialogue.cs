@@ -6,9 +6,10 @@ using System.Collections;
 
 public class LoudspeakerDialogue : MonoBehaviour
 {
-    [SerializeField] TextAsset dialogueFile;
+    public TextAsset startFile, successFile, failFile;
     [SerializeField] float writeSpeed, pauseTime, blankTime;
     [SerializeField] TextMeshPro bottomText;
+    [SerializeField] DoorButton door;
 
     private string[] dialogueByLine;
     private Queue<string> dialogueLines = new Queue<string>();
@@ -18,23 +19,34 @@ public class LoudspeakerDialogue : MonoBehaviour
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
+    public int success;
 
     public delegate void EndWriting();
     public EndWriting endWriting;
     private void Awake()
     {
-        GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += FirstDialogue;
         bottomText.text = null;
     }
-    void StartWriting()
+    void FirstDialogue()
     {
-        dialogueByLine = dialogueFile.text.Split("\n");
+        StartWriting(startFile);
+    }
+    public void SuccessDialogue(float timer)
+    {
+        counter = (1 / writeSpeed) - timer;
+        StartWriting(successFile);
+    }
+    public void StartWriting(TextAsset file)
+    {
+        dialogueByLine = file.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++)
         {
             //Debug.Log(dialogueByLine[i]);
             dialogueLines.Enqueue(dialogueByLine[i]);
         }
         currentLine = dialogueLines.Dequeue();
+        letterCount = 0;
         bottomText.text = null;
         isWriting = true;
         WriteText();
@@ -96,6 +108,10 @@ public class LoudspeakerDialogue : MonoBehaviour
         else
         {
             endWriting.Invoke();
+            if (success == 1)
+            {
+                door.canExit = true;
+            }
             Debug.Log("end");
         }
     }

@@ -850,6 +850,51 @@ MonoBehaviour:
   maxPanelNum: 3
   minPanelNum: -2
   circle: 1
+  turnLeft:
+    m_Name: Turn Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a801e47c-81a3-4dce-9b88-55b019d8aa02
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  turnRight:
+    m_Name: Turn Right
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f08d9a79-df14-465d-8eb9-f7fa8328a42f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  zoomIn:
+    m_Name: Zoom In
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: efbde2da-b37b-4808-a27d-a1bd23778510
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  zoomOut:
+    m_Name: Zoom Out
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 680d1a46-e933-4292-bc46-2fbc28c52354
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  rClick:
+    m_Name: R Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 42c97c7f-3370-48e9-80ca-c2cd6d4e6308
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   isTurning: 0
 --- !u!95 &249909218
 Animator:
@@ -5562,8 +5607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   roller: {fileID: 1549430585}
   flashingLights: {fileID: 6924413009236515953}
-  rollerFactor: 3
-  lightsFactor: 0.4
+  rollerFactor: 240
+  lightsFactor: 1
 --- !u!1 &1193248922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6301,9 +6346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FinalButtonAnimation
   handAnim: {fileID: 0}
   rotateAnim: {fileID: 0}
-  camAnim: {fileID: 0}
+  camAnim: {fileID: 1563889422}
   ticketAnim: {fileID: 846629523}
-  workCamControl: {fileID: 0}
+  workCamControl: {fileID: 249909217}
   eveningScene: 0
 --- !u!1 &1435235676
 GameObject:
@@ -6974,7 +7019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a66130e13e65448c56fd8867731bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 3
+  rollerSpeed: 1
+  accelerateRate: 0.5
 --- !u!1 &1561354625
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,11 +8065,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89509a7b4f2ec3478006bed7c82f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
+  startFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
+  successFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
+  failFile: {fileID: 0}
   writeSpeed: 80
   pauseTime: 0.03
   blankTime: 0.5
   bottomText: {fileID: 878488628}
+  door: {fileID: 581596559}
+  success: 0
 --- !u!4 &1738633251
 Transform:
   m_ObjectHideFlags: 0
@@ -9265,15 +9315,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
   testingGame: 1
   testGame: {fileID: 0}
-  gameCount: 5
+  gameCount: 1
   successes: 0
-  quota: 10
-  shiftTimer: 0
+  quota: 1
+  shiftTimer: 10
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}
   pause: 1
   tower: {fileID: 1178191527}
+  dialogue: {fileID: 1738633250}
+  controls: {fileID: 249909217}
   answerSheet: {fileID: 755153819}
   answers:
   - {fileID: 731961035}
@@ -9283,6 +9335,7 @@ MonoBehaviour:
   - {fileID: 1498174055}
   minigames: []
   games: 
+  isEnding: 0
 --- !u!4 &2007216441
 Transform:
   m_ObjectHideFlags: 0
@@ -10166,7 +10219,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 2157275441336708149}
   lightColor: 0
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!114 &1908004418682945446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10182,7 +10235,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 2157275443212487441}
   lightColor: 0
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!114 &1908004419113382205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10198,7 +10251,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 2157275442770511242}
   lightColor: 0
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!1 &1955354077838526039
 GameObject:
   m_ObjectHideFlags: 0
@@ -10992,7 +11045,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 6527132970244373386}
   lightColor: 3
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!65 &6733366741932137134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11100,6 +11153,7 @@ MonoBehaviour:
   - {fileID: 1908004419113382205}
   interval: 0.4
   startTime: 0.4
+  on: 0
 --- !u!4 &7266512333061986825
 Transform:
   m_ObjectHideFlags: 0
@@ -11190,7 +11244,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 7966912832289800172}
   lightColor: 1
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!114 &7573524602091084005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11206,7 +11260,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 7966912832269680433}
   lightColor: 1
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!23 &7696274989090171991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11969,7 +12023,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 9103681151343810536}
   lightColor: 2
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!114 &8781030517820962919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11985,7 +12039,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 9103681151809008495}
   lightColor: 2
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!114 &8781030518053592471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12001,7 +12055,7 @@ MonoBehaviour:
   on: 1
   lamp: {fileID: 9103681151760422559}
   lightColor: 2
-  fadeAmount: 0.4
+  fadeAmount: 0
 --- !u!4 &8828609497391142885
 Transform:
   m_ObjectHideFlags: 0

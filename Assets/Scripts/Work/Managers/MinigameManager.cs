@@ -23,13 +23,16 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeField] FinalButton finalButton;
     [SerializeField] float pause;
     [SerializeField] TowerIntensity tower;
-
+    [SerializeField] LoudspeakerDialogue dialogue;
+    [SerializeField] WorkCamControl controls;
     [SerializeField] GameObject answerSheet;
     [SerializeField] List<Transform> answers = new List<Transform>();
     [SerializeField] List<Minigame> minigames = new List<Minigame>();
     public List<int> games = new List<int>();
     private int rg;
     private float counter;
+    public bool isEnding;
+    private bool shiftActive;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,13 +45,21 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public void BeginShift()
     {
         counter = shiftTimer;
-        GenerateTasks();
+        shiftActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (shiftActive)
+        {
+            counter -= Time.deltaTime;
+            if (counter < 0 && !isEnding)
+            {
+                isEnding = true;
+                shiftActive = false;
+            }
+        }
     }
     public void AddToList(Minigame minigame)
     {
@@ -75,8 +86,9 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
             minigames[rg].isComplete = false;
             minigames[rg].Randomize(answers[i]);
             minigames[rg].Enable();
-            Debug.Log("Minigame "+rg+" Activated");
+            //Debug.Log("Minigame "+rg+" Activated");
         }
+        tower.UpdateIntensity(0);
         finalButton.IsActive(true);
     }
     int gamesCompleted;
@@ -90,8 +102,8 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
                 gamesCompleted++;
             }
         }
-        tower.UpdateIntensity(gamesCompleted);
-        Debug.Log("Games Completed: " + gamesCompleted + ", Minigame Count: " + minigames.Count);
+        tower.UpdateIntensity(gameCount + gamesCompleted - minigames.Count);
+        Debug.Log("Games Completed: " + gamesCompleted);
         if (gamesCompleted == minigames.Count)
         {
             Debug.Log("Final Button Activated");
@@ -104,23 +116,12 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         finalButton.IsActive(false);
         for(int i = 0; i < gameCount; i++)
         {
-            Destroy(answers[i].GetChild(0).gameObject);
+            if (answers[i].childCount != 0)
+            {
+                Destroy(answers[i].GetChild(0).gameObject);
+            }
         }
         successes++;
-        /*
-        switch (successes)
-        {
-            case 2:
-                gameCount = 2;
-                break;
-            case 4:
-                gameCount = 3;
-                break;
-            case 6:
-                gameCount = 4;
-                break;
-        }
-        */
         foreach (KeyValuePair<int, int> i in countChange)
         {
             if (successes == i.Key)
@@ -129,7 +130,6 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
                 break;
             }
         }
-        tower.UpdateIntensity(0);
         finalButton.Deactivate();
         StartCoroutine(BeginNewWave());
     }
@@ -138,6 +138,18 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         GenerateTasks();
         yield return new WaitForSeconds(pause);
         answerSheet.SetActive(true);
+    }
+    public void EndShift()
+    {
+        //shut off lights
+        tower.PowerDown();
+        controls.rClick.Disable();
+        if (successes >= quota)
+        {
+            //timer to delay printing
+            dialogue.SuccessDialogue(3);
+            dialogue.success = 1;
+        }
     }
     public void OnBeforeSerialize()
     {

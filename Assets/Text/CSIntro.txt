@@ -1,0 +1,7 @@
+Alright, there was some confusion last time as to the direction and structure of my game last week.
+Maybe I didn't make my plan clear, so I figured why not use the actual (now working) scene structure of my game to explain?
+Every work level, you begin by reading a monologue in this format. This will deliver tutorial and story info.
+Then, you have to meet a task quota by a given time. If you surpass it, you can continue to the next section.
+Otherwise, you get a different dialogue for failing, and the scene is reloaded.
+For the sake of example, this quota is one task, which means I can not fail, since the shift only "ends" when you hit the button.
+Now that I'm done talking, you'll see that button light up to begin the shift.

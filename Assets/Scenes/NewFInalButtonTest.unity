@@ -8065,9 +8065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89509a7b4f2ec3478006bed7c82f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
-  successFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
-  failFile: {fileID: 0}
+  startFile: {fileID: 4900000, guid: 319ffbbcf20bb01429de99d3dbabb309, type: 3}
+  successFile: {fileID: 4900000, guid: 4a1b81a5e6db1334fb6c44935a05e4d5, type: 3}
+  failFile: {fileID: 4900000, guid: 997e3a10f04e370479c70ccf3524a9e7, type: 3}
   writeSpeed: 80
   pauseTime: 0.03
   blankTime: 0.5
@@ -9316,9 +9316,9 @@ MonoBehaviour:
   testingGame: 1
   testGame: {fileID: 0}
   gameCount: 1
-  successes: 0
+  successes: -1
   quota: 1
-  shiftTimer: 10
+  shiftTimer: 5
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}

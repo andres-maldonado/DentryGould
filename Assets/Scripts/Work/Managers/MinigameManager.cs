@@ -144,11 +144,17 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         //shut off lights
         tower.PowerDown();
         controls.rClick.Disable();
+        finalButton.Deactivate();
         if (successes >= quota)
         {
             //timer to delay printing
             dialogue.SuccessDialogue(3);
             dialogue.success = 1;
+        }
+        else
+        {
+            dialogue.FailDialogue(3);
+            dialogue.success = 2;
         }
     }
     public void OnBeforeSerialize()

@@ -1,0 +1,4 @@
+Now the shift ended. You may have even noticed how the tower's wheel spun and lights flashed at different rates depending on the state of the game.
+That's a little detail though. I'm supposed to be showing off the big picture right now. Anyway,
+To transition to the next scene, you have to click the door. It only jiggles when you click it until after this dialogue is over.
+Once I stop talking, you get to leave. Go ahead!

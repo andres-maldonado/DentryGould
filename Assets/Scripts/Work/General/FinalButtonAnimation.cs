@@ -54,6 +54,7 @@ public class FinalButtonAnimation : MonoBehaviour
         }
         else
         {
+            minigameManager.successes++;
             minigameManager.EndShift();
         }
         AudioManager.ins.PlayOneShot(thudSound, transform.position);

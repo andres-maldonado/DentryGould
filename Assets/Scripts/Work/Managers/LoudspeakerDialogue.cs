@@ -37,6 +37,11 @@ public class LoudspeakerDialogue : MonoBehaviour
         counter = (1 / writeSpeed) - timer;
         StartWriting(successFile);
     }
+    public void FailDialogue(float timer)
+    {
+        counter = (1 / writeSpeed) - timer;
+        StartWriting(failFile);
+    }
     public void StartWriting(TextAsset file)
     {
         dialogueByLine = file.text.Split("\n");
@@ -111,6 +116,10 @@ public class LoudspeakerDialogue : MonoBehaviour
             if (success == 1)
             {
                 door.canExit = true;
+            }
+            else if (success == 2)
+            {
+                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
             }
             Debug.Log("end");
         }

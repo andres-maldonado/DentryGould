@@ -12,11 +12,13 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
     private bool firstHit;
 
     private EventReference stepsSound;
+    private ButtonLamp lamp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         anim = GetComponent<Animator>();
         stepsSound = RuntimeManager.PathToEventReference("event:/SFX/Work/FinalSteps");
+        lamp = GetComponent<ButtonLamp>();
         GameObject.Find("LoudspeakerDialogue").GetComponent<LoudspeakerDialogue>().endWriting += ShiftStart;
     }
     public void OnPointerDown(PointerEventData eventData)
@@ -46,16 +48,20 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
     public void ShiftStart()
     {
         firstHit = true;
-        ready = true;
+        Activate();
     }
     public void Activate()
     {
         ready = true;
+        lamp.on = true;
+        lamp.SetColor();
         //make it flash later
     }
     public void Deactivate()
     {
         ready = false;
+        lamp.on = false;
+        lamp.SetColor();
     }
     public void IsActive(bool s)
     {

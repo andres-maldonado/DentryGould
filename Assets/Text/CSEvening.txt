@@ -1,0 +1,1 @@
+This is the transition screen to get to the bar. Here, the feelings of the player character are narrated second-person. This is just meant to set up the dialogue scene at night, and I figured having some buildings would be a nice touch. Once this ends, it'll fade to the bar.

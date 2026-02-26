@@ -5,7 +5,7 @@ using UnityEngine;
 public class EveningText : MonoBehaviour
 {
     public TextAsset dialogueFile;
-    [SerializeField] float writeSpeed, pauseTime, endTime;
+    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime;
     public int sceneToLoad;
     private TextMeshPro text;
 
@@ -63,6 +63,12 @@ public class EveningText : MonoBehaviour
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
             counter = (1 / writeSpeed) - pauseTime;
+        }
+        if (currentLine[letterCount] == ',')
+        {
+            text.text += currentLine.Substring(letterCount, 1);
+            letterCount++;
+            counter = (1 / writeSpeed) - commaTime;
         }
     }
     void EndWrite()

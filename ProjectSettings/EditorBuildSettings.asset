@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Evening1.unity
+    path: Assets/Scenes/CSEvening.unity
     guid: 37d47a05500acca43bdd7b56824a6402
   - enabled: 1
     path: Assets/Scenes/NightTest.unity

@@ -1,0 +1,36 @@
+<align="center"><color=#EEEEEE><i>You order the cheapest beer on the menu. Anything will do after today's work. You sip quietly for a while, but then a man a few seats down speaks.</i>
+<align="left"><$PL00><color=#6B5887>Rough day?
+<align="right"><$PR03><color=#8A7043>Excuse me?
+<align="left"><$PL00><color=#6B5887>Oh, I'm just asking if you had a rough day. You look pretty wiped out.
+<align="right"><$PR03><color=#8A7043>Ha, you could say that...
+<align="left"><$PL00><color=#6B5887>You're an operator, right?
+<align="right"><$PR03><color=#8A7043>Uh, yea.
+<align="center"><color=#EEEEEE><i>He's wearing the same uniform as you. He must be one too. He gets up and takes the seat next to you.</i>
+<align="left"><$PL02><color=#6B5887>That work really wipes you out. No wonder.
+<align="right"><$PR03><color=#8A7043>Yea.
+<align="right"><color=#8A7043>...
+<align="right"><$PR03><color=#8A7043>It was my first day too. They really threw me in the deep end.
+<align="left"><$PL02><color=#6B5887>Yeeea, man. They like to do that with new guys. It's like a weed out thing. What did they tell you when you were done?
+<align="right"><$PR03><color=#8A7043>I mean, they said I did good.
+<align="left"><$PL01><color=#6B5887>Well, there you go! Ya did good!
+<align="right"><$PR03><color=#8A7043>Okay, sure, but like, I don't really understand what I was doing. What did I do good at? Do you have any idea what those machines do?
+<align="left"><$PL01><color=#6B5887>Oh, nope.
+<align="center"><color=#EEEEEE><i>He bursts out in laughter.</i>
+<align="right"><$PR03><color=#8A7043>...
+<align="left"><$PL02><color=#6B5887>Look, I've been an operator for two years now. I get how you feel, I was there too. There's no training, no explanation, and they expect you to work day in and day out, no real breaks. It sucks, and that's the truth. I'm sorry you stumbled into this job too.
+<align="right"><$PR03><color=#8A7043>Do you think I should just quit? Does it get better?
+<align="left"><$PL02><color=#6B5887>Sure, it gets better. Not easier, really, but it becomes easier to do, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
+<align="right"><$PR03><color=#8A7043>I guess that's not the worst thing ever.
+<align="left"><$PL00><color=#6B5887>Ay.
+<align="center"><color=#EEEEEE><i>He hits you on the shoulder.</i>
+<align="left"><$PL02><color=#6B5887>Pays well too, right?
+<align="right"><$PR03><color=#8A7043>True that.
+<align="left"><$PL01><color=#6B5887>Truuue that!
+<align="center"><color=#EEEEEE><i>You can't help but laugh.</i>
+<align="right"><$PR03><color=#8A7043>Sorry, what's your name?
+<align="left"><$PL01><color=#6B5887>Oh yea, forgot that part. It's Jeremy.
+<align="right"><$PR03><color=#8A7043>Nice to meet you, Jeremy. I appreciate you making me feel better. I guess I can only complain so much.
+<align="left"><$PL02><color=#6B5887>Nothing wrong with a little complaining. But it's nice to think about other things too. You know the southwest end of the parking lot's got cats?
+<align="right"><$PR03><color=#8A7043>Really?
+<align="left"><$PL01><color=#6B5887>Yea, dude, they're real cute. All orange, super loud but it's sweet...
+<align="center"><color=#AAAAAA><i>You and the man spend the night chatting about the cats, the bar, the music scene in the town, everything but work. It takes your mind off what you experienced today and your anxieties about tomorrow, at least for a time. But it’s a nice time. You’re glad you met him.</i>

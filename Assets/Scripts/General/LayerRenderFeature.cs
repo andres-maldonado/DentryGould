@@ -8,7 +8,7 @@ using UnityEngine.Experimental.Rendering;
 
 public class LayerRenderFeature : ScriptableRendererFeature
 {
-    public RenderPassEvent push = RenderPassEvent.AfterRenderingPostProcessing;
+    public RenderPassEvent push = RenderPassEvent.BeforeRendering;
     public RenderPassEvent pop = RenderPassEvent.AfterRenderingPostProcessing+49;
 
     public Material blendMaterial;
@@ -31,11 +31,17 @@ public class LayerRenderFeature : ScriptableRendererFeature
 
     class PushLayerRenderPass : ScriptableRenderPass
     {
+        public Material blendMaterial {  get; set; }
         // RecordRenderGraph is where the RenderGraph handle can be accessed, through which render passes can be added to the graph.
         // FrameData is a context container through which URP resources can be accessed and managed.
         public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData)
         {
             UniversalResourceData resourcesData = frameData.Get<UniversalResourceData>();
+            if (blendMaterial != null)
+            {
+                RenderGraphUtils.BlitMaterialParameters blitMaterialParameters = new(resourcesData.cameraColor, resourcesData.cameraColor, blendMaterial, 0);
+                renderGraph.AddBlitPass(blitMaterialParameters, "Push: Take Snapshot");
+            }
 
             var firstLayer = frameData.Contains<StackLayers>();
             var layers = frameData.GetOrCreate<StackLayers>();
@@ -71,8 +77,8 @@ public class LayerRenderFeature : ScriptableRendererFeature
             }
 
             desc.clearBuffer = true;
-            desc.clearColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-            desc.name = "_CameraColorLayer" + layers.layers.Count;
+            desc.clearColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+            desc.name = "_NewRenderTarget" + layers.layers.Count;
             
             var layerColor = renderGraph.CreateTexture(desc);
 
@@ -96,7 +102,7 @@ public class LayerRenderFeature : ScriptableRendererFeature
 
         public PopLayerRenderPass()
         {
-            profilingSampler = new ProfilingSampler("Blend Layer");
+            profilingSampler = new ProfilingSampler("Pop: Blend Snapshot");
         }
 
         // RecordRenderGraph is where the RenderGraph handle can be accessed, through which render passes can be added to the graph.

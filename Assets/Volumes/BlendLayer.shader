@@ -3,7 +3,7 @@ Shader "BlendLayer"
    SubShader
    {
        Tags { "RenderType"="Opaque" "RenderPipeline" = "UniversalPipeline"}
-       Blend SrcAlpha OneMinusSrcAlpha
+       Blend SrcAlpha One
        ZWrite Off Cull Off
        Pass
        {

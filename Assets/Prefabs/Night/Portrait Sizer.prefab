@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335292193254288918}
   - component: {fileID: 5172213442668770734}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Portrait Sizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 170399121562096584}
   - component: {fileID: 3987874915115230703}
   - component: {fileID: 2431181184661804248}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}

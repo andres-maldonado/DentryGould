@@ -230,7 +230,7 @@ MonoBehaviour:
   on: 0
   lamp: {fileID: 2606529578225552482}
   lightColor: 0
-  fadeAmount: 0.4
+  fadeAmount: 0.1
 --- !u!65 &8778512746830910313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -264,6 +264,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb080704c3be343b4b1b12d548ea0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorButton
+  anim: {fileID: 0}
+  buttonSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOn: 0
   code: 0
 --- !u!95 &5545888343044891653

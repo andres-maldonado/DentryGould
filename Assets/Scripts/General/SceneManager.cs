@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer fadeSprite;
+    [SerializeField] SpriteRenderer fadeSprite, UIFadeSprite;
     [SerializeField] WorkCamControl workCamControl;
     [SerializeField] float fadeInTime;
 
@@ -43,6 +43,7 @@ public class SceneManager : MonoBehaviour
         }
         isFadingOut = true;
         fadeSprite.color = new Color32(0, 0, 0, 0);
+        UIFadeSprite.color = new Color32(0, 0, 0, 0);
         currentFadeTime = 255 / fadeTime;
         currentAlpha = 0;
         sceneToLoad = scene;
@@ -56,6 +57,7 @@ public class SceneManager : MonoBehaviour
             {
                 currentAlpha -= currentFadeTime * Time.deltaTime;
                 fadeSprite.color = new Color32(0, 0, 0, (byte)currentAlpha);
+                UIFadeSprite.color = new Color32(0, 0, 0, (byte)currentAlpha);
             }
             else
             {
@@ -73,9 +75,11 @@ public class SceneManager : MonoBehaviour
             {
                 currentAlpha += currentFadeTime * Time.deltaTime;
                 fadeSprite.color = new Color32(0, 0, 0, (byte)(255 - Mathf.Pow(currentAlpha - 255, 2)/255));
+                UIFadeSprite.color = new Color32(0, 0, 0, (byte)(255 - Mathf.Pow(currentAlpha - 255, 2) / 255));
                 if (currentAlpha >= 255)
                 {
                     fadeSprite.color = new Color32(0, 0, 0, 255);
+                    UIFadeSprite.color = new Color32(0, 0, 0, 255);
                 }
             }
             else

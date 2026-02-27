@@ -144,6 +144,7 @@ public class DialogueManager : MonoBehaviour
         else if (end && !isWriting && !sceneManager.isFadingOut)
         {
             GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad);
+            Debug.Log("Loaded Scene " + sceneToLoad);
         }
     }
 

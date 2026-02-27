@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NightTest.unity
     guid: defa0e4109fe3b646848a68fe526c877
+  - enabled: 1
+    path: Assets/Scenes/CSReturn.unity
+    guid: 3518d6d0ea72794438ee265af5641033
+  - enabled: 1
+    path: Assets/Scenes/CSDay2.unity
+    guid: 8e9aff1758e421141add722c0c8cf5e4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

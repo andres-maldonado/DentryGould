@@ -1,0 +1,4 @@
+And there you have it! It's working! All in succession!
+From now on, it's just a matter of adding SFX, music, more games, more text, and that visual sauce.
+On that note, I did write the second night of dialogue and the accompanying music.
+Anyway, I hope this clarifies how exactly my game will work if I had made it hard to follow.

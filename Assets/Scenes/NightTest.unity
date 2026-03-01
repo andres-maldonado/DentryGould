@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c139e6f443c6f694fb6aaf44e78c0eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueFile: {fileID: 4900000, guid: b7c1645ded477014db92699074d3e9bb, type: 3}
+  dialogueFile: {fileID: 4900000, guid: 7c349cf2140054c41af38bb6123d2fcd, type: 3}
   textBox: {fileID: 0}
   writeSpeed: 40
   textGap: 100

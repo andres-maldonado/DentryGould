@@ -660,6 +660,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1156443009}
     m_Modifications:
+    - target: {fileID: 4382045300796104474, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4698d464b519c85499dbdee7ec8d53e1, type: 2}
+    - target: {fileID: 5709041388929589876, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f69c982c8eb372b44914a841b73b3552, type: 2}
     - target: {fileID: 6069280636244919201, guid: 05e9e47448795424c82917b515c7b876, type: 3}
       propertyPath: m_Name
       value: Gauge_Square (1)
@@ -1087,6 +1095,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1156443009}
     m_Modifications:
+    - target: {fileID: 4382045300796104474, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4698d464b519c85499dbdee7ec8d53e1, type: 2}
+    - target: {fileID: 5709041388929589876, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f69c982c8eb372b44914a841b73b3552, type: 2}
     - target: {fileID: 6069280636244919201, guid: 05e9e47448795424c82917b515c7b876, type: 3}
       propertyPath: m_Name
       value: Gauge_Square (3)
@@ -1165,6 +1181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1156443009}
     m_Modifications:
+    - target: {fileID: 5092503928205661134, guid: ecca9463a63616c44a6dacb9d8f6bf97, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e059c7991a7c0514390160c1817d8e72, type: 2}
     - target: {fileID: 6262001894993242273, guid: ecca9463a63616c44a6dacb9d8f6bf97, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2084,6 +2104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roller_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3970310989019723409, guid: 3ba0135bc80bd3f4f87ea85e8bab59f8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e059c7991a7c0514390160c1817d8e72, type: 2}
     m_RemovedComponents:
     - {fileID: 4610396754425787251, guid: 3ba0135bc80bd3f4f87ea85e8bab59f8, type: 3}
     m_RemovedGameObjects: []
@@ -4773,8 +4797,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 0.8553459, g: 0.83144224, b: 0.7020291, a: 1}
-  m_Intensity: 0.55
+  m_Color: {r: 0.6467604, g: 0.733184, b: 0.8113208, a: 1}
+  m_Intensity: 0.43
   m_Range: 1.87
   m_SpotAngle: 130.78935
   m_InnerSpotAngle: 99.67941
@@ -5140,6 +5164,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1156443009}
     m_Modifications:
+    - target: {fileID: 4382045300796104474, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4698d464b519c85499dbdee7ec8d53e1, type: 2}
+    - target: {fileID: 5709041388929589876, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f69c982c8eb372b44914a841b73b3552, type: 2}
     - target: {fileID: 6069280636244919201, guid: 05e9e47448795424c82917b515c7b876, type: 3}
       propertyPath: m_Name
       value: Gauge_Square
@@ -9719,7 +9751,7 @@ MonoBehaviour:
   testGame: {fileID: 0}
   gameCount: 1
   successes: -1
-  quota: 10
+  quota: 8
   shiftTimer: 120
   completeCount: 0200000005000000
   taskCount: 0200000003000000
@@ -10089,6 +10121,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1156443009}
     m_Modifications:
+    - target: {fileID: 4382045300796104474, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4698d464b519c85499dbdee7ec8d53e1, type: 2}
+    - target: {fileID: 5709041388929589876, guid: 05e9e47448795424c82917b515c7b876, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f69c982c8eb372b44914a841b73b3552, type: 2}
     - target: {fileID: 6069280636244919201, guid: 05e9e47448795424c82917b515c7b876, type: 3}
       propertyPath: m_Name
       value: Gauge_Square (2)
@@ -10184,7 +10224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 902693e8727b16d4db4268c92babb632, type: 2}
+  - {fileID: 2100000, guid: f69c982c8eb372b44914a841b73b3552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

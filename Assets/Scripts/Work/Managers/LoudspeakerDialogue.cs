@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System.Collections;
+using FMODUnity;
 
 public class LoudspeakerDialogue : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     [SerializeField] float writeSpeed, pauseTime, blankTime;
     [SerializeField] TextMeshPro bottomText;
     [SerializeField] DoorButton door;
+    [SerializeField] EventReference dialogueSound;
 
     private string[] dialogueByLine;
     private Queue<string> dialogueLines = new Queue<string>();

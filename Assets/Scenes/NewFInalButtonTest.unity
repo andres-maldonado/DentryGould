@@ -9775,7 +9775,7 @@ MonoBehaviour:
   testGame: {fileID: 0}
   gameCount: 1
   successes: -1
-  quota: 8
+  quota: 6
   shiftTimer: 150
   completeCount: 0200000005000000
   taskCount: 0200000003000000

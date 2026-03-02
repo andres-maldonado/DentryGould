@@ -47,6 +47,12 @@ public class KnobGame : Minigame
     {
         active = true;
     }
+    public override void ResetGame()
+    {
+        active = false;
+        taskLight.SetCompletion(false);
+    }
+
     public override void Randomize(Transform t)
     {
         answer = null; 

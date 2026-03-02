@@ -28,6 +28,7 @@ public abstract class Minigame : MonoBehaviour
     public abstract void Randomize(Transform parent);
     public abstract void Enable();
     public abstract void Disable();
+    public abstract void ResetGame();
 
     public void Complete()
     {

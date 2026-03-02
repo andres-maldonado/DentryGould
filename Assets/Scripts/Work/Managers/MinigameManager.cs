@@ -73,7 +73,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         foreach (Minigame m in minigames)
         {
             m.isComplete = true;
-            m.Disable();
+            m.ResetGame();
         }
         for(int i = 0; i < gameCount; i++)
         {

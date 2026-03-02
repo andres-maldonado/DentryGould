@@ -62,6 +62,17 @@ public class ColorButtonGame : Minigame
             button.IsActive(false);
         }
     }
+    public override void ResetGame()
+    {
+        active = false;
+        taskLight.SetCompletion(false);
+        foreach (ColorButton button in colorButtons)
+        {
+            button.IsActive(false);
+            button.isOn = false;
+            button.UpdateLamp();
+        }
+    }
     public override void Enable()
     {
         active = true;

@@ -2352,6 +2352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059410492}
     m_Modifications:
+    - target: {fileID: 660525457662230945, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1418509262602220762, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2403,6 +2407,18 @@ PrefabInstance:
     - target: {fileID: 6013051356699061052, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: m_Name
       value: ButtonNumberKnob (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918312090776056856, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918312090776056856, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918312090776056856, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5512,6 +5528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2130829656823907530, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: color.g
+      value: 0.45921358
+      objectReference: {fileID: 0}
     - target: {fileID: 6013051356699061052, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: m_Name
       value: ButtonNumberKnob (1)
@@ -8499,7 +8519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89509a7b4f2ec3478006bed7c82f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startFile: {fileID: 4900000, guid: 9132663894ca26547931ced5cf083107, type: 3}
+  startFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
   successFile: {fileID: 4900000, guid: 4a1b81a5e6db1334fb6c44935a05e4d5, type: 3}
   failFile: {fileID: 4900000, guid: 997e3a10f04e370479c70ccf3524a9e7, type: 3}
   writeSpeed: 80
@@ -9523,6 +9543,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059410492}
     m_Modifications:
+    - target: {fileID: 660525457662230945, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1418509262602220762, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.56291646
@@ -9752,7 +9776,7 @@ MonoBehaviour:
   gameCount: 1
   successes: -1
   quota: 8
-  shiftTimer: 120
+  shiftTimer: 150
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}

@@ -53,6 +53,17 @@ public class NumberButtonGame : Minigame
             button.IsActive(false);
         }
     }
+    public override void ResetGame()
+    {
+        active = false;
+        taskLight.SetCompletion(false);
+        entry = null;
+        foreach (NumberButton button in keys)
+        {
+            button.IsActive(false);
+        }
+
+    }
     public override void Enable()
     {
         active = true;

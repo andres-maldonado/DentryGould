@@ -944,6 +944,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &240207751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 240207753}
+  - component: {fileID: 240207752}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &240207752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240207751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408dcb0c63398dc4eb25443e6faacd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  startMusic:
+    Guid:
+      Data1: -1067765911
+      Data2: 1188478434
+      Data3: 2023085454
+      Data4: 1657149486
+    Path: event:/Music/Work/BeepsStart
+--- !u!4 &240207753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240207751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.62141, y: 0, z: 78.20075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249909215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,9 +4555,9 @@ GameObject:
   m_Component:
   - component: {fileID: 887565941}
   - component: {fileID: 887565940}
-  - component: {fileID: 887565939}
   - component: {fileID: 887565942}
   - component: {fileID: 887565943}
+  - component: {fileID: 887565944}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4514,14 +4565,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &887565939
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887565938}
-  m_Enabled: 1
 --- !u!20 &887565940
 Camera:
   m_ObjectHideFlags: 0
@@ -4650,6 +4693,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &887565944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887565938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 887565938}
 --- !u!1 &907813315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,6 +5639,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1418509262602220762, guid: 50fc761f6f5bbd54b95c082ac5ba34bf, type: 3}
   m_PrefabInstance: {fileID: 999361002}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1009979051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009979053}
+  - component: {fileID: 1009979052}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1009979052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009979051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 745f244c02016374a96bc1e04583f44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!4 &1009979053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009979051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.62141, y: 0, z: 78.20075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016279495
 GameObject:
   m_ObjectHideFlags: 0
@@ -8527,6 +8628,13 @@ MonoBehaviour:
   blankTime: 0.5
   bottomText: {fileID: 878488628}
   door: {fileID: 581596559}
+  dialogueSound:
+    Guid:
+      Data1: -1950164656
+      Data2: 1105826897
+      Data3: 1398598558
+      Data4: 1690893228
+    Path: event:/SFX/Dialogue/Loudspeaker1
   success: 0
 --- !u!4 &1738633251
 Transform:
@@ -12657,6 +12765,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FinalButton
   manager: {fileID: 2007216440}
   camParent: {fileID: 249909217}
+  workMusic:
+    Guid:
+      Data1: -505167497
+      Data2: 1335036449
+      Data3: 2083009185
+      Data4: 309882184
+    Path: event:/Music/Work/BeepsEnd
   anim: {fileID: 9067502118952148707}
   ready: 0
 --- !u!4 &9103681151075547589
@@ -12860,10 +12975,12 @@ SceneRoots:
   - {fileID: 1548365254}
   - {fileID: 1016279496}
   - {fileID: 1178191526}
-  - {fileID: 443375174}
   - {fileID: 179487946}
+  - {fileID: 937955208}
+  - {fileID: 443375174}
+  - {fileID: 177217097}
+  - {fileID: 775461714}
   - {fileID: 2007216441}
   - {fileID: 1738633251}
-  - {fileID: 775461714}
-  - {fileID: 177217097}
-  - {fileID: 937955208}
+  - {fileID: 1009979053}
+  - {fileID: 240207753}

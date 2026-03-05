@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using System.Collections;
 using FMODUnity;
+using FMOD.Studio;
 
 public class LoudspeakerDialogue : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class LoudspeakerDialogue : MonoBehaviour
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
+    private bool isYapping;
+    private EventInstance dialogueInstance;
     public int success;
 
     public delegate void EndWriting();
@@ -29,6 +32,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += FirstDialogue;
         bottomText.text = null;
+        dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
     }
     void FirstDialogue()
     {
@@ -65,10 +69,21 @@ public class LoudspeakerDialogue : MonoBehaviour
         if(isWriting)
         {
             WriteText();
+            if (!isYapping)
+            {
+                Debug.Log("Start Dialogue");
+                dialogueInstance.start();
+                isYapping = true;
+            }
         }
         if (nextLineCounter > 0)
         {
             PauseTime();
+            if (isYapping)
+            {
+                dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                isYapping = false;
+            }
         }
 
     }
@@ -109,6 +124,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         {
             yield return new WaitForSeconds(blankTime);
             currentLine = dialogueLines.Dequeue();
+
             isWriting = true;
             letterCount = 0;
         }

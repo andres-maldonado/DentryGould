@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639079746854652848
+  lastModified: 639082498795025658
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,10 +33,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639079746854652848
+  lastModified: 639082493835728510
   FileSizes:
   - Name: 
-    Value: 1270
+    Value: 1444
   Exists: 1
 --- !u!114 &-7768781499889182041
 MonoBehaviour:
@@ -119,6 +119,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5825812331955916680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/BeepsEnd
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/BeepsEnd
+  Guid:
+    Data1: -505167497
+    Data2: 1335036449
+    Data3: 2083009185
+    Data4: 309882184
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125000
 --- !u!114 &-3964110221361805662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +161,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639079746854652848
+  lastModified: 639082493835718500
   FileSizes: []
   Exists: 1
 --- !u!114 &-3141289957841797716
@@ -164,6 +191,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1833635357453253170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dialogue/Loudspeaker1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Dialogue/Loudspeaker1
+  Guid:
+    Data1: -1950164656
+    Data2: 1105826897
+    Data3: 1398598558
+    Data4: 1690893228
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
 --- !u!114 &-498524462607074115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +233,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639079746854672843
+  lastModified: 639082494696178960
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -210,12 +264,15 @@ MonoBehaviour:
   - {fileID: -7536538183237909680}
   - {fileID: -6623730954533576746}
   - {fileID: 157597575340874150}
+  - {fileID: -1833635357453253170}
+  - {fileID: 5168683194674249774}
+  - {fileID: -5825812331955916680}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639079746854672843
+  cacheTime: 639082498795025658
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:
@@ -352,6 +409,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5168683194674249774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/BeepsStart
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/BeepsStart
+  Guid:
+    Data1: -1067765911
+    Data2: 1188478434
+    Data3: 2023085454
+    Data4: 1657149486
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 116000
 --- !u!114 &7355529927802314931
 MonoBehaviour:
   m_ObjectHideFlags: 0

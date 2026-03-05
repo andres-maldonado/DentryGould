@@ -6,6 +6,7 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] MinigameManager manager;
     [SerializeField] WorkCamControl camParent;
+    [SerializeField] EventReference workMusic;
     public Animator anim;
     private bool canClick = true;
     public bool ready;
@@ -42,6 +43,7 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
                 firstHit = false;
             }
             camParent.FinalButtonSequence();
+            GameObject.Find("MusicManager").GetComponent<MusicManager>().ReplaceMusic(workMusic);
             AudioManager.ins.PlayOneShot(stepsSound, transform.position);
         }
     }

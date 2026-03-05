@@ -5788,6 +5788,13 @@ MonoBehaviour:
   flashingLights: {fileID: 6924413009236515953}
   rollerFactor: 240
   lightsFactor: 1
+  machineWhirr:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1193248922
 GameObject:
   m_ObjectHideFlags: 0
@@ -8348,6 +8355,13 @@ MonoBehaviour:
   blankTime: 0.5
   bottomText: {fileID: 878488628}
   door: {fileID: 581596559}
+  dialogueSound:
+    Guid:
+      Data1: -1950164656
+      Data2: 1105826897
+      Data3: 1398598558
+      Data4: 1690893228
+    Path: event:/SFX/Dialogue/Loudspeaker1
   success: 0
 --- !u!4 &1738633251
 Transform:
@@ -9609,6 +9623,13 @@ MonoBehaviour:
   - {fileID: 1821980011}
   - {fileID: 1498174055}
   minigames: []
+  endMusic:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   games: 
   isEnding: 0
 --- !u!4 &2007216441
@@ -12466,6 +12487,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FinalButton
   manager: {fileID: 2007216440}
   camParent: {fileID: 249909217}
+  workMusic:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   anim: {fileID: 9067502118952148707}
   ready: 0
 --- !u!4 &9103681151075547589

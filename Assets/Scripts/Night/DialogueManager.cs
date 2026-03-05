@@ -143,7 +143,8 @@ public class DialogueManager : MonoBehaviour
         }
         else if (end && !isWriting && !sceneManager.isFadingOut)
         {
-            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad);
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(5, sceneToLoad);
+            AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("Loaded Scene " + sceneToLoad);
         }
     }
@@ -197,6 +198,13 @@ public class DialogueManager : MonoBehaviour
                 newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
                 newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
+        }
+        else if (tag.StartsWith("M"))
+        {
+            tag = tag.Remove(0, 1);
+            int parameterNum = int.Parse(tag.Substring(tag.Length - 1, 1));
+            tag = tag.Remove(tag.Length - 1, 1);
+            AudioManager.ins.musicEventInstance.setParameterByName(tag, parameterNum);
         }
     }
 

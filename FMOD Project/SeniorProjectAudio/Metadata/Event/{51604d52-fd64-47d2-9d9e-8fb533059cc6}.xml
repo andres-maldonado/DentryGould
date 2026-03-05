@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{51604d52-fd64-47d2-9d9e-8fb533059cc6}">
 		<property name="name">
-			<value>Night1</value>
+			<value>Work1</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -39,9 +39,9 @@
 	</object>
 	<object class="MasterTrack" id="{885ae0c7-68b2-486c-91cd-a7b0bae364c2}">
 		<relationship name="modules">
-			<destination>{9e1a819e-056a-49fc-817e-0adad7cccc11}</destination>
 			<destination>{1f869765-fda1-444f-a597-7b5cf55967bd}</destination>
 			<destination>{dd34bfb8-fcb6-42e5-80ba-0c6a5acb3543}</destination>
+			<destination>{02973919-d9ab-4a9b-a69b-64f138d35404}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{7756bf9b-eca4-4348-9cd1-0a8ab7588c54}</destination>
@@ -62,7 +62,7 @@
 	<object class="MarkerTrack" id="{d120ae40-ded7-4fdf-866a-f91e6ac7da02}" />
 	<object class="Timeline" id="{504cf54a-2731-4836-80f4-9479ec3a3cf7}">
 		<relationship name="modules">
-			<destination>{9e1a819e-056a-49fc-817e-0adad7cccc11}</destination>
+			<destination>{02973919-d9ab-4a9b-a69b-64f138d35404}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{373330ab-7725-43f2-84db-84ac4ef071b3}</destination>
@@ -80,14 +80,6 @@
 			<destination>{9f127770-4773-4835-a16d-df0c7a19eb54}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{9e1a819e-056a-49fc-817e-0adad7cccc11}">
-		<property name="length">
-			<value>208</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{60dacdd7-74a8-45ec-8a63-d63223eba8dc}</destination>
-		</relationship>
-	</object>
 	<object class="TransitionSourceSound" id="{1f869765-fda1-444f-a597-7b5cf55967bd}">
 		<property name="length">
 			<value>3.5</value>
@@ -102,6 +94,14 @@
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{4b3d8173-3072-4d14-b266-0e5b44ecba3d}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{02973919-d9ab-4a9b-a69b-64f138d35404}">
+		<property name="length">
+			<value>208</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{b121fbc9-d08f-4c71-849e-11fb0f40a570}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{5e56f398-7399-4654-a1d2-cfbe4f3035ba}">

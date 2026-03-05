@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8824749385717977965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/Work1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/Work1
+  Guid:
+    Data1: 1365265746
+    Data2: 1205009764
+    Data3: -1248878947
+    Data4: -962853581
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 208000
 --- !u!114 &-8243837429957365735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +42,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639082641546291785
+  lastModified: 639083179310681421
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,10 +60,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639082638124472639
+  lastModified: 639083179275984059
   FileSizes:
   - Name: 
-    Value: 1688
+    Value: 1796
   Exists: 1
 --- !u!114 &-7768781499889182041
 MonoBehaviour:
@@ -185,7 +212,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639082638124462637
+  lastModified: 639083179275974057
   FileSizes: []
   Exists: 1
 --- !u!114 &-3141289957841797716
@@ -215,6 +242,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3055458710046482284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Night/Night1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Night/Night1
+  Guid:
+    Data1: 1886957060
+    Data2: 1206430680
+    Data3: 1635381670
+    Data4: 794520604
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2291379314460499405}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 252631
 --- !u!114 &-1833635357453253170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,13 +347,14 @@ MonoBehaviour:
   - {fileID: 5168683194674249774}
   - {fileID: -5825812331955916680}
   - {fileID: 8786904410696386010}
-  - {fileID: 1510626244436874617}
+  - {fileID: -8824749385717977965}
+  - {fileID: -3055458710046482284}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639082641546291785
+  cacheTime: 639083179310681421
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:
@@ -327,33 +383,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1510626244436874617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Work/Night1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Work/Night1
-  Guid:
-    Data1: 1365265746
-    Data2: 1205009764
-    Data3: -1248878947
-    Data4: -962853581
-  Banks:
-  - {fileID: -8243837429957365735}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 208000
 --- !u!114 &1952702153768423646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +410,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2291379314460499405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Night1/SongPosition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SongPosition
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1360172303
+    data2: 2118950865
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2941083267929774668
 MonoBehaviour:
   m_ObjectHideFlags: 0

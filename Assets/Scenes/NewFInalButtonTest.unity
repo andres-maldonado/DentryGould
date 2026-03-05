@@ -4871,10 +4871,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.6467604, g: 0.733184, b: 0.8113208, a: 1}
-  m_Intensity: 0.43
+  m_Intensity: 0.35
   m_Range: 1.87
   m_SpotAngle: 130.78935
-  m_InnerSpotAngle: 99.67941
+  m_InnerSpotAngle: 56.42703
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -6162,6 +6162,13 @@ MonoBehaviour:
   flashingLights: {fileID: 6924413009236515953}
   rollerFactor: 240
   lightsFactor: 1
+  machineWhirr:
+    Guid:
+      Data1: 455084966
+      Data2: 1083170728
+      Data3: -919536205
+      Data4: -309898294
+    Path: event:/SFX/Work/MachineWhirr
 --- !u!1 &1193248922
 GameObject:
   m_ObjectHideFlags: 0
@@ -9883,8 +9890,8 @@ MonoBehaviour:
   testGame: {fileID: 0}
   gameCount: 1
   successes: -1
-  quota: 6
-  shiftTimer: 150
+  quota: 1
+  shiftTimer: 20
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}
@@ -9900,6 +9907,13 @@ MonoBehaviour:
   - {fileID: 1821980011}
   - {fileID: 1498174055}
   minigames: []
+  endMusic:
+    Guid:
+      Data1: -505167497
+      Data2: 1335036449
+      Data3: 2083009185
+      Data4: 309882184
+    Path: event:/Music/Work/BeepsEnd
   games: 
   isEnding: 0
 --- !u!4 &2007216441
@@ -12767,11 +12781,11 @@ MonoBehaviour:
   camParent: {fileID: 249909217}
   workMusic:
     Guid:
-      Data1: -505167497
-      Data2: 1335036449
-      Data3: 2083009185
-      Data4: 309882184
-    Path: event:/Music/Work/BeepsEnd
+      Data1: 1365265746
+      Data2: 1205009764
+      Data3: -1248878947
+      Data4: -962853581
+    Path: event:/Music/Work/Night1
   anim: {fileID: 9067502118952148707}
   ready: 0
 --- !u!4 &9103681151075547589

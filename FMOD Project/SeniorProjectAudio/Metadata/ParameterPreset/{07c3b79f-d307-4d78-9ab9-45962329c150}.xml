@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{07c3b79f-d307-4d78-9ab9-45962329c150}">
+		<property name="name">
+			<value>ShiftEnding</value>
+		</property>
+		<relationship name="folder">
+			<destination>{3785b0f4-bdb3-41bf-a4ee-f9b7c0cfb4e7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6269155a-0409-40a7-891e-74d73d5e74c2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6269155a-0409-40a7-891e-74d73d5e74c2}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

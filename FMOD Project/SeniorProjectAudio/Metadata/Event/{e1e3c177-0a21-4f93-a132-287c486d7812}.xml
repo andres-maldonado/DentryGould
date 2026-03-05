@@ -99,9 +99,15 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{90bbeb1a-cefa-4769-bd2c-4a4594391505}">
+		<property name="start">
+			<value>4</value>
+		</property>
 		<property name="length">
 			<value>125</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{568f913f-44b2-4027-b88d-c4781c6ed913}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{9fb0afc1-37d8-4d04-8525-e4534dc6ab43}</destination>
 		</relationship>
@@ -150,6 +156,23 @@
 		<relationship name="endPoint">
 			<destination>{be14a6e0-8b12-408b-8832-d209b005df3f}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{568f913f-44b2-4027-b88d-c4781c6ed913}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>2000</value>
+		</property>
+		<property name="releaseTime">
+			<value>3200</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{19bfa812-0afb-431a-a134-d3efc09084bf}" />
 	<object class="TransitionTimeline" id="{48f01473-6e1d-4f1a-b100-472f20572ee8}">

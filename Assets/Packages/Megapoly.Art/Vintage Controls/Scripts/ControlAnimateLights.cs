@@ -23,7 +23,6 @@ public class ControlAnimateLights : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter <= 0 && on)
         {
-            Debug.Log("run");
             Run();
             counter = interval;
         }

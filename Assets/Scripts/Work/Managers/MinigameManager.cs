@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
 {
@@ -28,11 +29,14 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeField] GameObject answerSheet;
     [SerializeField] List<Transform> answers = new List<Transform>();
     [SerializeField] List<Minigame> minigames = new List<Minigame>();
+    [SerializeField] EventReference endMusic;
     public List<int> games = new List<int>();
     private int rg;
     private float counter;
     public bool isEnding;
     private bool shiftActive;
+    private MusicManager musicManager;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +44,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         {
             countChange.Add(completeCount[i], taskCount[i]);
         }
+        musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
     }
 
     public void BeginShift()
@@ -142,6 +147,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public void EndShift()
     {
         //shut off lights
+        musicManager.ReplaceMusic(endMusic);
         tower.PowerDown();
         controls.rClick.Disable();
         finalButton.Deactivate();

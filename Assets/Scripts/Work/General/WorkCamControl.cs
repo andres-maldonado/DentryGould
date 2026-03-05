@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,6 +14,8 @@ public class WorkCamControl : MonoBehaviour
     [SerializeField] int maxPanelNum;
     [SerializeField] int minPanelNum;
     [SerializeField] bool circle;
+
+    public EventInstance machineSound;
 
     private InputActionMap inputActionMap;
     public InputAction turnLeft, turnRight, zoomIn, zoomOut, rClick;
@@ -66,6 +69,7 @@ public class WorkCamControl : MonoBehaviour
                 }*/
                 isTurning = true;
                 currentPanel--;
+                machineSound.setParameterByName("CamPosition", currentPanel, false);
             }
             else if (circle && currentPanel == minPanelNum)
             {
@@ -86,6 +90,7 @@ public class WorkCamControl : MonoBehaviour
                 //Debug.Log("Euler Y: " + transform.eulerAngles.y + ", newPosition: " + newPosition);
                 isTurning = true;
                 currentPanel = maxPanelNum;
+                machineSound.setParameterByName("CamPosition", currentPanel, true);
             }
         }        
     }
@@ -112,6 +117,8 @@ public class WorkCamControl : MonoBehaviour
                 //Debug.Log("Euler Y: " + transform.eulerAngles.y + ", newPosition: " + newPosition);
                 isTurning = true;
                 currentPanel++;
+                machineSound.setParameterByName("CamPosition", currentPanel, false);
+
             }
             else if (circle && currentPanel == maxPanelNum)
             {
@@ -132,6 +139,7 @@ public class WorkCamControl : MonoBehaviour
                 //Debug.Log("Euler Y: " + transform.eulerAngles.y + ", newPosition: " + newPosition);
                 isTurning = true;
                 currentPanel = minPanelNum;
+                machineSound.setParameterByName("CamPosition", currentPanel, true);
             }
         }
     }

@@ -69,7 +69,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         if(isWriting)
         {
             WriteText();
-            if (!isYapping)
+            if (!isYapping && counter >= 0)
             {
                 Debug.Log("Start Dialogue");
                 dialogueInstance.start();
@@ -85,7 +85,6 @@ public class LoudspeakerDialogue : MonoBehaviour
                 isYapping = false;
             }
         }
-
     }
     private void WriteText()
     {
@@ -130,6 +129,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         }
         else
         {
+            isWriting = false;
             endWriting.Invoke();
             if (success == 1)
             {

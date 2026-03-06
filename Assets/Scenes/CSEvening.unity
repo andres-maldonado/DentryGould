@@ -1170,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 288}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1804228171
@@ -1185,12 +1185,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751e5597199639f488a5b7bf80548a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueFile: {fileID: 4900000, guid: b64421c6cac2e72429ecbbf60e955cf4, type: 3}
+  dialogueFile: {fileID: 4900000, guid: 499d39192e9c00c469595aa9880f45d3, type: 3}
   writeSpeed: 1000
   pauseTime: 2
   commaTime: 0.75
   endTime: 2
   sceneToLoad: 1
+  dialogueSound:
+    Guid:
+      Data1: -1693223840
+      Data2: 1280176253
+      Data3: 193542033
+      Data4: 734058526
+    Path: event:/SFX/Dialogue/Narration
 --- !u!114 &1804228172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,10 +1235,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is the transition screen to get to the bar. Here, the feelings of
-    the player character are narrated second-person. This is just meant to set up
-    the dialogue scene at night, and I figured having some buildings would be a nice
-    touch. Once this ends, it'll fade to the bar.
+  m_text: Your first day of work left you exhausted. You didn't know what to expect
+    from the job description, but it certainly wasn't that. They didn't even show
+    you patience on your first day, so you can only imagine how much of a pain this
+    job will be. Just when you thought you finally found a well-paying job that only
+    needed a high school diploma... you need a drink. You recall walking by a bar
+    on your way to work, so you seek it out.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f68b9c324e3c76542a621d34b4a9a32d, type: 2}
   m_sharedMaterial: {fileID: 1337869195437858060, guid: f68b9c324e3c76542a621d34b4a9a32d, type: 2}
@@ -1296,7 +1305,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -55.15001, y: 12.904402, z: -55.084167, w: -54.965614}
+  m_margin: {x: -55.15001, y: -27.788225, z: -55.084167, w: -27.179356}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

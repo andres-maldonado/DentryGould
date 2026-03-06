@@ -2751,6 +2751,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   doorAnim: {fileID: 907813317}
   eveningScene: 0
+  lockSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  exitSound:
+    Guid:
+      Data1: 573270970
+      Data2: 1094113306
+      Data3: 1704642727
+      Data4: 1153715206
+    Path: event:/SFX/Work/ExitDoor
   canExit: 0
 --- !u!65 &581596560
 BoxCollider:
@@ -8627,7 +8641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89509a7b4f2ec3478006bed7c82f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startFile: {fileID: 4900000, guid: 9132663894ca26547931ced5cf083107, type: 3}
+  startFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
   successFile: {fileID: 4900000, guid: 72c942c23da061745ac8dee653d3fbc0, type: 3}
   failFile: {fileID: 4900000, guid: 310bf2709d6537c4297cb923bb74821f, type: 3}
   writeSpeed: 80
@@ -8642,6 +8656,13 @@ MonoBehaviour:
       Data3: 1398598558
       Data4: 1690893228
     Path: event:/SFX/Dialogue/Loudspeaker1
+  unlockSound:
+    Guid:
+      Data1: 1729326133
+      Data2: 1139418315
+      Data3: 559999401
+      Data4: -1889570851
+    Path: event:/SFX/Work/DoorUnlock
   success: 0
 --- !u!4 &1738633251
 Transform:
@@ -9891,7 +9912,7 @@ MonoBehaviour:
   gameCount: 1
   successes: -1
   quota: 1
-  shiftTimer: 20
+  shiftTimer: 5
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}

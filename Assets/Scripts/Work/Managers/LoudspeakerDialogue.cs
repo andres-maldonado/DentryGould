@@ -12,7 +12,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     [SerializeField] float writeSpeed, pauseTime, blankTime;
     [SerializeField] TextMeshPro bottomText;
     [SerializeField] DoorButton door;
-    [SerializeField] EventReference dialogueSound;
+    [SerializeField] EventReference dialogueSound, unlockSound;
 
     private string[] dialogueByLine;
     private Queue<string> dialogueLines = new Queue<string>();
@@ -133,6 +133,7 @@ public class LoudspeakerDialogue : MonoBehaviour
             if (success == 1)
             {
                 door.canExit = true;
+                AudioManager.ins.PlayOneShot(unlockSound, this.gameObject.transform.position);
             }
             else if (success == 2)
             {

@@ -233,8 +233,9 @@ public class DialogueManager : MonoBehaviour
             letterCount = currentLine.Length;
             isWriting = false;
             quickFinish = false;
-            currentVoice.setPaused(true);
-            currentVoice.getPaused(out voiceState);
+            //currentVoice.setPaused(true);
+            //currentVoice.getPaused(out voiceState);
+            currentVoice.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             //Debug.Log("YOMAMA");
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }

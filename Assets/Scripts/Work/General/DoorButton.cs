@@ -35,7 +35,7 @@ public class DoorButton : MonoBehaviour, IPointerDownHandler
             {
                 doorAnim.Play("DoorExit");
                 AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                AudioManager.ins.CreateInstance(exitSound);
+                AudioManager.ins.PlayOneShot(exitSound, this.transform.position);
             }
 
         }

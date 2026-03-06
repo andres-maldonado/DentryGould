@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,6 +9,8 @@ public class EveningText : MonoBehaviour
     public TextAsset dialogueFile;
     [SerializeField] float writeSpeed, pauseTime, commaTime, endTime;
     public int sceneToLoad;
+    [SerializeField] EventReference dialogueSound;
+    private EventInstance dialogueInstance;
     private TextMeshPro text;
 
     private string[] dialogueByLine;
@@ -17,10 +21,12 @@ public class EveningText : MonoBehaviour
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
+    private bool isPaused;
     private bool isEnding;
     private void Awake()
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
+        dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
         text = gameObject.GetComponent<TextMeshPro>();
         text.text = null;
     }
@@ -38,6 +44,7 @@ public class EveningText : MonoBehaviour
         Debug.Log(currentLine);
         text.text = null;
         isWriting = true;
+        dialogueInstance.start();
         WriteText();
     }
     private void WriteText()
@@ -55,6 +62,10 @@ public class EveningText : MonoBehaviour
         else if (counter > 1 / writeSpeed)
         {
             text.text += currentLine.Substring(letterCount, 1);
+            if (isPaused)
+            {
+                dialogueInstance.setPaused(false);
+            }
             letterCount++;
             counter = 0;
         }
@@ -62,12 +73,16 @@ public class EveningText : MonoBehaviour
         {
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
+            dialogueInstance.setPaused(true);
+            dialogueInstance.getPaused(out isPaused);
             counter = (1 / writeSpeed) - pauseTime;
         }
         if (currentLine[letterCount] == ',')
         {
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
+            dialogueInstance.setPaused(true);
+            dialogueInstance.getPaused(out isPaused);
             counter = (1 / writeSpeed) - commaTime;
         }
     }

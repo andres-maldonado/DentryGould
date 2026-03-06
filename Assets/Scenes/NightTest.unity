@@ -1384,17 +1384,23 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 4a29b690d2827bf42ac121cdb621a632, type: 2}
   voices:
   - Guid:
-      Data1: -1950164656
-      Data2: 1105826897
-      Data3: 1398598558
-      Data4: 1690893228
-    Path: event:/SFX/Dialogue/Loudspeaker1
+      Data1: -1404706542
+      Data2: 1141689762
+      Data3: -1476729433
+      Data4: -1895021542
+    Path: event:/SFX/Dialogue/Man
   - Guid:
-      Data1: -648642497
-      Data2: 1305805837
-      Data3: -707734339
-      Data4: -833712077
-    Path: event:/SFX/Dialogue/Loudspeaker2
+      Data1: 2140206769
+      Data2: 1147649130
+      Data3: -554333557
+      Data4: -145313610
+    Path: event:/SFX/Dialogue/MC
+  - Guid:
+      Data1: -1693223840
+      Data2: 1280176253
+      Data3: 193542033
+      Data4: 734058526
+    Path: event:/SFX/Dialogue/Narration
   portraitPrefab: {fileID: 513250027124793571, guid: 039ee07c2bd78114c825b902e98b32b6, type: 3}
   lineBox: {fileID: 3597504547697388997, guid: bec65c52d10017c488a49b8cd58682b8, type: 3}
   fadeInSprite: {fileID: 1583466293}

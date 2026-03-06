@@ -9,6 +9,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using FMODUnity;
+using FMOD.Studio;
 //using FMODUnity;
 
 public class DialogueManager : MonoBehaviour
@@ -24,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Transform rightSprite;
     [SerializeField] RuntimeAnimatorController portraitSizer;
     [SerializeField] RuntimeAnimatorController[] portraits;
+    [SerializeField] EventReference[] voices;
     [SerializeField] GameObject portraitPrefab;
     [SerializeField] GameObject lineBox;
     [SerializeField] SpriteRenderer fadeInSprite;
@@ -32,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     private Transform textSpawn;
     private InputActionMap inputMap;
     private InputAction continueKey;
+    private EventInstance currentVoice;
 
     public List<GameObject> textBoxes = new List<GameObject>();
     private GameObject newBox;
@@ -45,9 +49,11 @@ public class DialogueManager : MonoBehaviour
     private int letterCount = 1;
     private int totalLetterCount;
     private bool isWriting;
+    private bool isYapping;
     private bool readingTag;
     private bool quickFinish;
     private bool end;
+    private bool voiceState;
     private Queue<string> dialogueLines = new Queue<String>();
 
     public delegate void MoveBoxesUp(float moveAmount);
@@ -206,6 +212,14 @@ public class DialogueManager : MonoBehaviour
             tag = tag.Remove(tag.Length - 1, 1);
             AudioManager.ins.musicEventInstance.setParameterByName(tag, parameterNum);
         }
+        else if (tag.StartsWith("V"))
+        {
+            tag = tag.Remove(0, 1);
+            int voiceIndex = int.Parse(tag);
+            currentVoice = AudioManager.ins.CreateInstance(voices[voiceIndex]);
+            Debug.Log("Voice made current voice");
+            currentVoice.start();
+        }
     }
 
     private void WriteText()
@@ -219,6 +233,8 @@ public class DialogueManager : MonoBehaviour
             letterCount = currentLine.Length;
             isWriting = false;
             quickFinish = false;
+            currentVoice.setPaused(true);
+            currentVoice.getPaused(out voiceState);
             //Debug.Log("YOMAMA");
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
@@ -262,18 +278,27 @@ public class DialogueManager : MonoBehaviour
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
                 counter = (1 / writeSpeed) - pauseTime;
+                currentVoice.setPaused(true);
+                currentVoice.getPaused(out voiceState);
             }
             else if (currentLine[letterCount] == ',' && letterCount < currentLine.Length)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
                 counter = (1 / writeSpeed) - commaTime;
+                currentVoice.setPaused(true);
+                currentVoice.getPaused(out voiceState);
             }
             else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '!') || quickFinish)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
                 counter = 0;
+                Debug.Log("state: " + voiceState);
+                if (voiceState == true)
+                {
+                    currentVoice.setPaused(false);
+                }
             }
         }
     }

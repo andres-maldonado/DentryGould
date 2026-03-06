@@ -1371,7 +1371,7 @@ MonoBehaviour:
   textGap: 100
   moveSpeed: 0.5
   commaTime: 0.4
-  pauseTime: 1.2
+  pauseTime: 1
   fadeTime: 2
   inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   leftSprite: {fileID: 175337787}
@@ -1382,6 +1382,19 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 6996461cf75a54d4aaaf4b7e78ce9034, type: 2}
   - {fileID: 9100000, guid: 08f7257cd1d0bbc4f93efc95b9a435a4, type: 2}
   - {fileID: 9100000, guid: 4a29b690d2827bf42ac121cdb621a632, type: 2}
+  voices:
+  - Guid:
+      Data1: -1950164656
+      Data2: 1105826897
+      Data3: 1398598558
+      Data4: 1690893228
+    Path: event:/SFX/Dialogue/Loudspeaker1
+  - Guid:
+      Data1: -648642497
+      Data2: 1305805837
+      Data3: -707734339
+      Data4: -833712077
+    Path: event:/SFX/Dialogue/Loudspeaker2
   portraitPrefab: {fileID: 513250027124793571, guid: 039ee07c2bd78114c825b902e98b32b6, type: 3}
   lineBox: {fileID: 3597504547697388997, guid: bec65c52d10017c488a49b8cd58682b8, type: 3}
   fadeInSprite: {fileID: 1583466293}

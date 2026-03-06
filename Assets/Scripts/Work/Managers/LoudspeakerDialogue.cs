@@ -71,7 +71,6 @@ public class LoudspeakerDialogue : MonoBehaviour
             WriteText();
             if (!isYapping && counter >= 0)
             {
-                Debug.Log("Start Dialogue");
                 dialogueInstance.start();
                 isYapping = true;
             }

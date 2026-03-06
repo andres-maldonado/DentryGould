@@ -5,7 +5,7 @@
 			<value>Loudspeaker1</value>
 		</property>
 		<property name="outputFormat">
-			<value>5</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{af22402c-946a-492b-8b11-28adf84a0c75}</destination>
@@ -64,7 +64,6 @@
 		</relationship>
 		<relationship name="modules">
 			<destination>{453fc5c9-d857-413d-9071-011200cb8432}</destination>
-			<destination>{56f4dcb4-8354-4624-bd69-878892f05467}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{c7822179-c160-4ed6-9d64-d59a25e537a3}</destination>
@@ -73,7 +72,6 @@
 	<object class="Timeline" id="{3d6d40b7-55b6-44fe-9af6-3d4779a7dbbc}">
 		<relationship name="modules">
 			<destination>{453fc5c9-d857-413d-9071-011200cb8432}</destination>
-			<destination>{56f4dcb4-8354-4624-bd69-878892f05467}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{020c8a18-d7fe-4236-9b2f-3734a7d1fd08}</destination>
@@ -123,29 +121,6 @@
 			<destination>{c39d5cff-b830-4bf9-9789-9d0c38eda57f}</destination>
 			<destination>{1d30fb4d-381a-49d2-ab5e-2df668158adb}</destination>
 			<destination>{a58d0b0a-c088-449e-9c62-0ad3072ae1e3}</destination>
-		</relationship>
-	</object>
-	<object class="SoundScatterer" id="{56f4dcb4-8354-4624-bd69-878892f05467}">
-		<property name="start">
-			<value>2.5</value>
-		</property>
-		<property name="length">
-			<value>2</value>
-		</property>
-		<property name="minimumTimeBetweenSounds">
-			<value>100</value>
-		</property>
-		<property name="maximumTimeBetweenSounds">
-			<value>100</value>
-		</property>
-		<property name="maximumScatterDistance">
-			<value>1</value>
-		</property>
-		<relationship name="modulators">
-			<destination>{b0d77431-1e99-44ad-bc5a-3e93d909e328}</destination>
-		</relationship>
-		<relationship name="sound">
-			<destination>{df716c7f-4353-4d64-83f5-a3cc19134970}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c7822179-c160-4ed6-9d64-d59a25e537a3}">
@@ -222,20 +197,6 @@
 			<destination>{18861ea5-7583-4337-aec7-58c97d7d4ebf}</destination>
 		</relationship>
 	</object>
-	<object class="RandomizerModulator" id="{b0d77431-1e99-44ad-bc5a-3e93d909e328}">
-		<property name="nameOfPropertyBeingModulated">
-			<value>pitch</value>
-		</property>
-	</object>
-	<object class="MultiSound" id="{df716c7f-4353-4d64-83f5-a3cc19134970}">
-		<relationship name="sounds">
-			<destination>{f4b1b1ba-a639-4cb1-bb8f-8c7f8c3ad0da}</destination>
-			<destination>{0c8e7e43-7f18-4465-9a1e-c4ff7ccba974}</destination>
-			<destination>{9af6877e-7a87-42f6-bf40-e09c4b6478f9}</destination>
-			<destination>{94a32f58-0447-4d71-895d-76d8ffec54f7}</destination>
-			<destination>{78c91f4c-2e09-4733-9a90-80d52a8df52c}</destination>
-		</relationship>
-	</object>
 	<object class="Automator" id="{86b96856-99a8-49d1-9d2b-eefeecbca3e8}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -301,31 +262,6 @@
 		<property name="dryLevel">
 			<value>-3</value>
 		</property>
-	</object>
-	<object class="SingleSound" id="{f4b1b1ba-a639-4cb1-bb8f-8c7f8c3ad0da}">
-		<relationship name="audioFile">
-			<destination>{a80698eb-8b44-448a-bd6c-673d88d0dc8e}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{0c8e7e43-7f18-4465-9a1e-c4ff7ccba974}">
-		<relationship name="audioFile">
-			<destination>{69674444-2489-4ab6-8a56-d839aa30f142}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{9af6877e-7a87-42f6-bf40-e09c4b6478f9}">
-		<relationship name="audioFile">
-			<destination>{d783ebe8-b2c9-4284-b5b8-7885ed3eea66}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{94a32f58-0447-4d71-895d-76d8ffec54f7}">
-		<relationship name="audioFile">
-			<destination>{68449353-ba59-472c-a16b-481466c19a23}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{78c91f4c-2e09-4733-9a90-80d52a8df52c}">
-		<relationship name="audioFile">
-			<destination>{e3039ddd-e383-4dc1-ac7b-68c7e5969f82}</destination>
-		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{363369d4-2ca2-4cae-9de2-25457bf97eaa}">
 		<relationship name="parameter">

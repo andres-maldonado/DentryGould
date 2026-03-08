@@ -274,7 +274,7 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!') && letterCount < StripAllTags(currentLine, true).Length)
+            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!' || currentLine[letterCount] == '?') && letterCount < StripAllTags(currentLine, true).Length)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
@@ -290,7 +290,7 @@ public class DialogueManager : MonoBehaviour
                 currentVoice.setPaused(true);
                 currentVoice.getPaused(out voiceState);
             }
-            else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '!') || quickFinish)
+            else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '?' && currentLine[letterCount - 1] != '!') || quickFinish)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;

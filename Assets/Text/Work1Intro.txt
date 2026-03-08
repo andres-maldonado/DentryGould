@@ -3,6 +3,7 @@ They shuffle managers a lot though, so don't get too attached.
 Oh, and I can't hear you, so if you were gonna introduce yourself, don't worry about it.
 Anyway, let me give you a brief rundown of what your job is here.
 Use the A and D buttons to turn left and right. You'll see a bunch of panels around you.
+Look over the panels by pressing W, and lean back out by pressing S.
 Each one is marked by the color above and has some control sections denoted by shapes.
 When you begin, you'll receive a ticket with those same shapes and colors alongside some other images or text.
 You can hold Right Click to look at the ticket at any time in case you forget what the input is.

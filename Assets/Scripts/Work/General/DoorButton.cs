@@ -9,7 +9,7 @@ public class DoorButton : MonoBehaviour, IPointerDownHandler
     [SerializeField] EventReference lockSound;
     [SerializeField] EventReference exitSound;
 
-    public bool canExit;
+    public bool canExit, isExiting;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,11 +31,12 @@ public class DoorButton : MonoBehaviour, IPointerDownHandler
                 doorAnim.Play("DoorLocked", 0, 0);
                 AudioManager.ins.PlayOneShot(lockSound, this.transform.position);
             }
-            if (canExit)
+            if (canExit && !isExiting)
             {
                 doorAnim.Play("DoorExit");
                 AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 AudioManager.ins.PlayOneShot(exitSound, this.transform.position);
+                isExiting = true;
             }
 
         }

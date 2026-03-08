@@ -23,7 +23,7 @@ public class ColorButtonGame : Minigame
         {
             entry -= code;
         }
-        if (entry == answer) //Here's where you win
+        if (entry == answer && active) //Here's where you win
         {
             print("you win!");
             Complete();
@@ -53,10 +53,12 @@ public class ColorButtonGame : Minigame
         green.code = 2;
         blue.code = 1;
         entry = 0;
+        Disable();
     }
     public override void Disable()
     {
         active = false;
+        Debug.Log("shits not running");
         foreach (ColorButton button in colorButtons)
         {
             button.IsActive(false);

@@ -903,8 +903,15 @@ MonoBehaviour:
   writeSpeed: 2
   pauseTime: 2
   commaTime: 0.75
-  endTime: 3
-  sceneToLoad: 3
+  endTime: 60
+  sceneToLoad: 0
+  dialogueSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &1804228172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,7 +949,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DAY 2
+  m_text: END OF DEMO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f68b9c324e3c76542a621d34b4a9a32d, type: 2}
   m_sharedMaterial: {fileID: 1337869195437858060, guid: f68b9c324e3c76542a621d34b4a9a32d, type: 2}
@@ -1007,7 +1014,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.781662, y: -2.0371714, z: -55.084167, w: -54.965614}
+  m_margin: {x: -12.558341, y: -2.0371714, z: -55.084167, w: -54.965614}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0

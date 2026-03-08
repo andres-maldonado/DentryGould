@@ -16,7 +16,7 @@ public class NumberButtonGame : Minigame
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Disable();
     }
     public void AddNumber(char c)
     {
@@ -25,7 +25,7 @@ public class NumberButtonGame : Minigame
             entry += c.ToString();
             UpdateDisplay();
         }
-        if (entry == answer)
+        if (entry == answer && active)
         {
             Complete();
         }

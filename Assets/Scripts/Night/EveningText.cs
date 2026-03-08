@@ -26,7 +26,10 @@ public class EveningText : MonoBehaviour
     private void Awake()
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
-        dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
+        if (!dialogueSound.IsNull)
+        {
+            dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
+        }
         text = gameObject.GetComponent<TextMeshPro>();
         text.text = null;
     }
@@ -62,7 +65,7 @@ public class EveningText : MonoBehaviour
         else if (counter > 1 / writeSpeed)
         {
             text.text += currentLine.Substring(letterCount, 1);
-            if (isPaused)
+            if (isPaused && !dialogueSound.IsNull)
             {
                 dialogueInstance.setPaused(false);
             }
@@ -73,16 +76,22 @@ public class EveningText : MonoBehaviour
         {
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
-            dialogueInstance.setPaused(true);
-            dialogueInstance.getPaused(out isPaused);
+            if (!dialogueSound.IsNull)
+            {
+                dialogueInstance.setPaused(true);
+                dialogueInstance.getPaused(out isPaused);
+            }
             counter = (1 / writeSpeed) - pauseTime;
         }
         if (currentLine[letterCount] == ',')
         {
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
-            dialogueInstance.setPaused(true);
-            dialogueInstance.getPaused(out isPaused);
+            if (!dialogueSound.IsNull)
+            {
+                dialogueInstance.setPaused(true);
+                dialogueInstance.getPaused(out isPaused);
+            }
             counter = (1 / writeSpeed) - commaTime;
         }
     }

@@ -1190,7 +1190,7 @@ MonoBehaviour:
   pauseTime: 2
   commaTime: 0.75
   endTime: 2
-  sceneToLoad: 1
+  sceneToLoad: 2
   dialogueSound:
     Guid:
       Data1: -1693223840

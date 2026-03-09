@@ -32,6 +32,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     private bool isYapping;
     private bool canSkip;
     private bool isPaused;
+    private bool waitingToYap;
     private EventInstance dialogueInstance;
     public int success;
 
@@ -80,13 +81,16 @@ public class LoudspeakerDialogue : MonoBehaviour
         letterCount = 0;
         bottomText.text = null;
         isWriting = true;
+        quickFinish = false;
         skipText.SetActive(true);
+        waitingToYap = true;
         WriteText();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log("Counter: " + counter);
         if(isWriting)
         {
             WriteText();
@@ -108,6 +112,15 @@ public class LoudspeakerDialogue : MonoBehaviour
         if (continueCounter >= 0)
         {
             continueCounter -= Time.deltaTime;
+        }
+        if (waitingToYap)
+        {
+            if(counter >= 0)
+            {
+                dialogueInstance.start();
+                isYapping = true;
+                waitingToYap = false;
+            }
         }
     }
     private void WriteText()

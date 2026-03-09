@@ -70,11 +70,12 @@ public class KnobGame : Minigame
             knobs[i].transform.localEulerAngles = new Vector3(knobs[i].transform.localEulerAngles.x, knobs[i].transform.localEulerAngles.y, j);
             float knobAns = (((float)answer.ToCharArray()[i] * 60 - 180) % 360);
             float knobPos = (j % 360);
-            while (Mathf.Abs(knobPos - knobAns) < 30)
+            while (Mathf.Abs(knobPos - knobAns) < 30 || (Mathf.Abs(knobPos - knobAns) > 330 && Mathf.Abs(knobPos - knobAns) < 390))
             {
                 j = Random.Range(-120, 120);
                 knobs[i].transform.localEulerAngles = new Vector3(knobs[i].transform.localEulerAngles.x, knobs[i].transform.localEulerAngles.y, j);
                 knobPos = (j % 360);
+                Debug.Log("REGENERATED ANSWER");
             }
         }
         taskLight.SetCompletion(false);

@@ -38,7 +38,8 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
     void ChangeAngle()
     {
-        gameObject.transform.eulerAngles += new Vector3(0, 0, scale * (look.ReadValue<Vector2>().x + look.ReadValue<Vector2>().y));
+        Debug.Log("Cosine: " + Mathf.Cos(Mathf.PI * gameObject.transform.localEulerAngles.z / 180) + ", Sine: " + Mathf.Sin(Mathf.PI * gameObject.transform.localEulerAngles.z / 180));
+        gameObject.transform.localEulerAngles += new Vector3(0, 0, scale * (look.ReadValue<Vector2>().x*Mathf.Cos(Mathf.PI*gameObject.transform.localEulerAngles.z/180) - look.ReadValue<Vector2>().y*Mathf.Sin(Mathf.PI*gameObject.transform.localEulerAngles.z/180)));
         if(gameObject.transform.localEulerAngles.z % 360 < 240 && gameObject.transform.localEulerAngles.z % 360 > 180)
         {
             gameObject.transform.localEulerAngles = new Vector3(0, 0, -120);

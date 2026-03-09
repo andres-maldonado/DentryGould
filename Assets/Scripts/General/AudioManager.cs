@@ -2,6 +2,7 @@ using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -55,6 +56,12 @@ public class AudioManager : MonoBehaviour
 
     public void InitializeMusic(EventReference musicEventReference)
     {
+        musicEventInstance.getPlaybackState(out PLAYBACK_STATE state);
+        if (state == PLAYBACK_STATE.PLAYING)
+        {
+            musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            musicEventInstance.release();
+        }
         musicEventInstance = CreateInstance(musicEventReference);
         musicEventInstance.start();
     }

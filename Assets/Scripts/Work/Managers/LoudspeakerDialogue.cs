@@ -5,24 +5,33 @@ using TMPro;
 using System.Collections;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.InputSystem;
 
 public class LoudspeakerDialogue : MonoBehaviour
 {
     public TextAsset startFile, successFile, failFile;
-    [SerializeField] float writeSpeed, pauseTime, blankTime;
+    [SerializeField] float writeSpeed, pauseTime, blankTime, continueDelay;
     [SerializeField] TextMeshPro bottomText;
     [SerializeField] DoorButton door;
     [SerializeField] EventReference dialogueSound, unlockSound;
+    [SerializeField] InputActionAsset inputAction;
+    [SerializeField] GameObject skipText;
+    private InputActionMap inputMap;
+    private InputAction continueKey;
+
 
     private string[] dialogueByLine;
     private Queue<string> dialogueLines = new Queue<string>();
     private int letterCount;
     private float counter;
     private float nextLineCounter;
+    private float continueCounter;
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
     private bool isYapping;
+    private bool canSkip;
+    private bool isPaused;
     private EventInstance dialogueInstance;
     public int success;
 
@@ -33,6 +42,9 @@ public class LoudspeakerDialogue : MonoBehaviour
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += FirstDialogue;
         bottomText.text = null;
         dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
+        inputMap = inputAction.FindActionMap("Player");
+        continueKey = inputMap.FindAction("Interact");
+        continueKey.performed += _ => ContinueDialogue();
     }
     void FirstDialogue()
     {
@@ -48,6 +60,14 @@ public class LoudspeakerDialogue : MonoBehaviour
         counter = (1 / writeSpeed) - timer;
         StartWriting(failFile);
     }
+    public void ContinueDialogue()
+    {
+        if (continueCounter < 0)
+        {
+            quickFinish = true;
+        }
+        continueCounter = continueDelay;
+    }
     public void StartWriting(TextAsset file)
     {
         dialogueByLine = file.text.Split("\n");
@@ -60,6 +80,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         letterCount = 0;
         bottomText.text = null;
         isWriting = true;
+        skipText.SetActive(true);
         WriteText();
     }
 
@@ -69,20 +90,24 @@ public class LoudspeakerDialogue : MonoBehaviour
         if(isWriting)
         {
             WriteText();
-            if (!isYapping && counter >= 0)
+            /*if (!isYapping && counter >= 0)
             {
                 dialogueInstance.start();
                 isYapping = true;
-            }
+            }*/
         }
-        if (nextLineCounter > 0)
+        if (nextLineCounter > 0 && isPaused)
         {
             PauseTime();
-            if (isYapping)
+            /*if (isYapping)
             {
                 dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 isYapping = false;
-            }
+            }*/
+        }
+        if (continueCounter >= 0)
+        {
+            continueCounter -= Time.deltaTime;
         }
     }
     private void WriteText()
@@ -90,16 +115,20 @@ public class LoudspeakerDialogue : MonoBehaviour
         //Debug.Log("LetterCount: " + letterCount + ", ReadingTag: " + readingTag +", isWriting: "+isWriting);
         counter += Time.deltaTime;
         //UnityEngine.Debug.Log("Counter: " + counter + ", Letters Displayed: " + letterCount);
-        if (letterCount >= currentLine.Length)
+        if (letterCount >= currentLine.Length || quickFinish)
         {
+            bottomText.text = currentLine;
             letterCount = currentLine.Length;
             isWriting = false;
+            quickFinish = false;
             nextLineCounter = pauseTime * currentLine.Length;
+            isPaused = true;
+            canSkip = true;
 
             //Debug.Log("YOMAMA");
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
-        else if ((counter > 1 / writeSpeed) || currentLine[letterCount] == ' ' || quickFinish)
+        else if ((counter > 1 / writeSpeed) || currentLine[letterCount] == ' ')
         {
             bottomText.text += currentLine.Substring(letterCount, 1);
             letterCount++;
@@ -109,10 +138,18 @@ public class LoudspeakerDialogue : MonoBehaviour
     private void PauseTime()
     {
         nextLineCounter -= Time.deltaTime;
-        if(nextLineCounter <= 0)
+        if (isYapping && isPaused)
+        {
+            dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            isYapping = false;
+        }
+        if (nextLineCounter <= 0 || (quickFinish && !isWriting) && canSkip)
         {
             bottomText.text = null;
+            quickFinish = false;
+            isPaused = false;
             StartCoroutine(BlankTime());
+            canSkip = false;
         }
     }
     IEnumerator BlankTime()
@@ -122,14 +159,17 @@ public class LoudspeakerDialogue : MonoBehaviour
         {
             yield return new WaitForSeconds(blankTime);
             currentLine = dialogueLines.Dequeue();
-
+            bottomText.text = null;
             isWriting = true;
             letterCount = 0;
+            dialogueInstance.start();
+            isYapping = true;
         }
         else
         {
             isWriting = false;
             endWriting.Invoke();
+            skipText.SetActive(false);
             if (success == 1)
             {
                 door.canExit = true;

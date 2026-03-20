@@ -90,7 +90,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("Counter: " + counter);
+        //Debug.Log("Counter: " + counter);
         if(isWriting)
         {
             WriteText();
@@ -167,7 +167,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     }
     IEnumerator BlankTime()
     {
-        Debug.Log("Dialogue Lines Left: "+dialogueLines.Count);
+        //Debug.Log("Dialogue Lines Left: "+dialogueLines.Count);
         if (dialogueLines.Count > 0 )
         {
             yield return new WaitForSeconds(blankTime);

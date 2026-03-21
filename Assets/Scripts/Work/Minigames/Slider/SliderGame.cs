@@ -7,13 +7,15 @@ public class SliderGame : Minigame
     public Transform vSliderCube;
     public Transform hSliderCube, dot;
     [SerializeField] Slider vSlider, hSlider;
-    [SerializeField] int divisions;
+    [SerializeField] int max, interval;
+    [SerializeField] float maxAnswerDist;
 
     private Vector2 entryVect, answerVect;
+    private string answer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,26 +26,44 @@ public class SliderGame : Minigame
 
     public override void Disable()
     {
-        throw new System.NotImplementedException();
+        active = false;
+        vSlider.enabled = false;
+        hSlider.enabled = false;
     }
     public override void Enable()
     {
-        throw new System.NotImplementedException();
+        active = true;
+        vSlider.enabled = true;
+        hSlider.enabled = true;
     }
 
     public override void Randomize(Transform p)
     {
-        answerVect = new Vector2(Random.Range(0, divisions)/divisions, Random.Range(0, divisions) / divisions);
-        entryVect = null;
+        answerVect = new Vector2((float)(Random.Range(0, max/interval + 1)) / max * interval, (float)(Random.Range(0, max/interval + 1)) / max * interval);
+        UpdateDot();
+        while (Vector2.Distance(answerVect, entryVect) < maxAnswerDist)
+        {
+            answerVect = new Vector2((float)(Random.Range(0, max / interval + 1)) / max * interval, (float)(Random.Range(0, max / interval + 1)) / max * interval);
+        }
+        answer = "("+answerVect.y * max + ", "+answerVect.x * max+")";
+        thisAnswer = Instantiate(answerTemplate, p);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
+        taskLight.SetCompletion(false);
+
     }
     public override void ResetGame()
     {
-        throw new System.NotImplementedException();
+        Disable();
     }
     public void UpdateDot()
     {
-        dot.localPosition = new Vector3(vSliderCube.localPosition.x, hSliderCube.localPosition.x-hSliderCube.parent.parent.position.x, 0);
+        dot.localPosition = new Vector3(vSliderCube.localPosition.x, hSliderCube.localPosition.x-hSliderCube.parent.parent.position.x, dot.localPosition.z);
         entryVect = new Vector2(hSlider.value, 1 - vSlider.value);
-        Debug.Log(entryVect);
+        if (Vector2.Distance(answerVect, entryVect) < maxAnswerDist && active)
+        {
+            hSlider.value = answerVect.x;
+            vSlider.value = 1 - answerVect.y;
+            Complete();
+        }
     }
 }

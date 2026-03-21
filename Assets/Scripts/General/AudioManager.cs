@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
         eventInstances.Add(eventInstance);
-        UnityEngine.Debug.Log("played sound");
+        //UnityEngine.Debug.Log("played sound");
         return eventInstance;
     }
 

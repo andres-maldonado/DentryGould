@@ -58,7 +58,7 @@ public class ColorButtonGame : Minigame
     public override void Disable()
     {
         active = false;
-        Debug.Log("shits not running");
+        //Debug.Log("shits not running");
         foreach (ColorButton button in colorButtons)
         {
             button.IsActive(false);

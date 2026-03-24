@@ -6131,7 +6131,7 @@ MonoBehaviour:
   vSlider: {fileID: 8306447788123140782}
   hSlider: {fileID: 214661490645521221}
   max: 8
-  interval: 2
+  interval: 1
   maxAnswerDist: 0.05
 --- !u!1 &8899544609907906385
 GameObject:

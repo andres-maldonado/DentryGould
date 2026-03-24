@@ -61,9 +61,9 @@ public class SliderGame : Minigame
         entryVect = new Vector2(hSlider.value, 1 - vSlider.value);
         if (Vector2.Distance(answerVect, entryVect) < maxAnswerDist && active)
         {
+            Complete();
             hSlider.value = answerVect.x;
             vSlider.value = 1 - answerVect.y;
-            Complete();
         }
     }
 }

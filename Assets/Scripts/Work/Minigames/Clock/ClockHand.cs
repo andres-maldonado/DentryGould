@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] Transform pivot, clockCircle;
-    [SerializeField] float maxTurnSpeed, clockValue;
+    [SerializeField] float maxTurnSpeed, clockValue, snapDistance;
+    [SerializeField] ClockGame game;
 
 
     private bool isDragging;
@@ -28,8 +29,6 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 if (hitInfo.transform == clockCircle)
                 {
                     Vector3 mousePosition = Vector3.ProjectOnPlane(hitInfo.point, pivot.forward);
-                    //Debug.Log(Vector3.Angle(pivot.up, mousePosition - pivot.position));
-                    //Debug.Log(transform.up);
                     float signedAngle = Vector3.Angle(transform.up, mousePosition - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, mousePosition-pivot.position));
                     if (signedAngle > maxTurnSpeed)
                     {
@@ -40,30 +39,36 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                         signedAngle = -maxTurnSpeed;
                     }
                     pivot.Rotate(Vector3.forward, signedAngle);
-                    /*if (pivot.localEulerAngles.z < 0)
-                    {
-                        clockValue = pivot.localEulerAngles.z / -30;
-                    }
-                    else if (pivot.localEulerAngles.z < 0)
-                    {
-                        clockValue = 12 - pivot.localEulerAngles.z / 30;
-                    }*/
                     clockValue = 12 - pivot.localEulerAngles.z / 30;
-                    Debug.Log(clockValue);
-                    //pivot.localEulerAngles = new Vector3(0, 0, Vector3.Angle(pivot.position, hitInfo.point));
-
                 }
             }
         }
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        isDragging = true;
+        if (game.active)
+        {
+            isDragging = true;
+        }
     }
     public void OnPointerUp(PointerEventData eventData)
     {
         isDragging = false;
-
+        if (clockValue % 1 <= 0 + snapDistance)
+        {
+            float snapAngle = clockValue % 1;
+            Debug.Log(snapAngle);
+            pivot.Rotate(Vector3.forward, snapAngle*30);
+            clockValue = Mathf.Floor(clockValue);
+        }
+        else if (clockValue % 1 >= 1 - snapDistance)
+        {
+            float snapAngle = 1 - clockValue % 1;
+            Debug.Log(snapAngle);
+            pivot.Rotate(Vector3.forward, -snapAngle*30);
+            clockValue = Mathf.Ceil(clockValue);
+        }
+        game.UpdateValue(this.transform.name, clockValue);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

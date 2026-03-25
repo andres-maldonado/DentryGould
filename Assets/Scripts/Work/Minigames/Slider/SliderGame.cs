@@ -15,7 +15,8 @@ public class SliderGame : Minigame
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        UpdateDot();
+        answerVect = new Vector2(-1, -1);
     }
 
     // Update is called once per frame

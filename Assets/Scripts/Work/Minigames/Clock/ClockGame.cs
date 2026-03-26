@@ -39,10 +39,27 @@ public class ClockGame : Minigame
     }
     public override void Randomize(Transform p)
     {
-        answer.x = Random.Range(1, 13);
-        answer.y = Random.Range(1, 13);
+        answer.x = Random.Range(0, 12);
+        answer.y = Random.Range(0, 12);
         thisAnswer = Instantiate(answerTemplate, p);
-        string displayAnswer = answer.x.ToString()+":"+(answer.y*5).ToString();
+        string displayAnswer;
+        if (answer.x == 0)
+        {
+            displayAnswer = "12";
+        }
+        else
+        {
+            displayAnswer = answer.x.ToString();
+        }
+        if (answer.y <= 1)
+        {
+            displayAnswer +=":0" + (answer.y * 5).ToString();
+        }
+        else 
+        {
+            displayAnswer += ":" + (answer.y * 5).ToString();
+        }
+        
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, displayAnswer);
         taskLight.SetCompletion(false);
     }

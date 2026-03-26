@@ -25,7 +25,11 @@ public class GaugeGame : Minigame
     }
     public void UpdateTarget(bool isUp)
     {
-        if (isUp && targetValue < maxAngle + precision)
+        if (targetValue == answer)
+        {
+
+        }
+        else if (isUp && targetValue < maxAngle + precision)
         {
             targetValue += moveAmount;
             //pivot.Rotate(Vector3.forward, moveAmount);
@@ -67,6 +71,10 @@ public class GaugeGame : Minigame
     public override void Randomize(Transform t)
     {
         answer = Random.Range(0, (int)maxAngle / (int)moveAmount + 1) * (int)moveAmount;
+        while (answer == targetValue)
+        {
+            answer = Random.Range(0, (int)maxAngle / (int)moveAmount + 1) * (int)moveAmount;
+        }
         thisAnswer = Instantiate(answerTemplate, t);
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer.ToString());
     }

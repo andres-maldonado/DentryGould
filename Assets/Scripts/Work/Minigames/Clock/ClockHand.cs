@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] Transform pivot, clockCircle;
-    [SerializeField] float maxTurnSpeed, clockValue, snapDistance;
+    [SerializeField] float maxTurnSpeed, clockValue, snapDistance, stopValue;
     [SerializeField] ClockGame game;
 
 
@@ -30,6 +30,10 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 {
                     Vector3 mousePosition = Vector3.ProjectOnPlane(hitInfo.point, pivot.forward);
                     float signedAngle = Vector3.Angle(transform.up, hitInfo.point - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, hitInfo.point-pivot.position));
+                    if (signedAngle < stopValue && signedAngle > -stopValue)
+                    {
+                        signedAngle = 0;
+                    }
                     if (signedAngle > maxTurnSpeed)
                     {
                         signedAngle = maxTurnSpeed;

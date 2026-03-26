@@ -29,7 +29,7 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 if (hitInfo.transform == clockCircle)
                 {
                     Vector3 mousePosition = Vector3.ProjectOnPlane(hitInfo.point, pivot.forward);
-                    float signedAngle = Vector3.Angle(transform.up, mousePosition - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, mousePosition-pivot.position));
+                    float signedAngle = Vector3.Angle(transform.up, hitInfo.point - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, hitInfo.point-pivot.position));
                     if (signedAngle > maxTurnSpeed)
                     {
                         signedAngle = maxTurnSpeed;

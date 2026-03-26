@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 using UnityEngine.Windows;
 
 public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
@@ -11,9 +12,10 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     private bool isDragging;
     private float lastFrame;
     private float thisFrame;
-    [SerializeField] float scale;
+    [SerializeField] float scale, stopAngle;
     [SerializeField] KnobGame game;
     [SerializeField] InputActionAsset input;
+    [SerializeField] Transform pivot;
     private EventReference knobStartSound;
     private EventReference knobStopSound;
     private InputActionMap map;
@@ -38,7 +40,7 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     }
     void ChangeAngle()
     {
-        Debug.Log("Cosine: " + Mathf.Cos(Mathf.PI * gameObject.transform.localEulerAngles.z / 180) + ", Sine: " + Mathf.Sin(Mathf.PI * gameObject.transform.localEulerAngles.z / 180));
+        /*Debug.Log("Cosine: " + Mathf.Cos(Mathf.PI * gameObject.transform.localEulerAngles.z / 180) + ", Sine: " + Mathf.Sin(Mathf.PI * gameObject.transform.localEulerAngles.z / 180));
         gameObject.transform.localEulerAngles += new Vector3(0, 0, scale * (look.ReadValue<Vector2>().x*Mathf.Cos(Mathf.PI*gameObject.transform.localEulerAngles.z/180) - look.ReadValue<Vector2>().y*Mathf.Sin(Mathf.PI*gameObject.transform.localEulerAngles.z/180)));
         if(gameObject.transform.localEulerAngles.z % 360 < 240 && gameObject.transform.localEulerAngles.z % 360 > 180)
         {
@@ -47,6 +49,38 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         if (gameObject.transform.localEulerAngles.z % 360 > 120 && gameObject.transform.localEulerAngles.z % 360 < 180)
         {
             gameObject.transform.localEulerAngles = new Vector3(0, 0, 120);
+        }*/
+        Ray rayOrigin = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        RaycastHit hitInfo;
+        if (Physics.Raycast(rayOrigin, out hitInfo))
+        {
+            //if (hitInfo.transform == clockCircle)
+            {
+                Vector3 mousePosition = Vector3.ProjectOnPlane(hitInfo.point, pivot.forward);
+                float signedAngle = Vector3.Angle(transform.up, hitInfo.point - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, hitInfo.point - pivot.position));
+                Debug.Log(hitInfo.point - pivot.position + ", " + transform.up + ", " + signedAngle);
+                if (signedAngle < stopAngle && signedAngle > -stopAngle)
+                {
+                    signedAngle = 0;
+                }
+                if (signedAngle > scale)
+                {
+                    signedAngle = scale;
+                }
+                else if (signedAngle < -scale)
+                {
+                    signedAngle = -scale;
+                }
+                pivot.Rotate(Vector3.forward, signedAngle);
+                if (pivot.eulerAngles.z < 240 && pivot.eulerAngles.z >= 230)
+                {
+                    pivot.eulerAngles = new Vector3(pivot.eulerAngles.x, pivot.eulerAngles.y, 240);
+                }
+                else if (pivot.eulerAngles.z > 120 && pivot.eulerAngles.z <= 130)
+                {
+                    pivot.eulerAngles = new Vector3(pivot.eulerAngles.x, pivot.eulerAngles.y, 120);
+                }
+            }
         }
     }
     public void FixAngle()

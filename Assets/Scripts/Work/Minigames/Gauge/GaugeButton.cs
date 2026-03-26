@@ -18,6 +18,9 @@ public class GaugeButton : WorkButton
 
     public override void OnClick()
     {
-        game.UpdateTarget(isUp);
+        if (game.active)
+        {
+            game.UpdateTarget(isUp);
+        }
     }
 }

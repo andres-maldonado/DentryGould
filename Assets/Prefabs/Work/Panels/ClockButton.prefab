@@ -2156,9 +2156,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 936202378251413457}
     m_Modifications:
+    - target: {fileID: 451690178951176605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 451690178951176605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451690178951176605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451690178951176605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 451690178951176605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2350595181748392605, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
       propertyPath: m_Name
       value: GaugeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968296920161754722, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8742138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968296920161754722, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8742138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968296920161754722, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8742138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968296920161754722, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292861919
       objectReference: {fileID: 0}
     - target: {fileID: 8310018096622369320, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2201,7 +2237,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7661636854144380296, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}

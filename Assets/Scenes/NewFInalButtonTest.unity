@@ -2633,6 +2633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClockButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5749935693869206419, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
+      propertyPath: depleteRate
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

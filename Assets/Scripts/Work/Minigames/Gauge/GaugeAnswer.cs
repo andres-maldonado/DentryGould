@@ -21,6 +21,6 @@ public class GaugeAnswer : Answer
         icon.sprite = sprite;
         icon.color = color;
         float angle = float.Parse(answer);
-        pivot.localEulerAngles = new Vector3(0, 0, angle-40);
+        pivot.localEulerAngles = new Vector3(0, 0, angle-30);
     }
 }

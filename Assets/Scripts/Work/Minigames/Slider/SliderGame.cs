@@ -58,7 +58,7 @@ public class SliderGame : Minigame
     }
     public void UpdateDot()
     {
-        dot.localPosition = new Vector3(vSliderCube.localPosition.x, hSliderCube.localPosition.x-hSliderCube.parent.parent.position.x, dot.localPosition.z);
+        dot.localPosition = new Vector3(vSliderCube.localPosition.x, hSliderCube.localPosition.x-hSliderCube.parent.parent.position.x-1, dot.localPosition.z);
         entryVect = new Vector2(hSlider.value, 1 - vSlider.value);
         if (Vector2.Distance(answerVect, entryVect) < maxAnswerDist && active)
         {

@@ -1889,6 +1889,7 @@ MonoBehaviour:
   camAnim: {fileID: 0}
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 249909217}
+  button: {fileID: 0}
   eveningScene: 1
 --- !u!1001 &272056004
 PrefabInstance:
@@ -3547,6 +3548,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8310018096622369320, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
   m_PrefabInstance: {fileID: 451117939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &451117941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1835662826717367461, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+  m_PrefabInstance: {fileID: 451117939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bc03de396bb9f4798445149110e122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &502348393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,7 +5780,8 @@ MonoBehaviour:
   minigames:
   - {fileID: 2035234939}
   - {fileID: 156263319}
-  - {fileID: 0}
+  - {fileID: 2000957040}
+  - {fileID: 451117941}
 --- !u!23 &738382289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6856,6 +6869,7 @@ MonoBehaviour:
   camAnim: {fileID: 1563889422}
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 0}
+  button: {fileID: 0}
   eveningScene: 0
 --- !u!1 &856149260
 GameObject:
@@ -7722,6 +7736,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2736674916046217763, guid: f7ce09cc459bdff499f65136c06550d2, type: 3}
   m_PrefabInstance: {fileID: 899779677}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &899779679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7083702740734497123, guid: f7ce09cc459bdff499f65136c06550d2, type: 3}
+  m_PrefabInstance: {fileID: 899779677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470e614f685996b418b4bcb6f343f755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberButtonGame
 --- !u!1001 &907701628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7808,6 +7833,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4100022901979339377, guid: 5cd266839997bb344beb51aae925ef1f, type: 3}
   m_PrefabInstance: {fileID: 907701628}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &907701630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1946297788359769585, guid: 5cd266839997bb344beb51aae925ef1f, type: 3}
+  m_PrefabInstance: {fileID: 907701628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2a1ad8332da9843b6bbf06271ee93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &907813315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7882,6 +7918,7 @@ MonoBehaviour:
   camAnim: {fileID: 0}
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 0}
+  button: {fileID: 0}
   eveningScene: 0
 --- !u!4 &908810813 stripped
 Transform:
@@ -7967,6 +8004,7 @@ GameObject:
   - component: {fileID: 937955208}
   - component: {fileID: 937955207}
   - component: {fileID: 937955206}
+  - component: {fileID: 937955209}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -8083,6 +8121,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &937955209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937955205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88dba7b20f07965448ba8d9151155d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  floor: 0.1
+  flashRate: 5000
+  differential: 1.4
+  downTime: 0.1
+  smoothPercent: 0.4
+  isLive: 1
 --- !u!1 &950749085
 GameObject:
   m_ObjectHideFlags: 0
@@ -10218,6 +10274,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8310018096622369320, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
   m_PrefabInstance: {fileID: 1169997244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1169997246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1835662826717367461, guid: cdbcc3c8380d8504dac9925cd67328c5, type: 3}
+  m_PrefabInstance: {fileID: 1169997244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bc03de396bb9f4798445149110e122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1176998684
 GameObject:
   m_ObjectHideFlags: 0
@@ -10380,8 +10447,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   roller: {fileID: 1549430585}
   flashingLights: {fileID: 6924413009236515953}
+  lightFlicker: {fileID: 937955209}
   rollerFactor: 240
   lightsFactor: 1
+  flickerFactor: 0.05
+  flickerIntensity: 2
+  flickerLength: 0.4
+  flickerPeriod: 3
   machineWhirr:
     Guid:
       Data1: 455084966
@@ -11753,6 +11825,7 @@ MonoBehaviour:
   camAnim: {fileID: 1563889422}
   ticketAnim: {fileID: 846629523}
   workCamControl: {fileID: 249909217}
+  button: {fileID: 9067502118952148708}
   eveningScene: 0
 --- !u!1 &1425477619
 GameObject:
@@ -13274,6 +13347,7 @@ MonoBehaviour:
   camAnim: {fileID: 0}
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 0}
+  button: {fileID: 0}
   eveningScene: 0
 --- !u!1 &1564991720
 GameObject:
@@ -14773,7 +14847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89509a7b4f2ec3478006bed7c82f065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startFile: {fileID: 4900000, guid: 9132663894ca26547931ced5cf083107, type: 3}
+  startFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
   successFile: {fileID: 4900000, guid: 72c942c23da061745ac8dee653d3fbc0, type: 3}
   failFile: {fileID: 4900000, guid: 310bf2709d6537c4297cb923bb74821f, type: 3}
   writeSpeed: 80
@@ -18591,12 +18665,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 0.627451, g: 0.1254902, b: 0.9411765, a: 1}
+  color: {r: 1, g: 0, b: 0, a: 1}
   icon: {fileID: 2222042411697229916}
   minigames:
   - {fileID: 368416444}
   - {fileID: 699840857}
   - {fileID: 587714696}
+  - {fileID: 1169997246}
 --- !u!1001 &759479352741848424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24364,12 +24439,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 1, g: 0, b: 0, a: 1}
-  icon: {fileID: 0}
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  icon: {fileID: 2962137915756770478}
   minigames:
   - {fileID: 2208601801065013961}
   - {fileID: 1126189032}
   - {fileID: 1820353772}
+  - {fileID: 907701630}
 --- !u!114 &4105747273166105289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26931,7 +27007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 1, g: 0.6470588, b: 0, a: 1}
+  color: {r: 0, g: 1, b: 0, a: 1}
   icon: {fileID: 2301373881776485615}
   minigames:
   - {fileID: 3901938923445817555}
@@ -30569,12 +30645,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 1, g: 0, b: 0, a: 1}
-  icon: {fileID: 0}
+  color: {r: 0, g: 0, b: 1, a: 1}
+  icon: {fileID: 7309687898566631421}
   minigames:
   - {fileID: 5966175995708328346}
   - {fileID: 2975922587507919767}
   - {fileID: 5749935695291701357}
+  - {fileID: 899779679}
 --- !u!65 &8427724161050584889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31999,6 +32076,7 @@ MonoBehaviour:
     Path: event:/Music/Work/Work1
   anim: {fileID: 9067502118952148707}
   ready: 0
+  firstHit: 0
 --- !u!4 &9103681151075547589
 Transform:
   m_ObjectHideFlags: 0

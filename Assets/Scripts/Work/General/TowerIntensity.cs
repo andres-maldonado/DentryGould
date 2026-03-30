@@ -6,10 +6,13 @@ public class TowerIntensity : MonoBehaviour
 {
     [SerializeField] Roller roller;
     [SerializeField] ControlAnimateLights flashingLights;
-    [SerializeField] float rollerFactor, lightsFactor;
+    [SerializeField] WorkLightFlicker lightFlicker;
+    [SerializeField] float rollerFactor, lightsFactor, flickerFactor, flickerIntensity, flickerLength, flickerPeriod;
     [SerializeField] EventReference machineWhirr;
 
     private EventInstance whirrInstance;
+    private bool isHardFlickering;
+    private float counter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +24,25 @@ public class TowerIntensity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isHardFlickering)
+        {
+            if (Random.Range(0f, 1f) < flickerFactor)
+            {
+                if (Random.Range(0, 2) == 0)
+                {
+                    lightFlicker.Flicker(false, flickerLength, Mathf.Sqrt(flickerIntensity - (flickerIntensity - 1)*counter/flickerPeriod));
+                }
+                else
+                {
+                    lightFlicker.Flicker(true, flickerLength, flickerIntensity - (flickerIntensity - 1) * counter / flickerPeriod);
+                }
+            }
+        }
+        counter += Time.deltaTime;
+        if (counter > flickerPeriod)
+        {
+            isHardFlickering = false;
+        }
     }
     public void StartWhirr()
     {
@@ -34,6 +55,11 @@ public class TowerIntensity : MonoBehaviour
         flashingLights.interval = lightsFactor / (completedTasks+1);
         whirrInstance.setParameterByName("TasksCompleted", completedTasks);
         //whirr sound
+    }
+    public void LightFlickerUp()
+    {
+        counter = 0;
+        isHardFlickering = true;
     }
     public void PowerDown()
     {

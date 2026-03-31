@@ -8,6 +8,7 @@ public class FinalButtonAnimation : MonoBehaviour
     [SerializeField] Animator camAnim;
     [SerializeField] Animator ticketAnim;
     [SerializeField] WorkCamControl workCamControl;
+    [SerializeField] FinalButton button;
     [SerializeField] int eveningScene;
     private MinigameManager minigameManager;
     private EventReference thudSound;
@@ -51,11 +52,20 @@ public class FinalButtonAnimation : MonoBehaviour
         if (!minigameManager.isEnding)
         {
             minigameManager.WaveCompletion();
+            if (!button.firstHit)
+            {
+                GameObject.Find("Tower").GetComponent<TowerIntensity>().LightFlickerUp();
+            }
         }
         else
         {
             minigameManager.successes++;
             minigameManager.EndShift();
+        }
+        if (button.firstHit)
+        {
+            GameObject.Find("Tower").GetComponent<TowerIntensity>().StartWhirr();
+            button.firstHit = false;
         }
         AudioManager.ins.PlayOneShot(thudSound, transform.position);
     }

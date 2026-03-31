@@ -3,16 +3,18 @@ using UnityEngine;
 
 public class GaugeGame : Minigame
 {
-    [SerializeField] float moveAmount, moveSpeed, moveAccel, minAngle, maxAngle, precision;
+    [SerializeField] float moveAmount, moveSpeed, moveAccel, minAngle, maxAngle, depleteRate, holdTime, precision;
     [SerializeField] Transform pivot;
 
-    private float targetValue, actualValue;
+    private float targetValue, answerMin, answerMax, counter;
     private int answer;
+    private bool isInRange;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         targetValue = 0;
-        answer = -10;
+        answer = 90;
+        Disable();
     }
 
     // Update is called once per frame
@@ -21,6 +23,21 @@ public class GaugeGame : Minigame
         if (pivot.rotation.z != targetValue)
         {
             UpdateGauge();
+            //Debug.Log("UpdateGauge()");
+        }
+        if (isInRange)
+        {
+            WithinRange();
+            //Debug.Log("WithinRange()");
+        }
+        Deplete();
+        //Debug.Log(isInRange + ", " + pivot.eulerAngles.z);
+    }
+    private void Deplete()
+    {
+        if (targetValue > 0)
+        {
+            targetValue -= depleteRate * Time.deltaTime;
         }
     }
     public void UpdateTarget(bool isUp)
@@ -51,9 +68,27 @@ public class GaugeGame : Minigame
         {
             pivot.Rotate(Vector3.forward, -Mathf.Min(moveSpeed, Mathf.Lerp(pivot.eulerAngles.z, targetValue, moveAccel)-targetValue, pivot.eulerAngles.z - targetValue));
         }
-        if (Mathf.Abs(pivot.eulerAngles.z - (float)answer) < precision && active)
+        if (pivot.eulerAngles.z <= answerMax && pivot.eulerAngles.z >= answerMin && !isInRange && active)
+        {
+            counter = holdTime;
+            isInRange = true;
+        }
+        else if ((pivot.eulerAngles.z > answerMax || pivot.eulerAngles.z < answerMin) && isInRange)
+        {
+            isInRange = false;
+        }
+        /*if (Mathf.Abs(pivot.eulerAngles.z - (float)answer) < precision && active)
         {
             Complete();
+        }*/
+    }
+    void WithinRange()
+    {
+        counter -= Time.deltaTime;
+        if (counter <= 0)
+        {
+            Complete();
+            isInRange = false;
         }
     }
     public override void Enable()
@@ -70,11 +105,9 @@ public class GaugeGame : Minigame
     }
     public override void Randomize(Transform t)
     {
-        answer = Random.Range(0, (int)maxAngle / (int)moveAmount + 1) * (int)moveAmount;
-        while (answer == targetValue)
-        {
-            answer = Random.Range(0, (int)maxAngle / (int)moveAmount + 1) * (int)moveAmount;
-        }
+        answer = (Random.Range(0, 3) + 1) * 20;
+        answerMin = answer;
+        answerMax = answer + 20;
         thisAnswer = Instantiate(answerTemplate, t);
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer.ToString());
     }

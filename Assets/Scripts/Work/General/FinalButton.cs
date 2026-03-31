@@ -10,7 +10,7 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
     public Animator anim;
     private bool canClick = true;
     public bool ready;
-    private bool firstHit;
+    public bool firstHit;
 
     private EventReference stepsSound;
     private ButtonLamp lamp;
@@ -40,9 +40,12 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
             if (firstHit)
             {
                 manager.BeginShift();
-                firstHit = false;
                 GameObject.Find("MusicManager").GetComponent<MusicManager>().ReplaceMusic(workMusic);
                 GameObject.Find("Tower").GetComponent<TowerIntensity>().StartWhirr();
+            }
+            else
+            {
+
             }
             camParent.FinalButtonSequence();
             AudioManager.ins.PlayOneShot(stepsSound, transform.position);

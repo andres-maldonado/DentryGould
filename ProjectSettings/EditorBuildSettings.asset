@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/NewFInalButtonTest.unity
+    path: Assets/Scenes/Work1.unity
     guid: 41000efd104b6e44ea48f4870568a824
   - enabled: 1
     path: Assets/Scenes/CSEvening.unity

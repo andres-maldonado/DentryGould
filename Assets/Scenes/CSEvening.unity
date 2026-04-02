@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751e5597199639f488a5b7bf80548a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueFile: {fileID: 4900000, guid: 499d39192e9c00c469595aa9880f45d3, type: 3}
+  dialogueFile: {fileID: 4900000, guid: 3bfd921949df0964ea3f47e67abd27d8, type: 3}
   writeSpeed: 1000
   pauseTime: 2
   commaTime: 0.75

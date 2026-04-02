@@ -322,7 +322,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2006846996, guid: 03297e533ad5dc54696d54b490aa0565, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.69411767}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1560,7 +1560,14 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 578edd7741fad884d9babdc70e1e7ec8, type: 2}
   - {fileID: 9100000, guid: 6996461cf75a54d4aaaf4b7e78ce9034, type: 2}
   - {fileID: 9100000, guid: 08f7257cd1d0bbc4f93efc95b9a435a4, type: 2}
-  - {fileID: 9100000, guid: 4a29b690d2827bf42ac121cdb621a632, type: 2}
+  - {fileID: 9100000, guid: b8a18880cc6b5934489bcefef05ac910, type: 2}
+  - {fileID: 9100000, guid: af1b496f348c29e4c95319f63519326e, type: 2}
+  - {fileID: 9100000, guid: 3678c5ba8e023c546af69e6f0e8e7656, type: 2}
+  - {fileID: 9100000, guid: b6d6daa14ce51464c95b081566098748, type: 2}
+  - {fileID: 9100000, guid: 73b9c0e84c028af488a96a0f43ebeab7, type: 2}
+  - {fileID: 9100000, guid: 4c124ce112a01514db37ad6b7be56f9e, type: 2}
+  - {fileID: 9100000, guid: 6de2d065bf085744e999b4daf861ecaa, type: 2}
+  - {fileID: 9100000, guid: d5c15911792ae31438c88b772fed8c98, type: 2}
   voices:
   - Guid:
       Data1: -1404706542
@@ -3165,7 +3172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.4745098}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -290,8 +290,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0.0000000074505797, z: -0.0000000074505797, w: 0.7071068}
   m_LocalPosition: {x: -0.1107, y: -0.3139, z: -0.0159325}
-  m_LocalScale: {x: 0.082322, y: 0.08232201, z: 0.8232202}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.0082322, y: 0.0082322, z: 0.08232202}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6016838125335106525}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -20}
@@ -342,7 +342,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 467586412, guid: cd59780e0a0919447b52230742d758e8, type: 3}
+  m_Sprite: {fileID: -1289315661, guid: 56e0cbb825f25fa468399304492246f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2875,11 +2875,11 @@ MonoBehaviour:
   camParent: {fileID: 0}
   workMusic:
     Guid:
-      Data1: 1365265746
-      Data2: 1205009764
-      Data3: -1248878947
-      Data4: -962853581
-    Path: event:/Music/Work/Work1
+      Data1: 35165230
+      Data2: 1207230414
+      Data3: 361872297
+      Data4: -655110934
+    Path: event:/Music/Work/Silence
   anim: {fileID: 4641882051963419445}
   ready: 0
   firstHit: 0
@@ -3749,7 +3749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5583697660494134774}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.17364825, z: -0, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
   m_LocalPosition: {x: 0.23667803, y: 0.612, z: -0.65026724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3760,7 +3760,7 @@ Transform:
   - {fileID: 4679636139918913458}
   - {fileID: 6016838125335106525}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
 --- !u!114 &6506864073613443540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3778,9 +3778,9 @@ MonoBehaviour:
   lightFlicker: {fileID: 0}
   rollerFactor: 240
   lightsFactor: 1
-  flickerFactor: 0.05
+  flickerFactor: 0.5
   flickerIntensity: 2
-  flickerLength: 0.2
+  flickerLength: 0.3
   flickerPeriod: 3
   machineWhirr:
     Guid:

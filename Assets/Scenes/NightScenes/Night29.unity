@@ -1547,7 +1547,7 @@ MonoBehaviour:
   dialogueFile: {fileID: 4900000, guid: 910d0ae72304797458147a604c6edc8c, type: 3}
   textBox: {fileID: 0}
   writeSpeed: 40
-  textGap: 100
+  textGap: 110
   extraGap: 130
   moveSpeed: 0.5
   commaTime: 0.4
@@ -1586,6 +1586,12 @@ MonoBehaviour:
       Data3: -554333557
       Data4: -145313610
     Path: event:/SFX/Dialogue/MC
+  - Guid:
+      Data1: 1304207727
+      Data2: 1278251491
+      Data3: -1204586825
+      Data4: -1330849540
+    Path: event:/SFX/Dialogue/Clerk
   - Guid:
       Data1: -1693223840
       Data2: 1280176253

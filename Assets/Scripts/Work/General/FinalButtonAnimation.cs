@@ -54,6 +54,7 @@ public class FinalButtonAnimation : MonoBehaviour
     }
     void NewTask()
     {
+        AudioManager.ins.PlayOneShot(thudSound, transform.position);
         Debug.Log(minigameManager.isEnding);
         if (!minigameManager.isEnding)
         {
@@ -73,7 +74,6 @@ public class FinalButtonAnimation : MonoBehaviour
             GameObject.Find("Tower").GetComponent<TowerIntensity>().StartWhirr();
             button.firstHit = false;
         }
-        AudioManager.ins.PlayOneShot(thudSound, transform.position);
     }
     void BackUp()
     {

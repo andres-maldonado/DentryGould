@@ -322,7 +322,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2006846996, guid: 03297e533ad5dc54696d54b490aa0565, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7372549}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1548,6 +1548,7 @@ MonoBehaviour:
   textBox: {fileID: 0}
   writeSpeed: 40
   textGap: 100
+  extraGap: 130
   moveSpeed: 0.5
   commaTime: 0.4
   pauseTime: 1
@@ -1592,6 +1593,7 @@ MonoBehaviour:
   fadeInSprite: {fileID: 1583466293}
   sceneToLoad: 3
   textBoxes: []
+  lastPosition: 0
 --- !u!4 &931412966
 Transform:
   m_ObjectHideFlags: 0

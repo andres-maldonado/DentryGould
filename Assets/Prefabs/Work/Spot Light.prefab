@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88dba7b20f07965448ba8d9151155d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  floor: 0
+  floor: 0.1
   flashRate: 5000
   differential: 1.4
   downTime: 0.1

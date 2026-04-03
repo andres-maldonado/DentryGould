@@ -1,44 +1,44 @@
 <$MSongPosition1><$V02><align="center"><color=#EEEEEE><i>You order the cheapest beer on the menu. Anything will do after today's work. You sip quietly for a while, but then a man a few seats down speaks.</i>
-<$V00><align="left"><$PL00><color=#6B5887>Rough day?
-<$V01><align="right"><$PR05><color=#699256>Excuse me?
-<$V00><align="left"><$PL00><color=#6B5887>Oh, I'm just asking if you had a rough day. You look pretty wiped out.
-<$V01><align="right"><$PR05><color=#699256>Ha, you could say that...
-<$V00><align="left"><$PL00><color=#6B5887>You're an operator, right?
-<$V01><align="right"><$PR05><color=#699256>Uh, yea.
+<$V00><align="left"><$PL00><$#6B5887>Rough day?
+<$V01><align="right"><$PR05><$#699256>Excuse me?
+<$V00><align="left"><$PL00><$#6B5887>Oh, I'm just asking if you had a rough day. You look pretty wiped out.
+<$V01><align="right"><$PR05><$#699256>Ha, you could say that...
+<$V00><align="left"><$PL00><$#6B5887>You're an operator, right?
+<$V01><align="right"><$PR05><$#699256>Uh, yea.
 <$MSongPosition2><align="center"><color=#EEEEEE><i>He's wearing the same uniform as you. He must be one too. He gets up and takes the seat next to you.
-<$V00><align="left"><$PL02><color=#6B5887>That work really wipes you out. No wonder.
-<$V01><align="right"><$PR06><color=#699256>Yea.
-<$V01><align="right"><color=#699256>...
-<$V01><align="right"><$PR06><color=#699256>It was my first day too. They really threw me in the deep end.
-<$V00><align="left"><$PL02><color=#6B5887>Yeeea, man. They like to do that with new guys. It's like a weed out thing. What did they tell you when you were done?
-<$V01><align="right"><$PR06><color=#699256>I mean, they said I did good.
-<$V00><align="left"><$PL01><color=#6B5887>Well, there you go! Ya did good!
-<$V01><align="right"><$PR08><color=#699256>Okay, sure, but I don't really understand what I was doing. I just followed instructions all day.
-<$V00><align="left"><$PL01><color=#6B5887>Yup, that's the job!
-<$V01><align="right"><$PR08><color=#699256>That's it? I thought it would be more self-directed or... normal or something. Why did they ask for a college degree if it's just menial labor?
-<$V00><align="left"><$PL03><color=#6B5887>They did? Dude, they hired me two years ago and I didn't even finish my degree.
-<$V01><align="right"><$PR07><color=#699256>Great...
-<$V00><align="left"><$PL02><color=#6B5887>But hey, useless degree or not, you still had a good first day! That's something!
-<$V01><align="right"><$PR08><color=#699256>But what did I do good at? Do you even know what those machines do?
-<$MSongPosition3><$V00><align="left"><$PL01><color=#6B5887>Oh, nope. He bursts out in laughter.
-<$V01><align="right"><$PR07><color=#699256>...
-<$V00><align="left"><$PL02><color=#6B5887>Look, I've been an operator for two years now. I get how you feel, I was there too. There's no training, no explanation, and they expect you to work day in and day out, no real breaks. It sucks, and that's the truth. I'm sorry you ended up in this job too.
-<$V01><align="right"><$PR06><color=#699256>I think I'm just gonna quit. Does it get any better?
-<$V00><align="left"><$PL02><color=#6B5887>Sure, it gets better. Not easier, really, but it becomes easier to do, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
-<$V01><align="right"><$PR07><color=#699256>They've got nice bars anywhere. I could just find one near a different job.
-<$V00><align="left"><$PL03><color=#6B5887>Where are you finding another job that easily? 
-<$V01><align="right"><$PR07><color=#699256>I don't know. McDonald's.
-<$V00><align="left"><$PL03><color=#6B5887>You mean the other place where you perform tasks according to printed instructions? It's basically the same thing.
-<$V01><align="right"><$PR06><color=#699256>I guess it is, huh...
+<$V00><align="left"><$PL02><$#6B5887>That work really wipes you out. No wonder.
+<$V01><align="right"><$PR06><$#699256>Yea.
+<$V01><align="right"><$#699256>...
+<$V01><align="right"><$PR06><$#699256>It was my first day too. They really threw me in the deep end.
+<$V00><align="left"><$PL02><$#6B5887>Yeeea, man. They like to do that with new guys. It's like a weed out thing. What did they tell you when you were done?
+<$V01><align="right"><$PR06><$#699256>I mean, they said I did good.
+<$V00><align="left"><$PL01><$#6B5887>Well, there you go! Ya did good!
+<$V01><align="right"><$PR08><$#699256>Okay, sure, but I don't really understand what I was doing. I just followed instructions all day.
+<$V00><align="left"><$PL01><$#6B5887>Yup, that's the job!
+<$V01><align="right"><$PR08><$#699256>That's it? I thought it would be more self-directed or... normal or something. Why did they ask for a college degree if it's just menial labor?
+<$V00><align="left"><$PL03><$#6B5887>They did? Dude, they hired me two years ago and I didn't even finish my degree.
+<$V01><align="right"><$PR07><$#699256>Great...
+<$V00><align="left"><$PL02><$#6B5887>But hey, useless degree or not, you still had a good first day! That's something!
+<$V01><align="right"><$PR08><$#699256>But what did I do good at? Do you even know what those machines do?
+<$MSongPosition3><$V00><align="left"><$PL01><$#6B5887>Oh, nope. He bursts out in laughter.
+<$V01><align="right"><$PR07><$#699256>...
+<$V00><align="left"><$PL02><$#6B5887>Look, I've been an operator for two years now. I get how you feel, I was there too. There's no training, no explanation, and they expect you to work day in and day out, no real breaks. It sucks, and that's the truth. I'm sorry you ended up in this job too.
+<$V01><align="right"><$PR06><$#699256>I think I'm just gonna quit. Does it get any better?
+<$V00><align="left"><$PL02><$#6B5887>Sure, it gets better. Not easier, really, but it becomes easier to do, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
+<$V01><align="right"><$PR07><$#699256>They've got nice bars anywhere. I could just find one near a different job.
+<$V00><align="left"><$PL03><$#6B5887>Where are you finding another job that easily? 
+<$V01><align="right"><$PR07><$#699256>I don't know. McDonald's.
+<$V00><align="left"><$PL03><$#6B5887>You mean the other place where you perform tasks according to printed instructions? It's basically the same thing.
+<$V01><align="right"><$PR06><$#699256>I guess it is, huh...
 <align="center"><color=#EEEEEE><i>He hits you lightly on the shoulder. 
-<$MSongPosition4><$V00><align="left"><$PL01><color=#6B5887>But this one pays well, ay?
-<$V01><align="right"><$PR06><color=#699256>Sure. True that.
-<$V00><align="left"><$PL01><color=#6B5887>Truuue that!
+<$MSongPosition4><$V00><align="left"><$PL01><$#6B5887>But this one pays well, ay?
+<$V01><align="right"><$PR06><$#699256>Sure. True that.
+<$V00><align="left"><$PL01><$#6B5887>Truuue that!
 <align="center"><color=#EEEEEE><i>You can't help but chuckle.
-<$V01><align="right"><$PR10><color=#699256>I don't get you man. You're funny.
-<$V00><align="left"><$PL01><color=#6B5887>Yea, they tell me that. Just saying, you'd be missing a lot if you quit. You know the southwest end of the parking lot's got cats?
-<$V01><align="right"><$PR07><color=#699256>I'd be missing out on cats?
-<$V01><align="right"><color=#699256>...
-<$V01><align="right"><$PR10><color=#699256>What kind of cats?
-<$V00><align="left"><$PL02><color=#6B5887>Yea, dude, they're real cute. All orange, super loud but it's sweet...
+<$V01><align="right"><$PR10><$#699256>I don't get you man. You're funny.
+<$V00><align="left"><$PL01><$#6B5887>Yea, they tell me that. Just saying, you'd be missing a lot if you quit. You know the southwest end of the parking lot's got cats?
+<$V01><align="right"><$PR07><$#699256>I'd be missing out on cats?
+<$V01><align="right"><$#699256>...
+<$V01><align="right"><$PR10><$#699256>What kind of cats?
+<$V00><align="left"><$PL02><$#6B5887>Yea, dude, they're real cute. All orange, super loud but it's sweet...
 <align="center"><color=#EEEEEE><i>You and the man spend the night chatting about the cats, the bar, the music scene in the town, everything but work. You're perplexed by his ambivalence and unseriousness, but it takes your mind off what you experienced today and your anxieties about tomorrow, at least for a time. You can appreciate that. Your anger fades, and you decide you'll give the job at least a few more days.

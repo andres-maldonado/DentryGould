@@ -787,11 +787,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   startMusic:
     Guid:
-      Data1: -1067765911
-      Data2: 1188478434
-      Data3: 2023085454
-      Data4: 1657149486
-    Path: event:/Music/Work/BeepsStart
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &240207753
 Transform:
   m_ObjectHideFlags: 0
@@ -1377,6 +1377,18 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7682760654422496892, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5381723419693140609, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6697308582851147207, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5819041365672416340, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 105661094379478426, guid: 3f3e57929ad250e48bec05f388a42815, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -6480,11 +6492,11 @@ MonoBehaviour:
   minigames: []
   endMusic:
     Guid:
-      Data1: -505167497
-      Data2: 1335036449
-      Data3: 2083009185
-      Data4: 309882184
-    Path: event:/Music/Work/BeepsEnd
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   games: 
   isEnding: 0
 --- !u!4 &2007216441
@@ -6626,6 +6638,26 @@ PrefabInstance:
       propertyPath: camParent
       value: 
       objectReference: {fileID: 249909217}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Path
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data4
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5583697660494134774, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: m_Name
       value: Tower

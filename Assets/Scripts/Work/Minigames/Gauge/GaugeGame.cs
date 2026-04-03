@@ -31,7 +31,12 @@ public class GaugeGame : Minigame
             //Debug.Log("WithinRange()");
         }
         Deplete();
-        //Debug.Log(isInRange + ", " + pivot.eulerAngles.z);
+        //Debug.Log(pivot.localEulerAngles.z);
+        if (pivot.localEulerAngles.z < 0 || pivot.localEulerAngles.z > 350)
+        {
+            pivot.localEulerAngles = new Vector3(pivot.localEulerAngles.x, pivot.localEulerAngles.y, 0f);
+        }
+        //Debug.Log(isInRange + ", " + pivot.localEulerAngles.z);
     }
     private void Deplete()
     {
@@ -56,28 +61,28 @@ public class GaugeGame : Minigame
             targetValue -= moveAmount;
             //pivot.Rotate(Vector3.forward, -moveAmount);
         }
-        Debug.Log(pivot.eulerAngles.z + ", " + targetValue);
+        Debug.Log(pivot.localEulerAngles.z + ", " + targetValue);
     }
     void UpdateGauge()
     {
-        if(pivot.eulerAngles.z <= targetValue - precision)
+        if(pivot.localEulerAngles.z <= targetValue - precision)
         {
-            pivot.Rotate(Vector3.forward, Mathf.Min(moveSpeed, Mathf.Lerp(pivot.eulerAngles.z, targetValue, moveAccel)-pivot.eulerAngles.z, targetValue - pivot.eulerAngles.z));
+            pivot.Rotate(Vector3.forward, Mathf.Min(moveSpeed, Mathf.Lerp(pivot.localEulerAngles.z, targetValue, moveAccel)-pivot.localEulerAngles.z, targetValue - pivot.localEulerAngles.z));
         }
-        else if (pivot.eulerAngles.z > targetValue + precision)
+        else if (pivot.localEulerAngles.z > targetValue + precision)
         {
-            pivot.Rotate(Vector3.forward, -Mathf.Min(moveSpeed, Mathf.Lerp(pivot.eulerAngles.z, targetValue, moveAccel)-targetValue, pivot.eulerAngles.z - targetValue));
+            pivot.Rotate(Vector3.forward, -Mathf.Min(moveSpeed, Mathf.Lerp(pivot.localEulerAngles.z, targetValue, moveAccel)-targetValue, pivot.localEulerAngles.z - targetValue));
         }
-        if (pivot.eulerAngles.z <= answerMax && pivot.eulerAngles.z >= answerMin && !isInRange && active)
+        if (pivot.localEulerAngles.z <= answerMax && pivot.localEulerAngles.z >= answerMin && !isInRange && active)
         {
             counter = holdTime;
             isInRange = true;
         }
-        else if ((pivot.eulerAngles.z > answerMax || pivot.eulerAngles.z < answerMin) && isInRange)
+        else if ((pivot.localEulerAngles.z > answerMax || pivot.localEulerAngles.z < answerMin) && isInRange)
         {
             isInRange = false;
         }
-        /*if (Mathf.Abs(pivot.eulerAngles.z - (float)answer) < precision && active)
+        /*if (Mathf.Abs(pivot.localEulerAngles.z - (float)answer) < precision && active)
         {
             Complete();
         }*/

@@ -18,6 +18,12 @@ public class FinalButtonAnimation : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        handAnim = GameObject.Find("WhiteHand").GetComponent<Animator>();
+        rotateAnim = GameObject.Find("CameraRotate").GetComponent<Animator>();
+        camAnim = GameObject.Find("CameraZoomIn").GetComponent<Animator>();
+        ticketAnim = GameObject.Find("TicketAnim").GetComponent<Animator>();
+        workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        button = GameObject.Find("FINALBUTTON").GetComponent<FinalButton>();
         minigameManager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         thudSound = RuntimeManager.PathToEventReference("event:/SFX/Work/FinalThud");
         ticketSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TicketPrint");

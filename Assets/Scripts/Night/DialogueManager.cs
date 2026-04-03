@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextAsset dialogueFile;
     [SerializeField] TextMeshProUGUI textBox;
     [SerializeField] float writeSpeed;
-    public float textGap;
+    public float textGap, extraGap;
     public float moveSpeed, commaTime, pauseTime;
     public float fadeTime;
     [SerializeField] InputActionAsset inputAction;
@@ -46,6 +46,7 @@ public class DialogueManager : MonoBehaviour
     private string currentTag;
     private float counter;
     private float fadeInAlpha;
+    private float nextGap;
     private int letterCount = 1;
     private int totalLetterCount;
     private bool isWriting;
@@ -59,6 +60,9 @@ public class DialogueManager : MonoBehaviour
     public delegate void MoveBoxesUp(float moveAmount);
     public MoveBoxesUp moveBoxesUp;
 
+    public enum TextPosition { left, center, right };
+    public TextPosition lastPosition;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -71,7 +75,7 @@ public class DialogueManager : MonoBehaviour
         content = GameObject.Find("Content");
         sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
         sceneManager.startScene += Begin;
-
+        nextGap = textGap;
 
         dialogueByLine = dialogueFile.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++) 
@@ -117,13 +121,13 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = dialogueLines.Dequeue();
                 //lineBox.GetComponentInChildren<TextMeshProUGUI>().text = "<alpha=#00>" + currentLine;
-                newBox = Instantiate(lineBox, textSpawn.transform.position, textSpawn.transform.rotation, content.transform);
+                newBox = Instantiate(lineBox, textSpawn.transform.position + new Vector3 (0, (textGap - nextGap)/800, 0), textSpawn.transform.rotation, content.transform);
                 textBoxes.Add(newBox);
                 newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
                 newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine, false);
                 newBoxText.ForceMeshUpdate();
                 //Debug.Log(newBoxText.GetRenderedValues(true));
-                heightShift = new Vector2(0, newBoxText.GetRenderedValues(true).y + textGap);
+                heightShift = new Vector2(0, newBoxText.GetRenderedValues(true).y + nextGap);
                 content.GetComponent<RectTransform>().sizeDelta += heightShift;
                 if (moveBoxesUp != null)
                 {
@@ -180,7 +184,7 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log(strippedLine);
         return strippedLine;
     }
-
+    GameObject newPortrait;
     private void ReadCustomTag(string tag)
     {
         if (tag.StartsWith("P"))
@@ -189,18 +193,36 @@ public class DialogueManager : MonoBehaviour
             if (tag.StartsWith("L"))
             {
                 tag = tag.Remove(0, 1);
+                if (tag.StartsWith("+"))
+                {
+                    nextGap = textGap + extraGap;
+                    tag = tag.Remove(0, 1);
+                }
+                else
+                {
+                    nextGap = textGap;
+                }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
+                newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
                 newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
             else if (tag.StartsWith("R"))
             {
                 tag = tag.Remove(0, 1);
+                if (tag.StartsWith("+"))
+                {
+                    nextGap = textGap + extraGap;
+                    tag = tag.Remove(0, 1);
+                }
+                else
+                {
+                    nextGap = textGap;
+                }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                GameObject newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
+                newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
                 newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
@@ -219,6 +241,13 @@ public class DialogueManager : MonoBehaviour
             currentVoice = AudioManager.ins.CreateInstance(voices[voiceIndex]);
             Debug.Log("Voice made current voice");
             currentVoice.start();
+        }
+        else if (tag.StartsWith("#"))
+        {
+            ColorUtility.TryParseHtmlString(tag, out Color myColor);
+            Debug.Log(myColor);
+            newPortrait.GetComponent<ColorFrame>().FrameColor(myColor);
+            newBoxText.text += "<color=" + tag + ">";
         }
     }
 
@@ -295,7 +324,7 @@ public class DialogueManager : MonoBehaviour
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
                 counter = 0;
-                Debug.Log("state: " + voiceState);
+                //Debug.Log("state: " + voiceState);
                 if (voiceState == true)
                 {
                     currentVoice.setPaused(false);

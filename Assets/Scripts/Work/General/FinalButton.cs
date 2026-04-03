@@ -17,6 +17,8 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        manager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
+        camParent = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
         anim = GetComponent<Animator>();
         stepsSound = RuntimeManager.PathToEventReference("event:/SFX/Work/FinalSteps");
         lamp = GetComponent<ButtonLamp>();

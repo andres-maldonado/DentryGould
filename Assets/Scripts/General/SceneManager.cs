@@ -19,6 +19,7 @@ public class SceneManager : MonoBehaviour
     private void Awake()
     {
         fadeSprite = GameObject.Find("FadeSprite").GetComponent<SpriteRenderer>();
+        UIFadeSprite = GameObject.Find("UIFadeSprite").GetComponent<SpriteRenderer>();
     }
     void Start()
     {

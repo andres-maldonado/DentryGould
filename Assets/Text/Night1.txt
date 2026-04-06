@@ -1,5 +1,5 @@
 <$MSongPosition1><$V02><align="center"><color=#EEEEEE><i>You order the cheapest beer on the menu. Anything will do after today's work. You sip quietly for a while, but then a man a few seats down speaks.</i>
-<$V00><align="left"><$PL00><$#6B5887>Rough day?
+<$V00><align="left"><$PL00><$#6B5887>Rough day?ate u !!!!!!
 <$V01><align="right"><$PR05><$#699256>Excuse me?
 <$V00><align="left"><$PL00><$#6B5887>Oh, I'm just asking if you had a rough day. You look pretty wiped out.
 <$V01><align="right"><$PR05><$#699256>Ha, you could say that...

@@ -10,6 +10,7 @@ public class FlashingText : MonoBehaviour
 
     private TextMeshPro text;
     private float counter, hCenter, vCenter;
+    private Color originalColor;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +19,7 @@ public class FlashingText : MonoBehaviour
         counter = flashRate;
         hCenter = gameObject.transform.localPosition.x;
         vCenter = gameObject.transform.localPosition.y;
+        originalColor = text.color;
     }
 
     private void Flash()
@@ -25,10 +27,10 @@ public class FlashingText : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter <= 0)
         {
-            byte currentBright = (byte)Random.Range(minBright, maxBright);
+            float currentBright = Random.Range(minBright, maxBright);
             float horizontal = Random.Range(hCenter - hShift, hCenter + hShift);
             float vertical = Random.Range(vCenter - vShift, vCenter + vShift);
-            text.color = new Color32(currentBright, currentBright, currentBright, 255);
+            text.color = new Color((originalColor.r / 255 * currentBright), (originalColor.g / 255 * currentBright), (originalColor.b / 255 * currentBright), 255);
             text.ForceMeshUpdate(true);
             transform.localPosition = new Vector3(horizontal, vertical, 0);
             counter = flashRate;

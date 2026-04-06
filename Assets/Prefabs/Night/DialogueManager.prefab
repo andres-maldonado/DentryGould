@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8944336039704361398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139200420208586026}
+  - component: {fileID: 8001239048399046683}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: DialogueManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139200420208586026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944336039704361398}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8001239048399046683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944336039704361398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c139e6f443c6f694fb6aaf44e78c0eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  dialogueFile: {fileID: 4900000, guid: 7c349cf2140054c41af38bb6123d2fcd, type: 3}
+  textBox: {fileID: 0}
+  writeSpeed: 40
+  textGap: 100
+  extraGap: 130
+  moveSpeed: 0.5
+  commaTime: 0.3
+  pauseTime: 0.8
+  fadeTime: 2
+  inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  leftSprite: {fileID: 0}
+  rightSprite: {fileID: 0}
+  portraitSizer: {fileID: 9100000, guid: 34c4021be377c4a499a9c98b9770d10b, type: 2}
+  portraits:
+  - {fileID: 9100000, guid: 578edd7741fad884d9babdc70e1e7ec8, type: 2}
+  - {fileID: 9100000, guid: 6996461cf75a54d4aaaf4b7e78ce9034, type: 2}
+  - {fileID: 9100000, guid: 08f7257cd1d0bbc4f93efc95b9a435a4, type: 2}
+  - {fileID: 9100000, guid: b8a18880cc6b5934489bcefef05ac910, type: 2}
+  - {fileID: 9100000, guid: af1b496f348c29e4c95319f63519326e, type: 2}
+  - {fileID: 9100000, guid: 3678c5ba8e023c546af69e6f0e8e7656, type: 2}
+  - {fileID: 9100000, guid: b6d6daa14ce51464c95b081566098748, type: 2}
+  - {fileID: 9100000, guid: 73b9c0e84c028af488a96a0f43ebeab7, type: 2}
+  - {fileID: 9100000, guid: 4c124ce112a01514db37ad6b7be56f9e, type: 2}
+  - {fileID: 9100000, guid: 6de2d065bf085744e999b4daf861ecaa, type: 2}
+  - {fileID: 9100000, guid: d5c15911792ae31438c88b772fed8c98, type: 2}
+  - {fileID: 9100000, guid: 4115b1f95a91fda44a0532f72588c7cf, type: 2}
+  - {fileID: 9100000, guid: 5c112b038a0ef304c8d70505f1db5b82, type: 2}
+  - {fileID: 9100000, guid: c6b31b72641f77b48b69b9be5777a050, type: 2}
+  - {fileID: 9100000, guid: 23388bfc93b058d4690b955dd9d553ac, type: 2}
+  voices:
+  - Guid:
+      Data1: -1404706542
+      Data2: 1141689762
+      Data3: -1476729433
+      Data4: -1895021542
+    Path: event:/SFX/Dialogue/Man
+  - Guid:
+      Data1: 2140206769
+      Data2: 1147649130
+      Data3: -554333557
+      Data4: -145313610
+    Path: event:/SFX/Dialogue/MC
+  - Guid:
+      Data1: -1693223840
+      Data2: 1280176253
+      Data3: 193542033
+      Data4: 734058526
+    Path: event:/SFX/Dialogue/Narration
+  portraitPrefab: {fileID: 513250027124793571, guid: 039ee07c2bd78114c825b902e98b32b6, type: 3}
+  lineBox: {fileID: 3597504547697388997, guid: bec65c52d10017c488a49b8cd58682b8, type: 3}
+  fadeInSprite: {fileID: 0}
+  sceneToLoad: 3
+  textBoxes: []
+  lastPosition: 0

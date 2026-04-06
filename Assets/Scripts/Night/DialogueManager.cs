@@ -55,6 +55,7 @@ public class DialogueManager : MonoBehaviour
     private bool quickFinish;
     private bool end;
     private bool voiceState;
+    private Transform canvas;
     private Queue<string> dialogueLines = new Queue<String>();
 
     public delegate void MoveBoxesUp(float moveAmount);
@@ -76,6 +77,7 @@ public class DialogueManager : MonoBehaviour
         sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
         sceneManager.startScene += Begin;
         nextGap = textGap;
+        canvas = GameObject.Find("NightCanvas").transform;
 
         dialogueByLine = dialogueFile.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++) 
@@ -121,7 +123,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = dialogueLines.Dequeue();
                 //lineBox.GetComponentInChildren<TextMeshProUGUI>().text = "<alpha=#00>" + currentLine;
-                newBox = Instantiate(lineBox, textSpawn.transform.position + new Vector3 (0, (textGap - nextGap)/800, 0), textSpawn.transform.rotation, content.transform);
+                newBox = Instantiate(lineBox, textSpawn.transform.position + new Vector3 (0, (textGap - nextGap) * canvas.localScale.x, 0), textSpawn.transform.rotation, content.transform);
                 textBoxes.Add(newBox);
                 newBoxText = newBox.GetComponentInChildren<TextMeshProUGUI>();
                 newBoxText.text = "<alpha=#00>" + StripAllTags(currentLine, false);
@@ -204,7 +206,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
+                newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap) * canvas.localScale.x / 2), leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
                 newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }
@@ -222,7 +224,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) / 1200, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
+                newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) * canvas.localScale.x /2, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
                 newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
                 newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
             }

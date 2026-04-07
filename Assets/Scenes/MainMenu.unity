@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 104635892}
   - component: {fileID: 104635893}
   m_Layer: 5
-  m_Name: BG (1)
+  m_Name: GlowControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1107,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 7
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.050980393}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7422,6 +7422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045912828}
+  - component: {fileID: 1045912829}
   m_Layer: 5
   m_Name: ScreenItems
   m_TagString: Untagged
@@ -7454,6 +7455,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1045912829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045912827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5168820a0e34524a8fa224ce8920c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  vRange: 0.3
+  hRange: 0.6
+  fadeMin: 30
+  fadeMax: 50
+  changeRate: 0.1
+  glowControl: {fileID: 104635893}
 --- !u!1 &1046018898
 GameObject:
   m_ObjectHideFlags: 0

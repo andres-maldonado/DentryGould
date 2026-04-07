@@ -24,6 +24,7 @@ public class WorkCamControl : MonoBehaviour
     private bool zoomedIn;
     public bool isTurning;
     private bool atTicket;
+    private bool ticketOff;
     private float newPosition;
     private float nextPosition;
     private int currentPanel = 0;
@@ -197,6 +198,20 @@ public class WorkCamControl : MonoBehaviour
             atTicket = false;
         }
     }
+    public void SetTicketEnabled(bool b)
+    {
+        if (!b)
+        {
+            PutTicketDown();
+            rClick.Disable();
+            ticketOff = true;
+        }
+        if (b)
+        {
+            rClick.Enable();
+            ticketOff = false;
+        }
+    }
     private void Turn()
     {
         if (transform.eulerAngles.y - newPosition < turnSnapPoint && transform.eulerAngles.y - newPosition > -turnSnapPoint)
@@ -251,7 +266,10 @@ public class WorkCamControl : MonoBehaviour
             turnRight.Enable();
             zoomIn.Enable();
             zoomOut.Enable();
-            rClick.Enable();
+            if (!ticketOff)
+            {
+                rClick.Enable();
+            }
         }
     }
 }

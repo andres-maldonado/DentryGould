@@ -51,6 +51,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     {
         counter = shiftTimer;
         shiftActive = true;
+        controls.SetTicketEnabled(true);
     }
 
     // Update is called once per frame
@@ -151,6 +152,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         tower.PowerDown();
         controls.rClick.Disable();
         finalButton.Deactivate();
+        finalButton.enabled = false;
         if (successes >= quota)
         {
             //timer to delay printing

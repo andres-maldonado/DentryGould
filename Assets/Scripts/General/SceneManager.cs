@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 public class SceneManager : MonoBehaviour
 {
     [SerializeField] SpriteRenderer fadeSprite, UIFadeSprite;
-    [SerializeField] WorkCamControl workCamControl;
     [SerializeField] float fadeInTime;
 
     public bool isFadingIn, isFadingOut;
     private float currentFadeTime;
     private float currentAlpha;
     private int sceneToLoad;
+    private WorkCamControl workCamControl;
 
 
     public delegate void StartScene();
@@ -20,6 +20,7 @@ public class SceneManager : MonoBehaviour
     {
         fadeSprite = GameObject.Find("FadeSprite").GetComponent<SpriteRenderer>();
         UIFadeSprite = GameObject.Find("UIFadeSprite").GetComponent<SpriteRenderer>();
+        workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
     void Start()
     {

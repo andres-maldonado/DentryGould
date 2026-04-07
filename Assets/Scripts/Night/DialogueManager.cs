@@ -342,6 +342,11 @@ public class DialogueManager : MonoBehaviour
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
+                if (currentLine[letterCount] == '"')
+                {
+                    newBoxText.text += currentLine.Substring(letterCount, 1);
+                    letterCount++;
+                }
                 counter = (1 / writeSpeed) - pauseTime;
                 currentVoice.setPaused(true);
                 currentVoice.getPaused(out voiceState);

@@ -16,6 +16,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     [SerializeField] EventReference dialogueSound, unlockSound;
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] GameObject skipText;
+    [SerializeField] TextGradient gradient;
     private InputActionMap inputMap;
     private InputAction continueKey;
 
@@ -26,14 +27,16 @@ public class LoudspeakerDialogue : MonoBehaviour
     private float counter;
     private float nextLineCounter;
     private float continueCounter;
-    private string currentLine;
+    private string currentLine, currentTag;
     private bool isWriting;
     private bool quickFinish;
     private bool isYapping;
     private bool canSkip;
     private bool isPaused;
     private bool waitingToYap;
+    private bool readingTag;
     private EventInstance dialogueInstance;
+    private WorkCamControl workCamControl;
     public int success;
 
     public delegate void EndWriting();
@@ -46,6 +49,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
         continueKey.performed += _ => ContinueDialogue();
+        workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
     void FirstDialogue()
     {
@@ -82,8 +86,10 @@ public class LoudspeakerDialogue : MonoBehaviour
         bottomText.text = null;
         isWriting = true;
         quickFinish = false;
-        skipText.SetActive(true);
         waitingToYap = true;
+        gradient.FadeIn();
+        workCamControl.SetTicketEnabled(false);
+        Debug.Log("Ticket disabled");
         WriteText();
     }
 
@@ -118,6 +124,7 @@ public class LoudspeakerDialogue : MonoBehaviour
             if(counter >= 0)
             {
                 dialogueInstance.start();
+                skipText.SetActive(true);
                 isYapping = true;
                 waitingToYap = false;
             }
@@ -141,7 +148,30 @@ public class LoudspeakerDialogue : MonoBehaviour
             //Debug.Log("YOMAMA");
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
-        else if ((counter > 1 / writeSpeed) || currentLine[letterCount] == ' ')
+        else if (currentLine[letterCount] == '<')
+        {
+            readingTag = true;
+            currentTag = null;
+        }
+        if (readingTag)
+        {
+            //Debug.Log("I'm reading a tag");
+            for (int i = letterCount; true; i++)
+            {
+                currentTag += currentLine[i];
+                //Debug.Log(currentTag + ", " + i);
+                //Debug.Log(currentTag.Contains('>'));
+                if (currentTag.Contains(">"))
+                {
+                    letterCount += currentTag.Length;
+                    readingTag = false;
+                    bottomText.text += currentTag;
+                    //Debug.Log("Read Tag: " + currentTag);
+                    break;
+                }
+            }
+        }
+            else if ((counter > 1 / writeSpeed) || currentLine[letterCount] == ' ')
         {
             bottomText.text += currentLine.Substring(letterCount, 1);
             letterCount++;
@@ -181,18 +211,25 @@ public class LoudspeakerDialogue : MonoBehaviour
         else
         {
             isWriting = false;
-            endWriting.Invoke();
+            gradient.FadeOut();
             skipText.SetActive(false);
             if (success == 1)
             {
                 door.canExit = true;
                 AudioManager.ins.PlayOneShot(unlockSound, this.gameObject.transform.position);
+                GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
+                GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
             }
             else if (success == 2)
             {
                 GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+                GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
+                GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
             }
-            Debug.Log("end");
+            else
+            {
+                endWriting.Invoke();
+            }
         }
     }
 }

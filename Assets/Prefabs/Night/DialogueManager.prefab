@@ -48,10 +48,10 @@ MonoBehaviour:
   textBox: {fileID: 0}
   writeSpeed: 40
   textGap: 100
-  extraGap: 130
+  extraGap: 140
   moveSpeed: 0.5
   commaTime: 0.3
-  pauseTime: 0.8
+  pauseTime: 0.6
   fadeTime: 2
   inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   leftSprite: {fileID: 0}
@@ -73,6 +73,15 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 5c112b038a0ef304c8d70505f1db5b82, type: 2}
   - {fileID: 9100000, guid: c6b31b72641f77b48b69b9be5777a050, type: 2}
   - {fileID: 9100000, guid: 23388bfc93b058d4690b955dd9d553ac, type: 2}
+  - {fileID: 9100000, guid: 1a444b18e4edb844ab8efe9a2d173367, type: 2}
+  - {fileID: 9100000, guid: ebd727ce5ee019c448585b92ba1c3416, type: 2}
+  - {fileID: 9100000, guid: 8d4aca3245476e04ebb643b84855e797, type: 2}
+  - {fileID: 9100000, guid: 968e58255492d484891bb3e5fba4351e, type: 2}
+  - {fileID: 9100000, guid: 85293783252f5c14cae3aedfda711610, type: 2}
+  - {fileID: 9100000, guid: 8a03ff64f3092374e8154613871b8b08, type: 2}
+  - {fileID: 9100000, guid: 1d16c64a02952f94e8410f9e26b78369, type: 2}
+  - {fileID: 9100000, guid: c86f6493ab890f14f9b35a229a070423, type: 2}
+  - {fileID: 9100000, guid: b801cd8ab40784a459e91e8392cfda24, type: 2}
   voices:
   - Guid:
       Data1: -1404706542

@@ -187,6 +187,7 @@ public class DialogueManager : MonoBehaviour
         return strippedLine;
     }
     GameObject newPortrait;
+    bool nextGapIsBig, thisGapIsBig;
     private void ReadCustomTag(string tag)
     {
         if (tag.StartsWith("P"))
@@ -195,9 +196,15 @@ public class DialogueManager : MonoBehaviour
             if (tag.StartsWith("L"))
             {
                 tag = tag.Remove(0, 1);
+                if (nextGapIsBig)
+                {
+                    thisGapIsBig = true;
+                    nextGapIsBig = false;
+                }
                 if (tag.StartsWith("+"))
                 {
                     nextGap = textGap + extraGap;
+                    nextGapIsBig = true;
                     tag = tag.Remove(0, 1);
                 }
                 else
@@ -206,16 +213,32 @@ public class DialogueManager : MonoBehaviour
                 }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap) * canvas.localScale.x / 2), leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
-                newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
-                newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                if (thisGapIsBig)
+                {
+                    newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap - extraGap) * canvas.localScale.x / 2), leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
+                    newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                    newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                    thisGapIsBig = false;
+                }
+                else
+                {
+                    newPortrait = Instantiate(portraitPrefab, new Vector3(leftSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap) * canvas.localScale.x / 2), leftSprite.transform.position.z), leftSprite.transform.rotation, newBox.transform);
+                    newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                    newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                }
             }
             else if (tag.StartsWith("R"))
             {
                 tag = tag.Remove(0, 1);
+                if (nextGapIsBig)
+                {
+                    thisGapIsBig = true;
+                    nextGapIsBig = false;
+                }
                 if (tag.StartsWith("+"))
                 {
                     nextGap = textGap + extraGap;
+                    nextGapIsBig = true;
                     tag = tag.Remove(0, 1);
                 }
                 else
@@ -224,9 +247,19 @@ public class DialogueManager : MonoBehaviour
                 }
                 //Debug.Log(tag);
                 int portraitIndex = int.Parse(tag);
-                newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - (heightShift.y - textGap) * canvas.localScale.x /2, rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
-                newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
-                newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                if (thisGapIsBig)
+                {
+                    newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap - extraGap) * canvas.localScale.x / 2), rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
+                    newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                    newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                    thisGapIsBig = false;
+                }
+                else
+                {
+                    newPortrait = Instantiate(portraitPrefab, new Vector3(rightSprite.transform.position.x, newBox.transform.position.y - ((heightShift.y - textGap) * canvas.localScale.x / 2), rightSprite.transform.position.z), rightSprite.transform.rotation, newBox.transform);
+                    newPortrait.GetComponent<Animator>().runtimeAnimatorController = portraitSizer;
+                    newPortrait.transform.GetChild(0).GetComponent<Animator>().runtimeAnimatorController = portraits[portraitIndex];
+                }
             }
         }
         else if (tag.StartsWith("M"))
@@ -305,7 +338,7 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!' || currentLine[letterCount] == '?') && letterCount < StripAllTags(currentLine, true).Length)
+            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!' || currentLine[letterCount] == '?') && letterCount < StripAllTags(currentLine, true).Length + 30)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;

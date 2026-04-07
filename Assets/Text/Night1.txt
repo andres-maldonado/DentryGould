@@ -25,7 +25,7 @@
 <$V01><align="right"><$PR07><$#699256>...
 <$V00><align="left"><$PL02><$#5A73E7>Look, I've been an operator for two years now. I get how you feel, I was there too. There's no training, no explanation, and they expect you to work day in and day out, no real breaks. It sucks, and that's the truth. I'm sorry you ended up in this job too.
 <$V01><align="right"><$PR06><$#699256>I think I'm just gonna quit. Does it get any better?
-<$V00><align="left"><$PL02><$#5A73E7>Sure, it gets better. Not easier, really, but it becomes easier to do, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
+<$V00><align="left"><$PL02><$#5A73E7>Sure, it gets better. Not <i>easier</i>, really, but it becomes easier to <i>do</i>, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
 <$V01><align="right"><$PR07><$#699256>They've got nice bars anywhere. I could just find one near a different job.
 <$V00><align="left"><$PL03><$#5A73E7>Where are you finding another job that easily? 
 <$V01><align="right"><$PR07><$#699256>I don't know. McDonald's.

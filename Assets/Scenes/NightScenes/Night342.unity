@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6042451
 RectTransform:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 25.001984, y: 735.28394}
-  m_SizeDelta: {x: 496.99976, y: 0}
+  m_SizeDelta: {x: 496.99976, y: 191.45}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &6042452
 MonoBehaviour:
@@ -441,9 +441,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: extraGap
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: dialogueFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 33a69809bab6a8442aef76309bfd7dbb, type: 3}
     - target: {fileID: 3604728218823273904, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0010986328
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7479743814590165036, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Name

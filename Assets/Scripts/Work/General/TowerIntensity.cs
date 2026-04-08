@@ -7,12 +7,12 @@ public class TowerIntensity : MonoBehaviour
     [SerializeField] Roller roller;
     [SerializeField] ControlAnimateLights flashingLights;
     [SerializeField] WorkLightFlicker lightFlicker;
-    [SerializeField] float rollerFactor, lightsFactor, flickerFactor, flickerIntensity, flickerLength, flickerPeriod;
+    [SerializeField] float rollerFactor, lightsFactor, flickerFactor, flickerIntensity, flickerLength, flickerPeriod, flickerRate;
     [SerializeField] EventReference machineWhirr;
 
     private EventInstance whirrInstance;
     private bool isHardFlickering;
-    private float counter;
+    private float counter, flickerCounter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,16 +26,21 @@ public class TowerIntensity : MonoBehaviour
     {
         if (isHardFlickering)
         {
-            if (Random.Range(0f, 1f) < flickerFactor)
+            flickerCounter -= Time.deltaTime;
+            if (flickerCounter < 0)
             {
-                if (Random.Range(0, 2) == 0)
+                if (Random.Range(0f, 1f) < flickerFactor)
                 {
-                    lightFlicker.Flicker(false, flickerLength, Mathf.Sqrt(flickerIntensity - (flickerIntensity - 1)*counter/flickerPeriod));
+                    if (Random.Range(0, 2) == 0)
+                    {
+                        lightFlicker.Flicker(false, flickerLength, Mathf.Sqrt(flickerIntensity - (flickerIntensity - 1) * counter / flickerPeriod));
+                    }
+                    else
+                    {
+                        lightFlicker.Flicker(true, flickerLength, flickerIntensity - (flickerIntensity - 1) * counter / flickerPeriod);
+                    }
                 }
-                else
-                {
-                    lightFlicker.Flicker(true, flickerLength, flickerIntensity - (flickerIntensity - 1) * counter / flickerPeriod);
-                }
+                flickerCounter = flickerRate;
             }
         }
         counter += Time.deltaTime;

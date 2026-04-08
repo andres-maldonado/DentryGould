@@ -18,7 +18,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     [SerializeField] GameObject skipText;
     [SerializeField] TextGradient gradient;
     private InputActionMap inputMap;
-    private InputAction continueKey;
+    private InputAction continueKey, skipKey;
 
 
     private string[] dialogueByLine;
@@ -49,6 +49,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
         continueKey.performed += _ => ContinueDialogue();
+        //skipKey.performed += _ => SkipDialogue();
         workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
     void FirstDialogue()
@@ -87,7 +88,6 @@ public class LoudspeakerDialogue : MonoBehaviour
         isWriting = true;
         quickFinish = false;
         waitingToYap = true;
-        gradient.FadeIn();
         workCamControl.SetTicketEnabled(false);
         Debug.Log("Ticket disabled");
         WriteText();
@@ -127,6 +127,7 @@ public class LoudspeakerDialogue : MonoBehaviour
                 skipText.SetActive(true);
                 isYapping = true;
                 waitingToYap = false;
+                gradient.FadeIn();
             }
         }
     }

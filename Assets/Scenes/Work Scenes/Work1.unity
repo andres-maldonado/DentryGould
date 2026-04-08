@@ -2139,7 +2139,7 @@ MonoBehaviour:
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 0}
   button: {fileID: 0}
-  eveningScene: 0
+  eveningScene: 1
 --- !u!1 &950749085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,15 +2867,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor.b
-      value: 1
+      value: 0.62578607
       objectReference: {fileID: 0}
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 4288741375
       objectReference: {fileID: 0}
     - target: {fileID: 1852308495181453672, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_Pivot.x
@@ -17419,6 +17423,10 @@ PrefabInstance:
       propertyPath: fadeSprite
       value: 
       objectReference: {fileID: 7334107019208832608}
+    - target: {fileID: 5868744929704829952, guid: 5a7eb1f945577d1419a23d44831bafe8, type: 3}
+      propertyPath: isWorkScene
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5868744929704829952, guid: 5a7eb1f945577d1419a23d44831bafe8, type: 3}
       propertyPath: UIFadeSprite
       value: 

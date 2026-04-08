@@ -7,7 +7,7 @@ using UnityEngine;
 public class EveningText : MonoBehaviour
 {
     public TextAsset dialogueFile;
-    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime;
+    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate;
     public int sceneToLoad;
     [SerializeField] EventReference dialogueSound;
     private EventInstance dialogueInstance;
@@ -72,7 +72,7 @@ public class EveningText : MonoBehaviour
             letterCount++;
             counter = 0;
         }
-        if (currentLine[letterCount] == '.')
+        if (currentLine[letterCount] == '.' || currentLine[letterCount] == '?')
         {
             text.text += currentLine.Substring(letterCount, 1);
             letterCount++;
@@ -93,6 +93,10 @@ public class EveningText : MonoBehaviour
                 dialogueInstance.getPaused(out isPaused);
             }
             counter = (1 / writeSpeed) - commaTime;
+        }
+        if (letterCount == speedChangeTime && speedChangeTime != 0)
+        {
+            writeSpeed = speedChangeRate;
         }
     }
     void EndWrite()

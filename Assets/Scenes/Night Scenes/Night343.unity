@@ -442,6 +442,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: sceneToLoad
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: dialogueFile
       value: 
       objectReference: {fileID: 4900000, guid: adb4bfd7abb032049a7c7c9272997621, type: 3}

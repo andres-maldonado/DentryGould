@@ -1648,7 +1648,7 @@ MonoBehaviour:
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 249909217}
   button: {fileID: 0}
-  eveningScene: 1
+  eveningScene: 9
 --- !u!1001 &267873487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3762,6 +3762,7 @@ MonoBehaviour:
   fadeSprite: {fileID: 328296662}
   UIFadeSprite: {fileID: 228348800}
   fadeInTime: 3
+  isWorkScene: 1
   isFadingIn: 0
   isFadingOut: 0
 --- !u!4 &775461714
@@ -7384,19 +7385,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor.b
-      value: 1
+      value: 0.99215686
       objectReference: {fileID: 0}
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.6194968
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.6745696
+      value: 0.61960787
       objectReference: {fileID: 0}
     - target: {fileID: 1516849647684081172, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294942380
+      value: 4294836126
       objectReference: {fileID: 0}
     - target: {fileID: 1852308495181453672, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_Pivot.x
@@ -7808,6 +7809,10 @@ PrefabInstance:
     - target: {fileID: 3508802321009482847, guid: bc0a14d2a4fd98e409f25541eadb1396, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954822697977532374, guid: bc0a14d2a4fd98e409f25541eadb1396, type: 3}
+      propertyPath: floor
+      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11890,9 +11895,17 @@ PrefabInstance:
       value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 6506864073613443540, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: flickerRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506864073613443540, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: lightFlicker
       value: 
       objectReference: {fileID: 1391966980}
+    - target: {fileID: 6506864073613443540, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: flickerIntensity
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6613843562294315442, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: button
       value: 
@@ -12343,7 +12356,7 @@ MonoBehaviour:
   testGame: {fileID: 0}
   gameCount: 3
   successes: -1
-  quota: 6
+  quota: 5
   shiftTimer: 200
   completeCount: 0200000005000000
   taskCount: 0400000005000000

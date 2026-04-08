@@ -29,7 +29,7 @@
 <$V03><align="left"><$PL17><$#8C4AE2>Certainly not.
 <$V00><align="right"><$PR01><$#5A73E7>Ah! Somebody just breached company policy!
 <$V03><align="left"><$PL17><$#8C4AE2>It's not against policy to say we aren't breaking the law.
-<$V03><align="center"><color=#EEEEEE><i>It's too late. While she's speaking, the man stands up on his stool and yells.
+<$V03><align="center"><color=#EEEEEE><i>It's too late. While she's speaking, he stands up on his stool and yells.
 <$V00><align="right"><$PR04><$#5A73E7>HR! WHERE'S HR?! SOMEBODY BROKE POLICY!
 <$V03><align="left"><$PL18><$#8C4AE2>What the hell?! Don't be ridiculous! Get down off that chair and stop causing a ruckus!
 <$V00><align="right"><$PR03><$#5A73E7>Is it against policy to cause a ruckus?

@@ -5,6 +5,7 @@ public class SceneManager : MonoBehaviour
 {
     [SerializeField] SpriteRenderer fadeSprite, UIFadeSprite;
     [SerializeField] float fadeInTime;
+    [SerializeField] bool isWorkScene;
 
     public bool isFadingIn, isFadingOut;
     private float currentFadeTime;
@@ -20,7 +21,10 @@ public class SceneManager : MonoBehaviour
     {
         fadeSprite = GameObject.Find("FadeSprite").GetComponent<SpriteRenderer>();
         UIFadeSprite = GameObject.Find("UIFadeSprite").GetComponent<SpriteRenderer>();
-        workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        if (isWorkScene)
+        {
+            workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        }
     }
     void Start()
     {

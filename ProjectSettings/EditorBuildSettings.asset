@@ -12,17 +12,47 @@ EditorBuildSettings:
     path: Assets/Scenes/Work Scenes/Work1.unity
     guid: 41000efd104b6e44ea48f4870568a824
   - enabled: 1
-    path: Assets/Scenes/CSEvening.unity
+    path: Assets/Scenes/Evening Scenes/Evening1.unity
     guid: 37d47a05500acca43bdd7b56824a6402
   - enabled: 1
-    path: Assets/Scenes/NightScenes/Night1.unity
+    path: Assets/Scenes/Night Scenes/Night1.unity
     guid: defa0e4109fe3b646848a68fe526c877
   - enabled: 1
-    path: Assets/Scenes/CSReturn.unity
+    path: Assets/Scenes/Return29/Return29.unity
     guid: 3518d6d0ea72794438ee265af5641033
   - enabled: 1
-    path: Assets/Scenes/CSDay2.unity
-    guid: 33a51b54c773cbf47aeb38fd43f61458
+    path: Assets/Scenes/Work Scenes/Work29.unity
+    guid: 472e482ad6891e84cb98dfe46eb168d8
+  - enabled: 1
+    path: Assets/Scenes/Evening Scenes/Evening29.unity
+    guid: 9b5f28d003621e84ba35616cd2f6630c
+  - enabled: 1
+    path: Assets/Scenes/Night Scenes/Night29.unity
+    guid: 7cb4f6eef32408b4fb58de09b3abd6eb
+  - enabled: 1
+    path: Assets/Scenes/Return29/Return342.unity
+    guid: 639f16d77e77b0b49a8c196f5afe8656
+  - enabled: 1
+    path: Assets/Scenes/Work Scenes/Work342.unity
+    guid: b2eb6a385deddd24a9da9d764ab4cd02
+  - enabled: 1
+    path: Assets/Scenes/Evening Scenes/Evening342.unity
+    guid: 6c603d838380d014b95294c51166afe6
+  - enabled: 1
+    path: Assets/Scenes/Night Scenes/Night342.unity
+    guid: 2a6c559009140eb49a888fa1e026be1c
+  - enabled: 1
+    path: Assets/Scenes/Return29/Return343.unity
+    guid: 8a8183673905a3946ae7963a6f080190
+  - enabled: 1
+    path: Assets/Scenes/Work Scenes/Work343.unity
+    guid: ab6229fc40db9144e90ce3cff979d7c8
+  - enabled: 1
+    path: Assets/Scenes/Evening Scenes/Evening343.unity
+    guid: 6eeaf74fef3fe324990e45ca9bf3d125
+  - enabled: 1
+    path: Assets/Scenes/Night Scenes/Night343.unity
+    guid: 2c289a63411ddf240ac04db65f869e34
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

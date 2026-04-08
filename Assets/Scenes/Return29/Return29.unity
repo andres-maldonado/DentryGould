@@ -1050,7 +1050,7 @@ MonoBehaviour:
   endTime: 3
   speedChangeTime: 5
   speedChangeRate: 0.6
-  sceneToLoad: 4
+  sceneToLoad: 5
   dialogueSound:
     Guid:
       Data1: 0

@@ -1648,7 +1648,7 @@ MonoBehaviour:
   ticketAnim: {fileID: 0}
   workCamControl: {fileID: 249909217}
   button: {fileID: 0}
-  eveningScene: 9
+  eveningScene: 10
 --- !u!1001 &267873487
 PrefabInstance:
   m_ObjectHideFlags: 0

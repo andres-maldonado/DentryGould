@@ -124,7 +124,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "New action",
+                    "name": "Tab",
                     "type": "Button",
                     "id": "565fc171-7d5d-4439-a714-73b2c338cc84",
                     "expectedControlType": "",
@@ -489,11 +489,11 @@
                 {
                     "name": "",
                     "id": "f7b05436-3ce2-4f6f-a352-f52dcb46147b",
-                    "path": "",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Tab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

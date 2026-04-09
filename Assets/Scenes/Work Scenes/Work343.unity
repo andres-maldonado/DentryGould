@@ -1830,6 +1830,26 @@ PrefabInstance:
       propertyPath: camParent
       value: 
       objectReference: {fileID: 249909217}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Path
+      value: event:/Music/Work/Work1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data1
+      value: 1365265746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data2
+      value: 1205009764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data3
+      value: -1248878947
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
+      propertyPath: workMusic.Guid.Data4
+      value: -962853581
+      objectReference: {fileID: 0}
     - target: {fileID: 5583697660494134774, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: m_Name
       value: Tower
@@ -5354,6 +5374,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4403838327638319903, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 4133485133953953501, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 814b693a13a053541837aea13981f9dc, type: 3}

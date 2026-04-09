@@ -3,13 +3,15 @@ using FMODUnity;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EveningText : MonoBehaviour
 {
     public TextAsset dialogueFile;
-    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate;
+    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate, extraTime;
     public int sceneToLoad;
     [SerializeField] EventReference dialogueSound;
+    [SerializeField] InputActionAsset inputAction;
     private EventInstance dialogueInstance;
     private TextMeshPro text;
 
@@ -23,6 +25,8 @@ public class EveningText : MonoBehaviour
     private bool quickFinish;
     private bool isPaused;
     private bool isEnding;
+    private InputActionMap inputMap;
+    private InputAction continueKey;
     private void Awake()
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
@@ -32,6 +36,9 @@ public class EveningText : MonoBehaviour
         }
         text = gameObject.GetComponent<TextMeshPro>();
         text.text = null;
+        inputMap = inputAction.FindActionMap("Player");
+        continueKey = inputMap.FindAction("Interact");
+        continueKey.performed += _ => SpeedText();
     }
     void StartWriting()
     {
@@ -62,7 +69,7 @@ public class EveningText : MonoBehaviour
             EndWrite();
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
-        else if (counter > 1 / writeSpeed)
+        else if (counter > 1 / writeSpeed || quickFinish)
         {
             text.text += currentLine.Substring(letterCount, 1);
             if (isPaused && !dialogueSound.IsNull)
@@ -104,6 +111,18 @@ public class EveningText : MonoBehaviour
         isEnding = true;
         counter = endTime;
     }
+    void SpeedText()
+    {
+        if (isWriting)
+        {
+            quickFinish = true;
+            counter += extraTime;
+        }
+        else
+        {
+            isEnding = true;
+        }
+    }
     void Start()
     {
         
@@ -123,7 +142,7 @@ public class EveningText : MonoBehaviour
             counter -= Time.deltaTime;
             if (counter < 0)
             {
-                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad);
+                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad, false);
                 isEnding = false;
             }
         }

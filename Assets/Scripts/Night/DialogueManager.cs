@@ -155,9 +155,9 @@ public class DialogueManager : MonoBehaviour
         }
         else if (end && !isWriting && !sceneManager.isFadingOut)
         {
-            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(5, sceneToLoad);
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(5, sceneToLoad, false);
             AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Debug.Log("Loaded Scene " + sceneToLoad);
+            //Debug.Log("Loaded Scene " + sceneToLoad);
         }
     }
 

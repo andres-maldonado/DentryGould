@@ -49,7 +49,9 @@ public class LoudspeakerDialogue : MonoBehaviour
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
         continueKey.performed += _ => ContinueDialogue();
-        //skipKey.performed += _ => SkipDialogue();
+        skipKey = inputMap.FindAction("Skip");
+        skipKey.performed += _ => SkipDialogue();
+        skipKey.Disable();
         workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
     void FirstDialogue()
@@ -76,6 +78,7 @@ public class LoudspeakerDialogue : MonoBehaviour
     }
     public void StartWriting(TextAsset file)
     {
+        dialogueLines.Clear();
         dialogueByLine = file.text.Split("\n");
         for (int i = 0; i < dialogueByLine.Length; i++)
         {
@@ -89,7 +92,6 @@ public class LoudspeakerDialogue : MonoBehaviour
         quickFinish = false;
         waitingToYap = true;
         workCamControl.SetTicketEnabled(false);
-        Debug.Log("Ticket disabled");
         WriteText();
     }
 
@@ -127,6 +129,7 @@ public class LoudspeakerDialogue : MonoBehaviour
                 skipText.SetActive(true);
                 isYapping = true;
                 waitingToYap = false;
+                skipKey.Enable();
                 gradient.FadeIn();
             }
         }
@@ -211,26 +214,45 @@ public class LoudspeakerDialogue : MonoBehaviour
         }
         else
         {
-            isWriting = false;
-            gradient.FadeOut();
-            skipText.SetActive(false);
-            if (success == 1)
-            {
-                door.canExit = true;
-                AudioManager.ins.PlayOneShot(unlockSound, this.gameObject.transform.position);
-                GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
-                GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
-            }
-            else if (success == 2)
-            {
-                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
-                GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
-                GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
-            }
-            else
-            {
-                endWriting.Invoke();
-            }
+            EndDialogue();
+        }
+    }
+    void SkipDialogue()
+    {
+        if (isYapping)
+        {
+            dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            isYapping = false;
+        }
+        isPaused = false;
+        bottomText.text = null;
+        dialogueLines.Clear();
+        StopAllCoroutines();
+        counter = -10;
+        EndDialogue();
+        skipKey.Disable();
+    }
+    void EndDialogue()
+    {
+        isWriting = false;
+        gradient.FadeOut();
+        skipText.SetActive(false);
+        if (success == 1)
+        {
+            door.canExit = true;
+            AudioManager.ins.PlayOneShot(unlockSound, this.gameObject.transform.position);
+            GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
+            GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
+        }
+        else if (success == 2)
+        {
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex, false);
+            GameObject.Find("FINALBUTTON").GetComponent<FinalButton>().enabled = false;
+            GameObject.Find("FINALBUTTON").GetComponent<ButtonLamp>().enabled = false;
+        }
+        else
+        {
+            endWriting.Invoke();
         }
     }
 }

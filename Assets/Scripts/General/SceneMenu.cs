@@ -1,10 +1,11 @@
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SceneMenu : MonoBehaviour
 {
     [SerializeField] InputActionAsset inputActionAsset;
-    [SerializeField] GameObject menu, text;
+    [SerializeField] GameObject menu;
 
     private InputActionMap inputActionMap;
     private InputAction key;
@@ -17,7 +18,7 @@ public class SceneMenu : MonoBehaviour
         key.performed += _ => TriggerMenu();
         controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
-    void TriggerMenu()
+    public void TriggerMenu()
     {
         menu.active = !menu.active;
         PauseGame(menu.active);
@@ -32,7 +33,11 @@ public class SceneMenu : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-        text.SetActive(!paused);
+        foreach (EventInstance e in AudioManager.ins.eventInstances)
+        {
+            e.setPaused(paused);
+        }
+        //text.SetActive(!paused);
         if (controls != null)
         {
             controls.LockControls(paused);

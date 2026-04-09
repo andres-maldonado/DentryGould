@@ -1,4 +1,4 @@
-<$V03><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
+<$V02><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
 <$V01><align="right"><$PR05><$#4FBC21>How was it for you today?
 <$V00><align="left"><$PL00><$#5A73E7>Dude... it's like they were trying to <i>KILL</i> me!
 <$V01><align="right"><$PR08><$#4FBC21>It was awful for me too, man. They gave me way more tasks than any one person could reasonably handle.
@@ -11,67 +11,67 @@
 <$V00><align="left"><$PL00><$#5A73E7>I don't know, I guess she has her ways in her position. I wouldn't fret about it. They wouldn't wanna get rid of guys like us, right?
 <$V01><align="right"><$PR06><$#4FBC21>...I hope so. Whatever. It's over and done with.
 <$V00><align="left"><$PL01><$#5A73E7>Damn right! Let's get some brewskis!
-<$V03><align="center"><color=#EEEEEE><i>You hear the bathroom door open across the bar and a man belting out a song with slurred words. He must be hammered. He's not even trying to hit the right notes.
-<$V05><align="left"><$PL20><$#DB241E>Weeeeee are the champiooooons, my frieeeeends...
-<$V03><align="center"><color=#EEEEEE><i>He can't be older than 35. He's wearing a dress shirt, but it has come untucked, and his tie is so loose it could slip off at any moment. He looks incredibly sweaty. Your friend stares, but he tries to continue your conversation as if nothing is happening.
+<$V02><align="center"><color=#EEEEEE><i>You hear the bathroom door open across the bar and a man belting out a song with slurred words. He must be hammered. He's not even trying to hit the right notes.
+<$V03><align="left"><$PL20><$#DB241E>Weeeeee are the champiooooons, my frieeeeends...
+<$V02><align="center"><color=#EEEEEE><i>He can't be older than 35. He's wearing a dress shirt, but it has come untucked, and his tie is so loose it could slip off at any moment. He looks incredibly sweaty. Your friend stares, but he tries to continue your conversation as if nothing is happening.
 <$V00><align="left"><$PL00><$#5A73E7>...Uuuuuh, the control room was a nice temperature today, don't you think?
-<$V03><align="center"><color=#EEEEEE><i>He is unsuccessful. You both glance at the man stumbling his way through the bar. He turns his head and meets your gaze before you can pretend you weren't looking. He lurches over to you and slaps you both on the back, leaning into the middle of you.
-<$V05><align="left"><$PL19><$#DB241E>Ain't that right fellas? We're on top!
+<$V02><align="center"><color=#EEEEEE><i>He is unsuccessful. You both glance at the man stumbling his way through the bar. He turns his head and meets your gaze before you can pretend you weren't looking. He lurches over to you and slaps you both on the back, leaning into the middle of you.
+<$V03><align="left"><$PL19><$#DB241E>Ain't that right fellas? We're on top!
 <$V01><align="right"><$PR+10><$#4FBC21>Yep, on top. We're all on top.
 <$V00><align="right"><$PR01><$#5A73E7>True that!
-<$V05><align="left"><$PL20><$#DB241E>Ya know what, let's get everyone here on top. EVERYONE'S TAB IS ON ME TONIGHT!!!
-<$V03><align="center"><color=#EEEEEE><i>After a pause, the bar erupts into a cheer. Seems like everyone feels on top. The man sits down next to you.
+<$V03><align="left"><$PL20><$#DB241E>Ya know what, let's get everyone here on top. EVERYONE'S TAB IS ON ME TONIGHT!!!
+<$V02><align="center"><color=#EEEEEE><i>After a pause, the bar erupts into a cheer. Seems like everyone feels on top. The man sits down next to you.
 <$V00><align="right"><$PR01><$#5A73E7>Woah woah woah, are you sure your wallet can handle that?
-<$V05><align="left"><$PL19><$#DB241E>Dude, don't even worry about my wallet. Nothing can handle my wallet after today. I'm FLUSH, BABY! I'm gonna buy my mom a house!
+<$V03><align="left"><$PL19><$#DB241E>Dude, don't even worry about my wallet. Nothing can handle my wallet after today. I'm FLUSH, BABY! I'm gonna buy my mom a house!
 <$V01><align="right"><$PR06><$#4FBC21>What? What happened to you?
-<$V05><align="left"><$PL19><$#DB241E>Oh, ya know, I just finished my contract. I'm getting the hell out of this boring ass town!
+<$V03><align="left"><$PL19><$#DB241E>Oh, ya know, I just finished my contract. I'm getting the hell out of this boring ass town!
 <$V00><align="right"><$PR03><$#5A73E7>You finished your operating contract?
-<$V05><align="left"><$PL20><$#DB241E>Oh, what? No, my consulting contract! What the hell is an operator? Sounds intense!
-<$V03><align="center"><color=#EEEEEE><i>He laughs. He must not know about your terminology as a third party contractor. Lucky him.
-<$V05><align="left"><$PL21><$#DB241E>But no, really, all the stupid paperwork is done, thank God. Now they're really PRINTING over here!
+<$V03><align="left"><$PL20><$#DB241E>Oh, what? No, my consulting contract! What the hell is an operator? Sounds intense!
+<$V02><align="center"><color=#EEEEEE><i>He laughs. He must not know about your terminology as a third party contractor. Lucky him.
+<$V03><align="left"><$PL21><$#DB241E>But no, really, all the stupid paperwork is done, thank God. Now they're really PRINTING over here!
 <$V01><align="right"><$PR05><$#4FBC21>Printing?
-<$V05><align="left"><$PL19><$#DB241E>Yea, like they brought my team and me in to adjust their fiscal strategy. You know, trim the fat, save on expenses, move the money offshore, all that. They were losing a lot of revenue trying to tiptoe around the laws.
+<$V03><align="left"><$PL19><$#DB241E>Yea, like they brought my team and me in to adjust their fiscal strategy. You know, trim the fat, save on expenses, move the money offshore, all that. They were losing a lot of revenue trying to tiptoe around the laws.
 <$V00><align="right"><$PR03><$#5A73E7>So what did you change?
-<$V05><align="left"><$PL20><$#DB241E>Buddy, we told 'em the secret. It's called, "regulatory capture." It's called, "make some friends in high places instead of slinking around." Knowing the ridiculous shit they do to make their money, you NEED someone in the government as a teammate. Yeesh...
-<$V03><align="center"><color=#EEEEEE><i>You're shocked. After all this time, this is the guy that knows the truth, and he's so loose-lipped right now, you're certain you can get it out of him. Your friend gives you a knowing look. This is your chance.
+<$V03><align="left"><$PL20><$#DB241E>Buddy, we told 'em the secret. It's called, "regulatory capture." It's called, "make some friends in high places instead of slinking around." Knowing the ridiculous shit they do to make their money, you NEED someone in the government as a teammate. Yeesh...
+<$V02><align="center"><color=#EEEEEE><i>You're shocked. After all this time, this is the guy that knows the truth, and he's so loose-lipped right now, you're certain you can get it out of him. Your friend gives you a knowing look. This is your chance.
 <$V00><align="right"><$PR01><$#5A73E7>Oh yeeea, with that business model, you do need that. That's a great point you made.
-<$V05><align="left"><$PL20><$#DB241E>That's what I said, man!
+<$V03><align="left"><$PL20><$#DB241E>That's what I said, man!
 <$V00><align="right"><$PR02><$#5A73E7>It's no wonder they pay you guys millions for such incredible insights.
-<$V05><align="left"><$PL+20><$#DB241E>We're talking tens, buddy. 7 zeroes. But damn right!
-<$V05><align="left"><$PL19><$#DB241E>Still though, I gotta commend whoever came up with that scheme. It's genius, really. Like, they found this beautiful little legal loophole and started digging gold right out of it. And it's solid! If the feds come for them eventually, they have a good case.
+<$V03><align="left"><$PL+20><$#DB241E>We're talking tens, buddy. 7 zeroes. But damn right!
+<$V03><align="left"><$PL19><$#DB241E>Still though, I gotta commend whoever came up with that scheme. It's genius, really. Like, they found this beautiful little legal loophole and started digging gold right out of it. And it's solid! If the feds come for them eventually, they have a good case.
 <$V01><align="right"><$PR10><$#4FBC21>Oh, but of course you're delaying that by connecting them with regulators. That's such a fantastic business strategy!
-<$V05><align="left"><$PL20><$#DB241E>I looove you guys, you really get it! You see the vision here, man! We need more guys like you at our agency!
+<$V03><align="left"><$PL20><$#DB241E>I looove you guys, you really get it! You see the vision here, man! We need more guys like you at our agency!
 <$V00><align="right"><$PR02><$#5A73E7>Oh, you're too kind. A job like that is best left to great minds like yours. I don't think we got the kind of education you need to make such incredible business decisions.
-<$V05><align="left"><$PL+20><$#DB241E>Education? Don't let that thinking stop you. I skipped every business class I had to do kegstands and shit.
-<$V05><align="left"><$PL19><$#DB241E>I got the job from chatting one of the C suite guys up at a frat networking function, man. You just need a good head on your shoulders like you guys clearly have. 
+<$V03><align="left"><$PL+20><$#DB241E>Education? Don't let that thinking stop you. I skipped every business class I had to do kegstands and shit.
+<$V03><align="left"><$PL19><$#DB241E>I got the job from chatting one of the C suite guys up at a frat networking function, man. You just need a good head on your shoulders like you guys clearly have. 
 <$V01><align="right"><$PR10><$#4FBC21>Well, maybe we'll know if we've got a good head on our shoulders if we can keep up with the Dentry Gould strategy. If we can understand it when you explain it, do you think that means we can be a consultant like you?
-<$V05><align="left"><$PL21><$#DB241E>Oh, I mean I can't get into all that, man, it's confidential.
+<$V03><align="left"><$PL21><$#DB241E>Oh, I mean I can't get into all that, man, it's confidential.
 <$V00><align="right"><$PR01><$#5A73E7>That won't matter when we get hired, right?
-<$V05><align="left"><$PL+20><$#DB241E>Wait, YOU'RE SO RIGHT!
-<$V05><align="left"><$PL19><$#DB241E>Alright fellas, let me lay it out for you. Try and keep up, 'cause this is some real high-level shit right here. This has got layers on layers. Shell companies and accounting tricks. The whole wazoo. Everything to mask what's at the heart of this bad boy. Are you ready?
+<$V03><align="left"><$PL+20><$#DB241E>Wait, YOU'RE SO RIGHT!
+<$V03><align="left"><$PL19><$#DB241E>Alright fellas, let me lay it out for you. Try and keep up, 'cause this is some real high-level shit right here. This has got layers on layers. Shell companies and accounting tricks. The whole wazoo. Everything to mask what's at the heart of this bad boy. Are you ready?
 <$V01><align="right"><$PR09><$#4FBC21>Hit us!
-<$V05><align="left"><$PL19><$#DB241E>Ok, so like... there's these guys, right? And like, they get these guys to push buttons and stuff, right?
+<$V03><align="left"><$PL19><$#DB241E>Ok, so like... there's these guys, right? And like, they get these guys to push buttons and stuff, right?
 <$V00><align="right"><$PR02><$#5A73E7>Uh-huh, uh-huh.
-<$V05><align="left"><$PL+21><$#DB241E>Yea, and then they put them in these rooms... and like, I think they have guys talking to 'em, and like...
-<$V05><align="left"><$PL21><$#DB241E>Ggggggghhhehe yeh, jhhhhhhh...
+<$V03><align="left"><$PL+21><$#DB241E>Yea, and then they put them in these rooms... and like, I think they have guys talking to 'em, and like...
+<$V03><align="left"><$PL21><$#DB241E>Ggggggghhhehe yeh, jhhhhhhh...
 <$V01><align="right"><$PR06><$#4FBC21>Uh... are you alright?
-<$V05><align="left"><$PL22><$#DB241E>G- URP!
-<$V03><align="center"><color=#EEEEEE><i>He throws up all over himself for an uncomfortably prolonged period. When he finally stops, he falls backwards onto the ground. You both stand up.
+<$V03><align="left"><$PL22><$#DB241E>G- URP!
+<$V02><align="center"><color=#EEEEEE><i>He throws up all over himself for an uncomfortably prolonged period. When he finally stops, he falls backwards onto the ground. You both stand up.
 <$V00><align="right"><$PR02><$#5A73E7>Oh my god, is he okay?!
-<$V05><align="left"><$PL23><$#DB241E>Hic-... Zzzzzzzzzzzzzzzz...
+<$V03><align="left"><$PL23><$#DB241E>Hic-... Zzzzzzzzzzzzzzzz...
 <$V01><align="right"><$PR+10><$#4FBC21>Seems fine to me.
 <$V01><align="right"><$PR08><$#4FBC21>Damn it! He was gonna tell us!
-<$V03><align="center"><color=#EEEEEE><i>You both stare for a little while.
+<$V02><align="center"><color=#EEEEEE><i>You both stare for a little while.
 <$V00><align="left"><$PL02><$#5A73E7>So much for that. I think he's someone else's problem now.
 <$V01><align="right"><$PR10><$#4FBC21>Yea, I'm not cleaning that.
 <$V00><align="left"><$PL00><$#5A73E7>...Do you feel disappointed?
 <$V01><align="right"><$PR06><$#4FBC21>Honestly? Not as much as I thought I would. I didn't know when I got here, and I still don't know now. I've lost nothing.
 <$V00><align="left"><$PL02><$#5A73E7>I guess that's fair.
-<$V03><align="center"><color=#EEEEEE><i>You stand silently for a bit. Then a thought comes to your mind.
+<$V02><align="center"><color=#EEEEEE><i>You stand silently for a bit. Then a thought comes to your mind.
 <$V01><align="right"><$PR10><$#4FBC21>Ay, you know what I think?
 <$V00><align="left"><$PL03><$#5A73E7>What's that?
-<$V03><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
+<$V02><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
 <$V01><align="right"><$PR10><$#4FBC21>We should hold him to his word.
 <$V00><align="left"><$PL01><$#5A73E7>Wow, I could not agree more!
-<$V03><align="center"><color=#EEEEEE><i>You and your friend spend the rest of the night chatting as usual. The man lays on the floor for the rest of the night. You pay everyone's tab with his card, put his wallet back in his pocket, and go home.
-<$V03><align="center"><color=#EEEEEE><i>You don't fret too much about not learning what the company does. You'll just ride this job out and enjoy your time at the bar. That's good enough for you right now.
+<$V02><align="center"><color=#EEEEEE><i>You and your friend spend the rest of the night chatting as usual. The man lays on the floor for the rest of the night. You pay everyone's tab with his card, put his wallet back in his pocket, and go home.
+<$V02><align="center"><color=#EEEEEE><i>You don't fret too much about not learning what the company does. You'll just ride this job out and enjoy your time at the bar. That's good enough for you right now.

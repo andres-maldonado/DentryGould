@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Night Scenes/Night343.unity
     guid: 2c289a63411ddf240ac04db65f869e34
+  - enabled: 1
+    path: Assets/Scenes/SceneMenuScene.unity
+    guid: 14e6e22e481a9794385753fb4b058228
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -72,6 +72,7 @@ public class FinalButtonAnimation : MonoBehaviour
         if (button.firstHit)
         {
             GameObject.Find("Tower").GetComponent<TowerIntensity>().StartWhirr();
+            workCamControl.SetTicketEnabled(true);
             button.firstHit = false;
         }
     }
@@ -97,6 +98,6 @@ public class FinalButtonAnimation : MonoBehaviour
     }
     void ContinueToEvening()
     {
-        GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, eveningScene);
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, eveningScene, false);
     }
 }

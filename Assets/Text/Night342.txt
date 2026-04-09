@@ -5,13 +5,13 @@
 <$V01><align="right"><$PR07><$#4FBC21>It's just so strange. I can't imagine what function the clock could possibly be providing.
 <$V00><align="left"><$PL03><$#5A73E7>Maybe we're scheduling something? Like other people's meetings or something. Or breaks? Lunches? Company retreats?
 <$V01><align="right"><$PR09><$#4FBC21>I think you might've just hit the nail on the head there.
-<$V03><align="center"><color=#EEEEEE><i>You hear the clacking of high heels. A woman sits on the other side of you without so much as a glance toward you two. She's wearing a full suit. She orders a glass of wine.
+<$V02><align="center"><color=#EEEEEE><i>You hear the clacking of high heels. A woman sits on the other side of you without so much as a glance toward you two. She's wearing a full suit. She orders a glass of wine.
 <$V00><align="right"><$PR02><$#5A73E7>You know, I don't think I've seen anyone get wine here.
 <$V03><align="left"><$PL15><$#8C4AE2>They serve wine, don't they? I see the bottle here.
 <$V00><align="right"><$PR00><$#5A73E7>I suppose so...
 <$V03><align="left"><$PL15><$#8C4AE2>Then I'll get wine.
-<$V03><align="center"><color=#EEEEEE><i>The bartender hands her a glass of wine. She quietly sips.
-<$V03><align="center"><color=#EEEEEE><i>The more you think about it, she seems pretty high up in the chain of command at Dentry Gould. Maybe she knows more about what kind of work you're really doing.
+<$V02><align="center"><color=#EEEEEE><i>The bartender hands her a glass of wine. She quietly sips.
+<$V02><align="center"><color=#EEEEEE><i>The more you think about it, she seems pretty high up in the chain of command at Dentry Gould. Maybe she knows more about what kind of work you're really doing.
 <$V01><align="right"><$PR05><$#4FBC21>You're from corporate?
 <$V03><align="left"><$PL16><$#8C4AE2>You're operators?
 <$V01><align="right"><$PR05><$#4FBC21>We are. Do you know what we do?
@@ -29,26 +29,26 @@
 <$V03><align="left"><$PL17><$#8C4AE2>Certainly not.
 <$V00><align="right"><$PR01><$#5A73E7>Ah! Somebody just breached company policy!
 <$V03><align="left"><$PL17><$#8C4AE2>It's not against policy to say we aren't breaking the law.
-<$V03><align="center"><color=#EEEEEE><i>It's too late. While she's speaking, he stands up on his stool and yells.
+<$V02><align="center"><color=#EEEEEE><i>It's too late. While she's speaking, he stands up on his stool and yells.
 <$V00><align="right"><$PR04><$#5A73E7>HR! WHERE'S HR?! SOMEBODY BROKE POLICY!
 <$V03><align="left"><$PL18><$#8C4AE2>What the hell?! Don't be ridiculous! Get down off that chair and stop causing a ruckus!
 <$V00><align="right"><$PR03><$#5A73E7>Is it against policy to cause a ruckus?
 <$V03><align="left"><$PL18><$#8C4AE2>Absolutely!
 <$V00><align="right"><$PR+01><$#5A73E7>Well, I'm off the clock.
 <$V00><align="right"><$PR04><$#5A73E7>HR! WE HAVE A SITUATION!
-<$V03><align="center"><color=#EEEEEE><i>The woman from logistics comes in through the door. She looks ready to resolve a conflict.
-<$V02><align="left"><$PL11><$#F13DB0>What's going on? What's the problem here?
+<$V02><align="center"><color=#EEEEEE><i>The woman from logistics comes in through the door. She looks ready to resolve a conflict.
+<$V04><align="left"><$PL11><$#F13DB0>What's going on? What's the problem here?
 <$V00><align="right"><$PR02><$#5A73E7>This woman here is spreading confidential information about Dentry Gould to operators!
-<$V02><align="left"><$PL+13><$#F13DB0>Is this true?
+<$V04><align="left"><$PL+13><$#F13DB0>Is this true?
 <$V03><align="left"><$PL18><$#8C4AE2>No!
 <$V01><align="right"><$PR10><$#4FBC21>Yes.
-<$V02><align="left"><$PL12><$#F13DB0>What did she say?
+<$V04><align="left"><$PL12><$#F13DB0>What did she say?
 <$V00><align="right"><$PR03><$#5A73E7>I can't tell you. It would break policy.
-<$V02><align="left"><$PL+13><$#F13DB0>Oh, I see. Well, as a logistics manager, I'm going to have to submit a policy breach report.
+<$V04><align="left"><$PL+13><$#F13DB0>Oh, I see. Well, as a logistics manager, I'm going to have to submit a policy breach report.
 <$V03><align="left"><$PL18><$#8C4AE2>I did NOT breach policy!
-<$V02><align="right"><$PR12><$#F13DB0>Well, then you'll be fine! You can just explain the situation to HR and they'll clear you. Could I get your name to put on the report?
+<$V04><align="right"><$PR12><$#F13DB0>Well, then you'll be fine! You can just explain the situation to HR and they'll clear you. Could I get your name to put on the report?
 <$V03><align="left"><$PL18><$#8C4AE2>UGH!
-<$V03><align="center"><color=#EEEEEE><i>The woman gets up and storms out of the bar.
-<$V02><align="left"><$PL14><$#F13DB0>...Should I follow her?
+<$V02><align="center"><color=#EEEEEE><i>The woman gets up and storms out of the bar.
+<$V04><align="left"><$PL14><$#F13DB0>...Should I follow her?
 <$V01><align="right"><$PR09><$#4FBC21>It's alright. I think she won't be breaching policy again.
-<$V03><align="center"><color=#EEEEEE><i>You and your friend laugh about the situation as the clerk giggles along with confusion. You would have liked some answers, but you're unsurprised that you met yet another wall instead. It was still an amusing event.
+<$V02><align="center"><color=#EEEEEE><i>You and your friend laugh about the situation as the clerk giggles along with confusion. You would have liked some answers, but you're unsurprised that you met yet another wall instead. It was still an amusing event.

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639110736191105708
+  lastModified: 639107713679364824
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,10 +33,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639110736190386692
+  lastModified: 639113536191471515
   FileSizes:
   - Name: 
-    Value: 2164
+    Value: 2316
   Exists: 1
 --- !u!114 &-7768781499889182041
 MonoBehaviour:
@@ -197,6 +197,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 208000
+--- !u!114 &-5513636637089927378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dialogue/Drunk
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Dialogue/Drunk
+  Guid:
+    Data1: 1583739585
+    Data2: 1203971787
+    Data3: 713938607
+    Data4: -1322384975
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7022156413394294983}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2031
 --- !u!114 &-5030456442847405579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,10 +248,35 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4195693456840908183}
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
+--- !u!114 &-4885957456110696736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Narration/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4710035488475292188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,10 +327,35 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4885957456110696736}
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
+--- !u!114 &-4195693456840908183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Clerk/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3964110221361805662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +371,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639083331776259143
+  lastModified: 639113536191461548
   FileSizes: []
   Exists: 1
 --- !u!114 &-3688404065391624557
@@ -319,7 +397,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7765325452649859632}
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
@@ -431,6 +510,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-1695679962663041055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dialogue/Boss
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Dialogue/Boss
+  Guid:
+    Data1: 492485603
+    Data2: 1258627940
+    Data3: -963307116
+    Data4: -134409949
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3028121269522732895}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2031
 --- !u!114 &-498524462607074115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +553,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639110736191167828
+  lastModified: 639113539855282339
   FileSizes: []
   Exists: 1
 --- !u!114 &-185391200323517648
@@ -519,12 +626,15 @@ MonoBehaviour:
   - {fileID: -185391200323517648}
   - {fileID: 2504096644804898776}
   - {fileID: -5030456442847405579}
-  EditorParameters: []
+  - {fileID: -1695679962663041055}
+  - {fileID: -5513636637089927378}
+  EditorParameters:
+  - {fileID: 3660146708659453400}
   MasterBanks:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639110736191167828
+  cacheTime: 639113539855282339
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:
@@ -627,7 +737,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 3846072037772578239}
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
@@ -766,6 +877,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 116000
+--- !u!114 &3028121269522732895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boss/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3079770467646005447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +980,54 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3660146708659453400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameFader
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: GameFader
+  StudioPath: parameter:/GameFader
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3820612608
+    data2: 4223201496
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3846072037772578239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MC/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4334144520537249338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,6 +1099,30 @@ MonoBehaviour:
   ID:
     data1: 2659343261
     data2: 1580522217
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7022156413394294983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Drunk/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
   Type: 1
   IsGlobal: 0
   Labels: []
@@ -1029,6 +1236,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 127000
+--- !u!114 &7765325452649859632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Man/IsSpeaking
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: IsSpeaking
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1743482710
+    data2: 3283378111
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8786904410696386010
 MonoBehaviour:
   m_ObjectHideFlags: 0

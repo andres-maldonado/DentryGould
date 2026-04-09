@@ -3,13 +3,16 @@ using FMODUnity;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EveningText : MonoBehaviour
 {
     public TextAsset dialogueFile;
-    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate;
+    [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate, extraTime;
     public int sceneToLoad;
     [SerializeField] EventReference dialogueSound;
+    [SerializeField] InputActionAsset inputAction;
+    [SerializeField] GameObject continueText;
     private EventInstance dialogueInstance;
     private TextMeshPro text;
 
@@ -18,11 +21,14 @@ public class EveningText : MonoBehaviour
     private int letterCount;
     private float counter;
     private float nextLineCounter;
+    private int letterSkip = 1;
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
     private bool isPaused;
     private bool isEnding;
+    private InputActionMap inputMap;
+    private InputAction continueKey;
     private void Awake()
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().startScene += StartWriting;
@@ -32,10 +38,17 @@ public class EveningText : MonoBehaviour
         }
         text = gameObject.GetComponent<TextMeshPro>();
         text.text = null;
+        if (inputAction != null)
+        {
+            inputMap = inputAction.FindActionMap("Player");
+            continueKey = inputMap.FindAction("Interact");
+            continueKey.performed += _ => SpeedText();
+            continueKey.Disable();
+            continueText.SetActive(false);
+        }
     }
     void StartWriting()
     {
-        Debug.Log("startWRiting");
         //dialogueByLine = dialogueFile.text.Split("\n");
         //for (int i = 0; i < dialogueByLine.Length; i++)
         {
@@ -48,6 +61,11 @@ public class EveningText : MonoBehaviour
         text.text = null;
         isWriting = true;
         dialogueInstance.start();
+        if (inputAction != null)
+        {
+            continueKey.Enable();
+            continueText.SetActive(true);
+        }
         WriteText();
     }
     private void WriteText()
@@ -62,7 +80,24 @@ public class EveningText : MonoBehaviour
             EndWrite();
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
-        else if (counter > 1 / writeSpeed)
+        else if (quickFinish)
+        {
+            if (currentLine.Length <= letterCount + letterSkip)
+            {
+                text.text += currentLine.Substring(letterCount, currentLine.Length - letterCount);
+            }
+            else
+            {
+                text.text += currentLine.Substring(letterCount, letterSkip);
+            }
+            if (isPaused && !dialogueSound.IsNull)
+            {
+                dialogueInstance.setPaused(false);
+            }
+            letterCount += letterSkip;
+            counter = extraTime;
+        }
+        else if (counter > 1 / writeSpeed || quickFinish)
         {
             text.text += currentLine.Substring(letterCount, 1);
             if (isPaused && !dialogueSound.IsNull)
@@ -103,6 +138,26 @@ public class EveningText : MonoBehaviour
     {
         isEnding = true;
         counter = endTime;
+        if (quickFinish)
+        {
+            counter += extraTime;
+        }
+        dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        dialogueInstance.release();
+    }
+    void SpeedText()
+    {
+        if (isWriting)
+        {
+            quickFinish = true;
+            letterSkip = 5;
+        }
+        else if (isEnding)
+        {
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad, false);
+            continueKey.Disable();
+            isEnding = false;
+        }
     }
     void Start()
     {
@@ -123,7 +178,7 @@ public class EveningText : MonoBehaviour
             counter -= Time.deltaTime;
             if (counter < 0)
             {
-                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad);
+                GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad, false);
                 isEnding = false;
             }
         }

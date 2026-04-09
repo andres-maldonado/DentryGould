@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{421ae86a-caf0-4a23-9401-aad4f5765dcd}">
+		<property name="assetPath">
+			<value>Drunk.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.69535416666666672</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b8beede7-2631-4354-85c6-db186a9f0f72}</destination>
+		</relationship>
+	</object>
+</objects>

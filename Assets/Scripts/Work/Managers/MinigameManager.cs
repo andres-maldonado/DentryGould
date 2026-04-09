@@ -150,7 +150,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         //shut off lights
         musicManager.ReplaceMusic(endMusic);
         tower.PowerDown();
-        controls.rClick.Disable();
+        controls.SetTicketEnabled(false);
         finalButton.Deactivate();
         finalButton.enabled = false;
         if (successes >= quota)

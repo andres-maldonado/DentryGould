@@ -14,7 +14,7 @@ public class MenuButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class MenuButton : MonoBehaviour
     public void LoadScene()
     {
         isFlashing = true;
-        sceneManager.FadeOutOfScene(fadeTime, sceneToLoad);
+        sceneManager.FadeOutOfScene(fadeTime, sceneToLoad, true);
     }
     void FlashButton()
     {

@@ -8,7 +8,7 @@
 <$V02><$MSongPosition2><align="center"><color=#EEEEEE><i>He's wearing the same uniform as you. He must be one too. He gets up and takes the seat next to you.
 <$V00><align="left"><$PL02><$#5A73E7>That work really wipes you out. No wonder.
 <$V01><align="right"><$PR06><$#4FBC21>Yea.
-<$V01><align="right"><$#4FBC21>...
+<$V02><align="right"><$#4FBC21>...
 <$V01><align="right"><$PR06><$#4FBC21>It was my first day too. They really threw me in the deep end.
 <$V00><align="left"><$PL02><$#5A73E7>Yeeea, man. They like to do that with new guys. It's like a weed out thing. What did they tell you when you were done?
 <$V01><align="right"><$PR06><$#4FBC21>I mean, they said I did good.
@@ -22,7 +22,7 @@
 <$V01><align="right"><$PR08><$#4FBC21>But what did I do good at? Do you even know what those machines do?
 <$MSongPosition3><$V00><align="left"><$PL01><$#5A73E7>Oh, nope.
 <$V02><align="center"><color=#EEEEEE><i>He bursts out in laughter.
-<$V01><align="right"><$PR07><$#4FBC21>...
+<$V02><align="right"><$PR07><$#4FBC21>...
 <$V00><align="left"><$PL02><$#5A73E7>Look, I've been an operator for two years now. I get how you feel, I was there too. There's no training, no explanation, and they expect you to work day in and day out, no real breaks. It sucks, and that's the truth. I'm sorry you ended up in this job too.
 <$V01><align="right"><$PR06><$#4FBC21>I think I'm just gonna quit. Does it get any better?
 <$V00><align="left"><$PL02><$#5A73E7>Sure, it gets better. Not <i>easier</i>, really, but it becomes easier to <i>do</i>, you know? You just get in the groove of it. And hey, at least there's a nice bar with good, cheap drinks and a nice atmosphere. Can't be too mad about that!
@@ -39,7 +39,7 @@
 <$V01><align="right"><$PR10><$#4FBC21>I don't get you man. You're funny.
 <$V00><align="left"><$PL01><$#5A73E7>Yea, they tell me that. Just saying, you'd be missing a lot if you quit. You know the southwest end of the parking lot's got cats?
 <$V01><align="right"><$PR07><$#4FBC21>I'd be missing out on cats?
-<$V01><align="right"><$#4FBC21>...
+<$V02><align="right"><$#4FBC21>...
 <$V01><align="right"><$PR10><$#4FBC21>What kind of cats?
 <$V00><align="left"><$PL02><$#5A73E7>Yea, dude, they're real cute. All orange, super loud but it's sweet...
 <$V02><align="center"><color=#EEEEEE><i>You and the man spend the night chatting about the cats, the bar, the music scene in the town, everything but work. You're perplexed by his ambivalence and unseriousness, but it takes your mind off what you experienced today and your anxieties about tomorrow, at least for a time. You can appreciate that. Your anger fades, and you decide you'll give the job at least a few more days.

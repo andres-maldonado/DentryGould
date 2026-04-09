@@ -409,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 516444923178798624, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 604776973207672893, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Layer
@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3604728218823273904, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0009765625
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 4054029026448566633, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_IsActive
@@ -490,10 +490,6 @@ PrefabInstance:
     - target: {fileID: 7479743814590165036, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Name
       value: NightScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 7481731876828418870, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7621897740694372122, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -535,6 +531,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7794630376776397277, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8117446944076922478, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -566,37 +566,10 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 1616064989}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7672946064503294423, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 84067453216830074, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 4336835897096160824, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3876135933760804839, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3324279648543900702, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1491761972878195612, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 6559543697467469928, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1446193658662891363, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2044474939105670089, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 4278737774741125647, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7481731876828418870, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7560320567533575220, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}

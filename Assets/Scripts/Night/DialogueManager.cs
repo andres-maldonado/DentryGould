@@ -34,7 +34,8 @@ public class DialogueManager : MonoBehaviour
     private GameObject content;
     private Transform textSpawn;
     private InputActionMap inputMap;
-    private InputAction continueKey;
+    private InputAction continueKey, skipKey;
+    private int currentVoiceRef;
     private EventInstance currentVoice;
 
     public List<GameObject> textBoxes = new List<GameObject>();
@@ -72,6 +73,9 @@ public class DialogueManager : MonoBehaviour
         continueKey = inputMap.FindAction("Interact");
         continueKey.performed += _ => ContinueDialogue();
         continueKey.Disable();
+        skipKey = inputMap.FindAction("Skip");
+        skipKey.performed += _ => SkipScene();
+        skipKey.Disable();
         textSpawn = GameObject.Find("TextSpawn").GetComponent<Transform>();
         content = GameObject.Find("Content");
         sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
@@ -97,6 +101,7 @@ public class DialogueManager : MonoBehaviour
     void Begin()
     {
         continueKey.Enable();
+        skipKey.Enable();
         ContinueDialogue();
     }
 
@@ -160,10 +165,18 @@ public class DialogueManager : MonoBehaviour
             //Debug.Log("Loaded Scene " + sceneToLoad);
         }
     }
+    void SkipScene()
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(1, sceneToLoad, true);
+        skipKey.Disable();
+        continueKey.Disable();
+    }
 
     private string StripAllTags(string line, bool customOnly)
     {
         string strippedLine = null;
+        string currentTag = null;
+        bool readingTag = false;
         bool deleteMode = false;
         for (int i = 0; i < line.Length; i++)
         {
@@ -173,16 +186,33 @@ public class DialogueManager : MonoBehaviour
             }
             else if (line[i] == '<')
             {
-                if (line[i+1] == '$' || !customOnly)
+                if ((line[i+1] == '$' && line[i + 2] != '#') || !customOnly)
                 {
                     deleteMode = true;
                 }
+                else
+                {
+                    strippedLine += line[i];
+                }
             }
+            /*if (readingTag)
+            {
+                currentTag += line[i];
+            }*/
             if (line[i] == '>')
             {
                 deleteMode = false;
+                /*if (readingTag)
+                {
+                    currentTag.Replace("<$", "");
+                    Debug.Log(currentTag);
+                    strippedLine += "<color=" + currentTag;
+                    currentTag = null;
+                    readingTag = false;
+                }*/
             }
         }
+        strippedLine = strippedLine.Replace("<$#", "<color=#");
         //Debug.Log(strippedLine);
         return strippedLine;
     }
@@ -272,10 +302,9 @@ public class DialogueManager : MonoBehaviour
         else if (tag.StartsWith("V"))
         {
             tag = tag.Remove(0, 1);
-            int voiceIndex = int.Parse(tag);
-            currentVoice = AudioManager.ins.CreateInstance(voices[voiceIndex]);
-            Debug.Log("Voice made current voice");
-            currentVoice.start();
+            currentVoiceRef = int.Parse(tag);
+            //Debug.Log("Voice made current voice");
+            StartTalking();
         }
         else if (tag.StartsWith("#"))
         {
@@ -296,10 +325,10 @@ public class DialogueManager : MonoBehaviour
         {
             letterCount = currentLine.Length;
             isWriting = false;
-            quickFinish = false;
+            quickFinish = false; 
+            StopTalking();
             //currentVoice.setPaused(true);
             //currentVoice.getPaused(out voiceState);
-            currentVoice.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             //Debug.Log("YOMAMA");
             //Debug.Log(newBoxText.GetRenderedValues(true));
         }
@@ -338,7 +367,7 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!' || currentLine[letterCount] == '?') && letterCount < StripAllTags(currentLine, true).Length + 30)
+            else if ((currentLine[letterCount] == '.' || currentLine[letterCount] == '!' || currentLine[letterCount] == '?') && letterCount < StripAllTags(currentLine, true).Length)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
@@ -348,16 +377,20 @@ public class DialogueManager : MonoBehaviour
                     letterCount++;
                 }
                 counter = (1 / writeSpeed) - pauseTime;
-                currentVoice.setPaused(true);
-                currentVoice.getPaused(out voiceState);
+                if (!quickFinish)
+                {
+                    StopTalking();
+                }
             }
             else if (currentLine[letterCount] == ',' && letterCount < currentLine.Length)
             {
                 newBoxText.text += currentLine.Substring(letterCount, 1);
                 letterCount++;
                 counter = (1 / writeSpeed) - commaTime;
-                currentVoice.setPaused(true);
-                currentVoice.getPaused(out voiceState);
+                if (!quickFinish)
+                {
+                    StopTalking();
+                }
             }
             else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '?' && currentLine[letterCount - 1] != '!') || quickFinish)
             {
@@ -365,11 +398,29 @@ public class DialogueManager : MonoBehaviour
                 letterCount++;
                 counter = 0;
                 //Debug.Log("state: " + voiceState);
-                if (voiceState == true)
-                {
-                    currentVoice.setPaused(false);
-                }
+                StartTalking();
             }
+        }
+    }
+    void StartTalking()
+    {
+        if (voiceState == false)
+        {
+            currentVoice = AudioManager.ins.CreateInstance(voices[currentVoiceRef]);
+            currentVoice.start();
+            voiceState = true;
+            Debug.Log("Started Talking");
+        }
+    }
+    void StopTalking()
+    {
+        if (voiceState == true)
+        {
+            currentVoice.setParameterByName("IsSpeaking", 0);
+            currentVoice.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentVoice.release();
+            voiceState = false;
+            Debug.Log("Stopped Talking");
         }
     }
 

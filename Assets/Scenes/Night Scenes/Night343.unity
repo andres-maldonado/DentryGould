@@ -449,6 +449,30 @@ PrefabInstance:
       propertyPath: dialogueFile
       value: 
       objectReference: {fileID: 4900000, guid: adb4bfd7abb032049a7c7c9272997621, type: 3}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Path
+      value: event:/SFX/Dialogue/Drunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data1
+      value: 1583739585
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data2
+      value: 1203971787
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data3
+      value: 713938607
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data4
+      value: -1322384975
+      objectReference: {fileID: 0}
     - target: {fileID: 539936465208485921, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Color.g
       value: 0.6443301
@@ -537,6 +561,9 @@ PrefabInstance:
       addedObject: {fileID: 6042451}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7481731876828418870, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7560320567533575220, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}

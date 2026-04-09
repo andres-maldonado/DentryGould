@@ -12,6 +12,7 @@ public class EveningText : MonoBehaviour
     public int sceneToLoad;
     [SerializeField] EventReference dialogueSound;
     [SerializeField] InputActionAsset inputAction;
+    [SerializeField] GameObject continueText;
     private EventInstance dialogueInstance;
     private TextMeshPro text;
 
@@ -20,6 +21,7 @@ public class EveningText : MonoBehaviour
     private int letterCount;
     private float counter;
     private float nextLineCounter;
+    private int letterSkip = 1;
     private string currentLine;
     private bool isWriting;
     private bool quickFinish;
@@ -36,13 +38,17 @@ public class EveningText : MonoBehaviour
         }
         text = gameObject.GetComponent<TextMeshPro>();
         text.text = null;
-        inputMap = inputAction.FindActionMap("Player");
-        continueKey = inputMap.FindAction("Interact");
-        continueKey.performed += _ => SpeedText();
+        if (inputAction != null)
+        {
+            inputMap = inputAction.FindActionMap("Player");
+            continueKey = inputMap.FindAction("Interact");
+            continueKey.performed += _ => SpeedText();
+            continueKey.Disable();
+            continueText.SetActive(false);
+        }
     }
     void StartWriting()
     {
-        Debug.Log("startWRiting");
         //dialogueByLine = dialogueFile.text.Split("\n");
         //for (int i = 0; i < dialogueByLine.Length; i++)
         {
@@ -55,6 +61,11 @@ public class EveningText : MonoBehaviour
         text.text = null;
         isWriting = true;
         dialogueInstance.start();
+        if (inputAction != null)
+        {
+            continueKey.Enable();
+            continueText.SetActive(true);
+        }
         WriteText();
     }
     private void WriteText()
@@ -68,6 +79,23 @@ public class EveningText : MonoBehaviour
             isWriting = false;
             EndWrite();
             //Debug.Log(newBoxText.GetRenderedValues(true));
+        }
+        else if (quickFinish)
+        {
+            if (currentLine.Length <= letterCount + letterSkip)
+            {
+                text.text += currentLine.Substring(letterCount, currentLine.Length - letterCount);
+            }
+            else
+            {
+                text.text += currentLine.Substring(letterCount, letterSkip);
+            }
+            if (isPaused && !dialogueSound.IsNull)
+            {
+                dialogueInstance.setPaused(false);
+            }
+            letterCount += letterSkip;
+            counter = extraTime;
         }
         else if (counter > 1 / writeSpeed || quickFinish)
         {
@@ -110,17 +138,25 @@ public class EveningText : MonoBehaviour
     {
         isEnding = true;
         counter = endTime;
+        if (quickFinish)
+        {
+            counter += extraTime;
+        }
+        dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        dialogueInstance.release();
     }
     void SpeedText()
     {
         if (isWriting)
         {
             quickFinish = true;
-            counter += extraTime;
+            letterSkip = 5;
         }
-        else
+        else if (isEnding)
         {
-            isEnding = true;
+            GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(2, sceneToLoad, false);
+            continueKey.Disable();
+            isEnding = false;
         }
     }
     void Start()

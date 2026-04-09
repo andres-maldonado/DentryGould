@@ -458,6 +458,50 @@ PrefabInstance:
       propertyPath: dialogueFile
       value: 
       objectReference: {fileID: 4900000, guid: 33a69809bab6a8442aef76309bfd7dbb, type: 3}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Path
+      value: event:/SFX/Dialogue/Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[4].Path
+      value: event:/SFX/Dialogue/Clerk
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data1
+      value: 492485603
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data2
+      value: 1258627940
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data3
+      value: -963307116
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[3].Guid.Data4
+      value: -134409949
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[4].Guid.Data1
+      value: 1304207727
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[4].Guid.Data2
+      value: 1278251491
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[4].Guid.Data3
+      value: -1204586825
+      objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: voices.Array.data[4].Guid.Data4
+      value: -1330849540
+      objectReference: {fileID: 0}
     - target: {fileID: 3604728218823273904, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -518,6 +562,9 @@ PrefabInstance:
       addedObject: {fileID: 6042451}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7481731876828418870, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7560320567533575220, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}

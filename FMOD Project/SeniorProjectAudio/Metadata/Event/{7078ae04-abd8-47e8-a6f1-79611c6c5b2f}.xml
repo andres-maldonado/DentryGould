@@ -325,8 +325,8 @@
 		<property name="length">
 			<value>40.421052631578945</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>8</value>
+		<property name="transitionOffset">
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{63e4634c-23b7-40d5-80c3-37f393cfc0f5}</destination>
@@ -350,6 +350,9 @@
 		</property>
 		<property name="length">
 			<value>10.105263157894736</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
 		</property>
 		<property name="name">
 			<value>NoGuitar</value>

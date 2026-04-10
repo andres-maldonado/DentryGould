@@ -48,9 +48,9 @@ public class LoudspeakerDialogue : MonoBehaviour
         dialogueInstance = AudioManager.ins.CreateInstance(dialogueSound);
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
-        continueKey.performed += _ => ContinueDialogue();
+        continueKey.performed += ContinueDialogue;
         skipKey = inputMap.FindAction("Skip");
-        skipKey.performed += _ => SkipDialogue();
+        skipKey.performed += SkipDialogue;
         skipKey.Disable();
         workCamControl = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
     }
@@ -68,7 +68,7 @@ public class LoudspeakerDialogue : MonoBehaviour
         counter = (1 / writeSpeed) - timer;
         StartWriting(failFile);
     }
-    public void ContinueDialogue()
+    public void ContinueDialogue(InputAction.CallbackContext context)
     {
         if (continueCounter < 0)
         {
@@ -129,6 +129,7 @@ public class LoudspeakerDialogue : MonoBehaviour
                 skipText.SetActive(true);
                 isYapping = true;
                 waitingToYap = false;
+                continueKey.Enable();
                 skipKey.Enable();
                 gradient.FadeIn();
             }
@@ -217,7 +218,7 @@ public class LoudspeakerDialogue : MonoBehaviour
             EndDialogue();
         }
     }
-    void SkipDialogue()
+    void SkipDialogue(InputAction.CallbackContext context)
     {
         if (isYapping)
         {
@@ -254,5 +255,10 @@ public class LoudspeakerDialogue : MonoBehaviour
         {
             endWriting.Invoke();
         }
+    }
+    private void OnDisable()
+    {
+        continueKey.performed -= ContinueDialogue;
+        skipKey.performed -= SkipDialogue;
     }
 }

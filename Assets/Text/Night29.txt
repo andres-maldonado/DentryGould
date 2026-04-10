@@ -1,4 +1,4 @@
-<$V00><align="left"><$PL03><$#5A73E7>Wow, "good different?"
+<$MSongPosition1><$V01><$V00><align="left"><$PL03><$#5A73E7>Wow, "good different?"
 <$V01><align="right"><$PR08><$#4FBC21>Yea man, how is that supposed to be motivating? Only difference I feel is that I've stuck around through all the crap for some reason. Doesn't make me feel "good different."
 <$V00><align="left"><$PL02><$#5A73E7>Some of the managers take creative liberties with the position, let's say. I think it's 'cause most of them have never actually been operators. They don't know what it's like to work in the room.
 <$V01><align="right"><$PR06><$#4FBC21>I thought they said there was upward mobility?
@@ -9,7 +9,7 @@
 <$V01><align="right"><$PR06><$#4FBC21>Sorry?
 <$V02><align="left"><$PL12><$#F13DB0>Well, I don't mean to be nosy, but you're operators, right? You're talking about the performance report, aren't you?
 <$V01><align="right"><$PR08><$#4FBC21>You want me to feel that way?
-<$V02><align="left"><$PL+11><$#F13DB0>Absolutely!
+<$MSongPosition2><$V02><align="left"><$PL+11><$#F13DB0>Absolutely!
 <$V02><align="left"><$PL12><$#F13DB0>Ok, so I work in logistics, we're out across the river in the offices there. We analyze performance data, allocate workloads, and create and deliver the performance reports!
 <$V02><align="left"><$PL12><$#F13DB0>With the new reports we really wanted to inspire hard-working operators like yourselves and make them feel like their work goes noticed, so we put some words of encouragement for the managers to read out.
 <$V02><align="left"><$PL11><$#F13DB0>I read in a report that workers are 42% more efficient when they're encouraged. They loved the idea. Not to brag, but I'm really feeling another Employee of the Month!
@@ -34,9 +34,9 @@
 <$V01><align="right"><$PR08><$#4FBC21>I don't care about that. Not even a little bit. What am I even doing when I push those buttons anyway? What "value" am I generating?
 <$V02><align="left"><$PL+12><$#F13DB0>...
 <$V02><align="left"><$PL14><$#F13DB0>Honestly, I have no idea. I don't have that kind of clearance. I wasn't really aware buttons were even involved. All I get are the numbers that represent your performance, and they must be very high.
-<$V03><align="center"><color=#EEEEEE><i>You scoff.
+<$V01><align="right"><$PR07><$#4FBC21>Ha! Yea, ok then...
 <$V02><align="left"><$PL13><$#F13DB0>But your work is meaningful! It helps people! I know that!
-<$V03><align="center"><color=#EEEEEE><i>She looks troubled. She can feel your frustration, but she's realizing she can't say or do anything to fix it. The other operator leans in toward you and whispers.
+<$MSongPosition3><$V03><align="center"><color=#EEEEEE><i>She looks troubled. She can feel your frustration, but she's realizing she can't say or do anything to fix it. The other operator leans in toward you and whispers.
 <$V00><align="left"><$PL02><$#5A73E7>Look man, I get it's frustrating, but I feel for her too, you know? I think she just doesn't understand what it's like for us.
 <$V01><align="right"><$PR07><$#4FBC21>She seems very enthusiastic for someone who just unloaded a whole lot of work onto us.
 <$V00><align="left"><$PL+02><$#5A73E7>Well, that's true. But at least she tried to make things better for us. She thought she was doing the right thing. It just went through bureaucracy and got all messed up through the chain.
@@ -48,7 +48,7 @@
 <$V02><align="left"><$PL13><$#F13DB0>Look, I understand wanting a raise. That's not a problem at all. I'm sorry if I made you feel that way.
 <$V00><align="right"><$PR01><$#5A73E7>No no, it's fine. We were just talking, and I think we've come to an understanding of what change would really improve our quality of life.
 <$V02><align="left"><$PL11><$#F13DB0>Oh? What would that be?
-<$V00><align="right"><$PR+03><$#5A73E7>Cat posters.
+<$MSongPosition4><$V00><align="right"><$PR+03><$#5A73E7>Cat posters.
 <$V01><align="right"><$PR07><$#4FBC21>...
 <$V02><align="left"><$PL14><$#F13DB0>Cat posters? Explain more.
 <$V00><align="right"><$PR01><$#5A73E7>I just feel that a cute kitty and a motivational message would do wonders for my spirit as a worker. If you want to see productivity increases, that's what you gotta do.

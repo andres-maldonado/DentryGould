@@ -1,4 +1,4 @@
-<$V02><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
+<$MSongPosition1><$V02><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
 <$V01><align="right"><$PR05><$#4FBC21>How was it for you today?
 <$V00><align="left"><$PL00><$#5A73E7>Dude... it's like they were trying to <i>KILL</i> me!
 <$V01><align="right"><$PR08><$#4FBC21>It was awful for me too, man. They gave me way more tasks than any one person could reasonably handle.
@@ -9,7 +9,7 @@
 <$V00><align="left"><$PL00><$#5A73E7>Honestly, I think it was a one-off. They said it was an especially high quota today, so I bet it was just that woman that was here last night getting back at us.
 <$V01><align="right"><$PR08><$#4FBC21>How? I thought everything was anonymized?
 <$V00><align="left"><$PL00><$#5A73E7>I don't know, I guess she has her ways in her position. I wouldn't fret about it. They wouldn't wanna get rid of guys like us, right?
-<$V01><align="right"><$PR06><$#4FBC21>...I hope so. Whatever. It's over and done with.
+<$MSongPosition2><$V01><align="right"><$PR06><$#4FBC21>...I hope so. Whatever. It's over and done with.
 <$V00><align="left"><$PL01><$#5A73E7>Damn right! Let's get some brewskis!
 <$V02><align="center"><color=#EEEEEE><i>You hear the bathroom door open across the bar and a man belting out a song with slurred words. He must be hammered. He's not even trying to hit the right notes.
 <$V03><align="left"><$PL20><$#DB241E>Weeeeee are the champiooooons, my frieeeeends...
@@ -57,7 +57,7 @@
 <$V01><align="right"><$PR06><$#4FBC21>Uh... are you alright?
 <$V03><align="left"><$PL22><$#DB241E>G- URP!
 <$V02><align="center"><color=#EEEEEE><i>He throws up all over himself for an uncomfortably prolonged period. When he finally stops, he falls backwards onto the ground. You both stand up.
-<$V00><align="right"><$PR02><$#5A73E7>Oh my god, is he okay?!
+<$MSongPosition3><$V00><align="right"><$PR02><$#5A73E7>Oh my god, is he okay?!
 <$V03><align="left"><$PL23><$#DB241E>Hic-... Zzzzzzzzzzzzzzzz...
 <$V01><align="right"><$PR+10><$#4FBC21>Seems fine to me.
 <$V01><align="right"><$PR08><$#4FBC21>Damn it! He was gonna tell us!
@@ -70,7 +70,7 @@
 <$V02><align="center"><color=#EEEEEE><i>You stand silently for a bit. Then a thought comes to your mind.
 <$V01><align="right"><$PR10><$#4FBC21>Ay, you know what I think?
 <$V00><align="left"><$PL03><$#5A73E7>What's that?
-<$V02><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
+<$MSongPosition4><$V02><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
 <$V01><align="right"><$PR10><$#4FBC21>We should hold him to his word.
 <$V00><align="left"><$PL01><$#5A73E7>Wow, I could not agree more!
 <$V02><align="center"><color=#EEEEEE><i>You and your friend spend the rest of the night chatting as usual. The man lays on the floor for the rest of the night. You pay everyone's tab with his card, put his wallet back in his pocket, and go home.

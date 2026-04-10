@@ -1610,6 +1610,26 @@ PrefabInstance:
       propertyPath: bottomText
       value: 
       objectReference: {fileID: 1516849646701384213}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Path
+      value: event:/SFX/Dialogue/Loudspeaker2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data1
+      value: -648642497
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data2
+      value: 1305805837
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data3
+      value: -707734339
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data4
+      value: -833712077
+      objectReference: {fileID: 0}
     - target: {fileID: 7633056737441117076, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
       propertyPath: m_Name
       value: LoudspeakerDialogue

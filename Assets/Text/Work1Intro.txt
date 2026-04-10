@@ -8,9 +8,9 @@ Each one is marked by the color above and has some control sections denoted by s
 When you begin, you'll receive a ticket with those same shapes and colors alongside some other images or text.
 You can hold Right Click to look at the ticket at any time in case you forget what the input is.
 Those images and text represent inputs. As an operator, your job is to enter those inputs in their respective panels. It's easy!
-If you see <color=#FF3333>buttons<color=#FFFBD3> on your answer sheet, find the corresponding <color=#FF3333>colored buttons<color=#FFFBD3>, click <color=#FF3333>only<color=#FFFBD3> the buttons shown to light them up, and keep the others <color=#FF3333>unlit<color=#FFFBD3>.
-If you see a <color=#FF3333>4-digit number<color=#FFFBD3>, find the corresponding <color=#FF3333>keypad<color=#FFFBD3> and enter the number on the sheet.
-If you see <color=#FF3333>3 knobs<color=#FFFBD3>, find the corresponding <color=#FF3333>set of knobs<color=#FFFBD3> and drag them to the same positions shown on the sheet.
+If you see <color=#FF3333>buttons<color=#FFFFA0> on your answer sheet, find the corresponding <color=#FF3333>colored buttons<color=#FFFFA0>, click <color=#FF3333>only<color=#FFFFA0> the buttons shown to light them up, and keep the others <color=#FF3333>unlit<color=#FFFFA0>.
+If you see a <color=#FF3333>4-digit number<color=#FFFFA0>, find the corresponding <color=#FF3333>keypad<color=#FFFFA0> and enter the number on the sheet.
+If you see <color=#FF3333>3 knobs<color=#FFFFA0>, find the corresponding <color=#FF3333>set of knobs<color=#FFFFA0> and drag them to the same positions shown on the sheet.
 When you've entered every input on your ticket correctly, that big button on the tower by the door will turn red.
 Hit it to finalize the task, receive a new ticket, and do the process again.
 That's all there is to it. Oh, well and the time limit. 

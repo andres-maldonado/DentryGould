@@ -107,6 +107,7 @@ public class GaugeGame : Minigame
     public override void ResetGame()
     {
         Disable();
+        taskLight.SetCompletion(false);
     }
     public override void Randomize(Transform t)
     {

@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 7696996146265971894}
   - component: {fileID: 5276610187402328141}
   - component: {fileID: 6748976338616846167}
+  - component: {fileID: 5654758748112868453}
   m_Layer: 0
   m_Name: VSliderCube
   m_TagString: Untagged
@@ -659,6 +660,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5654758748112868453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770520556168671197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f42e5ab7c59e74aaeef7c921f692a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  game: {fileID: 5414689696642406685}
+  click:
+    Guid:
+      Data1: 212055710
+      Data2: 1149991317
+      Data3: -536619884
+      Data4: -378800480
+    Path: event:/SFX/Work/KnobStart
+  release:
+    Guid:
+      Data1: -883417806
+      Data2: 1091524365
+      Data3: 929524910
+      Data4: 296023871
+    Path: event:/SFX/Work/KnobStop
 --- !u!1 &961679984061369805
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +699,7 @@ GameObject:
   - component: {fileID: 2279900885248285018}
   - component: {fileID: 3952885772756440483}
   - component: {fileID: 4853514642791857314}
+  - component: {fileID: 6349314070915215613}
   m_Layer: 0
   m_Name: HSliderCube
   m_TagString: Untagged
@@ -774,6 +803,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6349314070915215613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961679984061369805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f42e5ab7c59e74aaeef7c921f692a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnOffClickSound
+  game: {fileID: 5414689696642406685}
+  click:
+    Guid:
+      Data1: 212055710
+      Data2: 1149991317
+      Data3: -536619884
+      Data4: -378800480
+    Path: event:/SFX/Work/KnobStart
+  release:
+    Guid:
+      Data1: -883417806
+      Data2: 1091524365
+      Data3: 929524910
+      Data4: 296023871
+    Path: event:/SFX/Work/KnobStop
 --- !u!1 &1027757956059829157
 GameObject:
   m_ObjectHideFlags: 0

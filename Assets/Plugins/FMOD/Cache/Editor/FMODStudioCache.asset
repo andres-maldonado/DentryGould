@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639107713679364824
+  lastModified: 639113702329073680
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,11 +33,38 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639113536191471515
+  lastModified: 639113702154038638
   FileSizes:
   - Name: 
-    Value: 2316
+    Value: 2442
   Exists: 1
+--- !u!114 &-8016640982530066123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Work/ClockStop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Work/ClockStop
+  Guid:
+    Data1: -751784899
+    Data2: 1192070234
+    Data3: -1324799835
+    Data4: 1565249954
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7768781499889182041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +398,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639113536191461548
+  lastModified: 639113702154028636
   FileSizes: []
   Exists: 1
 --- !u!114 &-3688404065391624557
@@ -447,6 +474,33 @@ MonoBehaviour:
     Data2: 1212320532
     Data3: -1428815214
     Data4: 1386109075
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2772515835592671787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Work/ClockStart
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Work/ClockStart
+  Guid:
+    Data1: -1535453037
+    Data2: 1144318466
+    Data3: 1246239144
+    Data4: -799939610
   Banks:
   - {fileID: -498524462607074115}
   IsStream: 0
@@ -553,7 +607,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639113539855282339
+  lastModified: 639113665311104515
   FileSizes: []
   Exists: 1
 --- !u!114 &-185391200323517648
@@ -628,13 +682,15 @@ MonoBehaviour:
   - {fileID: -5030456442847405579}
   - {fileID: -1695679962663041055}
   - {fileID: -5513636637089927378}
+  - {fileID: -8016640982530066123}
+  - {fileID: -2772515835592671787}
   EditorParameters:
   - {fileID: 3660146708659453400}
   MasterBanks:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639113539855282339
+  cacheTime: 639113702329073680
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:

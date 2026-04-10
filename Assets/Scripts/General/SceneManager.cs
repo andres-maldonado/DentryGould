@@ -69,6 +69,7 @@ public class SceneManager : MonoBehaviour
         isFadingSound = fadeSound;
         currentAlpha = 0;
         sceneToLoad = scene;
+        Debug.Log("Told to fade, sound = " + fadeSound);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -101,7 +102,7 @@ public class SceneManager : MonoBehaviour
                 if (isFadingSound)
                 {
                     RuntimeManager.StudioSystem.setParameterByID(paramId, 1 - currentAlpha/255);
-                    Debug.Log(1 - currentAlpha/255);
+                    //Debug.Log(1 - currentAlpha/255);
                 }
                 if (currentAlpha >= 255)
                 {

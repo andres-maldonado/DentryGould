@@ -71,10 +71,10 @@ public class DialogueManager : MonoBehaviour
         newBoxText = null;
         inputMap = inputAction.FindActionMap("Player");
         continueKey = inputMap.FindAction("Interact");
-        continueKey.performed += _ => ContinueDialogue();
+        continueKey.performed += PressE;
         continueKey.Disable();
         skipKey = inputMap.FindAction("Skip");
-        skipKey.performed += _ => SkipScene();
+        skipKey.performed += SkipScene;
         skipKey.Disable();
         textSpawn = GameObject.Find("TextSpawn").GetComponent<Transform>();
         content = GameObject.Find("Content");
@@ -110,6 +110,10 @@ public class DialogueManager : MonoBehaviour
 
     }
     Vector2 heightShift;
+    private void PressE(InputAction.CallbackContext context)
+    {
+        ContinueDialogue();
+    }
     private void ContinueDialogue()
     {
         //Debug.Log("isWriting: " + isWriting);
@@ -158,14 +162,20 @@ public class DialogueManager : MonoBehaviour
             end = true;
             //Debug.Log("End=true");
         }
-        else if (end && !isWriting && !sceneManager.isFadingOut)
+        else if (end && !isWriting)
         {
             GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(5, sceneToLoad, false);
+            Debug.Log("WE GOING TO SCENE "+sceneToLoad+", BABY: "+gameObject.name);
             AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            continueKey.performed -= PressE;
+            skipKey.performed -= SkipScene;
+            continueKey.Disable();
+            skipKey.Disable();
+            Destroy(gameObject);
             //Debug.Log("Loaded Scene " + sceneToLoad);
         }
     }
-    void SkipScene()
+    void SkipScene(InputAction.CallbackContext context)
     {
         GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(1, sceneToLoad, true);
         skipKey.Disable();
@@ -309,7 +319,7 @@ public class DialogueManager : MonoBehaviour
         else if (tag.StartsWith("#"))
         {
             ColorUtility.TryParseHtmlString(tag, out Color myColor);
-            Debug.Log(myColor);
+            //Debug.Log(myColor);
             newPortrait.GetComponent<ColorFrame>().FrameColor(myColor);
             newBoxText.text += "<color=" + tag + ">";
         }
@@ -409,7 +419,7 @@ public class DialogueManager : MonoBehaviour
             currentVoice = AudioManager.ins.CreateInstance(voices[currentVoiceRef]);
             currentVoice.start();
             voiceState = true;
-            Debug.Log("Started Talking");
+            //Debug.Log("Started Talking");
         }
     }
     void StopTalking()
@@ -420,7 +430,7 @@ public class DialogueManager : MonoBehaviour
             currentVoice.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             currentVoice.release();
             voiceState = false;
-            Debug.Log("Stopped Talking");
+            //Debug.Log("Stopped Talking");
         }
     }
 
@@ -431,5 +441,10 @@ public class DialogueManager : MonoBehaviour
         {
             WriteText();
         }
+    }
+    private void OnDisable()
+    {
+        continueKey.performed -= PressE;
+        skipKey.performed -= SkipScene;
     }
 }

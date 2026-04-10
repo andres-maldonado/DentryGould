@@ -42,7 +42,7 @@ public class EveningText : MonoBehaviour
         {
             inputMap = inputAction.FindActionMap("Player");
             continueKey = inputMap.FindAction("Interact");
-            continueKey.performed += _ => SpeedText();
+            continueKey.performed += SpeedText;
             continueKey.Disable();
             continueText.SetActive(false);
         }
@@ -57,7 +57,7 @@ public class EveningText : MonoBehaviour
         }
         //currentLine = dialogueLines.Dequeue();
         currentLine = dialogueFile.text;
-        Debug.Log(currentLine);
+        //Debug.Log(currentLine);
         text.text = null;
         isWriting = true;
         dialogueInstance.start();
@@ -145,7 +145,7 @@ public class EveningText : MonoBehaviour
         dialogueInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         dialogueInstance.release();
     }
-    void SpeedText()
+    void SpeedText(InputAction.CallbackContext context)
     {
         if (isWriting)
         {
@@ -170,11 +170,11 @@ public class EveningText : MonoBehaviour
         if (isWriting)
         {
             WriteText();
-            Debug.Log(text.text);
+            //Debug.Log(text.text);
         }
         if (isEnding)
         {
-            Debug.Log("Counter: "+counter);
+            //Debug.Log("Counter: "+counter);
             counter -= Time.deltaTime;
             if (counter < 0)
             {
@@ -182,5 +182,9 @@ public class EveningText : MonoBehaviour
                 isEnding = false;
             }
         }
+    }
+    private void OnDisable()
+    {
+        continueKey.performed -= SpeedText;
     }
 }

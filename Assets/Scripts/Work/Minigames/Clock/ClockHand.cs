@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -8,6 +9,7 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField] Transform pivot, clockCircle;
     [SerializeField] float maxTurnSpeed, clockValue, snapDistance, stopValue;
     [SerializeField] ClockGame game;
+    [SerializeField] EventReference startSound, stopSound;
 
 
     private bool isDragging;
@@ -53,6 +55,7 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (game.active)
         {
             isDragging = true;
+            AudioManager.ins.PlayOneShot(startSound, this.transform.position);
         }
     }
     public void OnPointerUp(PointerEventData eventData)
@@ -73,6 +76,7 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             clockValue = Mathf.Ceil(clockValue);
         }
         game.UpdateValue(this.transform.name, clockValue);
+        AudioManager.ins.PlayOneShot(stopSound, this.transform.position);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

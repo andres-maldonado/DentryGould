@@ -1,11 +1,11 @@
-<$V01><align="right"><$PR08><$#4FBC21>It would be nice if they could keep the boards consistent. Why is every single one so different?
+<$MSongPosition1><$V01><align="right"><$PR08><$#4FBC21>It would be nice if they could keep the boards consistent. Why is every single one so different?
 <$V00><align="left"><$PL02><$#5A73E7>I was talking to a guy some months back, and he told me that they're all customized for a specific function.
 <$V01><align="right"><$PR06><$#4FBC21>He didn't tell you the function, did he?
 <$V00><align="left"><$PL01><$#5A73E7>Oh no, certainly not. Where do you think we work?
 <$V01><align="right"><$PR07><$#4FBC21>It's just so strange. I can't imagine what function the clock could possibly be providing.
 <$V00><align="left"><$PL03><$#5A73E7>Maybe we're scheduling something? Like other people's meetings or something. Or breaks? Lunches? Company retreats?
 <$V01><align="right"><$PR09><$#4FBC21>I think you might've just hit the nail on the head there.
-<$V02><align="center"><color=#EEEEEE><i>You hear the clacking of high heels. A woman sits on the other side of you without so much as a glance toward you two. She's wearing a full suit. She orders a glass of wine.
+<$MSongPosition2><$V02><align="center"><color=#EEEEEE><i>You hear the clacking of high heels. A woman sits on the other side of you without so much as a glance toward you two. She's wearing a full suit. She orders a glass of wine.
 <$V00><align="right"><$PR02><$#5A73E7>You know, I don't think I've seen anyone get wine here.
 <$V03><align="left"><$PL15><$#8C4AE2>They serve wine, don't they? I see the bottle here.
 <$V00><align="right"><$PR00><$#5A73E7>I suppose so...
@@ -23,14 +23,14 @@
 <$V01><align="right"><$PR08><$#4FBC21>But that's ridiculous! We just have to perform these tasks without having a clue as to why?
 <$V03><align="left"><$PL16><$#8C4AE2>The system works, and it's most efficient when it operates on a need-to-know basis. If you knew every detail, it would just distract you.
 <$V01><align="right"><$PR08><$#4FBC21>Distract me?
-<$V03><align="left"><$PL+17><$#8C4AE2>You don't get paid to know the answers. You don't get paid to call the shots, or to determine the direction of the company, or to concern yourself with the consequences. You get paid to push buttons and turn knobs. That's all you need to worry about.
+<$MSongPosition3><$V03><align="left"><$PL+17><$#8C4AE2>You don't get paid to know the answers. You don't get paid to call the shots, or to determine the direction of the company, or to concern yourself with the consequences. You get paid to push buttons and turn knobs. That's all you need to worry about.
 <$V03><align="left"><$PL16><$#8C4AE2>Can you please stop asking me questions now? 
 <$V00><align="right"><$PR03><$#5A73E7>Ok, whatever it is, it's definitely super illegal.
 <$V03><align="left"><$PL17><$#8C4AE2>Certainly not.
 <$V00><align="right"><$PR01><$#5A73E7>Ah! Somebody just breached company policy!
 <$V03><align="left"><$PL17><$#8C4AE2>It's not against policy to say we aren't breaking the law.
 <$V02><align="center"><color=#EEEEEE><i>It's too late. While she's speaking, he stands up on his stool and yells.
-<$V00><align="right"><$PR04><$#5A73E7>HR! WHERE'S HR?! SOMEBODY BROKE POLICY!
+<$MSongPosition4><$V00><align="right"><$PR04><$#5A73E7>HR! WHERE'S HR?! SOMEBODY BROKE POLICY!
 <$V03><align="left"><$PL18><$#8C4AE2>What the hell?! Don't be ridiculous! Get down off that chair and stop causing a ruckus!
 <$V00><align="right"><$PR03><$#5A73E7>Is it against policy to cause a ruckus?
 <$V03><align="left"><$PL18><$#8C4AE2>Absolutely!

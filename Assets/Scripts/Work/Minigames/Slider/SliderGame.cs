@@ -55,6 +55,8 @@ public class SliderGame : Minigame
     public override void ResetGame()
     {
         Disable();
+        vSlider.enabled = true;
+        hSlider.enabled = true;
     }
     public void UpdateDot()
     {

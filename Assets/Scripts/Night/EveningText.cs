@@ -46,6 +46,7 @@ public class EveningText : MonoBehaviour
             continueKey.Disable();
             continueText.SetActive(false);
         }
+        Cursor.visible = false;
     }
     void StartWriting()
     {

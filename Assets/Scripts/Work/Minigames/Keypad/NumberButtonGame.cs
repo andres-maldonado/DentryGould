@@ -58,6 +58,7 @@ public class NumberButtonGame : Minigame
         active = false;
         taskLight.SetCompletion(false);
         entry = null;
+        UpdateDisplay();
         foreach (NumberButton button in keys)
         {
             button.IsActive(false);

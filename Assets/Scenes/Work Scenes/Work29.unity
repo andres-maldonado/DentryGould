@@ -3619,7 +3619,7 @@ PrefabInstance:
       objectReference: {fileID: 1738633250}
     - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
       propertyPath: shiftTimer
-      value: 160
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
       propertyPath: answerSheet

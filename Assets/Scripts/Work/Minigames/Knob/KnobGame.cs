@@ -64,7 +64,7 @@ public class KnobGame : Minigame
         }
         thisAnswer = Instantiate(answerTemplate, t);
         thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
-        for (int i = 0; i < knobs.Count - 1; i++)
+        for (int i = 0; i < knobs.Count; i++)
         {
             int j = Random.Range(-120, 120);
             knobs[i].transform.localEulerAngles = new Vector3(knobs[i].transform.localEulerAngles.x, knobs[i].transform.localEulerAngles.y, j);

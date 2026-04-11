@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class SceneMenu : MonoBehaviour
 {
     [SerializeField] InputActionAsset inputActionAsset;
     [SerializeField] GameObject menu;
+    [SerializeField] bool canHide = true;
 
     private InputActionMap inputActionMap;
     private InputAction key;
@@ -20,8 +22,11 @@ public class SceneMenu : MonoBehaviour
     }
     public void TriggerMenu()
     {
-        menu.active = !menu.active;
-        PauseGame(menu.active);
+        if (canHide)
+        {
+            menu.active = !menu.active;
+            PauseGame(menu.active);
+        }
     }
     void PauseGame(bool paused)
     {
@@ -37,10 +42,11 @@ public class SceneMenu : MonoBehaviour
         {
             e.setPaused(paused);
         }
-        //text.SetActive(!paused);
-        if (controls != null)
+        //text.SetActive(!paused);]
+        Cursor.visible = paused; if (controls != null)
         {
             controls.LockControls(paused);
+            Cursor.visible = true;
         }
     }
     // Update is called once per frame

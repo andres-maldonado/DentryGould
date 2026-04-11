@@ -45,6 +45,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
             countChange.Add(completeCount[i], taskCount[i]);
         }
         musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+        Cursor.visible = true;
     }
 
     public void BeginShift()

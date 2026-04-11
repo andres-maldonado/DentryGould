@@ -9,6 +9,7 @@ public class MainMenuSpin : MonoBehaviour
     void Start()
     {
         spin = GetComponent<Transform>();
+        Cursor.visible = true;
     }
 
     // Update is called once per frame

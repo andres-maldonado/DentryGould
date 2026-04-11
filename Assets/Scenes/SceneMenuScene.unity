@@ -309,6 +309,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796468997807489562, guid: 4ab827e168157b64c9ec762110fe26cb, type: 3}
+      propertyPath: canHide
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 796468997807489562, guid: 4ab827e168157b64c9ec762110fe26cb, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -539,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 189019777684010919, guid: 4ab827e168157b64c9ec762110fe26cb, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 796468997807489562, guid: 4ab827e168157b64c9ec762110fe26cb, type: 3}
+      propertyPath: canHide
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1729513317655727187, guid: 4ab827e168157b64c9ec762110fe26cb, type: 3}
       propertyPath: m_LocalScale.x

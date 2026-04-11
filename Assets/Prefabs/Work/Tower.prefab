@@ -3038,7 +3038,7 @@ MonoBehaviour:
   on: 0
   lamp: {fileID: 6956014056684989058}
   lightColor: 0
-  fadeAmount: 0
+  fadeAmount: 0.02
 --- !u!65 &3887450656919157088
 BoxCollider:
   m_ObjectHideFlags: 0

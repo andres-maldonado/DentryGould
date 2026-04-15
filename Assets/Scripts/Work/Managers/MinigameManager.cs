@@ -13,7 +13,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public int gameCount;
     public int successes;
     public int quota;
-    public float shiftTimer;
+    public float shiftTimer, taskTimer;
 
     [Header("Difficulty Ramp")]
     public List<int> completeCount = new List<int>();
@@ -32,9 +32,9 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeField] EventReference endMusic;
     public List<int> games = new List<int>();
     private int rg;
-    private float counter;
+    private float counter, taskTime;
     public bool isEnding;
-    private bool shiftActive;
+    private bool shiftActive, taskFailed;
     private MusicManager musicManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,6 +50,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public void BeginShift()
     {
         counter = shiftTimer;
+        taskTime = taskTimer;
         shiftActive = true;
         controls.SetTicketEnabled(true);
     }
@@ -60,10 +61,15 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         if (shiftActive)
         {
             counter -= Time.deltaTime;
+            taskTime -= Time.deltaTime;
             if (counter < 0 && !isEnding)
             {
                 isEnding = true;
-                shiftActive = false;
+            }
+            if (taskTime < 0)
+            {
+                taskFailed = false;
+                EndShift();
             }
         }
     }
@@ -95,6 +101,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
             //Debug.Log("Minigame "+rg+" Activated");
         }
         tower.UpdateIntensity(0);
+        taskTime = taskTimer;
         finalButton.IsActive(true);
     }
     int gamesCompleted;
@@ -148,12 +155,13 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public void EndShift()
     {
         //shut off lights
+        shiftActive = false;
         musicManager.ReplaceMusic(endMusic);
         tower.PowerDown();
         controls.SetTicketEnabled(false);
         finalButton.Deactivate();
         finalButton.enabled = false;
-        if (successes >= quota)
+        if (successes >= quota && !taskFailed)
         {
             //timer to delay printing
             dialogue.SuccessDialogue(3);

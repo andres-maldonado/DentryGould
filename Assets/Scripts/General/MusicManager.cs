@@ -27,6 +27,7 @@ public class MusicManager : MonoBehaviour
     public void StartMusic()
     {
         AudioManager.ins.InitializeMusic(startMusic);
+        AudioManager.ins.musicEventInstance.setParameterByName("MusicPosition", 0);
     }
     public void ReplaceMusic(EventReference newMusic)
     {

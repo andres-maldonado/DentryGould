@@ -8008,6 +8008,7 @@ MonoBehaviour:
   successes: -1
   quota: 5
   shiftTimer: 200
+  taskTimer: 45
   completeCount: 0200000005000000
   taskCount: 0400000005000000
   finalButton: {fileID: 9067502118952148708}

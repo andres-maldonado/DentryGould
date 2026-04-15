@@ -1182,6 +1182,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
+      propertyPath: taskTimer
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
       propertyPath: shiftTimer
       value: 120
       objectReference: {fileID: 0}

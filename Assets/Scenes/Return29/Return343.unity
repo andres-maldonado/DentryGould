@@ -1044,12 +1044,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   dialogueFile: {fileID: 4900000, guid: de3aebc482ee3b5459d2695a2b4f359e, type: 3}
-  writeSpeed: 2
+  writeSpeed: 3
   pauseTime: 2
   commaTime: 0.75
   endTime: 3
   speedChangeTime: 0
   speedChangeRate: 2
+  extraTime: 0
   sceneToLoad: 13
   dialogueSound:
     Guid:
@@ -1058,6 +1059,8 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  inputAction: {fileID: 0}
+  continueText: {fileID: 0}
 --- !u!114 &1804228172
 MonoBehaviour:
   m_ObjectHideFlags: 0

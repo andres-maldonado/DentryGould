@@ -4,15 +4,16 @@ using UnityEngine.UI;
 public class ColorblindToggle : MonoBehaviour
 {
     private Toggle toggle;
-    private ColorblindPersist persist;
+    //private ColorblindPersist persist;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
-        persist = GameObject.Find("ColorblindToggle").GetComponent<ColorblindPersist>();
+        //persist = GameObject.Find("ColorblindToggle").GetComponent<ColorblindPersist>();
     }
     void Start()
     {
         toggle = GetComponent<Toggle>();
+        toggle.isOn = ColorblindPersist.ins.cbOn;
         SetColorblind();
     }
 
@@ -26,11 +27,11 @@ public class ColorblindToggle : MonoBehaviour
         if (toggle.isOn)
         {
             //Debug.Log("Ran On");
-            persist.On();
+            ColorblindPersist.ins.On();
         }
         else 
         {
-            persist.Off();
+            ColorblindPersist.ins.Off();
             //Debug.Log("Ran Off");
         }
     }

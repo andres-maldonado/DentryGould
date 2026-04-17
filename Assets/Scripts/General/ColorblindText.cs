@@ -4,15 +4,13 @@ using UnityEngine;
 public class ColorblindText : MonoBehaviour
 {
     private MeshRenderer text;
-    private ColorblindPersist persist;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         text = GetComponent<MeshRenderer>();
-        persist = GameObject.Find("ColorblindToggle").GetComponent<ColorblindPersist>();
-        persist.colorblindOn += TurnOn;
-        persist.colorblindOff += TurnOff;
-        text.enabled = persist.cbOn;
+        ColorblindPersist.ins.colorblindOn += TurnOn;
+        ColorblindPersist.ins.colorblindOff += TurnOff;
+        text.enabled = ColorblindPersist.ins.cbOn;
     }
 
     // Update is called once per frame
@@ -30,7 +28,7 @@ public class ColorblindText : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GameObject.Find("ColorblindToggle").GetComponent<ColorblindPersist>().colorblindOff -= TurnOff;
-        GameObject.Find("ColorblindToggle").GetComponent<ColorblindPersist>().colorblindOn -= TurnOn;
+        ColorblindPersist.ins.colorblindOff -= TurnOff;
+        ColorblindPersist.ins.colorblindOn -= TurnOn;
     }
 }

@@ -17,8 +17,16 @@ public class SceneMenu : MonoBehaviour
     {
         inputActionMap = inputActionAsset.FindActionMap("Player");
         key = inputActionMap.FindAction("Tab");
-        key.performed += _ => TriggerMenu();
+        key.performed += MenuButton;
         controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+    }
+    private void OnDestroy()
+    {
+        key.performed -= MenuButton;
+    }
+    void MenuButton(InputAction.CallbackContext context)
+    {
+        TriggerMenu();
     }
     public void TriggerMenu()
     {

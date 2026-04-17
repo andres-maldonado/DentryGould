@@ -162,7 +162,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         controls.SetTicketEnabled(false);
         finalButton.Deactivate();
         finalButton.enabled = false;
-        if (taskFailed)
+        if (!taskFailed)
         {
             //timer to delay printing
             dialogue.SuccessDialogue(3);

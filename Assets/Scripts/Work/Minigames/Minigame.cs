@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public abstract class Minigame : MonoBehaviour
@@ -13,7 +14,7 @@ public abstract class Minigame : MonoBehaviour
     public TaskLight taskLight;
 
     private MinigameManager manager;
-    private Panel panel;
+    public Panel panel;
     void Awake()
     {
         //Debug.Log("ok we up");
@@ -38,8 +39,9 @@ public abstract class Minigame : MonoBehaviour
         Disable();
         manager.CheckCompletion();
     }
-    public void ColorIcon(Color color)
+    public void ColorIcon(Color color, int number)
     {
         minigameIcon.color = color;
+        minigameIcon.GetComponentInChildren<TextMeshPro>().text = number.ToString();
     }
 }

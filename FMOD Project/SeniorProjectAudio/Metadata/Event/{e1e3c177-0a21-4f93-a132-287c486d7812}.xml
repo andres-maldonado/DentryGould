@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{e1e3c177-0a21-4f93-a132-287c486d7812}">
 		<property name="name">
-			<value>BeepsEnd</value>
+			<value>BeepsEndMusic</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -55,7 +55,7 @@
 			<destination>{97b9f4c7-8d5b-4f93-8748-6889f8e85120}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{49cf5550-6c1b-4a8b-a6aa-328e39b6bc9e}</destination>
+			<destination>{4287d7ea-781f-4a6c-abe4-5e8f046a3f40}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{0a911cfa-241b-4d87-8abf-a18b0bddb6d2}" />

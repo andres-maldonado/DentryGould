@@ -115,6 +115,6 @@ public class GaugeGame : Minigame
         answerMin = answer;
         answerMax = answer + 20;
         thisAnswer = Instantiate(answerTemplate, t);
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer.ToString());
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, answer.ToString());
     }
 }

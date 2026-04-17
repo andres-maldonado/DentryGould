@@ -48,7 +48,7 @@ public class SliderGame : Minigame
         }
         answer = "("+answerVect.y * max + ", "+answerVect.x * max+")";
         thisAnswer = Instantiate(answerTemplate, p);
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, answer);
         taskLight.SetCompletion(false);
 
     }

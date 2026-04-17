@@ -33,7 +33,7 @@ public class ColorButtonGame : Minigame
     {
         answer = (byte)UnityEngine.Random.Range(1, 16);
         thisAnswer = Instantiate(answerTemplate, p);
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer.ToString());
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, answer.ToString());
         colorButtons.ForEach(button => 
         { 
             button.isOn = false;

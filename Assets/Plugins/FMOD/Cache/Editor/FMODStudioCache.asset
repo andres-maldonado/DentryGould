@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639114218191686287
+  lastModified: 639119722665848286
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,10 +33,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639114218191174082
+  lastModified: 639119738928481217
   FileSizes:
   - Name: 
-    Value: 2442
+    Value: 2720
   Exists: 1
 --- !u!114 &-8016640982530066123
 MonoBehaviour:
@@ -359,6 +359,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
+--- !u!114 &-4470535824271157745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFXVolume
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SFXVolume
+  StudioPath: parameter:/SFXVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1634351902
+    data2: 3680042085
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-4195693456840908183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +422,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639114218191174082
+  lastModified: 639119738928481217
   FileSizes: []
   Exists: 1
 --- !u!114 &-3688404065391624557
@@ -510,6 +534,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2351902697468479439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/SilenceMusic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/SilenceMusic
+  Guid:
+    Data1: 35165230
+    Data2: 1207230414
+    Data3: 361872297
+    Data4: -655110934
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2207450872155895597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +643,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2031
+--- !u!114 &-1617778463331339659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MasterVolume
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: MasterVolume
+  StudioPath: parameter:/MasterVolume
+  Min: 0
+  Max: 1
+  Default: 0.75
+  ID:
+    data1: 529436295
+    data2: 1283233664
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-498524462607074115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,9 +682,36 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639114218191723374
+  lastModified: 639119733761101251
   FileSizes: []
   Exists: 1
+--- !u!114 &-419375929835297637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/BeepsEndMusic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/BeepsEndMusic
+  Guid:
+    Data1: -505167497
+    Data2: 1335036449
+    Data3: 2083009185
+    Data4: 309882184
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 127000
 --- !u!114 &-185391200323517648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,24 +775,28 @@ MonoBehaviour:
   - {fileID: -4702678006838599570}
   - {fileID: -4710035488475292188}
   - {fileID: 3248678280943556830}
-  - {fileID: 7113613199017681584}
-  - {fileID: 3007767115163665720}
-  - {fileID: 7541464235564352684}
   - {fileID: -7349161281340051535}
   - {fileID: -185391200323517648}
-  - {fileID: 2504096644804898776}
   - {fileID: -5030456442847405579}
   - {fileID: -1695679962663041055}
   - {fileID: -5513636637089927378}
   - {fileID: -8016640982530066123}
   - {fileID: -2772515835592671787}
+  - {fileID: -2351902697468479439}
+  - {fileID: 6952915566443826510}
+  - {fileID: 4568268660083948104}
+  - {fileID: -419375929835297637}
+  - {fileID: 2629827755058075893}
   EditorParameters:
   - {fileID: 3660146708659453400}
+  - {fileID: -1617778463331339659}
+  - {fileID: 5665083689496988777}
+  - {fileID: -4470535824271157745}
   MasterBanks:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639114218191723374
+  cacheTime: 639119738928481217
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:
@@ -825,7 +931,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &2504096644804898776
+--- !u!114 &2629827755058075893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -835,23 +941,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Work/Silence
+  m_Name: event:/SFX/VolumeTest
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Work/Silence
+  Path: event:/SFX/VolumeTest
   Guid:
-    Data1: 35165230
-    Data2: 1207230414
-    Data3: 361872297
-    Data4: -655110934
+    Data1: -1230096794
+    Data2: 1082143469
+    Data3: 2118083749
+    Data4: 1247749145
   Banks:
-  - {fileID: -8243837429957365735}
+  - {fileID: -498524462607074115}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 721
 --- !u!114 &2646270011422684305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,33 +1012,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3007767115163665720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Work/BeepsStart
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Work/BeepsStart
-  Guid:
-    Data1: -1067765911
-    Data2: 1188478434
-    Data3: 2023085454
-    Data4: 1657149486
-  Banks:
-  - {fileID: -8243837429957365735}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 116000
 --- !u!114 &3028121269522732895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,6 +1187,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4568268660083948104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/BeepsStartMusic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/BeepsStartMusic
+  Guid:
+    Data1: -1067765911
+    Data2: 1188478434
+    Data3: 2023085454
+    Data4: 1657149486
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 116000
 --- !u!114 &4921046930459740466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,6 +1241,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5665083689496988777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicVolume
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: MusicVolume
+  StudioPath: parameter:/MusicVolume
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 895491034
+    data2: 1438531127
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &6559097240545416176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1289,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6952915566443826510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/Work1Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/Work1Music
+  Guid:
+    Data1: 1365265746
+    Data2: 1205009764
+    Data3: -1248878947
+    Data4: -962853581
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 208000
 --- !u!114 &7022156413394294983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,33 +1340,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7113613199017681584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Work/Work1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Work/Work1
-  Guid:
-    Data1: 1365265746
-    Data2: 1205009764
-    Data3: -1248878947
-    Data4: -962853581
-  Banks:
-  - {fileID: -8243837429957365735}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 208000
 --- !u!114 &7355529927802314931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,33 +1395,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 252631
---- !u!114 &7541464235564352684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Work/BeepsEnd
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Work/BeepsEnd
-  Guid:
-    Data1: -505167497
-    Data2: 1335036449
-    Data3: 2083009185
-    Data4: 309882184
-  Banks:
-  - {fileID: -8243837429957365735}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 127000
 --- !u!114 &7765325452649859632
 MonoBehaviour:
   m_ObjectHideFlags: 0

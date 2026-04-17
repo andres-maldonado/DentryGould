@@ -16,7 +16,7 @@ public abstract class Answer : MonoBehaviour
     {
         
     }
-    public abstract void DisplayAnswer(Sprite sprite, Color color, string answer);
+    public abstract void DisplayAnswer(Sprite sprite, int number, Color color, string answer);
     public void Complete()
     {
         check.SetActive(true);

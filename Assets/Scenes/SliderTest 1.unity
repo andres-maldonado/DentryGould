@@ -2121,7 +2121,7 @@ MonoBehaviour:
       Data2: 1188478434
       Data3: 2023085454
       Data4: 1657149486
-    Path: event:/Music/Work/BeepsStart
+    Path: event:/Music/Work/BeepsStartMusic
 --- !u!4 &240207753
 Transform:
   m_ObjectHideFlags: 0
@@ -6444,7 +6444,7 @@ MonoBehaviour:
       Data2: 1205009764
       Data3: -1248878947
       Data4: -962853581
-    Path: event:/Music/Work/Work1
+    Path: event:/Music/Work/Work1Music
   anim: {fileID: 655013573}
   ready: 0
   firstHit: 0
@@ -20363,6 +20363,7 @@ MonoBehaviour:
   successes: -1
   quota: 4
   shiftTimer: 120
+  taskTimer: 0
   completeCount: 0200000005000000
   taskCount: 0200000003000000
   finalButton: {fileID: 9067502118952148708}
@@ -20384,7 +20385,7 @@ MonoBehaviour:
       Data2: 1335036449
       Data3: 2083009185
       Data4: 309882184
-    Path: event:/Music/Work/BeepsEnd
+    Path: event:/Music/Work/BeepsEndMusic
   games: 
   isEnding: 0
 --- !u!4 &2007216441
@@ -24644,7 +24645,7 @@ MonoBehaviour:
       Data2: 1205009764
       Data3: -1248878947
       Data4: -962853581
-    Path: event:/Music/Work/Work1
+    Path: event:/Music/Work/Work1Music
   anim: {fileID: 9067502118952148707}
   ready: 0
   firstHit: 0

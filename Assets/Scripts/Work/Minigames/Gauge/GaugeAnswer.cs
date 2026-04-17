@@ -16,9 +16,10 @@ public class GaugeAnswer : Answer
     {
         
     }
-    public override void DisplayAnswer(Sprite sprite, Color color, string answer)
+    public override void DisplayAnswer(Sprite sprite, int number, Color color, string answer)
     {
         icon.sprite = sprite;
+        icon.GetComponentInChildren<TextMeshPro>().text = number.ToString();
         icon.color = color;
         float angle = float.Parse(answer);
         pivot.localEulerAngles = new Vector3(0, 0, angle-30);

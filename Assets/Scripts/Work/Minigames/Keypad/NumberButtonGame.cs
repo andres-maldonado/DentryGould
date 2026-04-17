@@ -86,7 +86,7 @@ public class NumberButtonGame : Minigame
         entry = null;
         UpdateDisplay();
         thisAnswer = Instantiate(answerTemplate, t);
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, answer);
         taskLight.SetCompletion(false);
     }
 }

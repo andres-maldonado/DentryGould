@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SliderAnswer : Answer
@@ -16,9 +17,10 @@ public class SliderAnswer : Answer
         
     }
 
-    public override void DisplayAnswer(Sprite sprite, Color color, string answer)
+    public override void DisplayAnswer(Sprite sprite, int number, Color color, string answer)
     {
         icon.sprite = sprite;
+        icon.GetComponentInChildren<TextMeshPro>().text = number.ToString();
         icon.color = color;
         answerDisplay.text = answer;
     }

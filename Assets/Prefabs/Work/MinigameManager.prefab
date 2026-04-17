@@ -50,6 +50,7 @@ MonoBehaviour:
   successes: -1
   quota: 0
   shiftTimer: 0
+  taskTimer: 0
   completeCount: 0200000005000000
   taskCount: 0300000004000000
   finalButton: {fileID: 0}
@@ -71,6 +72,6 @@ MonoBehaviour:
       Data2: 1335036449
       Data3: 2083009185
       Data4: 309882184
-    Path: event:/Music/Work/BeepsEnd
+    Path: event:/Music/Work/BeepsEndMusic
   games: 
   isEnding: 0

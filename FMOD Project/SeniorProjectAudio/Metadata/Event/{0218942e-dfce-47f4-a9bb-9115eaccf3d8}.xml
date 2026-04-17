@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{0218942e-dfce-47f4-a9bb-9115eaccf3d8}">
 		<property name="name">
-			<value>Silence</value>
+			<value>SilenceMusic</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -50,7 +50,7 @@
 			<destination>{5920881f-d768-40a5-8e15-b8e45efc8d34}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{49cf5550-6c1b-4a8b-a6aa-328e39b6bc9e}</destination>
+			<destination>{4287d7ea-781f-4a6c-abe4-5e8f046a3f40}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{3fb01c95-7f3d-429e-b144-6dee67b6c1d4}" />

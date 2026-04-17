@@ -40,8 +40,15 @@ public class SceneMenu : MonoBehaviour
         }
         foreach (EventInstance e in AudioManager.ins.eventInstances)
         {
-            e.setPaused(paused);
+            e.getDescription(out EventDescription description);
+            description.getPath(out string result);
+            //UnityEngine.Debug.Log(result);
+            if (result != null && !result.EndsWith("Music"))
+            {
+                e.setPaused(paused);
+            }
         }
+        AudioManager.ins.musicEventInstance.setPaused(false);
         //text.SetActive(!paused);]
         Cursor.visible = paused; if (controls != null)
         {

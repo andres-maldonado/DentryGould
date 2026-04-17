@@ -60,7 +60,7 @@ public class ClockGame : Minigame
             displayAnswer += ":" + (answer.y * 5).ToString();
         }
         
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, displayAnswer);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, displayAnswer);
         taskLight.SetCompletion(false);
     }
     public override void ResetGame()

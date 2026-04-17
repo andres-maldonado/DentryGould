@@ -63,7 +63,7 @@ public class KnobGame : Minigame
             answer += k.ToString();
         }
         thisAnswer = Instantiate(answerTemplate, t);
-        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, minigameColor, answer);
+        thisAnswer.GetComponent<Answer>().DisplayAnswer(minigameIcon.sprite, panel.number, minigameColor, answer);
         for (int i = 0; i < knobs.Count; i++)
         {
             int j = Random.Range(-120, 120);

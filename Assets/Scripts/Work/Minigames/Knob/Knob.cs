@@ -58,7 +58,7 @@ public class Knob : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             {
                 Vector3 mousePosition = Vector3.ProjectOnPlane(hitInfo.point, pivot.forward);
                 float signedAngle = Vector3.Angle(transform.up, hitInfo.point - pivot.position) * Mathf.Sign(Vector3.Dot(-transform.right, hitInfo.point - pivot.position));
-                Debug.Log(hitInfo.point - pivot.position + ", " + transform.up + ", " + signedAngle);
+                //Debug.Log(hitInfo.point - pivot.position + ", " + transform.up + ", " + signedAngle);
                 if (signedAngle < stopAngle && signedAngle > -stopAngle)
                 {
                     signedAngle = 0;

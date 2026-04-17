@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class NumberButtonAnswer : Answer
 {
@@ -15,9 +16,10 @@ public class NumberButtonAnswer : Answer
     {
 
     }
-    public override void DisplayAnswer(Sprite sprite, Color color, string answer)
+    public override void DisplayAnswer(Sprite sprite, int number, Color color, string answer)
     {
         icon.sprite = sprite;
+        icon.GetComponentInChildren<TextMeshPro>().text = number.ToString();
         icon.color = color;
         answerDisplay.text = answer;
     }

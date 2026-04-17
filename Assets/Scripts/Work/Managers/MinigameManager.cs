@@ -69,7 +69,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
             }
             if (taskTime < 0)
             {
-                taskFailed = false;
+                taskFailed = true;
                 EndShift();
             }
         }
@@ -162,7 +162,7 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         controls.SetTicketEnabled(false);
         finalButton.Deactivate();
         finalButton.enabled = false;
-        if (successes >= quota && !taskFailed)
+        if (taskFailed)
         {
             //timer to delay printing
             dialogue.SuccessDialogue(3);

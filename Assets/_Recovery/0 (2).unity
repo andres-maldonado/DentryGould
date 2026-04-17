@@ -2509,7 +2509,7 @@ MonoBehaviour:
       Data2: 1188478434
       Data3: 2023085454
       Data4: 1657149486
-    Path: event:/Music/Work/BeepsStart
+    Path: event:/Music/Work/BeepsStartMusic
 --- !u!4 &240207753
 Transform:
   m_ObjectHideFlags: 0
@@ -6571,6 +6571,7 @@ MonoBehaviour:
   minBright: 195
   hShift: 0.3
   vShift: 0.3
+  glowControl: {fileID: 0}
 --- !u!114 &636757855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7873,8 +7874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
   fadeSprite: {fileID: 328296662}
   UIFadeSprite: {fileID: 228348800}
-  workCamControl: {fileID: 249909217}
   fadeInTime: 3
+  isWorkScene: 0
   isFadingIn: 0
   isFadingOut: 0
 --- !u!4 &775461714
@@ -9402,6 +9403,7 @@ MonoBehaviour:
   minBright: 225
   hShift: 0.5
   vShift: 0.5
+  glowControl: {fileID: 0}
 --- !u!1 &884151939
 GameObject:
   m_ObjectHideFlags: 0
@@ -13336,6 +13338,7 @@ MonoBehaviour:
   flickerIntensity: 0
   flickerLength: 0
   flickerPeriod: 0
+  flickerRate: 0
   machineWhirr:
     Guid:
       Data1: 455084966
@@ -19674,6 +19677,7 @@ MonoBehaviour:
     Path: event:/SFX/Work/DoorUnlock
   inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   skipText: {fileID: 636757852}
+  gradient: {fileID: 0}
   success: 0
 --- !u!4 &1738633251
 Transform:
@@ -22679,6 +22683,7 @@ MonoBehaviour:
   successes: -1
   quota: 4
   shiftTimer: 120
+  taskTimer: 0
   completeCount: 0200000005000000
   taskCount: 0400000005000000
   finalButton: {fileID: 9067502118952148708}
@@ -22700,7 +22705,7 @@ MonoBehaviour:
       Data2: 1335036449
       Data3: 2083009185
       Data4: 309882184
-    Path: event:/Music/Work/BeepsEnd
+    Path: event:/Music/Work/BeepsEndMusic
   games: 
   isEnding: 0
 --- !u!4 &2007216441
@@ -46490,7 +46495,7 @@ MonoBehaviour:
       Data2: 1205009764
       Data3: -1248878947
       Data4: -962853581
-    Path: event:/Music/Work/Work1
+    Path: event:/Music/Work/Work1Music
   anim: {fileID: 9067502118952148707}
   ready: 0
   firstHit: 0

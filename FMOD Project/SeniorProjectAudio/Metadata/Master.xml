@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
+		<relationship name="automators">
+			<destination>{b63c643f-7a8f-496b-bf0b-8455ea8bfb3d}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{a7a80d4d-bbd8-42eb-b107-cbba02fb0a54}</destination>
 		</relationship>
@@ -12,6 +15,14 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{894ca1aa-7e86-413f-aa0b-78b6afa1e9cf}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{b63c643f-7a8f-496b-bf0b-8455ea8bfb3d}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{82fe8a40-e097-40a4-b662-f7eda4711bbb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{a7a80d4d-bbd8-42eb-b107-cbba02fb0a54}">
@@ -25,12 +36,40 @@
 			<value>2</value>
 		</property>
 	</object>
+	<object class="AutomationCurve" id="{82fe8a40-e097-40a4-b662-f7eda4711bbb}">
+		<relationship name="parameter">
+			<destination>{7203518c-399f-49c7-af8a-764d8c58f355}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{424b2997-6947-42cc-8ed2-ad84c9bb9369}</destination>
+			<destination>{284697bb-f745-4974-856b-3c254d9247fa}</destination>
+		</relationship>
+	</object>
 	<object class="GainEffect" id="{e1c1c113-291e-4619-a5e3-fcc9944e3abc}">
 		<relationship name="automators">
 			<destination>{88c2bc2b-29fc-4713-9d9f-b8aca064bc91}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d9af20d4-407b-40ba-ba41-601822a9032b}" />
+	<object class="AutomationPoint" id="{424b2997-6947-42cc-8ed2-ad84c9bb9369}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>0.767906189</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{284697bb-f745-4974-856b-3c254d9247fa}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-74.8806229</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.0288056098</value>
+		</property>
+	</object>
 	<object class="Automator" id="{88c2bc2b-29fc-4713-9d9f-b8aca064bc91}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>gain</value>

@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ButtonLamp : MonoBehaviour
@@ -18,10 +20,12 @@ public class ButtonLamp : MonoBehaviour
     public float fadeAmount;
 
     MeshRenderer rend;
+    [SerializeField] TextMeshPro number;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rend = lamp.GetComponent<MeshRenderer>();
+        //number = GetComponentInChildren<TextMeshPro>();
         SetColor();
     }
 
@@ -51,7 +55,10 @@ public class ButtonLamp : MonoBehaviour
                 default:
                     break;
             }
-
+            if (number != null)
+            {
+                number.color = new Color(1, 1, 1);
+            }
         }
         else
         {
@@ -71,6 +78,10 @@ public class ButtonLamp : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+            if (number != null)
+            {
+                number.color = new Color(.4f, .4f, .4f);
             }
         }
     }

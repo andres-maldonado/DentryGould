@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Unity.Mathematics;
+using TMPro;
 
 public class ColorButton : WorkButton
 {
@@ -13,11 +14,13 @@ public class ColorButton : WorkButton
 
     private ButtonLamp buttonLamp;
     private ColorButtonGame game;
+    private TextMeshPro number;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         buttonLamp = GetComponent<ButtonLamp>();
         game = transform.parent.GetComponentInParent<ColorButtonGame>();
+        number = GetComponentInChildren<TextMeshPro>();
     }
 
     // Update is called once per frame

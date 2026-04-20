@@ -421,6 +421,7 @@ MonoBehaviour:
   yellow: {fileID: -2099668836, guid: 5a0ea71cf9fcb4842a3a65e032f39c2b, type: 3}
   green: {fileID: -1955508567, guid: 5a0ea71cf9fcb4842a3a65e032f39c2b, type: 3}
   blue: {fileID: -1772417296, guid: 5a0ea71cf9fcb4842a3a65e032f39c2b, type: 3}
+  cbNumber: {fileID: 3603913427317619296, guid: 03cdf3eff3e4d6f47bb2952ef648e9ff, type: 3}
 --- !u!1 &7289224617703246126
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +500,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1191476093
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1579143786, guid: 4645ecb211d7f9f43ac4d7e67c8eaabf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

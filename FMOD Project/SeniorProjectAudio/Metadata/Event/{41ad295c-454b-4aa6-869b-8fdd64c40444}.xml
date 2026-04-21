@@ -26,6 +26,7 @@
 			<destination>{c2ee8fbd-51a7-4b19-877f-87c9aea7c9a3}</destination>
 			<destination>{a37260b6-8707-401b-a763-30883a7ad7fa}</destination>
 			<destination>{74abb198-2531-4536-a82d-d92085c0a28f}</destination>
+			<destination>{1afcd092-fbea-4f56-8a93-c5330f734bba}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{3b2f5dc3-0371-48b1-b172-2e479c94682d}</destination>
@@ -70,6 +71,7 @@
 	<object class="MarkerTrack" id="{c2ee8fbd-51a7-4b19-877f-87c9aea7c9a3}" />
 	<object class="MarkerTrack" id="{a37260b6-8707-401b-a763-30883a7ad7fa}" />
 	<object class="MarkerTrack" id="{74abb198-2531-4536-a82d-d92085c0a28f}" />
+	<object class="MarkerTrack" id="{1afcd092-fbea-4f56-8a93-c5330f734bba}" />
 	<object class="GroupTrack" id="{3b2f5dc3-0371-48b1-b172-2e479c94682d}">
 		<relationship name="automationTracks">
 			<destination>{32ac63a6-6b4e-49a8-9529-ff1808cb894e}</destination>
@@ -121,6 +123,7 @@
 			<destination>{7ae812a7-a596-42b8-93ef-02be0308920d}</destination>
 			<destination>{47b5252c-b661-463d-b0e2-05ed8440d139}</destination>
 			<destination>{fb9855de-e4c2-44bc-82da-1a374ed89774}</destination>
+			<destination>{9e9255a7-596c-4fdd-9f12-e1a19c4d7095}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{8a731a6f-cba6-4c6c-9aad-f12a292b5219}">
@@ -581,6 +584,20 @@
 		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{392a40ac-62be-4a66-b1b7-cb5e5373b167}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{9e9255a7-596c-4fdd-9f12-e1a19c4d7095}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>12</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{b25a924e-047a-470a-9882-f4c686b5eba1}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{1afcd092-fbea-4f56-8a93-c5330f734bba}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{c352b616-96b6-40cb-8785-d59b347eb5ee}">

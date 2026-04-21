@@ -9,6 +9,10 @@ public class MusicManager : MonoBehaviour
     private bool waitingToReplace;
     private EventReference replaceTrack;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        AudioManager.ins.musicEventInstance.setParameterByName("MusicPosition", 0);
+    }
     void Start()
     {
         AudioManager.ins.musicEventInstance.getDescription(out EventDescription musicDesc);
@@ -32,7 +36,6 @@ public class MusicManager : MonoBehaviour
     public void StartMusic()
     {
         AudioManager.ins.InitializeMusic(startMusic);
-        AudioManager.ins.musicEventInstance.setParameterByName("MusicPosition", 0);
     }
     public void ReplaceMusic(EventReference newMusic)
     {

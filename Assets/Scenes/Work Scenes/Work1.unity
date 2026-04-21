@@ -207,6 +207,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2843135942487548291}
+    - target: {fileID: 914996658336004163, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 1743926476}
     - target: {fileID: 980747194163610730, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: sceneManager
       value: 
@@ -385,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7641558125016426644, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8499628057736879771, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: sceneManager
@@ -403,6 +407,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 4905838054480402260, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5150116354811861059, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 8715825436589435922, guid: 814b693a13a053541837aea13981f9dc, type: 3}
@@ -430,9 +437,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 3053111485982479615, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 6573563993334587687, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 392339944597827859, guid: 814b693a13a053541837aea13981f9dc, type: 3}

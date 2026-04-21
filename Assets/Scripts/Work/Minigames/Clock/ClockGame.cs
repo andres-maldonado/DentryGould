@@ -19,7 +19,7 @@ public class ClockGame : Minigame
         {
             entry.y = value;
         }
-        if (entry == answer)
+        if (entry == answer && active)
         {
             Complete();
         }
@@ -65,6 +65,6 @@ public class ClockGame : Minigame
     }
     public override void ResetGame()
     {
-
+        Disable();
     }
 }

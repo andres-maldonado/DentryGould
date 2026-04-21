@@ -1,11 +1,11 @@
-<$MSongPosition1><$V02><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
+<$V02><align="center"><color=#EEEEEE><i>You see your friend at the far end of the bar. He looks exhausted.
 <$V01><align="right"><$PR05><$#4FBC21>How was it for you today?
 <$V00><align="left"><$PL00><$#5A73E7>Dude... it's like they were trying to <i>KILL</i> me!
 <$V01><align="right"><$PR08><$#4FBC21>It was awful for me too, man. They gave me way more tasks than any one person could reasonably handle.
 <$V00><align="left"><$PL03><$#5A73E7>You got it done though, right?
 <$V01><align="right"><$PR07><$#4FBC21>Barely.
 <$V00><align="left"><$PL01><$#5A73E7>Damn, we really are the best operators at this company...
-<$V01><align="right"><$PR08><$#4FBC21>I don't want that to be my workload from here on out though. That was absurd.
+<$MSongPosition1><$V01><align="right"><$PR08><$#4FBC21>I don't want that to be my workload from here on out though. That was absurd.
 <$V00><align="left"><$PL00><$#5A73E7>Honestly, I think it was a one-off. They said it was an especially high quota today, so I bet it was just that woman that was here last night getting back at us.
 <$V01><align="right"><$PR08><$#4FBC21>How? I thought everything was anonymized?
 <$V00><align="left"><$PL00><$#5A73E7>I don't know, I guess she has her ways in her position. I wouldn't fret about it. They wouldn't wanna get rid of guys like us, right?
@@ -55,22 +55,22 @@
 <$V03><align="left"><$PL+21><$#DB241E>Yea, and then they put them in these rooms... and like, I think they have guys talking to 'em, and like...
 <$V03><align="left"><$PL21><$#DB241E>Ggggggghhhehe yeh, jhhhhhhh...
 <$V01><align="right"><$PR06><$#4FBC21>Uh... are you alright?
-<$V03><align="left"><$PL22><$#DB241E>G- URP!
+<$MSongPosition3><$V03><align="left"><$PL22><$#DB241E>G- URP!
 <$V02><align="center"><color=#EEEEEE><i>He throws up all over himself for an uncomfortably prolonged period. When he finally stops, he falls backwards onto the ground. You both stand up.
-<$MSongPosition3><$V00><align="right"><$PR02><$#5A73E7>Oh my god, is he okay?!
+<$V00><align="right"><$PR02><$#5A73E7>Oh my god, is he okay?!
 <$V03><align="left"><$PL23><$#DB241E>Hic-... Zzzzzzzzzzzzzzzz...
 <$V01><align="right"><$PR+10><$#4FBC21>Seems fine to me.
-<$V01><align="right"><$PR08><$#4FBC21>Damn it! He was gonna tell us!
+<$MSongPosition4><$V01><align="right"><$PR08><$#4FBC21>Damn it! He was gonna tell us!
 <$V02><align="center"><color=#EEEEEE><i>You both stare for a little while.
 <$V00><align="left"><$PL02><$#5A73E7>So much for that. I think he's someone else's problem now.
 <$V01><align="right"><$PR10><$#4FBC21>Yea, I'm not cleaning that.
 <$V00><align="left"><$PL00><$#5A73E7>...Do you feel disappointed?
-<$V01><align="right"><$PR06><$#4FBC21>Honestly? Not as much as I thought I would. I didn't know when I got here, and I still don't know now. I've lost nothing.
+<$MSongPosition5><$V01><align="right"><$PR06><$#4FBC21>Honestly? Not as much as I thought I would. I didn't know when I got here, and I still don't know now. I've lost nothing.
 <$V00><align="left"><$PL02><$#5A73E7>I guess that's fair.
 <$V02><align="center"><color=#EEEEEE><i>You stand silently for a bit. Then a thought comes to your mind.
 <$V01><align="right"><$PR10><$#4FBC21>Ay, you know what I think?
 <$V00><align="left"><$PL03><$#5A73E7>What's that?
-<$MSongPosition4><$V02><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
+<$MSongPosition6><$V02><align="center"><color=#EEEEEE><i>You squat down and pull the unconscious man's wallet out of his pocket. You sit back down and throw it onto the bar.
 <$V01><align="right"><$PR10><$#4FBC21>We should hold him to his word.
 <$V00><align="left"><$PL01><$#5A73E7>Wow, I could not agree more!
 <$V02><align="center"><color=#EEEEEE><i>You and your friend spend the rest of the night chatting as usual. The man lays on the floor for the rest of the night. You pay everyone's tab with his card, put his wallet back in his pocket, and go home.

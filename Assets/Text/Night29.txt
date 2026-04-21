@@ -1,15 +1,15 @@
-<$MSongPosition1><$V01><$V00><align="left"><$PL03><$#5A73E7>Wow, "good different?"
+<$MSongPosition1><$V00><align="left"><$PL03><$#5A73E7>Wow, "good different?"
 <$V01><align="right"><$PR08><$#4FBC21>Yea man, how is that supposed to be motivating? Only difference I feel is that I've stuck around through all the crap for some reason. Doesn't make me feel "good different."
 <$V00><align="left"><$PL02><$#5A73E7>Some of the managers take creative liberties with the position, let's say. I think it's 'cause most of them have never actually been operators. They don't know what it's like to work in the room.
 <$V01><align="right"><$PR06><$#4FBC21>I thought they said there was upward mobility?
 <$V00><align="left"><$PL02><$#5A73E7>Pretty sure that's just a line.
 <$V01><align="right"><$PR07><$#4FBC21>Well that's uplifting.
-<$V02><align="left"><$PL11><$#F13DB0>I'm glad to hear you feel that way!
+<$MSongPosition2><$V02><align="left"><$PL11><$#F13DB0>I'm glad to hear you feel that way!
 <$V03><align="center"><color=#EEEEEE><i>A woman you haven't seen before sits down next to the other guy. She must have only heard the tail end of your conversation. She doesn't look more than a few years older than you. She's in office clothes. Must be corporate.
 <$V01><align="right"><$PR06><$#4FBC21>Sorry?
 <$V02><align="left"><$PL12><$#F13DB0>Well, I don't mean to be nosy, but you're operators, right? You're talking about the performance report, aren't you?
 <$V01><align="right"><$PR08><$#4FBC21>You want me to feel that way?
-<$MSongPosition2><$V02><align="left"><$PL+11><$#F13DB0>Absolutely!
+<$V02><align="left"><$PL+11><$#F13DB0>Absolutely!
 <$V02><align="left"><$PL12><$#F13DB0>Ok, so I work in logistics, we're out across the river in the offices there. We analyze performance data, allocate workloads, and create and deliver the performance reports!
 <$V02><align="left"><$PL12><$#F13DB0>With the new reports we really wanted to inspire hard-working operators like yourselves and make them feel like their work goes noticed, so we put some words of encouragement for the managers to read out.
 <$V02><align="left"><$PL11><$#F13DB0>I read in a report that workers are 42% more efficient when they're encouraged. They loved the idea. Not to brag, but I'm really feeling another Employee of the Month!

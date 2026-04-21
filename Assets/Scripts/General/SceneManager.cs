@@ -89,7 +89,10 @@ public class SceneManager : MonoBehaviour
                 {
                     workCamControl.LockControls(false);
                 }
-                startScene.Invoke();
+                if (!isFadingOut)
+                {
+                    startScene.Invoke();
+                }
             }
         }
         if (isFadingOut)

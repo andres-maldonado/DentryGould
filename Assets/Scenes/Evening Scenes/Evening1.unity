@@ -345,7 +345,7 @@ MonoBehaviour:
       Data2: 1206430680
       Data3: 1635381670
       Data4: 794520604
-    Path: event:/Music/Night/Night1
+    Path: event:/Music/Night/Night1Music
 --- !u!1 &375591297
 GameObject:
   m_ObjectHideFlags: 0

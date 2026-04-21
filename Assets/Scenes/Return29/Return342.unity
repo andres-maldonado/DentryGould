@@ -1050,6 +1050,7 @@ MonoBehaviour:
   endTime: 3
   speedChangeTime: 5
   speedChangeRate: 0.8
+  extraTime: 0
   sceneToLoad: 9
   dialogueSound:
     Guid:
@@ -1058,6 +1059,16 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  typeSound:
+    Guid:
+      Data1: 1067068699
+      Data2: 1106586029
+      Data3: 1774928775
+      Data4: -359123516
+    Path: event:/SFX/Dialogue/Type
+  inputAction: {fileID: 0}
+  continueText: {fileID: 0}
+  isReturn: 1
 --- !u!114 &1804228172
 MonoBehaviour:
   m_ObjectHideFlags: 0

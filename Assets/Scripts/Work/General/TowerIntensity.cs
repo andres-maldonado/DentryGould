@@ -8,7 +8,7 @@ public class TowerIntensity : MonoBehaviour
     [SerializeField] ControlAnimateLights flashingLights;
     [SerializeField] WorkLightFlicker lightFlicker;
     [SerializeField] float rollerFactor, lightsFactor, flickerFactor, flickerIntensity, flickerLength, flickerPeriod, flickerRate;
-    [SerializeField] EventReference machineWhirr;
+    [SerializeField] EventReference machineWhirr, sparkSound;
 
     private EventInstance whirrInstance;
     private bool isHardFlickering;
@@ -65,6 +65,7 @@ public class TowerIntensity : MonoBehaviour
     {
         counter = 0;
         isHardFlickering = true;
+        AudioManager.ins.PlayOneShot(sparkSound, this.transform.position);
     }
     public void PowerDown()
     {

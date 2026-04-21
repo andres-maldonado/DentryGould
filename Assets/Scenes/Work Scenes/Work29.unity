@@ -4141,6 +4141,26 @@ PrefabInstance:
       propertyPath: successFile
       value: 
       objectReference: {fileID: 4900000, guid: 351fd9b78d3b00d4a8b47b36f792a8ce, type: 3}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Path
+      value: event:/SFX/Dialogue/Loudspeaker3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data1
+      value: 739283981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data2
+      value: 1140926767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data3
+      value: -328442743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315278797611901224, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
+      propertyPath: dialogueSound.Guid.Data4
+      value: -415201661
+      objectReference: {fileID: 0}
     - target: {fileID: 7633056737441117076, guid: 53036081cc1a8174f8684f918ab6b170, type: 3}
       propertyPath: m_Name
       value: LoudspeakerDialogue
@@ -6377,10 +6397,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6781729734652814383, guid: bc0a14d2a4fd98e409f25541eadb1396, type: 3}
-      propertyPath: m_Intensity
-      value: 0.65
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7678,23 +7694,23 @@ PrefabInstance:
       objectReference: {fileID: 249909217}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Path
-      value: event:/Music/Work/Work1Music
+      value: event:/Music/Work/Work2Music
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data1
-      value: 1365265746
+      value: 398476030
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data2
-      value: 1205009764
+      value: 1159370941
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data3
-      value: -1248878947
+      value: 947728027
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data4
-      value: -962853581
+      value: -629291851
       objectReference: {fileID: 0}
     - target: {fileID: 5583697660494134774, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: m_Name

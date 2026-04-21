@@ -8,6 +8,7 @@ public class MenuButton : MonoBehaviour
     [SerializeField] float fadeTime, flashRate;
     [SerializeField] int glowMin, glowMax;
     [SerializeField] SpriteRenderer glowControl;
+    [SerializeField] bool spareSound;
 
     private float counter;
     private bool isFlashing, isCurrentlyMin;
@@ -28,7 +29,7 @@ public class MenuButton : MonoBehaviour
     public void LoadScene()
     {
         isFlashing = true;
-        sceneManager.FadeOutOfScene(fadeTime, sceneToLoad, true);
+        sceneManager.FadeOutOfScene(fadeTime, sceneToLoad, !spareSound);
     }
     void FlashButton()
     {

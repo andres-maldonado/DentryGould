@@ -1924,23 +1924,23 @@ PrefabInstance:
       objectReference: {fileID: 249909217}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Path
-      value: event:/Music/Work/Work1Music
+      value: event:/Music/Work/Work4Music
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data1
-      value: 1365265746
+      value: 1726204686
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data2
-      value: 1205009764
+      value: 1178117691
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data3
-      value: -1248878947
+      value: -1965822038
       objectReference: {fileID: 0}
     - target: {fileID: 1822714071154526304, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: workMusic.Guid.Data4
-      value: -962853581
+      value: 526215923
       objectReference: {fileID: 0}
     - target: {fileID: 5583697660494134774, guid: 1c5a24e74d1d1c845a2d326d96af0d4b, type: 3}
       propertyPath: m_Name

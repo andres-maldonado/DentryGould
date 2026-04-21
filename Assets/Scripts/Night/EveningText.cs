@@ -10,9 +10,10 @@ public class EveningText : MonoBehaviour
     public TextAsset dialogueFile;
     [SerializeField] float writeSpeed, pauseTime, commaTime, endTime, speedChangeTime, speedChangeRate, extraTime;
     public int sceneToLoad;
-    [SerializeField] EventReference dialogueSound;
+    [SerializeField] EventReference dialogueSound, typeSound;
     [SerializeField] InputActionAsset inputAction;
     [SerializeField] GameObject continueText;
+    [SerializeField] bool isReturn;
     private EventInstance dialogueInstance;
     private TextMeshPro text;
 
@@ -104,6 +105,10 @@ public class EveningText : MonoBehaviour
             if (isPaused && !dialogueSound.IsNull)
             {
                 dialogueInstance.setPaused(false);
+            }
+            if (isReturn && currentLine[letterCount] != ' ')
+            {
+                AudioManager.ins.PlayOneShot(typeSound, this.transform.position);
             }
             letterCount++;
             counter = 0;

@@ -484,11 +484,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   startMusic:
     Guid:
-      Data1: 1886957060
-      Data2: 1206430680
-      Data3: 1635381670
-      Data4: 794520604
-    Path: event:/Music/Night/Night1
+      Data1: 1101867356
+      Data2: 1252410699
+      Data3: -577791098
+      Data4: 1141163108
+    Path: event:/Music/Night/Night4Music
 --- !u!1 &375591297
 GameObject:
   m_ObjectHideFlags: 0

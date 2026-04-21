@@ -131,6 +131,7 @@ MonoBehaviour:
   lamp: {fileID: 1803443007754784309}
   lightColor: 1
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &212115834598673645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -484,6 +485,7 @@ MonoBehaviour:
   lamp: {fileID: 8646530537803424763}
   lightColor: 3
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &2042143823230597878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -875,6 +877,7 @@ MonoBehaviour:
   lamp: {fileID: 4014068413741561612}
   lightColor: 0
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &7747834153196349640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2598,6 +2601,7 @@ MonoBehaviour:
   lamp: {fileID: 8105812978400288124}
   lightColor: 0
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &5941054835295144329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3039,6 +3043,7 @@ MonoBehaviour:
   lamp: {fileID: 6956014056684989058}
   lightColor: 0
   fadeAmount: 0.02
+  number: {fileID: 0}
 --- !u!65 &3887450656919157088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3535,6 +3540,7 @@ MonoBehaviour:
   lamp: {fileID: 7306151324485473125}
   lightColor: 0
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &5486448861568000829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3992,6 +3998,13 @@ MonoBehaviour:
       Data3: -919536205
       Data4: -309898294
     Path: event:/SFX/Work/MachineWhirr
+  sparkSound:
+    Guid:
+      Data1: 1727184440
+      Data2: 1237810057
+      Data3: -248140644
+      Data4: 601119464
+    Path: event:/SFX/Work/Spark
 --- !u!1 &5612676268682610280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,6 +4716,7 @@ MonoBehaviour:
   lamp: {fileID: 1591733525844133433}
   lightColor: 1
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &6309427864202028285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5188,6 +5202,7 @@ MonoBehaviour:
   lamp: {fileID: 977170413761833948}
   lightColor: 2
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &5219683250296449393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5755,6 +5770,7 @@ MonoBehaviour:
   lamp: {fileID: 4527255414171014413}
   lightColor: 2
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &1011903243241047031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6139,6 +6155,7 @@ MonoBehaviour:
   lamp: {fileID: 717636564666699874}
   lightColor: 2
   fadeAmount: 0
+  number: {fileID: 0}
 --- !u!65 &4915605162560443897
 BoxCollider:
   m_ObjectHideFlags: 0

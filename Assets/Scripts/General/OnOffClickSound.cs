@@ -28,7 +28,7 @@ public class OnOffClickSound : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (game.active)
+        if (game.active && eventData.button == PointerEventData.InputButton.Left)
         {
             AudioManager.ins.PlayOneShot(click, this.transform.position);
             isDragging = true;

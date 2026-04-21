@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 639119722665848286
+  lastModified: 639123181839791569
   FileSizes: []
   Exists: 1
 --- !u!114 &-8087993894171859577
@@ -33,10 +33,10 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639119738928481217
+  lastModified: 639123194030894200
   FileSizes:
   - Name: 
-    Value: 2720
+    Value: 3126
   Exists: 1
 --- !u!114 &-8016640982530066123
 MonoBehaviour:
@@ -224,6 +224,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 208000
+--- !u!114 &-6181607419169133899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dialogue/Type
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Dialogue/Type
+  Guid:
+    Data1: 1067068699
+    Data2: 1106586029
+    Data3: 1774928775
+    Data4: -359123516
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5981594838485824050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/Work2Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/Work2Music
+  Guid:
+    Data1: 398476030
+    Data2: 1159370941
+    Data3: 947728027
+    Data4: -629291851
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 245333
 --- !u!114 &-5513636637089927378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +358,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4781485255352702870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dialogue/Loudspeaker3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Dialogue/Loudspeaker3
+  Guid:
+    Data1: 739283981
+    Data2: 1140926767
+    Data3: -328442743
+    Data4: -415201661
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-4710035488475292188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +488,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3985358082580996413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Night/Night3Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Night/Night3Music
+  Guid:
+    Data1: -443902898
+    Data2: 1314399906
+    Data3: 1133800583
+    Data4: 1263516770
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1060093881088495749}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 512842
 --- !u!114 &-3964110221361805662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +531,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639119738928481217
+  lastModified: 639123194030884197
   FileSizes: []
   Exists: 1
 --- !u!114 &-3688404065391624557
@@ -667,6 +776,54 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-1183256103629127999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Night2Music/SongPosition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SongPosition
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1360172303
+    data2: 2118950865
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1060093881088495749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Night3Music/SongPosition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SongPosition
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1360172303
+    data2: 2118950865
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-498524462607074115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +839,7 @@ MonoBehaviour:
   Path: Assets/FMOD Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 639119733761101251
+  lastModified: 639123200772227643
   FileSizes: []
   Exists: 1
 --- !u!114 &-419375929835297637
@@ -739,6 +896,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7778933895875364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/Work4Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/Work4Music
+  Guid:
+    Data1: 1726204686
+    Data2: 1178117691
+    Data3: -1965822038
+    Data4: 526215923
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 286666
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +958,6 @@ MonoBehaviour:
   - {fileID: 1789716386521382579}
   - {fileID: -4702678006838599570}
   - {fileID: -4710035488475292188}
-  - {fileID: 3248678280943556830}
   - {fileID: -7349161281340051535}
   - {fileID: -185391200323517648}
   - {fileID: -5030456442847405579}
@@ -787,6 +970,16 @@ MonoBehaviour:
   - {fileID: 4568268660083948104}
   - {fileID: -419375929835297637}
   - {fileID: 2629827755058075893}
+  - {fileID: -7778933895875364}
+  - {fileID: 4219387571184042206}
+  - {fileID: -5981594838485824050}
+  - {fileID: 5523203422866157152}
+  - {fileID: -3985358082580996413}
+  - {fileID: 4704484174365157087}
+  - {fileID: 1452387225046596565}
+  - {fileID: -4781485255352702870}
+  - {fileID: -6181607419169133899}
+  - {fileID: 7610385940763235587}
   EditorParameters:
   - {fileID: 3660146708659453400}
   - {fileID: -1617778463331339659}
@@ -796,7 +989,7 @@ MonoBehaviour:
   - {fileID: -3964110221361805662}
   StringsBanks:
   - {fileID: -8087993894171859577}
-  cacheTime: 639119738928481217
+  cacheTime: 639123200772227643
   cacheVersion: 131635
 --- !u!114 &157597575340874150
 MonoBehaviour:
@@ -825,6 +1018,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &343073145165677461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Night1Music/SongPosition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SongPosition
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1360172303
+    data2: 2118950865
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1452387225046596565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Night/Night2Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Night/Night2Music
+  Guid:
+    Data1: -1387280398
+    Data2: 1321817972
+    Data3: -2146797674
+    Data4: -750951484
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1183256103629127999}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 199341
 --- !u!114 &1575375859925892638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,34 +1308,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3248678280943556830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Night/Night1
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Music/Night/Night1
-  Guid:
-    Data1: 1886957060
-    Data2: 1206430680
-    Data3: 1635381670
-    Data4: 794520604
-  Banks:
-  - {fileID: -8243837429957365735}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4334144520537249338}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 252631
 --- !u!114 &3643759434527403560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,7 +1380,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &4334144520537249338
+--- !u!114 &4219387571184042206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1172,21 +1389,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Night1/SongPosition
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: SongPosition
-  StudioPath: 
-  Min: 0
-  Max: 4
-  Default: 0
-  ID:
-    data1: 1360172303
-    data2: 2118950865
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Work/Work3Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Work/Work3Music
+  Guid:
+    Data1: -1561757422
+    Data2: 1142565004
+    Data3: 1789798790
+    Data4: -191759531
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 168000
 --- !u!114 &4568268660083948104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,6 +1434,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 116000
+--- !u!114 &4704484174365157087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Night/Night4Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Night/Night4Music
+  Guid:
+    Data1: 1101867356
+    Data2: 1252410699
+    Data3: -577791098
+    Data4: 1141163108
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7200265262174741309}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 204000
 --- !u!114 &4921046930459740466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,6 +1489,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5523203422866157152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Night/Night1Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Night/Night1Music
+  Guid:
+    Data1: 1886957060
+    Data2: 1206430680
+    Data3: 1635381670
+    Data4: 794520604
+  Banks:
+  - {fileID: -8243837429957365735}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 343073145165677461}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 252631
 --- !u!114 &5665083689496988777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,6 +1616,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7200265262174741309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Night4Music/SongPosition
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: SongPosition
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1360172303
+    data2: 2118950865
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7355529927802314931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,6 +1695,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 252631
+--- !u!114 &7610385940763235587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Work/Spark
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Work/Spark
+  Guid:
+    Data1: 1727184440
+    Data2: 1237810057
+    Data3: -248140644
+    Data4: 601119464
+  Banks:
+  - {fileID: -498524462607074115}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7765325452649859632
 MonoBehaviour:
   m_ObjectHideFlags: 0

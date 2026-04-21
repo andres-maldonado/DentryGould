@@ -11,7 +11,12 @@ public class MusicManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartMusic();
+        AudioManager.ins.musicEventInstance.getDescription(out EventDescription musicDesc);
+        musicDesc.getPath(out string musicPath);
+        if (musicPath != startMusic.Path)
+        {
+            StartMusic();
+        }
     }
 
     // Update is called once per frame

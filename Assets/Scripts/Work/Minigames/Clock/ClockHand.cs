@@ -52,7 +52,7 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (game.active)
+        if (game.active && eventData.button == PointerEventData.InputButton.Left)
         {
             isDragging = true;
             AudioManager.ins.PlayOneShot(startSound, this.transform.position);
@@ -76,7 +76,10 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             clockValue = Mathf.Ceil(clockValue);
         }
         game.UpdateValue(this.transform.name, clockValue);
-        AudioManager.ins.PlayOneShot(stopSound, this.transform.position);
+        if (game.active)
+        {
+            AudioManager.ins.PlayOneShot(stopSound, this.transform.position);
+        }
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

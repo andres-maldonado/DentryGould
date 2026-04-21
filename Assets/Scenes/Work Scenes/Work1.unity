@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7641558125016426644, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8499628057736879771, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: sceneManager
@@ -404,69 +404,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4403838327638319903, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 4905838054480402260, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5150116354811861059, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8715825436589435922, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1415740121384245183, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3359856304076956669, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 2829914080410202658, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 4372190940233490907, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 449479635531357785, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5298270529511888301, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 477095399418448550, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3053111485982479615, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 392339944597827859, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1067491532222600716, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3021409104673644490, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 416587392385363457, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 7890112122089171056, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5043511319623907807, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3515360328327308395, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3000045697736331487, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 3675973414092646692, guid: 814b693a13a053541837aea13981f9dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1918415858245216725, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 814b693a13a053541837aea13981f9dc, type: 3}
@@ -5986,7 +5923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 0, g: 0, b: 1, a: 1}
+  color: {r: 0.11173906, g: 0.11173906, b: 0.8773585, a: 1}
   number: 2
   icon: {fileID: 660525457838101858}
   text: {fileID: 0}
@@ -6006,7 +5943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 1, g: 0, b: 0, a: 1}
+  color: {r: 0.9150943, g: 0.09927912, b: 0.09927912, a: 1}
   number: 5
   icon: {fileID: 660525457017292875}
   text: {fileID: 0}
@@ -6026,7 +5963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  color: {r: 0.8867924, g: 0.82713073, b: 0.13803846, a: 1}
   number: 4
   icon: {fileID: 660525455703921247}
   text: {fileID: 0}
@@ -6751,7 +6688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 0.627451, g: 0.1254902, b: 0.9411765, a: 1}
+  color: {r: 0.5791446, g: 0.16237983, b: 0.8396226, a: 1}
   number: 1
   icon: {fileID: 1340738291152348283}
   text: {fileID: 0}
@@ -8041,7 +7978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326418de5f73ec459de336a75b1ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Panel
-  color: {r: 0, g: 1, b: 0, a: 1}
+  color: {r: 0.08877714, g: 0.8962264, b: 0.08877714, a: 1}
   number: 3
   icon: {fileID: 2517024756127057672}
   text: {fileID: 0}

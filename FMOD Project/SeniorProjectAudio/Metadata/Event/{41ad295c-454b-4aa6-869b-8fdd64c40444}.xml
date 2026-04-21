@@ -177,7 +177,7 @@
 			<value>12</value>
 		</property>
 		<property name="volume">
-			<value>-4</value>
+			<value>-3</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{26bf41ab-a0fe-4fbc-a5e1-c3c6c73f041d}</destination>
@@ -408,7 +408,6 @@
 		<property name="length">
 			<value>12</value>
 		</property>
-		<property name="name" />
 		<relationship name="timeline">
 			<destination>{b25a924e-047a-470a-9882-f4c686b5eba1}</destination>
 		</relationship>

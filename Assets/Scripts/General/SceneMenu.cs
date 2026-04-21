@@ -12,6 +12,7 @@ public class SceneMenu : MonoBehaviour
     private InputActionMap inputActionMap;
     private InputAction key;
     private WorkCamControl controls;
+    private SceneManager sceneManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -19,6 +20,7 @@ public class SceneMenu : MonoBehaviour
         key = inputActionMap.FindAction("Tab");
         key.performed += MenuButton;
         controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
     }
     private void OnDestroy()
     {
@@ -26,6 +28,7 @@ public class SceneMenu : MonoBehaviour
     }
     void MenuButton(InputAction.CallbackContext context)
     {
+        if (!sceneManager.isFadingOut)
         TriggerMenu();
     }
     public void TriggerMenu()

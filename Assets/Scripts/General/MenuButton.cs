@@ -28,8 +28,11 @@ public class MenuButton : MonoBehaviour
     }
     public void LoadScene()
     {
-        isFlashing = true;
-        sceneManager.FadeOutOfScene(fadeTime, sceneToLoad, !spareSound);
+        if (!sceneManager.isFadingOut)
+        {
+            isFlashing = true;
+            sceneManager.FadeOutOfScene(fadeTime, sceneToLoad, !spareSound);
+        }
     }
     void FlashButton()
     {

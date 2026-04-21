@@ -508,6 +508,17 @@
                 },
                 {
                     "name": "",
+                    "id": "3e6464ec-6b06-4d84-ad5d-865a43ca4ce1",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "618f05be-87bb-4939-a8b5-cc197babfa88",
                     "path": "<Keyboard>/r",
                     "interactions": "",

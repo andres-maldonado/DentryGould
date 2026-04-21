@@ -473,10 +473,13 @@
 			<value>volume</value>
 		</property>
 		<property name="initialValue">
-			<value>-80</value>
+			<value>-10.5</value>
 		</property>
 		<property name="attackTime">
 			<value>807.692261</value>
+		</property>
+		<property name="attackShape">
+			<value>-0.356008708</value>
 		</property>
 		<property name="releaseTime">
 			<value>6400</value>

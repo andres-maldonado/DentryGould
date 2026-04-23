@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextAsset dialogueFile;
     [SerializeField] TextMeshProUGUI textBox;
     [SerializeField] float writeSpeed;
+    [SerializeField] int quickFinishSpeed;
     public float textGap, extraGap;
     public float moveSpeed, commaTime, pauseTime;
     public float fadeTime;
@@ -404,8 +405,21 @@ public class DialogueManager : MonoBehaviour
             }
             else if ((counter > 1 / writeSpeed && !readingTag) || (currentLine[letterCount] == ' ' && currentLine[letterCount - 1] != '.' && currentLine[letterCount - 1] != ',' && currentLine[letterCount - 1] != '?' && currentLine[letterCount - 1] != '!') || quickFinish)
             {
-                newBoxText.text += currentLine.Substring(letterCount, 1);
-                letterCount++;
+                if (!quickFinish)
+                {
+                    newBoxText.text += currentLine.Substring(letterCount, 1);
+                    letterCount++;
+                }
+                else if (letterCount + quickFinishSpeed <= currentLine.Length)
+                {
+                    newBoxText.text += currentLine.Substring(letterCount, quickFinishSpeed);
+                    letterCount += quickFinishSpeed;
+                }
+                else
+                {
+                    newBoxText.text += currentLine.Substring(letterCount, currentLine.Length - letterCount);
+                    letterCount += currentLine.Length - letterCount;
+                }
                 counter = 0;
                 //Debug.Log("state: " + voiceState);
                 StartTalking();

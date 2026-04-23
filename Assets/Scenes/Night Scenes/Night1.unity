@@ -453,6 +453,10 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 413893622088689649, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
+      propertyPath: quickFinishSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 604776973207672893, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -507,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3604728218823273904, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00018310547
+      value: -0.0015258789
       objectReference: {fileID: 0}
     - target: {fileID: 3713036493241923865, guid: d0b1a263e10abed4ebf91e4cc71c594e, type: 3}
       propertyPath: m_AnchorMax.y

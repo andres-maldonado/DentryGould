@@ -7,7 +7,7 @@ Or, well ok, you're "<i>good</i> different," it says. You should be proud! Good 
 Hm, ok, well that's what the paper says but it looks like your pay is the same?
 Oh, yea, the only "raise" I'm seeing is raising the level of work you're gonna do.
 Ha, well, that's tough man. I guess that's why they put you in the room with <color=#FF3333>more tasks.<color=#FFBBA0> Let me explain.
-If you see a <color=#FF3333>dashes<color=#FFBBA0> with a <color=#33FF33>green range<color=#FFBBA0> between two of them, that's the gauge task.
+If you see <color=#FF3333>dashes<color=#FFBBA0> with a <color=#33FF33>green range<color=#FFBBA0> between two of them, that's the gauge task.
 Find the corresponding <color=#FF3333>gauge<color=#FFBBA0> and click the button repeatedly to <color=#FF3333>increase the meter<color=#FFBBA0>.
 It decreases over time, but <color=#FF3333>keep the color in the green range<color=#FFBBA0> for a few seconds to complete the task.
 If you see a <color=#FF3333>coordinate<color=#FFBBA0>, find the corresponding <color=#FF3333>slider screen<color=#FFBBA0>.

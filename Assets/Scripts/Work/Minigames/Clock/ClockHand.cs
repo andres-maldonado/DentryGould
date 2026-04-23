@@ -74,12 +74,17 @@ public class ClockHand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             Debug.Log(snapAngle);
             pivot.Rotate(Vector3.forward, -snapAngle*30);
             clockValue = Mathf.Ceil(clockValue);
+            if (clockValue == 12)
+            {
+                clockValue = 0;
+            }
         }
         game.UpdateValue(this.transform.name, clockValue);
         if (game.active)
         {
             AudioManager.ins.PlayOneShot(stopSound, this.transform.position);
         }
+        Debug.Log(clockValue);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

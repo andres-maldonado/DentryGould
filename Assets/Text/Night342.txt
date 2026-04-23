@@ -1,7 +1,8 @@
 <$V01><align="right"><$PR08><$#4FBC21>It would be nice if they could keep the boards consistent. Why is every single one so different?
 <$V00><align="left"><$PL02><$#5A73E7>A friend of mine from an old job used to work in the department that builds them, and he told me that they're all customized for a specific function.
 <$V01><align="right"><$PR06><$#4FBC21>An old job? What did you do before this?
-<$V00><align="left"><$PL00><$#5A73E7>I was actually a computer engineer, believe it or not. My friend pivoted to building those boards, and when I lost my job, he told me about Dentry Gould.
+<$V00><align="left"><$PL+02><$#5A73E7>I was actually a computer engineer, believe it or not. I dropped out before I finished the college degree, but my dad knew a guy with a business, and he hired me anyway.
+<$V00><align="left"><$PL00><$#5A73E7>That's where I met my friend. He quit and pivoted to building those boards though, and when I lost my job, he told me about Dentry Gould.
 <$V01><align="right"><$PR06><$#4FBC21>Why didn't you get a job in his department? Why are you an operator?
 <$V00><align="left"><$PL01><$#5A73E7>Oh, I HATED computer engineering. There's so much that can go wrong in any project, so much to think about. I got so tired of it. But a job where I just have to press buttons when I'm told to and I can cash a check? I was on board with that!
 <$V01><align="right"><$PR05><$#4FBC21>I guess it's nice to have a job that's so simple. The day feels so much faster when I just shut my brain off.

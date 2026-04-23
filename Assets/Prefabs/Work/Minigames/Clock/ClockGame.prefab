@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pivot: {fileID: 4304484568425109079}
   clockCircle: {fileID: 9080775549205318176}
-  maxTurnSpeed: 1
+  maxTurnSpeed: 5
   clockValue: 0
   snapDistance: 0.3
   stopValue: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pivot: {fileID: 6066380949191659310}
   clockCircle: {fileID: 9080775549205318176}
-  maxTurnSpeed: 1
+  maxTurnSpeed: 5
   clockValue: 0
   snapDistance: 0.3
   stopValue: 0
@@ -2235,6 +2235,7 @@ MonoBehaviour:
   isComplete: 1
   thisAnswer: {fileID: 0}
   taskLight: {fileID: 4037777120069860830}
+  panel: {fileID: 0}
 --- !u!1 &4437341008044389517
 GameObject:
   m_ObjectHideFlags: 0

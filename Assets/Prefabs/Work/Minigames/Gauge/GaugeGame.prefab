@@ -423,9 +423,10 @@ MonoBehaviour:
   isComplete: 1
   thisAnswer: {fileID: 0}
   taskLight: {fileID: 5344711892599849970}
+  panel: {fileID: 0}
   moveAmount: 10
-  moveSpeed: 0.3
-  moveAccel: 0.1
+  moveSpeed: 0.8
+  moveAccel: 0.2
   minAngle: 0
   maxAngle: 80
   depleteRate: 15

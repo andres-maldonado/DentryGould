@@ -2307,6 +2307,10 @@ PrefabInstance:
       propertyPath: fadeInSprite
       value: 
       objectReference: {fileID: 9202968105794069396}
+    - target: {fileID: 8001239048399046683, guid: aaba3a1b540a4da409cde41a0eb9b78f, type: 3}
+      propertyPath: quickFinishSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8944336039704361398, guid: aaba3a1b540a4da409cde41a0eb9b78f, type: 3}
       propertyPath: m_Name
       value: DialogueManager

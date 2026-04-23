@@ -269,6 +269,10 @@ PrefabInstance:
       value: -18.072012
       objectReference: {fileID: 0}
     - target: {fileID: 3728336645540380329, guid: ab3b1c0ff7524ae488e4982663c62df8, type: 3}
+      propertyPath: endTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728336645540380329, guid: ab3b1c0ff7524ae488e4982663c62df8, type: 3}
       propertyPath: sceneToLoad
       value: 7
       objectReference: {fileID: 0}

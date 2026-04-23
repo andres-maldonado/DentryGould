@@ -45,6 +45,7 @@ public class FinalButton : MonoBehaviour, IPointerDownHandler
                 GameObject.Find("MusicManager").GetComponent<MusicManager>().ReplaceMusic(workMusic);
                 //GameObject.Find("Tower").GetComponent<TowerIntensity>().StartWhirr();
             }
+            manager.taskTime += 10f;
             camParent.FinalButtonSequence();
             AudioManager.ins.PlayOneShot(stepsSound, transform.position);
         }

@@ -16,8 +16,8 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         AudioManager.ins.musicEventInstance.getDescription(out EventDescription musicDesc);
-        musicDesc.getPath(out string musicPath);
-        if (musicPath != startMusic.Path)
+        musicDesc.getID(out FMOD.GUID musicPath);
+        if (musicPath != startMusic.Guid)
         {
             StartMusic();
         }

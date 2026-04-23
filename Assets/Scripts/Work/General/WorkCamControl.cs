@@ -14,6 +14,7 @@ public class WorkCamControl : MonoBehaviour
     [SerializeField] int maxPanelNum;
     [SerializeField] int minPanelNum;
     [SerializeField] bool circle;
+    private GameObject aKey, dKey, wKey, sKey, mouseKey;
 
     public EventInstance machineSound;
 
@@ -23,7 +24,7 @@ public class WorkCamControl : MonoBehaviour
     private EventReference ticketUpSound, ticketDownSound;
     private bool zoomedIn;
     public bool isTurning;
-    private bool atTicket;
+    public bool atTicket;
     private bool ticketOff;
     private float newPosition;
     private float nextPosition;
@@ -33,22 +34,27 @@ public class WorkCamControl : MonoBehaviour
     {
         inputActionMap = inputActionAsset.FindActionMap("Player");
         turnLeft = inputActionMap.FindAction("Left");
-        turnLeft.performed += _ => TurnLeft();
+        turnLeft.performed += TurnLeft;
         turnRight = inputActionMap.FindAction("Right");
-        turnRight.performed += _ => TurnRight();
+        turnRight.performed += TurnRight;
         zoomIn = inputActionMap.FindAction("Up");
-        zoomIn.performed += _ => ZoomIn();
+        zoomIn.performed += ZoomIn;
         zoomOut = inputActionMap.FindAction("Down");
-        zoomOut.performed += _ => ZoomOut();
+        zoomOut.performed += ZoomOut;
         rClick = inputActionMap.FindAction("RightClick");
-        rClick.performed += _ => LookAtTicket();
-        rClick.canceled += _ => PutTicketDown();
+        rClick.performed += LookAtTicket;
+        rClick.canceled += PutTicketDown;
         thisAnim = GetComponent<Animator>();
         thisAnim. enabled = false;
         ticketUpSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TicketUp");
         ticketDownSound = RuntimeManager.PathToEventReference("event:/SFX/Work/TicketDown");
+        wKey = GameObject.Find("W Key");
+        aKey = GameObject.Find("A Key");
+        sKey = GameObject.Find("S Key");
+        dKey = GameObject.Find("D Key");
+        mouseKey = GameObject.Find("Mouse Key");
     }
-    private void TurnLeft()
+    private void TurnLeft(InputAction.CallbackContext context)
     {
         if (!zoomedIn)
         {
@@ -93,9 +99,17 @@ public class WorkCamControl : MonoBehaviour
                 currentPanel = maxPanelNum;
                 machineSound.setParameterByName("CamPosition", currentPanel, true);
             }
+            if (currentPanel == 0)
+            {
+                wKey.SetActive(false);
+            }
+            else
+            {
+                wKey.SetActive(true);
+            }
         }        
     }
-    private void TurnRight()
+    private void TurnRight(InputAction.CallbackContext context)
     {
         if (!zoomedIn)
         {
@@ -142,29 +156,41 @@ public class WorkCamControl : MonoBehaviour
                 currentPanel = minPanelNum;
                 machineSound.setParameterByName("CamPosition", currentPanel, true);
             }
+            if (currentPanel == 0)
+            {
+                wKey.SetActive(false);
+            }
+            else
+            {
+                wKey.SetActive(true);
+            }
         }
     }
-    private void ZoomIn()
+    private void ZoomIn(InputAction.CallbackContext context)
     {
         if (!zoomedIn && currentPanel != 0)
         {
             if (atTicket)
             {
-                PutTicketDown();
+                PutTicketDownDetached();
             }
             zoomAnim.Play("PanelZoomIn");
             zoomedIn = true;
+            ShowUI(false);
+            sKey.SetActive(true);
         }
     }
-    private void ZoomOut()
+    private void ZoomOut(InputAction.CallbackContext context)
     {
         if (zoomedIn && !atTicket)
         {
             zoomAnim.Play("PanelZoomOut");
             zoomedIn = false;
+            ShowUI(true);
+            sKey.SetActive(false);
         }
     }
-    private void LookAtTicket()
+    private void LookAtTicket(InputAction.CallbackContext context)
     {
         if (!atTicket)
         {
@@ -179,9 +205,14 @@ public class WorkCamControl : MonoBehaviour
             }
             AudioManager.ins.PlayOneShot(ticketUpSound, transform.position);
             atTicket = true;
+            mouseKey.SetActive(false);
         }
     }
-    private void PutTicketDown()
+    private void PutTicketDown(InputAction.CallbackContext context)
+    {
+        PutTicketDownDetached();
+    }
+    void PutTicketDownDetached()
     {
         if (atTicket)
         {
@@ -196,20 +227,23 @@ public class WorkCamControl : MonoBehaviour
             }
             AudioManager.ins.PlayOneShot(ticketDownSound, transform.position);
             atTicket = false;
+            mouseKey.SetActive(true);
         }
     }
     public void SetTicketEnabled(bool b)
     {
         if (!b)
         {
-            PutTicketDown();
+            PutTicketDownDetached();
             rClick.Disable();
             ticketOff = true;
+            mouseKey.SetActive(false);
         }
         if (b)
         {
             rClick.Enable();
             ticketOff = false;
+            //mouseKey.SetActive(true);
         }
     }
     private void Turn()
@@ -259,6 +293,7 @@ public class WorkCamControl : MonoBehaviour
             zoomIn.Disable();
             zoomOut.Disable();
             rClick.Disable();
+            ShowUI(false);
         }
         else
         {
@@ -266,10 +301,55 @@ public class WorkCamControl : MonoBehaviour
             turnRight.Enable();
             zoomIn.Enable();
             zoomOut.Enable();
+            ShowUI(true);
             if (!ticketOff)
             {
                 rClick.Enable();
             }
         }
+    }
+    public void ShowUI(bool isOn)
+    {
+        if (!isOn)
+        {
+            wKey.SetActive(false);
+            aKey.SetActive(false);
+            sKey.SetActive(false);
+            dKey.SetActive(false);
+            mouseKey.SetActive(false);
+        }
+        else
+        {
+            if (!zoomedIn)
+            {
+                if (currentPanel != 0)
+                {
+                    wKey.SetActive(true);
+                }
+                aKey.SetActive(true);
+                dKey.SetActive(true);
+                if (!atTicket && !ticketOff)
+                {
+                    mouseKey.SetActive(true);
+                }
+            }
+            else
+            {
+                sKey.SetActive(true);
+                if (!atTicket && !ticketOff)
+                {
+                    mouseKey.SetActive(true);
+                }
+            }
+        }
+    }
+    private void OnDestroy()
+    {
+        turnLeft.performed -= TurnLeft;
+        turnRight.performed -= TurnRight;
+        zoomIn.performed -= ZoomIn;
+        zoomOut.performed -= ZoomOut;
+        rClick.performed -= LookAtTicket;
+        rClick.canceled -= PutTicketDown;
     }
 }

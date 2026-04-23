@@ -19,7 +19,10 @@ public class SceneMenu : MonoBehaviour
         inputActionMap = inputActionAsset.FindActionMap("Player");
         key = inputActionMap.FindAction("Tab");
         key.performed += MenuButton;
-        controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        if (GameObject.Find("CameraRotate") != null)
+        {
+            controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
+        }
         sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
     }
     private void OnDestroy()
@@ -28,8 +31,13 @@ public class SceneMenu : MonoBehaviour
     }
     void MenuButton(InputAction.CallbackContext context)
     {
-        if (!sceneManager.isFadingOut)
-        TriggerMenu();
+        if (!sceneManager.isFadingOut && !sceneManager.isFadingIn)
+        {
+            if (controls == null || !controls.atTicket) 
+            {
+                TriggerMenu();
+            }
+        }
     }
     public void TriggerMenu()
     {
@@ -61,7 +69,8 @@ public class SceneMenu : MonoBehaviour
         }
         AudioManager.ins.musicEventInstance.setPaused(false);
         //text.SetActive(!paused);]
-        Cursor.visible = paused; if (controls != null)
+        Cursor.visible = paused;
+        if (controls != null)
         {
             controls.LockControls(paused);
             Cursor.visible = true;

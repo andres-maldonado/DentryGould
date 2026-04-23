@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using FMODUnity;
+using UnityEngine.InputSystem;
 
 public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
 {
@@ -30,9 +31,12 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeField] List<Transform> answers = new List<Transform>();
     [SerializeField] List<Minigame> minigames = new List<Minigame>();
     [SerializeField] EventReference endMusic;
+    [SerializeField] InputActionAsset inputAction;
+    private InputActionMap map;
+    private InputAction winKey;
     public List<int> games = new List<int>();
     private int rg;
-    private float counter, taskTime;
+    public float counter, taskTime;
     public bool isEnding;
     private bool shiftActive, taskFailed;
     private MusicManager musicManager;
@@ -45,6 +49,8 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
             countChange.Add(completeCount[i], taskCount[i]);
         }
         musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+        winKey = inputAction.FindAction("Win");
+        winKey.performed += AutoWin;
         Cursor.visible = true;
     }
 
@@ -153,6 +159,14 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
         yield return new WaitForSeconds(pause);
         answerSheet.SetActive(true);
     }
+    void AutoWin(InputAction.CallbackContext context)
+    {
+        if (shiftActive)
+        {
+            taskFailed = false;
+            EndShift();
+        }
+    }
     public void EndShift()
     {
         //shut off lights
@@ -181,5 +195,9 @@ public class MinigameManager : MonoBehaviour, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         
+    }
+    private void OnDestroy()
+    {
+        winKey.performed -= AutoWin;
     }
 }

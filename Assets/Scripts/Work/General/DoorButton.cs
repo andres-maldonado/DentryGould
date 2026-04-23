@@ -36,6 +36,7 @@ public class DoorButton : MonoBehaviour, IPointerDownHandler
                 doorAnim.Play("DoorExit");
                 AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 AudioManager.ins.PlayOneShot(exitSound, this.transform.position);
+                GameObject.Find("CameraRotate").GetComponent<WorkCamControl>().ShowUI(false);
                 isExiting = true;
             }
 

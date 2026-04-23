@@ -1361,6 +1361,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   isTurning: 0
+  atTicket: 0
 --- !u!95 &249909218
 Animator:
   serializedVersion: 7
@@ -4489,6 +4490,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4403838327638319903, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6124932602773088496, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 77611003154730662, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 665999120198871863, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 576947271940376909, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 814b693a13a053541837aea13981f9dc, type: 3}
@@ -8187,6 +8200,7 @@ MonoBehaviour:
       Data3: 2083009185
       Data4: 309882184
     Path: event:/Music/Work/BeepsEndMusic
+  inputAction: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   games: 
   isEnding: 0
 --- !u!4 &2007216441

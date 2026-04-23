@@ -207,6 +207,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2843135942487548291}
+    - target: {fileID: 566092286758457765, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 566092286758457765, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 914996658336004163, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: sceneManager
       value: 
@@ -359,6 +367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorkCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4311702316706628471, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4410052044867916490, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       propertyPath: sceneManager
       value: 
@@ -404,6 +416,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4403838327638319903, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6124932602773088496, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 77611003154730662, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 665999120198871863, guid: 814b693a13a053541837aea13981f9dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 576947271940376909, guid: 814b693a13a053541837aea13981f9dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 814b693a13a053541837aea13981f9dc, type: 3}
@@ -1102,6 +1126,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   isTurning: 0
+  atTicket: 0
 --- !u!95 &249909218
 Animator:
   serializedVersion: 7
@@ -1169,7 +1194,7 @@ PrefabInstance:
       objectReference: {fileID: 1738633250}
     - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
       propertyPath: gameCount
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2057326062771515917, guid: 21eccb6206decb9469be136f1f462771, type: 3}
       propertyPath: taskTimer

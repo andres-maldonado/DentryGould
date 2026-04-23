@@ -1928,13 +1928,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8804952335634127147}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2931230211431591078}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4685537171890694074}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &862452184548544635 stripped
 RectTransform:
@@ -2484,26 +2478,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2118037900786284082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2216694805695139173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 14
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!224 &2123666209044213537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2736,13 +2710,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6950750310374501987}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1491161045749988433}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2519671425136035005}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &2189150510114183581 stripped
 RectTransform:
@@ -2955,13 +2923,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8763031288576410961}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8461005352083556210}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2118037900786284082}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &2216694805695139172 stripped
 RectTransform:
@@ -3094,26 +3056,6 @@ MonoBehaviour:
   sceneManager: {fileID: 0}
   sceneToLoad: 1
   fadeTime: 1.5
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
---- !u!114 &2519671425136035005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189150510114183582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 6
-  fadeTime: 1
   flashRate: 0
   glowMin: 0
   glowMax: 0
@@ -3380,13 +3322,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5376893231595573131}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1948341435051071965}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3610207430724364219}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &2661794420724770335 stripped
 RectTransform:
@@ -3602,7 +3538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButton
   sceneManager: {fileID: 0}
-  sceneToLoad: 5
+  sceneToLoad: 4
   fadeTime: 1
   flashRate: 0
   glowMin: 0
@@ -3880,26 +3816,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3610207430724364219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661794420724770336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 2
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!224 &3625999238938550775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4382,13 +4298,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6329188111059084833}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8558967186407961662}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9161810447761082989}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &3962367310676354105 stripped
 RectTransform:
@@ -4434,26 +4344,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4079144369230433102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898184352421696106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 10
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!224 &4099117753120487074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4790,13 +4680,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7443236175321962478}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7090562734977386107}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5134882657669735303}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &4546502907588982248 stripped
 RectTransform:
@@ -4826,26 +4710,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4685537171890694074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862452184548544636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 5
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!1 &4734370114299441788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,26 +4931,6 @@ RectTransform:
   m_AnchoredPosition: {x: 32, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5134882657669735303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4546502907588982249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 13
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!114 &5147785130249791419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5257,26 +5101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5376893231595573131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2661794420724770336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 2
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!1 &5426181027267628951
 GameObject:
   m_ObjectHideFlags: 0
@@ -5631,13 +5455,7 @@ PrefabInstance:
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4079144369230433102}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7255920089782216938}
-    - targetCorrespondingSourceObject: {fileID: 7865582758678362734, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8493322964687585971}
   m_SourcePrefab: {fileID: 100100000, guid: d26fee0e6ac021448a5adec4f107bf86, type: 3}
 --- !u!224 &5898184352421696105 stripped
 RectTransform:
@@ -5843,26 +5661,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6329188111059084833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962367310676354106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 9
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!222 &6337767275957489901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6601,26 +6399,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2.0000389, y: 30}
   m_SizeDelta: {x: 80, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6950750310374501987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189150510114183582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 6
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!1001 &6965211122842266583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6832,7 +6610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButton
   sceneManager: {fileID: 0}
-  sceneToLoad: 13
+  sceneToLoad: 12
   fadeTime: 1
   flashRate: 0
   glowMin: 0
@@ -6984,26 +6762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6259959ee7a61b847b63664c3df34113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &7443236175321962478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4546502907588982249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 13
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!222 &7445406874076052033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7718,26 +7476,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8493322964687585971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5898184352421696106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 10
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!1 &8524859731525050382
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,7 +7506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButton
   sceneManager: {fileID: 0}
-  sceneToLoad: 9
+  sceneToLoad: 8
   fadeTime: 1
   flashRate: 0
   glowMin: 0
@@ -7841,26 +7579,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8763031288576410961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2216694805695139173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 14
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!114 &8780807108333097991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7933,26 +7651,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
---- !u!114 &8804952335634127147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862452184548544636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 5
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!23 &8976681581732113096
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8078,26 +7776,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9161810447761082989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962367310676354106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db6ee6cfc5c460429ac6092d558f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  sceneManager: {fileID: 0}
-  sceneToLoad: 9
-  fadeTime: 1
-  flashRate: 0
-  glowMin: 0
-  glowMax: 0
-  glowControl: {fileID: 0}
-  spareSound: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

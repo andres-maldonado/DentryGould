@@ -140,6 +140,15 @@
                     "processors": "",
                     "interactions": "Hold(duration=1)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Win",
+                    "type": "Button",
+                    "id": "31cc645e-359c-4709-9627-d191647f6436",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=2)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -525,6 +534,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "890d1172-96de-45ad-9f8e-636e87c81831",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Win",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

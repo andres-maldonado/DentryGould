@@ -226,6 +226,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=1)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Win"",
+                    ""type"": ""Button"",
+                    ""id"": ""31cc645e-359c-4709-9627-d191647f6436"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=2)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -611,6 +620,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""890d1172-96de-45ad-9f8e-636e87c81831"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Win"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1213,6 +1233,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_RightClick = m_Player.FindAction("RightClick", throwIfNotFound: true);
         m_Player_Tab = m_Player.FindAction("Tab", throwIfNotFound: true);
         m_Player_Skip = m_Player.FindAction("Skip", throwIfNotFound: true);
+        m_Player_Win = m_Player.FindAction("Win", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1321,6 +1342,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_RightClick;
     private readonly InputAction m_Player_Tab;
     private readonly InputAction m_Player_Skip;
+    private readonly InputAction m_Player_Win;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1393,6 +1415,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Skip => m_Wrapper.m_Player_Skip;
         /// <summary>
+        /// Provides access to the underlying input action "Player/Win".
+        /// </summary>
+        public InputAction @Win => m_Wrapper.m_Player_Win;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1463,6 +1489,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Skip.started += instance.OnSkip;
             @Skip.performed += instance.OnSkip;
             @Skip.canceled += instance.OnSkip;
+            @Win.started += instance.OnWin;
+            @Win.performed += instance.OnWin;
+            @Win.canceled += instance.OnWin;
         }
 
         /// <summary>
@@ -1519,6 +1548,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Skip.started -= instance.OnSkip;
             @Skip.performed -= instance.OnSkip;
             @Skip.canceled -= instance.OnSkip;
+            @Win.started -= instance.OnWin;
+            @Win.performed -= instance.OnWin;
+            @Win.canceled -= instance.OnWin;
         }
 
         /// <summary>
@@ -1924,6 +1956,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSkip(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Win" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnWin(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

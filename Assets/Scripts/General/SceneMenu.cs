@@ -24,6 +24,7 @@ public class SceneMenu : MonoBehaviour
             controls = GameObject.Find("CameraRotate").GetComponent<WorkCamControl>();
         }
         sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
+        menu.SetActive(false);
     }
     private void OnDestroy()
     {

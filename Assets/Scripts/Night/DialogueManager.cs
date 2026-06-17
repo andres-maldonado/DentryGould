@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour
         else if (end && !isWriting)
         {
             GameObject.Find("SceneManager").GetComponent<SceneManager>().FadeOutOfScene(5, sceneToLoad, false);
-            Debug.Log("WE GOING TO SCENE "+sceneToLoad+", BABY: "+gameObject.name);
+            //Debug.Log("WE GOING TO SCENE "+sceneToLoad+", BABY: "+gameObject.name);
             AudioManager.ins.musicEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             continueKey.performed -= PressE;
             skipKey.performed -= SkipScene;
